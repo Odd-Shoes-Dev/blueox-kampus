@@ -1,0 +1,31 @@
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Hero from '../components/Hero';
+import OfferingsGrid from '../components/OfferingsGrid';
+import PartnersGrid from '../components/PartnersGrid';
+import VisualGallery from '../components/VisualGallery';
+import TechSpotlight from '../components/TechSpotlight';
+import SkillsSection from '../components/SkillsSection';
+import HouseCard from '../components/HouseCard';
+import Marquee from '../components/Marquee';
+import StartJourney from '../components/StartJourney';
+import ApplyCTA from '../components/ApplyCTA';
+
+export default function Page(){
+  return (
+    <main>
+      <Header />
+      <Hero />
+      <OfferingsGrid />
+      <PartnersGrid />
+      <VisualGallery />
+      <TechSpotlight />
+      <SkillsSection />
+      <HouseCard />
+      <Marquee />
+      <StartJourney />
+      <ApplyCTA />
+      <Footer />
+    </main>
+  );
+}

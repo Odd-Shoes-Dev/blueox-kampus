@@ -1,0 +1,24 @@
+{
+  "name": "Blue OX Kampus",
+  "short_name": "BlueOX",
+  "description": "Blue OX Kampus — Uganda's AI & VR innovation campus. Training, creation and opportunity in one place.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#05080f",
+  "theme_color": "#f38131",
+  "icons": [
+    {
+      "src": "/assets/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
