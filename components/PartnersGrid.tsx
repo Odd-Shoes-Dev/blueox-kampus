@@ -4,7 +4,7 @@ export default function PartnersGrid(){
   return (
     <Reveal delay={0.24}>
       <section id="partners" className="py-12 border-y border-white/5 bg-white/[0.01]">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <p className="text-center text-[10px] font-black text-gray-600 uppercase tracking-[0.5em] mb-10">Industry-Grade Simulation Partners</p>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-y-12 gap-x-8 items-center justify-items-center">
           <span className="partner-logo">DIG IN VISION</span>

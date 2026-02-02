@@ -3,7 +3,7 @@ import Reveal from './Reveal';
 
 export default function OfferingsGrid(){
   return (
-    <section id="academy" className="py-12 px-6">
+    <section id="academy" className="py-12 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <Reveal delay={0.03}>

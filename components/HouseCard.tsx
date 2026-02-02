@@ -3,7 +3,7 @@ import Reveal from './Reveal';
 export default function HouseCard(){
   return (
     <Reveal delay={0.21}>
-      <section id="house" className="py-12 px-6">
+      <section id="house" className="py-8 sm:py-12 px-4 sm:px-6 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto">
           <div className="rounded-2xl p-8 bg-gradient-to-r from-[#f38131] to-[#ff9a5a] text-black shadow-2xl">
           <div className="grid lg:grid-cols-2 gap-6 items-center">

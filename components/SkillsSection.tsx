@@ -3,7 +3,7 @@ import Reveal from './Reveal';
 export default function SkillsSection(){
   return (
     <Reveal delay={0.12}>
-      <section className="py-12 px-6 bg-white/2">
+      <section className="py-8 sm:py-12 px-4 sm:px-6 bg-gradient-to-b from-black/30 to-black/20">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 items-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="p-6 rounded-2xl bg-black/40 border border-white/5 text-center"> <div className="text-xl sm:text-2xl font-black text-[#f38131] mb-1">MIG/TIG Sim</div><div className="text-sm text-gray-300">Welding scenarios</div></div>

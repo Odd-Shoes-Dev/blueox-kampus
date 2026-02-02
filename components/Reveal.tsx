@@ -13,10 +13,29 @@ type RevealProps = {
 export default function Reveal({ children, className = '', threshold = 0.12, rootMargin = '0px', delay = 0, once = true }: RevealProps){
   const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Check if mobile on mount
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    // On mobile, show content immediately to prevent hiding
+    if (isMobile) {
+      setVisible(true);
+      return;
+    }
 
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -27,11 +46,14 @@ export default function Reveal({ children, className = '', threshold = 0.12, roo
           setVisible(false);
         }
       });
-    }, { threshold, rootMargin });
+    }, { 
+      threshold: isMobile ? 0.05 : threshold, // Lower threshold for mobile
+      rootMargin: isMobile ? '50px' : rootMargin // Earlier trigger on mobile
+    });
 
     obs.observe(el);
     return () => obs.disconnect();
-  }, [threshold, rootMargin, once]);
+  }, [threshold, rootMargin, once, isMobile]);
 
   const style = delay ? { ['--reveal-delay' as any]: `${delay}s` } : undefined;
 

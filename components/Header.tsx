@@ -29,11 +29,11 @@ export default function Header(){
     };
   }, [open]);
   return (
-    <header className="fixed top-0 left-0 w-full h-[var(--nav-height)] z-50 bg-black/70 backdrop-blur-md border-b border-white/5">
-        <div className="max-w-7xl mx-auto px-6 py-1 lg:-mt-5 flex items-center justify-between relative">
+    <header className="fixed top-0 left-0 w-full h-[var(--nav-height)] z-50 bg-black/70 backdrop-blur-md border-b border-white/5 right-50">
+        <div className="max-w-7xl mx-auto px-6 py-0 lg:mt-0 flex items-center justify-between relative">
           <div className="flex items-center gap-3">
             <Link href="/">
-              <img src="/assets/images/logo_name.png" alt="Blue OX" className="w-20 sm:w-24 md:w-28 h-auto" />
+              <img src="/assets/images/logo_name.png" alt="Blue OX" className="w-20 sm:w-24 md:w-28 h-auto mt-2 lg:mt-0" />
             </Link>
             <div className="hidden sm:block">
               <span className="text-sm font-black tracking-tighter uppercase leading-none block text-white">Blue <span className="text-[#f38131]">OX</span> Kampus</span>
@@ -48,10 +48,10 @@ export default function Header(){
             <Link href="#partners">Partners</Link>
           </nav>
 
-          <div className="flex items-center gap-3">
-            <Link className="hidden sm:inline-block bg-[#f38131] text-black px-3 py-1 rounded-md text-[10px] font-black uppercase" href="#apply">Join Kampus</Link>
-            {/* mobile toggle placed inside the centered container so it aligns with content */}
-            <button ref={btnRef} className="lg:hidden absolute right-6 p-2 rounded-md bg-white/5" aria-label="menu" onClick={() => setOpen(v => !v)}>
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Link className="hidden md:inline-block bg-[#f38131] text-black px-3 py-1 rounded-md text-[10px] font-black uppercase" href="#apply">Join Kampus</Link>
+            {/* mobile toggle - now flows naturally in flex container */}
+            <button ref={btnRef} className="lg:hidden p-2 rounded-md bg-white/5 hover:bg-white/10 transition-colors" aria-label="menu" onClick={() => setOpen(v => !v)}>
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
             </button>
           </div>
@@ -59,12 +59,44 @@ export default function Header(){
 
         {/* Mobile menu - render only when open */}
         {open && (
-          <div ref={menuRef} className="lg:hidden mobile-menu">
-            <Link href="#" onClick={() => setOpen(false)}>Kampus</Link>
-            <Link href="#academy" onClick={() => setOpen(false)}>Academy</Link>
-            <Link href="#house" onClick={() => setOpen(false)}>The House</Link>
-            <Link href="#partners" onClick={() => setOpen(false)}>Partners</Link>
-            <Link href="#apply" onClick={() => setOpen(false)}>Apply</Link>
+          <div ref={menuRef} className="lg:hidden absolute top-full left-0 w-full bg-black/90 backdrop-blur-md border-t border-white/10 py-4 px-6">
+            <div className="flex flex-col gap-4 max-w-7xl mx-auto">
+              <Link 
+                href="#" 
+                onClick={() => setOpen(false)}
+                className="text-white hover:text-[#f38131] py-2 text-sm font-bold uppercase tracking-wider transition-colors"
+              >
+                Kampus
+              </Link>
+              <Link 
+                href="#academy" 
+                onClick={() => setOpen(false)}
+                className="text-white hover:text-[#f38131] py-2 text-sm font-bold uppercase tracking-wider transition-colors"
+              >
+                Academy
+              </Link>
+              <Link 
+                href="#house" 
+                onClick={() => setOpen(false)}
+                className="text-white hover:text-[#f38131] py-2 text-sm font-bold uppercase tracking-wider transition-colors"
+              >
+                The House
+              </Link>
+              <Link 
+                href="#partners" 
+                onClick={() => setOpen(false)}
+                className="text-white hover:text-[#f38131] py-2 text-sm font-bold uppercase tracking-wider transition-colors"
+              >
+                Partners
+              </Link>
+              <Link 
+                href="#apply" 
+                onClick={() => setOpen(false)}
+                className="bg-[#f38131] text-black px-4 py-2 rounded-md text-sm font-black uppercase hover:bg-[#f38131]/90 transition-colors inline-block text-center"
+              >
+                Apply
+              </Link>
+            </div>
           </div>
         )}
       </header>
