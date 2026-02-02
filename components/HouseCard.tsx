@@ -17,7 +17,16 @@ export default function HouseCard(){
             </div>
             <div>
               <div className="rounded-xl overflow-hidden border border-black/10 bg-black/5 p-4">
-                <div className="w-full h-40 bg-black/20 rounded-xl flex items-center justify-center text-2xl font-black">HELLO</div>
+                <video 
+                  className="w-full h-40 bg-black/20 rounded-xl object-cover"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                >
+                  <source src="/assets/videos/room_vid.MP4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
           </div>

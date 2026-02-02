@@ -18,7 +18,7 @@ export default function Hero(){
                 Uganda's first AI and VR innovation kampus
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center flex-wrap">
-                <a href="#academy" className="cta-button bg-[#f38131] px-8 py-4 rounded-full text-black font-bold hover:scale-105 transition-transform duration-300 text-center text-lg shadow-2xl">
+                <a href="https://wa.me/3197010209759?text=Hi!%20I%20would%20like%20to%20apply%20to%20Blue%20OX%20Kampus%20Academy." target="_blank" rel="noopener noreferrer" className="cta-button bg-[#f38131] px-8 py-4 rounded-full text-black font-bold hover:scale-105 transition-transform duration-300 text-center text-lg shadow-2xl">
                   Apply to Academy
                 </a>
                 <a href="#house" className="cta-button-outline border-2 border-white/30 px-8 py-4 rounded-full backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-center text-lg text-white shadow-2xl">
