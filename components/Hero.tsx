@@ -3,7 +3,7 @@ import Reveal from './Reveal';
 export default function Hero(){
   return (
     <Reveal delay={0.03}>
-      <section className="relative pt-16 sm:pt-24 pb-8 sm:pb-12 h-screen flex items-center overflow-hidden">
+      <section className="relative pt-20 sm:pt-24 pb-8 sm:pb-12 h-screen flex items-center overflow-hidden">
         {/* YouTube Video Background */}
         <div className="absolute inset-0 z-0">
           <iframe
@@ -31,7 +31,7 @@ export default function Hero(){
           <div className="floating-pyramid absolute bottom-32 left-1/4 w-20 h-20 border-l border-r border-orange-400/30" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-10 items-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-10 items-center mt-4 sm:mt-0">
         <div className="space-y-6 hero-content">
           <div className="inline-flex items-center gap-3 py-1 px-3 rounded-full bg-orange-600/20 backdrop-blur-sm text-orange-400 text-xs font-bold mb-4 border border-orange-400/20">
             • Live Simulation & Job Pipelines
