@@ -29,7 +29,7 @@ Current Unsplash images serve as fallbacks if videos are not available.
 - Medical VR training scenes
 - Industrial automation demos
 - Abstract tech backgrounds with particles/neurons
-- Uganda campus footage
+- Uganda kampus footage
 
 ## Performance Notes
 - Videos are loaded with `loading="lazy"` equivalent
