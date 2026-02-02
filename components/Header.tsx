@@ -35,9 +35,9 @@ export default function Header(){
             <Link href="/">
               <img src="/assets/images/logo_name.png" alt="Blue OX" className="w-20 sm:w-24 md:w-28 h-auto mt-2 lg:mt-0" />
             </Link>
-            <div className="hidden sm:block">
-              <span className="text-sm font-black tracking-tighter uppercase leading-none block text-white">Blue <span className="text-[#f38131]">OX</span> Kampus</span>
-              <span className="text-[9px] font-bold text-gray-400 tracking-[0.3em] uppercase">Mbarara • Uganda</span>
+            <div className="block">
+              <span className="text-xs sm:text-sm font-black tracking-tighter uppercase leading-none block text-white">Blue <span className="text-[#f38131]">OX</span> Kampus</span>
+              <span className="text-[8px] sm:text-[9px] font-bold text-gray-400 tracking-[0.2em] sm:tracking-[0.3em] uppercase">Mbarara • Uganda</span>
             </div>
           </div>
 
