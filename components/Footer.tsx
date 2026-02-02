@@ -9,7 +9,7 @@ export default function Footer(){
           <img src="/assets/images/logo.png" alt="logo" className="w-10" />
           <div>
             <div className="font-extrabold">BLUE OX KAMPUS</div>
-            <div className="text-xs text-gray-400">Uganda's first AI and VR innovation campus</div>
+            <div className="text-xs text-gray-400">Uganda's first AI and VR innovation kampus</div>
           </div>
         </div>
         <div className="text-sm text-gray-400 text-center">

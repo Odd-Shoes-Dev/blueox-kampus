@@ -3,8 +3,8 @@ import { ReactNode } from 'react';
 
 export const metadata = {
   title: 'Blue OX Kampus — AI & VR Innovation',
-  description: "Blue OX Kampus — Uganda's AI & VR innovation campus. Training, creation and opportunity — industry-grade simulators, labs, and career pipelines in Mbarara.",
-  keywords: ['AI', 'VR', 'simulation', 'training', 'Mbarara', 'Uganda', 'tech campus', 'skills verification', 'Blue OX'],
+  description: "Blue OX Kampus — Uganda's AI & VR innovation kampus. Training, creation and opportunity — industry-grade simulators, labs, and career pipelines in Mbarara.",
+  keywords: ['AI', 'VR', 'simulation', 'training', 'Mbarara', 'Uganda', 'tech kampus', 'skills verification', 'Blue OX'],
   authors: [{ name: 'Blue OX Kampus', url: 'https://blueoxjobs.eu' }],
   generator: 'Next.js',
   applicationName: 'Blue OX Kampus',
@@ -22,7 +22,7 @@ export const metadata = {
   },
   openGraph: {
     title: 'Blue OX Kampus — AI & VR Innovation',
-    description: "Blue OX Kampus — Uganda's AI & VR innovation campus. Training, creation and opportunity in one place.",
+    description: "Blue OX Kampus — Uganda's AI & VR innovation kampus. Training, creation and opportunity in one place.",
     url: 'https://blueoxjobs.eu',
     siteName: 'Blue OX Kampus',
     images: [
@@ -90,7 +90,7 @@ export default function RootLayout({ children }:{children:ReactNode}){
               alternateName: 'BlueOX Kampus',
               url: 'https://blueoxjobs.eu',
               logo: 'https://blueoxjobs.eu/assets/images/logo.png',
-              description: "Uganda's AI & VR innovation campus. Training, creation and opportunity — industry-grade simulators, labs, and career pipelines in Mbarara.",
+              description: "Uganda's AI & VR innovation kampus. Training, creation and opportunity — industry-grade simulators, labs, and career pipelines in Mbarara.",
               address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'Mbarara',
@@ -108,15 +108,25 @@ export default function RootLayout({ children }:{children:ReactNode}){
           }}
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            if ('scrollRestoration' in history) {
+              history.scrollRestoration = 'manual';
+            }
+            window.addEventListener('load', function() {
+              setTimeout(function() {
+                window.scrollTo(0, 0);
+              }, 0);
+            });
+          `
+        }} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
       </head>
-      <body className="w-full min-h-screen">
-        <main className="w-full min-h-screen max-w-screen-xl mx-auto">
-          {children}
-        </main>
+      <body className="min-h-screen">
+        {children}
       </body>
     </html>
   );

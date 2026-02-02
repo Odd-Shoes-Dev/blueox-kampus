@@ -15,7 +15,7 @@ export default function Hero(){
                 UGANDA'S <span className="gradient-text-3d">AI & VR</span> KAMPUS
               </h1>
               <p className="text-gray-200 max-w-2xl mb-8 text-xl leading-relaxed mx-auto">
-                Uganda's first AI and VR innovation campus
+                Uganda's first AI and VR innovation kampus
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center flex-wrap">
                 <a href="#academy" className="cta-button bg-[#f38131] px-8 py-4 rounded-full text-black font-bold hover:scale-105 transition-transform duration-300 text-center text-lg shadow-2xl">

@@ -119,7 +119,12 @@ export default function VisualGallery(){
             </div>
           </div>
 
-          <div className="gallery-item sim-visual-3d h-96 group transform hover:scale-105 transition-all duration-700">
+          <a 
+            href="https://www.blueoxjobs.eu/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="gallery-item sim-visual-3d h-96 group transform hover:scale-105 transition-all duration-700 block cursor-pointer"
+          >
             <div className="relative h-full rounded-3xl overflow-hidden border border-white/20 shadow-2xl">
               <img 
                 src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" 
@@ -156,7 +161,7 @@ export default function VisualGallery(){
                 </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>
