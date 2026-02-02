@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useState, createElement } from 'react';
 
 export default function VRShowcase() {
   const [currentModel, setCurrentModel] = useState<'headset' | 'controller'>('headset');
@@ -28,24 +28,24 @@ export default function VRShowcase() {
             <div className="relative">
               <div className="bg-gray-800/50 rounded-xl p-8 backdrop-blur-sm border border-gray-700">
                 <div className="h-96 w-full relative">
-                  <model-viewer
-                    src={currentModel === 'headset' ? '/assets/models/vr-headset-full.glb' : '/assets/models/vr-controller.glb'}
-                    alt={currentModel === 'headset' ? 'VR Headset 3D Model' : 'VR Controller 3D Model'}
-                    auto-rotate
-                    camera-controls
-                    loading="lazy"
-                    style={{
+                  {createElement('model-viewer', {
+                    src: currentModel === 'headset' ? '/assets/models/vr-headset-full.glb' : '/assets/models/vr-controller.glb',
+                    alt: currentModel === 'headset' ? 'VR Headset 3D Model' : 'VR Controller 3D Model',
+                    'auto-rotate': true,
+                    'camera-controls': true,
+                    loading: 'lazy',
+                    style: {
                       width: '100%',
                       height: '100%',
                       backgroundColor: 'transparent',
                       borderRadius: '12px'
-                    }}
-                    environment-image="neutral"
-                    exposure="1"
-                    shadow-intensity="1"
-                    camera-orbit="0deg 75deg 8m"
-                    suppressHydrationWarning={true}
-                  />
+                    },
+                    'environment-image': 'neutral',
+                    exposure: '1',
+                    'shadow-intensity': '1',
+                    'camera-orbit': '0deg 75deg 8m',
+                    suppressHydrationWarning: true
+                  })}
                   
                   <div className="absolute bottom-4 left-4">
                     <div className="bg-black/50 backdrop-blur-sm rounded-lg px-3 py-2">
