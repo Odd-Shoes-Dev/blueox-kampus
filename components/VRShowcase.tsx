@@ -1,33 +1,6 @@
 "use client";
 import { useState } from 'react';
 
-// Extend JSX to include model-viewer with proper typing
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'model-viewer': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
-        src?: string;
-        alt?: string;
-        'auto-rotate'?: boolean;
-        'camera-controls'?: boolean;
-        loading?: 'auto' | 'lazy' | 'eager';
-        'environment-image'?: string;
-        exposure?: string;
-        'shadow-intensity'?: string;
-        'camera-orbit'?: string;
-        'ar-status'?: string;
-        'ar-modes'?: string;
-        'ar-scale'?: string;
-        'ios-src'?: string;
-        'quick-look-browsers'?: string;
-        'xr-environment'?: boolean;
-        style?: React.CSSProperties;
-        suppressHydrationWarning?: boolean;
-      };
-    }
-  }
-}
-
 export default function VRShowcase() {
   const [currentModel, setCurrentModel] = useState<'headset' | 'controller'>('headset');
 

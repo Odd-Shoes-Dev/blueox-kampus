@@ -24,6 +24,13 @@ declare global {
         'max-camera-orbit'?: string;
         'min-field-of-view'?: string;
         'max-field-of-view'?: string;
+        exposure?: string;
+        'ar-status'?: string;
+        'ar-modes'?: string;
+        'ar-scale'?: string;
+        'ios-src'?: string;
+        'quick-look-browsers'?: string;
+        'xr-environment'?: boolean;
         suppressHydrationWarning?: boolean;
       };
     }
