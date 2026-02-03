@@ -31,26 +31,23 @@ body {
 
 * {
   box-sizing: border-box;
-  /* Hide all scrollbars but maintain functionality */
+}
+
+/* Hide scrollbars only for specific containers that cause issues */
+main, section, div, article, aside {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer 10+ */
 }
 
-/* Hide webkit scrollbars for all elements */
-*::-webkit-scrollbar {
-  width: 0px;
-  height: 0px;
-  display: none;
-}
-
-/* Specifically target common containers */
+/* Hide webkit scrollbars for specific containers only */
 main::-webkit-scrollbar, 
 section::-webkit-scrollbar,
 div::-webkit-scrollbar,
-article::-webkit-scrollbar {
-  width: 0 !important;
-  height: 0 !important;
-  display: none !important;
+article::-webkit-scrollbar,
+aside::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  display: none;
 }
 
 /* Global layout fixes */
