@@ -125,7 +125,7 @@ export default function RootLayout({ children }:{children:ReactNode}){
         <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
       </head>
-      <body className="min-h-screen">
+      <body>
         {children}
       </body>
     </html>

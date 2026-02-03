@@ -30,16 +30,13 @@ export default function VisualGallery(){
           </div>
         </div>
 
-        <div className="gallery-grid grid md:grid-cols-3 gap-8">
+        <div className="gallery-grid grid md:grid-cols-3 gap-8 overflow-hidden">
           <div className="gallery-item sim-visual-3d h-96 group transform hover:scale-105 transition-all duration-700">
             <div className="relative h-full rounded-3xl overflow-hidden border border-white/20 shadow-2xl">
               {/* YouTube Embed for Academy */}
               <iframe
                 src="https://www.youtube.com/embed/5lNZjtubMS4?autoplay=1&mute=1&loop=1&playlist=5lNZjtubMS4&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1"
                 className="absolute inset-0 w-full h-full opacity-90 group-hover:opacity-100 transition-all duration-700 pointer-events-none"
-                style={{
-                  transform: 'scale(1.1)' // Slight zoom to hide YouTube branding
-                }}
                 frameBorder="0"
                 allow="autoplay; encrypted-media"
                 allowFullScreen

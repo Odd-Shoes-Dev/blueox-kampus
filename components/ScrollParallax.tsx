@@ -64,7 +64,7 @@ export default function ScrollParallax({
     
     if (scale) {
       const scaleValue = 1 + (offset * 0.0001);
-      transform += `scale(${Math.max(0.8, Math.min(1.2, scaleValue))}) `;
+      transform += `scale(${Math.max(0.95, Math.min(1.05, scaleValue))}) `;
     }
     
     return transform;

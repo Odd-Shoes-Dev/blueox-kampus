@@ -45,7 +45,7 @@ export default function Hero(){
         </div>
 
         {/* Video Background Section - Visible on Scroll */}
-        <div className="relative h-screen overflow-hidden">
+        <div className="relative h-96 sm:h-[500px] lg:h-[600px]">
           <iframe
             src="https://www.youtube.com/embed/JUApsTgSYtQ?autoplay=1&mute=1&loop=1&playlist=JUApsTgSYtQ&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&start=0"
             className="w-full h-full object-cover opacity-60 pointer-events-none"
