@@ -312,7 +312,168 @@ export default function AcceleratorPage() {
         </div>
       </section>
 
-      {/* 6. The Social Mission (The Heart) */}
+      {/* Pricing Section */}
+      <section className="relative py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <Reveal delay={1.65}>
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-6xl font-black mb-4 text-white">
+                Choose Your <span className="text-[#ff4040]">Accelerator Package</span>
+              </h2>
+              <p className="text-xl text-gray-400">All packages include the 5-day MVP build</p>
+            </div>
+          </Reveal>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Trial Plan */}
+            <Reveal delay={1.7}>
+              <div className="glass rounded-2xl p-6 hover:scale-105 transition-all duration-300 flex flex-col">
+                <div className="text-sm text-[#ff4040] font-bold mb-2">TRIAL</div>
+                <div className="text-4xl font-bold text-white mb-2">$2,000</div>
+                <div className="text-gray-400 text-sm mb-6">1 Month Accelerator</div>
+                <div className="space-y-3 mb-6 flex-grow">
+                  <div className="text-[#ff4040] text-sm font-semibold flex items-start gap-2">
+                    <i className="fas fa-rocket mt-1"></i>
+                    <span>MVP in 5 Days (included)</span>
+                  </div>
+                  <div className="text-gray-300 text-sm flex items-start gap-2">
+                    <i className="fas fa-check text-green-400 mt-1"></i>
+                    <span>Unlimited design requests</span>
+                  </div>
+                  <div className="text-gray-300 text-sm flex items-start gap-2">
+                    <i className="fas fa-check text-green-400 mt-1"></i>
+                    <span>1-3 day turnaround</span>
+                  </div>
+                  <div className="text-gray-300 text-sm flex items-start gap-2">
+                    <i className="fas fa-check text-green-400 mt-1"></i>
+                    <span>Perfect for testing</span>
+                  </div>
+                </div>
+                <a 
+                  href="https://wa.me/3197010209759?text=Hi!%20I'm%20interested%20in%20the%20Trial%20Accelerator%20package%20(%242,000)." 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-center bg-white/5 hover:bg-white/10 text-white py-3 rounded-lg text-sm font-semibold transition-all"
+                >
+                  Get Started
+                </a>
+              </div>
+            </Reveal>
+
+            {/* Starter Plan */}
+            <Reveal delay={1.8}>
+              <div className="glass rounded-2xl p-6 hover:scale-105 transition-all duration-300 flex flex-col">
+                <div className="text-sm text-blue-400 font-bold mb-2">STARTER</div>
+                <div className="text-4xl font-bold text-white mb-2">$4,500</div>
+                <div className="text-gray-400 text-sm mb-1">3 Months Accelerator</div>
+                <div className="text-gray-500 text-xs mb-6">$1,500/month</div>
+                <div className="space-y-3 mb-6 flex-grow">
+                  <div className="text-[#ff4040] text-sm font-semibold flex items-start gap-2">
+                    <i className="fas fa-rocket mt-1"></i>
+                    <span>MVP in 5 Days (included)</span>
+                  </div>
+                  <div className="text-gray-300 text-sm flex items-start gap-2">
+                    <i className="fas fa-check text-green-400 mt-1"></i>
+                    <span>All unlimited designs</span>
+                  </div>
+                  <div className="text-gray-300 text-sm flex items-start gap-2">
+                    <i className="fas fa-check text-green-400 mt-1"></i>
+                    <span>Priority support</span>
+                  </div>
+                  <div className="text-green-400 text-sm font-semibold flex items-start gap-2">
+                    <i className="fas fa-gift"></i>
+                    <span>1 Month FREE!</span>
+                  </div>
+                </div>
+                <a 
+                  href="https://wa.me/3197010209759?text=Hi!%20I'm%20interested%20in%20the%20Starter%20Accelerator%20package%20(%244,500)." 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-center bg-white/5 hover:bg-white/10 text-white py-3 rounded-lg text-sm font-semibold transition-all"
+                >
+                  Get Started
+                </a>
+              </div>
+            </Reveal>
+
+            {/* Scale-Up Plan - Popular */}
+            <Reveal delay={1.9}>
+              <div className="p-6 bg-[#ff4040]/10 border-2 border-[#ff4040]/50 rounded-2xl hover:scale-105 transition-all duration-300 relative flex flex-col">
+                <div className="absolute -top-3 right-4 bg-[#ff4040] text-white text-xs font-bold py-1 px-3 rounded-full">
+                  POPULAR
+                </div>
+                <div className="text-sm text-[#ff4040] font-bold mb-2">SCALE-UP</div>
+                <div className="text-4xl font-bold text-white mb-2">$8,000</div>
+                <div className="text-gray-300 text-sm mb-1">6 Months Accelerator</div>
+                <div className="text-gray-400 text-xs mb-6">$1,333/month</div>
+                <div className="space-y-3 mb-6 flex-grow">
+                  <div className="text-[#ff4040] text-sm font-semibold flex items-start gap-2">
+                    <i className="fas fa-rocket mt-1"></i>
+                    <span>MVP in 5 Days (included)</span>
+                  </div>
+                  <div className="text-gray-300 text-sm flex items-start gap-2">
+                    <i className="fas fa-check text-green-400 mt-1"></i>
+                    <span>Everything in Starter</span>
+                  </div>
+                  <div className="text-gray-300 text-sm flex items-start gap-2">
+                    <i className="fas fa-check text-green-400 mt-1"></i>
+                    <span>Long-term growth focus</span>
+                  </div>
+                  <div className="text-green-400 text-sm font-semibold flex items-start gap-2">
+                    <i className="fas fa-gift"></i>
+                    <span>2 Months FREE!</span>
+                  </div>
+                </div>
+                <a 
+                  href="https://wa.me/3197010209759?text=Hi!%20I'm%20interested%20in%20the%20Scale-Up%20Accelerator%20package%20(%248,000)." 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-center bg-[#ff4040] hover:bg-[#ff2020] text-white py-3 rounded-lg text-sm font-bold transition-all"
+                >
+                  Get Started Now
+                </a>
+              </div>
+            </Reveal>
+
+            {/* Premium Plan */}
+            <Reveal delay={2.0}>
+              <div className="glass rounded-2xl border border-purple-500/50 p-6 hover:scale-105 transition-all duration-300 flex flex-col">
+                <div className="text-sm text-purple-400 font-bold mb-2">PREMIUM</div>
+                <div className="text-4xl font-bold text-white mb-2">$12,000</div>
+                <div className="text-gray-400 text-sm mb-6">6 Months Accelerator</div>
+                <div className="space-y-3 mb-6 flex-grow">
+                  <div className="text-[#ff4040] text-sm font-semibold flex items-start gap-2">
+                    <i className="fas fa-rocket mt-1"></i>
+                    <span>MVP in 5 Days (included)</span>
+                  </div>
+                  <div className="text-gray-300 text-sm flex items-start gap-2">
+                    <i className="fas fa-check text-green-400 mt-1"></i>
+                    <span>Unlimited designs</span>
+                  </div>
+                  <div className="text-gray-300 text-sm flex items-start gap-2">
+                    <i className="fas fa-check text-green-400 mt-1"></i>
+                    <span>White-glove service</span>
+                  </div>
+                  <div className="text-gray-300 text-sm flex items-start gap-2">
+                    <i className="fas fa-check text-green-400 mt-1"></i>
+                    <span>Dedicated success manager</span>
+                  </div>
+                </div>
+                <a 
+                  href="https://wa.me/3197010209759?text=Hi!%20I'm%20interested%20in%20the%20Premium%20Accelerator%20package%20(%2412,000)." 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-center bg-white/5 hover:bg-white/10 text-white py-3 rounded-lg text-sm font-semibold transition-all"
+                >
+                  Get Started
+                </a>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. The Social Mission (The Heart) */}
       <section className="relative py-20 bg-gray-900">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <Reveal delay={1.7}>
@@ -331,7 +492,7 @@ export default function AcceleratorPage() {
         </div>
       </section>
 
-      {/* 7. Final CTA & Urgency */}
+      {/* 8. Final CTA & Urgency */}
       <section className="relative py-20 bg-black">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <Reveal delay={1.8}>
@@ -365,7 +526,7 @@ export default function AcceleratorPage() {
         </div>
       </section>
 
-      {/* 8. FAQ */}
+      {/* 9. FAQ */}
       <section className="relative py-20 bg-gray-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Reveal delay={1.9}>

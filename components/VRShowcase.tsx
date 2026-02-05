@@ -14,14 +14,6 @@ export default function VRShowcase() {
       
       <section className="py-20 bg-black relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#ff4040] mb-6">
-              THE VR SKILLING KAMPUS
-            </h2>
-            <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-              Explore our cutting-edge VR technology in 3D. Rotate, zoom, and interact with real VR equipment used in our training programs.  Train Like a Pro. Risk Nothing.
-            </p>
-          </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* 3D Model Viewer */}

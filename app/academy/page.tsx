@@ -1,6 +1,7 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Reveal from '../../components/Reveal';
+import VRShowcase from '../../components/VRShowcase';
 import Link from 'next/link';
 
 export default function AcademyPage() {
@@ -17,12 +18,61 @@ export default function AcademyPage() {
                 • VR Skilling Academy
               </div>
               <h1 className="text-5xl md:text-7xl font-extrabold mb-6 text-white">
-                THE VR <span className="text-[#ff4040]">SKILLING KAMPUS</span>
+                Train In VR Today. <span className="text-[#ff4040]">Land A Job In Europe In 90 Days.</span>
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-4">
-                Master Certified Skills In Weeks, Not Years—Through Immersive VR Training
+                We don't just "teach skills." We fill contracts.
               </p>
-              <p className="text-gray-400 text-lg">(No waste. No injuries. Just results.)</p>
+              <p className="text-gray-400 text-lg mb-12">(No waste. No injuries. Just results.)</p>
+
+              {/* 90-Day Pipeline Section */}
+              <div className="max-w-4xl mx-auto">
+                <div className="glass rounded-2xl p-8 md:p-12">
+                  <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+                    Europe is facing a massive shortage of skilled tradespeople. We have the direct contracts to fill those spots. We use VR Simulation to train you to European standards in record time, then we help you land the job.
+                  </p>
+
+                  <h4 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
+                    THE <span className="text-[#ff4040]">"90-DAY"</span> PIPELINE:
+                  </h4>
+
+                  <div className="space-y-6 mb-8">
+                    <div className="bg-black/30 rounded-xl p-6">
+                      <h5 className="text-xl font-bold text-[#ff4040] mb-3">
+                        1. ZERO-RISK MASTERY (DAYS 1-60):
+                      </h5>
+                      <p className="text-gray-300 leading-relaxed">
+                        Master Welding, Automotive Repair, or Nursing in our hyper-realistic VR simulators. You get 100% certified confidence without wasting materials or risking safety.
+                      </p>
+                    </div>
+
+                    <div className="bg-black/30 rounded-xl p-6">
+                      <h5 className="text-xl font-bold text-blue-400 mb-3">
+                        2. THE STANDARD CHECK:
+                      </h5>
+                      <p className="text-gray-300 leading-relaxed">
+                        Our VR metrics prove you are ready. No guessing. If you pass the sim, you know the job.
+                      </p>
+                    </div>
+
+                    <div className="bg-black/30 rounded-xl p-6">
+                      <h5 className="text-xl font-bold text-purple-400 mb-3">
+                        3. THE EUROPEAN PLACEMENT (DAYS 61-90):
+                      </h5>
+                      <p className="text-gray-300 leading-relaxed">
+                        We don't just wave goodbye. We actually help you. Because we hold direct recruitment contracts, we connect our top graduates directly to European employers who are desperate for certified talent.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="text-center">
+                    <a href="https://wa.me/3197010209759?text=Hi!%20I%20want%20to%20start%20VR%20training%20and%20land%20a%20job%20in%20Europe." target="_blank" rel="noopener noreferrer" className="inline-block bg-[#ff4040] hover:bg-[#ff2020] px-10 py-5 rounded-full text-white font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl">
+                      <i className="fas fa-play-circle mr-2"></i>
+                      START MY TRAINING
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </Reveal>
         </div>
@@ -55,62 +105,8 @@ export default function AcademyPage() {
         </div>
       </div>
 
-      {/* VR Training Section */}
-      <section className="relative py-12 bg-black">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <Reveal delay={0.2}>
-            <div className="grid md:grid-cols-2 gap-6">
-                <div className="glass p-6 rounded-xl">
-                  <h3 className="text-2xl font-bold text-white mb-4">
-                    <i className="fas fa-fire text-[#ff4040] mr-3"></i>Welding Training
-                  </h3>
-                  <ul className="text-gray-300 space-y-3">
-                    <li>• Master MIG, TIG, and Stick welding</li>
-                    <li>• Practice without burning a single rod</li>
-                    <li>• Real-time performance tracking</li>
-                    <li>• Zero material waste</li>
-                  </ul>
-                </div>
-
-                <div className="glass p-6 rounded-xl">
-                  <h3 className="text-2xl font-bold text-white mb-4">
-                    <i className="fas fa-car text-[#ff4040] mr-3"></i>Automotive Repair
-                  </h3>
-                  <ul className="text-gray-300 space-y-3">
-                    <li>• Diagnose and repair engines in VR</li>
-                    <li>• Virtual garage environment</li>
-                    <li>• Hands-on mechanical training</li>
-                    <li>• Safe, risk-free learning</li>
-                  </ul>
-                </div>
-
-                <div className="glass p-6 rounded-xl">
-                  <h3 className="text-2xl font-bold text-white mb-4">
-                    <i className="fas fa-heartbeat text-[#ff4040] mr-3"></i>Medical Procedures
-                  </h3>
-                  <ul className="text-gray-300 space-y-3">
-                    <li>• Practice medical procedures safely</li>
-                    <li>• Zero-risk patient simulations</li>
-                    <li>• Emergency response training</li>
-                    <li>• Clinical skills development</li>
-                  </ul>
-                </div>
-
-                <div className="p-6 bg-[#ff4040]/10 border border-[#ff4040]/30 rounded-xl">
-                  <h3 className="text-2xl font-bold text-white mb-3">
-                    <i className="fas fa-chart-line text-[#ff4040] mr-3"></i>Success Rate
-                  </h3>
-                  <div className="flex items-center gap-4">
-                    <div className="text-4xl font-black text-[#ff4040]">70%</div>
-                    <div className="text-gray-300 text-sm">
-                      of our VR graduates secure jobs within 6 months
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Reveal>
-        </div>
-      </section>
+      {/* VR Showcase Section */}
+      <VRShowcase />
 
       {/* Why VR Training? */}
       <section className="relative py-12 bg-black">

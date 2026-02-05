@@ -2,9 +2,11 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRef, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function Header(){
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
   const menuRef = useRef<HTMLDivElement | null>(null);
   const btnRef = useRef<HTMLButtonElement | null>(null);
 
@@ -41,10 +43,10 @@ export default function Header(){
           </div>
 
           <nav className="hidden lg:flex gap-6 text-xs uppercase font-bold tracking-widest">
-            <Link href="/" className="hover:text-[#ff4040] transition-colors">Kampus</Link>
-            <Link href="/academy" className="hover:text-[#ff4040] transition-colors">Academy</Link>
-            <Link href="/house" className="hover:text-[#ff4040] transition-colors">The House</Link>
-            <Link href="/accelerator" className="hover:text-[#ff4040] transition-colors">Accelerator Program</Link>
+            <Link href="/" className={pathname === '/' ? 'text-[#ff4040]' : 'hover:text-[#ff4040] transition-colors'}>Kampus</Link>
+            <Link href="/academy" className={pathname === '/academy' ? 'text-[#ff4040]' : 'hover:text-[#ff4040] transition-colors'}>Academy</Link>
+            <Link href="/house" className={pathname === '/house' ? 'text-[#ff4040]' : 'hover:text-[#ff4040] transition-colors'}>The House</Link>
+            <Link href="/accelerator" className={pathname === '/accelerator' ? 'text-[#ff4040]' : 'hover:text-[#ff4040] transition-colors'}>Accelerator Program</Link>
           </nav>
 
           <div className="flex items-center gap-2 sm:gap-3">
@@ -63,28 +65,28 @@ export default function Header(){
               <Link 
                 href="/" 
                 onClick={() => setOpen(false)}
-                className="text-white hover:text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider transition-colors"
+                className={pathname === '/' ? 'text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider' : 'text-white hover:text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider transition-colors'}
               >
                 Kampus
               </Link>
               <Link 
                 href="/academy" 
                 onClick={() => setOpen(false)}
-                className="text-white hover:text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider transition-colors"
+                className={pathname === '/academy' ? 'text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider' : 'text-white hover:text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider transition-colors'}
               >
                 Academy
               </Link>
               <Link 
                 href="/house" 
                 onClick={() => setOpen(false)}
-                className="text-white hover:text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider transition-colors"
+                className={pathname === '/house' ? 'text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider' : 'text-white hover:text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider transition-colors'}
               >
                 The House
               </Link>
               <Link 
                 href="/accelerator" 
                 onClick={() => setOpen(false)}
-                className="text-white hover:text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider transition-colors"
+                className={pathname === '/accelerator' ? 'text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider' : 'text-white hover:text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider transition-colors'}
               >
                 Accelerator Program
               </Link>
