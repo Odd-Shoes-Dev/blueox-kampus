@@ -21,13 +21,13 @@ export default function Hero(){
                   Uganda's <span className="text-blue-500">#1 AI and VR</span> innovation Kampus
                 </h1>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center flex-wrap">
-                  <a href="https://wa.me/3197010209759?text=Hi!%20I%20would%20like%20to%20apply%20to%20Blue%20OX%20Kampus%20Academy." target="_blank" rel="noopener noreferrer" className="blueox-btn blueox-btn-primary">
-                    <i className="fas fa-graduation-cap"></i>
-                    Apply to Academy
+                  <a href="https://wa.me/3197010209759?text=Hi!%20I%20would%20like%20to%20apply%20to%20the%20Blue%20OX%20Accelerator%20Program." target="_blank" rel="noopener noreferrer" className="blueox-btn blueox-btn-primary">
+                    <i className="fas fa-rocket"></i>
+                    Apply to Accelerator Program
                   </a>
-                  <a href="#house" className="blueox-btn blueox-btn-secondary">
-                    <i className="fas fa-home"></i>
-                    Book a Room
+                  <a href="https://wa.me/3197010209759?text=Hi!%20I%20would%20like%20to%20apply%20to%20the%20VR%20Training%20Program." target="_blank" rel="noopener noreferrer" className="blueox-btn blueox-btn-secondary">
+                    <i className="fas fa-vr-cardboard"></i>
+                    Apply to VR Training
                   </a>
                 </div>
 

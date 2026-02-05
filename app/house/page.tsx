@@ -6,43 +6,23 @@ export default function HousePage() {
   const rooms = [
     {
       id: 1,
-      name: 'Single Studio',
-      type: 'Private Room',
-      capacity: '1 Person',
-      amenities: ['Private bathroom', 'High-speed WiFi', 'Desk & Chair', 'Air conditioning', 'Access to common areas'],
-      price: '$25/night',
+      name: 'Room 1',
+      type: 'Shared Accommodation',
+      capacity: 'Up to 2 People',
+      amenities: ['3 meals daily (breakfast, lunch, supper)', 'High-speed WiFi', 'Shared kitchen', 'Shared sitting room', 'Desk & workspace', 'Air conditioning'],
+      price: '$20/night per person',
       available: true,
-      image: '[Add image: Modern single studio room]'
+      image: '[Add image: Comfortable shared accommodation room]'
     },
     {
       id: 2,
-      name: 'Double Studio',
-      type: 'Shared Room',
-      capacity: '2 People',
-      amenities: ['Shared bathroom', 'High-speed WiFi', '2 Desks', 'Air conditioning', 'Kitchen access'],
-      price: '$40/night',
+      name: 'Room 2',
+      type: 'Shared Accommodation',
+      capacity: 'Up to 2 People',
+      amenities: ['3 meals daily (breakfast, lunch, supper)', 'High-speed WiFi', 'Shared kitchen', 'Shared sitting room', 'Desk & workspace', 'Air conditioning'],
+      price: '$20/night per person',
       available: true,
-      image: '[Add image: Double studio with two beds]'
-    },
-    {
-      id: 3,
-      name: 'Deluxe Suite',
-      type: 'Premium Room',
-      capacity: '2 People',
-      amenities: ['Private bathroom', 'Mini kitchen', 'Workspace', 'Balcony', 'Premium WiFi', 'Smart TV'],
-      price: '$60/night',
-      available: true,
-      image: '[Add image: Luxury suite with modern amenities]'
-    },
-    {
-      id: 4,
-      name: 'Team Room',
-      type: 'Group Accommodation',
-      capacity: '4 People',
-      amenities: ['2 Bathrooms', 'Common workspace', 'Mini kitchen', 'Multiple desks', 'Conference area'],
-      price: '$80/night',
-      available: true,
-      image: '[Add image: Large room with multiple beds and workspace]'
+      image: '[Add image: Comfortable shared accommodation room]'
     }
   ];
 
@@ -79,8 +59,8 @@ export default function HousePage() {
 
           {/* House Video */}
           <Reveal delay={0.2}>
-            <div className="relative mb-16">
-              <div className="aspect-video rounded-2xl border-2 border-[#ff4040]/30 overflow-hidden">
+            <div className="relative mb-16 flex justify-center">
+              <div className="w-full max-w-lg aspect-video rounded-2xl border-2 border-[#ff4040]/30 overflow-hidden">
                 <video
                   autoPlay
                   loop
