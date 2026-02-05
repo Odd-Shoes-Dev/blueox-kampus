@@ -49,8 +49,7 @@ export const metadata = {
     nocache: true,
     googleBot: {
       index: true,
-      follow: false,
-      noimageindex: true,
+      follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
@@ -61,25 +60,20 @@ export const metadata = {
     shortcut: '/assets/images/logo.png',
     apple: '/assets/images/logo.png',
   },
-  manifest: '/manifest.json'
 };
 
 export default function RootLayout({ children }:{children:ReactNode}){
   return (
     <html lang="en">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-        <meta name="description" content={metadata.description} />
-        <meta name="keywords" content={metadata.keywords.join(', ')} />
-        <meta name="theme-color" content="#f38131" />
-        <meta name="msapplication-TileColor" content="#05080f" />
-        <meta name="msapplication-config" content="/browserconfig.xml" />
-        <link rel="canonical" href="https://blueoxjobs.eu" />
-        <link rel="manifest" href="/manifest.json" />
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#ff4040" />
+        <link rel="icon" type="image/x-icon" href="/assets/images/logo.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/logo.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/logo.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/logo.png" />
-        <link rel="mask-icon" href="/assets/images/logo.png" color="#f38131" />
+        <link rel="mask-icon" href="/assets/images/logo.png" color="#ff4040" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -122,10 +116,10 @@ export default function RootLayout({ children }:{children:ReactNode}){
         }} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
       </head>
-      <body className="bg-gradient-to-b from-black via-gray-900 to-black">
+      <body className="bg-black">
         {children}
       </body>
     </html>

@@ -36,20 +36,20 @@ export default function Header(){
               <img src="/assets/images/logo_name.png" alt="Blue OX" className="w-20 sm:w-24 md:w-28 h-auto mt-2 lg:mt-0" />
             </Link>
             <div className="block">
-              <span className="text-xs sm:text-sm font-black tracking-tighter uppercase leading-none block text-white">Blue <span className="text-[#f38131]">OX</span> Kampus</span>
-              <span className="text-[8px] sm:text-[9px] font-bold text-gray-400 tracking-[0.2em] sm:tracking-[0.3em] uppercase">Mbarara • Uganda</span>
+              <span className="text-xs sm:text-sm font-black tracking-tighter uppercase leading-none block text-white">Blue <span className="text-[#ff4040]">OX</span> <span className="text-blue-500">Kampus</span></span>
             </div>
           </div>
 
           <nav className="hidden lg:flex gap-6 text-xs uppercase font-bold tracking-widest">
-            <Link href="#">Kampus</Link>
-            <Link href="#academy">Academy</Link>
-            <Link href="#house">The House</Link>
-            <Link href="#partners">Partners</Link>
+            <Link href="/" className="hover:text-[#ff4040] transition-colors">Kampus</Link>
+            <Link href="/academy" className="hover:text-[#ff4040] transition-colors">Academy</Link>
+            <Link href="/house" className="hover:text-[#ff4040] transition-colors">The House</Link>
+            <Link href="/partners" className="hover:text-[#ff4040] transition-colors">Partners</Link>
+            <Link href="/accelerator" className="hover:text-[#ff4040] transition-colors">Accelerator Program</Link>
           </nav>
 
           <div className="flex items-center gap-2 sm:gap-3">
-            <Link className="hidden md:inline-block bg-[#f38131] text-black px-3 py-1 rounded-md text-[10px] font-black uppercase" href="#apply">Join Kampus</Link>
+            <Link className="hidden md:inline-block bg-[#ff4040] text-black px-3 py-1 rounded-md text-[10px] font-black uppercase" href="#apply">Join Kampus</Link>
             {/* mobile toggle - now flows naturally in flex container */}
             <button ref={btnRef} className="lg:hidden p-2 rounded-md bg-white/5 hover:bg-white/10 transition-colors" aria-label="menu" onClick={() => setOpen(v => !v)}>
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -62,37 +62,44 @@ export default function Header(){
           <div ref={menuRef} className="lg:hidden absolute top-full left-0 w-full bg-black/90 backdrop-blur-md border-t border-white/10 py-4 px-6">
             <div className="flex flex-col gap-4 max-w-7xl mx-auto">
               <Link 
-                href="#" 
+                href="/" 
                 onClick={() => setOpen(false)}
-                className="text-white hover:text-[#f38131] py-2 text-sm font-bold uppercase tracking-wider transition-colors"
+                className="text-white hover:text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider transition-colors"
               >
                 Kampus
               </Link>
               <Link 
-                href="#academy" 
+                href="/academy" 
                 onClick={() => setOpen(false)}
-                className="text-white hover:text-[#f38131] py-2 text-sm font-bold uppercase tracking-wider transition-colors"
+                className="text-white hover:text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider transition-colors"
               >
                 Academy
               </Link>
               <Link 
-                href="#house" 
+                href="/house" 
                 onClick={() => setOpen(false)}
-                className="text-white hover:text-[#f38131] py-2 text-sm font-bold uppercase tracking-wider transition-colors"
+                className="text-white hover:text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider transition-colors"
               >
                 The House
               </Link>
               <Link 
-                href="#partners" 
+                href="/partners" 
                 onClick={() => setOpen(false)}
-                className="text-white hover:text-[#f38131] py-2 text-sm font-bold uppercase tracking-wider transition-colors"
+                className="text-white hover:text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider transition-colors"
               >
                 Partners
               </Link>
               <Link 
+                href="/accelerator" 
+                onClick={() => setOpen(false)}
+                className="text-white hover:text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider transition-colors"
+              >
+                Accelerator Program
+              </Link>
+              <Link 
                 href="#apply" 
                 onClick={() => setOpen(false)}
-                className="bg-[#f38131] text-black px-4 py-2 rounded-md text-sm font-black uppercase hover:bg-[#f38131]/90 transition-colors inline-block text-center"
+                className="bg-[#ff4040] text-black px-4 py-2 rounded-md text-sm font-black uppercase hover:bg-[#ff4040]/90 transition-colors inline-block text-center"
               >
                 Apply
               </Link>

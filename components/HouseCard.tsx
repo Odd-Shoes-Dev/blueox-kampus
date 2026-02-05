@@ -3,16 +3,16 @@ import Reveal from './Reveal';
 export default function HouseCard(){
   return (
     <Reveal delay={0.21}>
-      <section id="house" className="py-8 sm:py-12 px-4 sm:px-6 bg-gradient-to-b from-gray-900 to-black">
+      <section id="house" className="py-8 sm:py-12 px-4 sm:px-6 bg-black">
         <div className="max-w-7xl mx-auto">
-          <div className="rounded-2xl p-8 bg-gradient-to-r from-[#f38131] to-[#ff9a5a] text-black shadow-2xl">
+          <div className="rounded-2xl p-8 bg-[#ff4040] text-white shadow-2xl">
           <div className="grid lg:grid-cols-2 gap-6 items-center">
             <div>
               <h3 className="text-2xl font-extrabold mb-2">BLUEOX HOUSE: LIVE & CREATE</h3>
               <p className="mb-4">Airbnb-style living for students, researchers, and creators — focused environments built for rapid learning and building.</p>
               <div className="flex gap-3 items-center">
-                <div className="text-sm font-black bg-black/10 rounded-full px-3 py-1">$20 / night</div>
-                <a href="#" className="bg-black text-white px-4 py-2 rounded-full font-bold">Book a Room</a>
+                <div className="text-sm font-black bg-white/20 rounded-full px-3 py-1">$20 / night</div>
+                <a href="#" className="bg-white text-black px-4 py-2 rounded-full font-bold hover:bg-gray-100 transition-colors">Book a Room</a>
               </div>
             </div>
             <div>

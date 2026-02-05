@@ -7,7 +7,7 @@
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#05080f",
-  "theme_color": "#f38131",
+  "theme_color": "#ff4040",
   "categories": ["education", "technology", "innovation"],
   "lang": "en",
   "dir": "ltr",

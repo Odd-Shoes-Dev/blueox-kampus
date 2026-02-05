@@ -2,6 +2,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import OfferingsGrid from '../components/OfferingsGrid';
+import AcceleratorPreview from '../components/AcceleratorPreview';
 import PartnersGrid from '../components/PartnersGrid';
 import VisualGallery from '../components/VisualGallery';
 import TechSpotlight from '../components/TechSpotlight';
@@ -18,12 +19,12 @@ export default function Page(){
       <Header />
       <Hero />
       <OfferingsGrid />
-      <PartnersGrid />
-      <VisualGallery />
-      <TechSpotlight />
       <VRShowcase />
       <SkillsSection />
       <HouseCard />
+      <PartnersGrid />
+      <VisualGallery />
+      <TechSpotlight />
       <Marquee />
       <StartJourney />
       <ApplyCTA />

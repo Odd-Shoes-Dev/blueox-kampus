@@ -12,10 +12,10 @@ export default function VRShowcase() {
         src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"
       />
       
-      <section className="py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
+      <section className="py-20 bg-black relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#ff4040] mb-6">
               Interactive VR Experience
             </h2>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">
@@ -62,7 +62,7 @@ export default function VRShowcase() {
                     onClick={() => setCurrentModel('headset')}
                     className={`px-4 sm:px-6 py-3 rounded-lg font-semibold transition-all flex items-center justify-center gap-2 text-sm sm:text-base ${
                       currentModel === 'headset'
-                        ? 'bg-orange-500 text-white shadow-lg shadow-orange-500/25'
+                        ? 'bg-[#ff4040] text-white shadow-lg shadow-[#ff4040]/25'
                         : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     }`}
                   >
@@ -112,7 +112,7 @@ export default function VRShowcase() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div className="bg-gray-800/30 rounded-lg p-4 sm:p-6 border border-gray-700">
                   <div className="flex items-center gap-3 mb-3 sm:mb-4">
-                    <div className="w-3 h-3 bg-orange-500 rounded-full flex-shrink-0"></div>
+                    <div className="w-3 h-3 bg-[#ff4040] rounded-full flex-shrink-0"></div>
                     <h4 className="text-white font-semibold text-sm sm:text-base">4K Resolution</h4>
                   </div>
                   <p className="text-gray-400 text-sm">
@@ -152,7 +152,7 @@ export default function VRShowcase() {
               </div>
 
               <div className="pt-4 sm:pt-6">
-                <button className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-blue-500 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-orange-500/25 transition-all duration-300">
+                <button className="w-full sm:w-auto bg-[#ff4040] hover:bg-[#ff2020] text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#ff4040]/25 transition-all duration-300">
                   Experience VR Training
                 </button>
               </div>
@@ -162,7 +162,7 @@ export default function VRShowcase() {
 
         {/* Background Effects */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-orange-500/5 rounded-full blur-xl"></div>
+          <div className="absolute top-20 left-10 w-32 h-32 bg-[#ff4040]/5 rounded-full blur-xl"></div>
           <div className="absolute bottom-20 right-10 w-40 h-40 bg-blue-500/5 rounded-full blur-xl"></div>
         </div>
       </section>
