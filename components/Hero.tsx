@@ -17,9 +17,13 @@ export default function Hero(){
               
               {/* Content - Right Side */}
               <div className="space-y-6 hero-content flex-1 text-center lg:text-left">
-                <h1 className="blueox-heading text-5xl md:text-7xl lg:text-8xl mb-6 leading-tight text-white">
-                  Uganda's <span className="text-blue-500">#1 AI and VR</span> innovation Kampus
+                <h1 className="blueox-heading text-5xl md:text-7xl lg:text-8xl mb-4 leading-tight text-white">
+                  THE BLUE OX : UGANDA'S <span className="text-blue-500">#1 AI & VR</span> INNOVATION KAMPUS
                 </h1>
+                <p className="text-xl md:text-2xl text-gray-300 mb-6 leading-relaxed">
+                  We Turn Prayers Into Prototypes And 'What Ifs' Into Bankable Products In 5 Days.<br />
+                  <span className="text-[#ff4040] font-semibold">(Yes, really.)</span>
+                </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center flex-wrap">
                   <a href="https://wa.me/3197010209759?text=Hi!%20I%20would%20like%20to%20apply%20to%20the%20Blue%20OX%20Accelerator%20Program." target="_blank" rel="noopener noreferrer" className="blueox-btn blueox-btn-primary">
                     <i className="fas fa-rocket"></i>

@@ -16,10 +16,10 @@ export default function AcceleratorPage() {
                 • For Startups That Have Raised $150k+
               </div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 text-white leading-tight">
-                We Build Your <span className="text-[#ff4040]">Investor-Ready MVP & Brand</span> in 5 Days—Or You Don't Pay
+                We Build Your <span className="text-[#ff4040]">Entire Startup In 120 Hours</span>. Or We Work For Free.
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Stop waiting months for development. The Blue OX provides the elite design and low-code engineering power of a Silicon Valley team, delivered at lightning speed.
+                Most agencies guess what you want. We visualize it first. We combine <span className="text-[#ff4040] font-semibold">Rapid MVP Development</span> with <span className="text-blue-500 font-semibold">Unlimited Creative Designs</span> to ensure 100% clarity and speed.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
                 <a 
@@ -77,61 +77,97 @@ export default function AcceleratorPage() {
           <Reveal delay={0.4}>
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-6xl font-black mb-4 text-white">
-                The <span className="text-[#ff4040]">Startup Foundation Kit</span>
+                THE <span className="text-[#ff4040]">FRICTIONLESS</span> STACK
               </h2>
-              <p className="text-2xl text-gray-400 font-bold">One Flat Fee. Total Execution.</p>
+              <p className="text-2xl text-gray-400 font-bold">WE SPEAK 'VISUAL', NOT JUST 'CODE'.</p>
             </div>
           </Reveal>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
             <Reveal delay={0.5}>
-              <div className="glass rounded-2xl p-8 border-2 border-[#ff4040]/30">
+              <div className="glass rounded-2xl p-8 border-2 border-blue-500/30">
                 <div className="flex items-center gap-3 mb-4">
-                  <i className="fas fa-rocket text-3xl text-[#ff4040]"></i>
-                  <h3 className="text-2xl font-black text-white">The 5-Day Sprint</h3>
+                  <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
+                    <span className="text-2xl font-black text-blue-500">1</span>
+                  </div>
+                  <h3 className="text-xl font-black text-white">VISUAL TRANSLATION</h3>
                 </div>
-                <p className="text-gray-300 leading-relaxed">
-                  A fully functional web or mobile application with backend architecture, API-ready databases, and authentication.
+                <h4 className="text-lg font-bold text-blue-400 mb-3">(Unlimited Designs)</h4>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  We turn your idea into a <span className="text-white font-semibold">High-Fidelity Design Prototype</span> immediately. You get unlimited revisions until the vision in your head matches the vision on the screen.
+                </p>
+                <p className="text-blue-400 font-semibold italic">
+                  We don't code until you say "Perfect."
                 </p>
               </div>
             </Reveal>
 
             <Reveal delay={0.6}>
-              <div className="glass rounded-2xl p-8 border-2 border-purple-500/30">
+              <div className="glass rounded-2xl p-8 border-2 border-[#ff4040]/30">
                 <div className="flex items-center gap-3 mb-4">
-                  <i className="fas fa-crown text-3xl text-purple-400"></i>
-                  <h3 className="text-2xl font-black text-white">The "Unicorn" Identity</h3>
+                  <div className="w-12 h-12 rounded-full bg-[#ff4040]/20 flex items-center justify-center">
+                    <span className="text-2xl font-black text-[#ff4040]">2</span>
+                  </div>
+                  <h3 className="text-xl font-black text-white">BLITZSCALE BUILD</h3>
                 </div>
-                <p className="text-gray-300 leading-relaxed">
-                  Premium branding, UI/UX designs, and the exact pitch deck slides needed to close your Series A.
+                <h4 className="text-lg font-bold text-[#ff4040] mb-3">(MVP)</h4>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  Once the design is locked, we use our <span className="text-[#ff4040] font-semibold">"Magic Formula"</span> (Strapi + Directus) to build the functional, API-ready product in 1 to 5 days.
+                </p>
+                <p className="text-[#ff4040] font-semibold italic">
+                  From pixels to production, lightning fast.
                 </p>
               </div>
             </Reveal>
 
             <Reveal delay={0.7}>
-              <div className="glass rounded-2xl p-8 border-2 border-blue-500/30">
-                <div className="flex items-center gap-3 mb-4">
-                  <i className="fas fa-infinity text-3xl text-blue-400"></i>
-                  <h3 className="text-2xl font-black text-white">Unlimited Growth Creative</h3>
-                </div>
-                <p className="text-gray-300 leading-relaxed">
-                  Continuous design support for social ads, landing pages, and marketing assets for 6 months.
-                </p>
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.8}>
               <div className="glass rounded-2xl p-8 border-2 border-green-500/30">
                 <div className="flex items-center gap-3 mb-4">
-                  <i className="fas fa-plug text-3xl text-green-400"></i>
-                  <h3 className="text-2xl font-black text-white">API Integrations</h3>
+                  <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
+                    <span className="text-2xl font-black text-green-500">3</span>
+                  </div>
+                  <h3 className="text-xl font-black text-white">THE GUARANTEE</h3>
                 </div>
-                <p className="text-gray-300 leading-relaxed">
-                  Seamless connection to third-party tools like Twilio or Stripe to ensure you're market-ready.
+                <h4 className="text-lg font-bold text-green-400 mb-3">(Zero Risk)</h4>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  If the final code doesn't match the approved design pixels, we refund your deposit.
+                </p>
+                <p className="text-green-400 font-semibold italic">
+                  We take all the risk. You get all the results.
                 </p>
               </div>
             </Reveal>
           </div>
+
+          {/* Why This Works Section */}
+          <Reveal delay={0.8}>
+            <div className="bg-gray-900 rounded-2xl p-8 md:p-12 border-2 border-[#ff4040]/20 mb-16">
+              <h3 className="text-3xl md:text-4xl font-black text-white mb-6 text-center">
+                WHY THIS WORKS
+              </h3>
+              <div className="max-w-3xl mx-auto space-y-6 text-gray-300 text-lg leading-relaxed">
+                <p>
+                  <span className="text-[#ff4040] font-bold text-xl">"WE SPEAK 'VISUAL', NOT JUST 'CODE'."</span>
+                </p>
+                <p>
+                  Working with overseas teams can be hard if you have to manage them. At Blue OX, you don't manage the code. <span className="text-white font-semibold">You manage the Design</span>.
+                </p>
+                <p>
+                  Since we offer <span className="text-blue-500 font-semibold">Unlimited Designs</span>, we can iterate on the visuals 100 times until it's right. It is frictionless, effortless, and impossible to misunderstand.
+                </p>
+                <div className="text-center pt-6">
+                  <a 
+                    href="https://wa.me/3197010209759?text=Hi!%20I'm%20ready%20to%20start%20my%20Visual-First%20Accelerator%20build." 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-block bg-[#ff4040] hover:bg-[#ff2020] text-white px-10 py-4 rounded-full font-black uppercase tracking-wide transition-all hover:scale-105 shadow-2xl"
+                  >
+                    START MY BUILD
+                  </a>
+                </div>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 

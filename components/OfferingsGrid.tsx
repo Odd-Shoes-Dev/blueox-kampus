@@ -7,10 +7,13 @@ export default function OfferingsGrid(){
         <Reveal delay={0.03}>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-              We Build Your <span className="text-[#ff4040]">Investor-Ready MVP & Brand</span> in 5 Days—Or You Don't Pay
+              The <span className="text-[#ff4040]">"Visual-First"</span> Accelerator
             </h2>
-            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-              For startups that have raised $150k+. Get a fully functional MVP, premium branding, and unlimited growth creative—all with a 5-day delivery guarantee.
+            <p className="text-gray-400 text-xl max-w-3xl mx-auto mb-4 font-semibold">
+              "We Build Your Entire Startup In 120 Hours. Or We Work For Free."
+            </p>
+            <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+              Most agencies guess what you want. We <span className="text-white font-semibold">visualize it first</span>. Unlimited designs + rapid MVP development = 100% clarity and speed.
             </p>
           </div>
         </Reveal>
@@ -21,8 +24,12 @@ export default function OfferingsGrid(){
             <div className="glass rounded-2xl p-6 hover:scale-105 transition-all duration-300 flex flex-col">
               <div className="text-sm text-[#ff4040] font-bold mb-2">TRIAL</div>
               <div className="text-4xl font-bold text-white mb-2">$2,000</div>
-              <div className="text-gray-400 text-sm mb-6">1 Month</div>
+              <div className="text-gray-400 text-sm mb-6">1 Month Accelerator</div>
               <div className="space-y-3 mb-6 flex-grow">
+                <div className="text-[#ff4040] text-sm font-semibold flex items-start gap-2">
+                  <i className="fas fa-rocket mt-1"></i>
+                  <span>MVP in 5 Days (included)</span>
+                </div>
                 <div className="text-gray-300 text-sm flex items-start gap-2">
                   <i className="fas fa-check text-green-400 mt-1"></i>
                   <span>Unlimited design requests</span>
@@ -50,9 +57,13 @@ export default function OfferingsGrid(){
             <div className="glass rounded-2xl p-6 hover:scale-105 transition-all duration-300 flex flex-col">
               <div className="text-sm text-blue-400 font-bold mb-2">STARTER</div>
               <div className="text-4xl font-bold text-white mb-2">$4,500</div>
-              <div className="text-gray-400 text-sm mb-1">3 Months</div>
+              <div className="text-gray-400 text-sm mb-1">3 Months Accelerator</div>
               <div className="text-gray-500 text-xs mb-6">$1,500/month</div>
               <div className="space-y-3 mb-6 flex-grow">
+                <div className="text-[#ff4040] text-sm font-semibold flex items-start gap-2">
+                  <i className="fas fa-rocket mt-1"></i>
+                  <span>MVP in 5 Days (included)</span>
+                </div>
                 <div className="text-gray-300 text-sm flex items-start gap-2">
                   <i className="fas fa-check text-green-400 mt-1"></i>
                   <span>All unlimited designs</span>
@@ -83,9 +94,13 @@ export default function OfferingsGrid(){
               </div>
               <div className="text-sm text-[#ff4040] font-bold mb-2">SCALE-UP</div>
               <div className="text-4xl font-bold text-white mb-2">$8,000</div>
-              <div className="text-gray-300 text-sm mb-1">6 Months</div>
+              <div className="text-gray-300 text-sm mb-1">6 Months Accelerator</div>
               <div className="text-gray-400 text-xs mb-6">$1,333/month</div>
               <div className="space-y-3 mb-6 flex-grow">
+                <div className="text-[#ff4040] text-sm font-semibold flex items-start gap-2">
+                  <i className="fas fa-rocket mt-1"></i>
+                  <span>MVP in 5 Days (included)</span>
+                </div>
                 <div className="text-gray-300 text-sm flex items-start gap-2">
                   <i className="fas fa-check text-green-400 mt-1"></i>
                   <span>Everything in Starter</span>
@@ -113,19 +128,23 @@ export default function OfferingsGrid(){
             <div className="glass rounded-2xl border border-purple-500/50 p-6 hover:scale-105 transition-all duration-300 flex flex-col">
               <div className="text-sm text-purple-400 font-bold mb-2">PREMIUM</div>
               <div className="text-4xl font-bold text-white mb-2">$12,000</div>
-              <div className="text-gray-400 text-sm mb-6">6 Months</div>
+              <div className="text-gray-400 text-sm mb-6">6 Months Accelerator</div>
               <div className="space-y-3 mb-6 flex-grow">
+                <div className="text-[#ff4040] text-sm font-semibold flex items-start gap-2">
+                  <i className="fas fa-rocket mt-1"></i>
+                  <span>MVP in 5 Days (included)</span>
+                </div>
                 <div className="text-gray-300 text-sm flex items-start gap-2">
                   <i className="fas fa-check text-green-400 mt-1"></i>
                   <span>Unlimited designs</span>
                 </div>
                 <div className="text-gray-300 text-sm flex items-start gap-2">
                   <i className="fas fa-check text-green-400 mt-1"></i>
-                  <span>1 MVP build included</span>
+                  <span>White-glove service</span>
                 </div>
                 <div className="text-gray-300 text-sm flex items-start gap-2">
                   <i className="fas fa-check text-green-400 mt-1"></i>
-                  <span>White-glove service</span>
+                  <span>Dedicated success manager</span>
                 </div>
               </div>
               <a 

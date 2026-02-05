@@ -8,6 +8,7 @@ import VisualGallery from '../components/VisualGallery';
 import TechSpotlight from '../components/TechSpotlight';
 import VRShowcase from '../components/VRShowcase';
 import SkillsSection from '../components/SkillsSection';
+import WhyBlueOX from '../components/WhyBlueOX';
 import HouseCard from '../components/HouseCard';
 import Marquee from '../components/Marquee';
 import StartJourney from '../components/StartJourney';
@@ -21,12 +22,12 @@ export default function Page(){
       <OfferingsGrid />
       <VRShowcase />
       <SkillsSection />
+      <WhyBlueOX />
       <HouseCard />
-      <PartnersGrid />
       <VisualGallery />
       <TechSpotlight />
       <Marquee />
-      <StartJourney />
+      <PartnersGrid />
       <ApplyCTA />
       <Footer />
     </>

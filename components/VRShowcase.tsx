@@ -16,10 +16,10 @@ export default function VRShowcase() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-[#ff4040] mb-6">
-              Interactive VR Experience
+              THE VR SKILLING KAMPUS
             </h2>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-              Explore our cutting-edge VR technology in 3D. Rotate, zoom, and interact with real VR equipment used in our training programs.
+              Explore our cutting-edge VR technology in 3D. Rotate, zoom, and interact with real VR equipment used in our training programs.  Train Like a Pro. Risk Nothing.
             </p>
           </div>
 
@@ -99,62 +99,55 @@ export default function VRShowcase() {
             {/* Information Panel */}
             <div className="space-y-6 sm:space-y-8 mt-8 lg:mt-0">
               <div className="space-y-4 sm:space-y-6">
-                <h3 className="text-2xl sm:text-3xl font-bold text-white">
-                  Professional VR Equipment
-                </h3>
                 <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
-                  Experience the same industry-grade VR technology used by professionals worldwide. 
-                  Our training programs utilize cutting-edge headsets and controllers to provide 
-                  immersive learning experiences in AI, simulation, and digital innovation.
+                  Vocational training is broken—expensive, dangerous, and slow. We fixed it with <span className="text-[#ff4040] font-semibold italic">VR simulations</span> that let you:
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                <div className="bg-gray-800/30 rounded-lg p-4 sm:p-6 border border-gray-700">
-                  <div className="flex items-center gap-3 mb-3 sm:mb-4">
-                    <div className="w-3 h-3 bg-[#ff4040] rounded-full flex-shrink-0"></div>
-                    <h4 className="text-white font-semibold text-sm sm:text-base">4K Resolution</h4>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
+                    <i className="fas fa-fire text-[#ff4040] text-xl"></i>
                   </div>
-                  <p className="text-gray-400 text-sm">
-                    Crystal clear displays for immersive visual experiences and detailed training scenarios
+                  <p className="text-gray-300 text-base sm:text-lg">
+                    <span className="text-white font-semibold">Master welding (MIG, TIG, Stick)</span> without burning a single rod.
                   </p>
                 </div>
 
-                <div className="bg-gray-800/30 rounded-lg p-4 sm:p-6 border border-gray-700">
-                  <div className="flex items-center gap-3 mb-3 sm:mb-4">
-                    <div className="w-3 h-3 bg-blue-500 rounded-full flex-shrink-0"></div>
-                    <h4 className="text-white font-semibold text-sm sm:text-base">Precision Tracking</h4>
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
+                    <i className="fas fa-car text-[#ff4040] text-xl"></i>
                   </div>
-                  <p className="text-gray-400 text-sm">
-                    Sub-millimeter accuracy for professional training and simulation requirements
+                  <p className="text-gray-300 text-base sm:text-lg">
+                    <span className="text-white font-semibold">Diagnose and repair engines</span> in a virtual garage.
                   </p>
                 </div>
 
-                <div className="bg-gray-800/30 rounded-lg p-4 sm:p-6 border border-gray-700">
-                  <div className="flex items-center gap-3 mb-3 sm:mb-4">
-                    <div className="w-3 h-3 bg-green-500 rounded-full flex-shrink-0"></div>
-                    <h4 className="text-white font-semibold text-sm sm:text-base">Wireless Freedom</h4>
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
+                    <i className="fas fa-heartbeat text-[#ff4040] text-xl"></i>
                   </div>
-                  <p className="text-gray-400 text-sm">
-                    Untethered movement for natural interaction and comprehensive training experiences
-                  </p>
-                </div>
-
-                <div className="bg-gray-800/30 rounded-lg p-4 sm:p-6 border border-gray-700">
-                  <div className="flex items-center gap-3 mb-3 sm:mb-4">
-                    <div className="w-3 h-3 bg-purple-500 rounded-full flex-shrink-0"></div>
-                    <h4 className="text-white font-semibold text-sm sm:text-base">Haptic Feedback</h4>
-                  </div>
-                  <p className="text-gray-400 text-sm">
-                    Realistic touch sensations enhance learning and skill development in VR training
+                  <p className="text-gray-300 text-base sm:text-lg">
+                    <span className="text-white font-semibold">Practice medical procedures</span> in a zero-risk environment.
                   </p>
                 </div>
               </div>
 
+              <div className="bg-gray-800/30 rounded-lg p-6 border border-gray-700">
+                <p className="text-xl text-white">
+                  <span className="text-[#ff4040] font-bold">Result?</span> Certified skills in weeks, not years. <span className="text-[#ff4040] font-semibold">No waste. No injuries. Just results.</span>
+                </p>
+              </div>
+
               <div className="pt-4 sm:pt-6">
-                <button className="w-full sm:w-auto bg-[#ff4040] hover:bg-[#ff2020] text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#ff4040]/25 transition-all duration-300">
-                  Experience VR Training
-                </button>
+                <a 
+                  href="https://wa.me/3197010209759?text=Hi!%20I%20would%20like%20to%20start%20my%20VR%20training%20at%20Blue%20OX%20Kampus." 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block w-full sm:w-auto bg-[#ff4040] hover:bg-[#ff2020] text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#ff4040]/25 transition-all duration-300 text-center"
+                >
+                  START MY VR TRAINING
+                </a>
               </div>
             </div>
           </div>

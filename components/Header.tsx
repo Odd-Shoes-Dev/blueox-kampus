@@ -44,12 +44,11 @@ export default function Header(){
             <Link href="/" className="hover:text-[#ff4040] transition-colors">Kampus</Link>
             <Link href="/academy" className="hover:text-[#ff4040] transition-colors">Academy</Link>
             <Link href="/house" className="hover:text-[#ff4040] transition-colors">The House</Link>
-            <Link href="/partners" className="hover:text-[#ff4040] transition-colors">Partners</Link>
             <Link href="/accelerator" className="hover:text-[#ff4040] transition-colors">Accelerator Program</Link>
           </nav>
 
           <div className="flex items-center gap-2 sm:gap-3">
-            <Link className="hidden md:inline-block bg-[#ff4040] text-black px-3 py-1 rounded-md text-[10px] font-black uppercase" href="#apply">Join Kampus</Link>
+            <a href="https://wa.me/3197010209759?text=Hi!%20I%20want%20to%20join%20Blue%20OX%20Kampus." target="_blank" rel="noopener noreferrer" className="hidden md:inline-block bg-[#ff4040] text-black px-4 py-2 rounded-md text-sm font-black uppercase hover:bg-[#ff2020] transition-colors">Join Kampus</a>
             {/* mobile toggle - now flows naturally in flex container */}
             <button ref={btnRef} className="lg:hidden p-2 rounded-md bg-white/5 hover:bg-white/10 transition-colors" aria-label="menu" onClick={() => setOpen(v => !v)}>
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -83,26 +82,21 @@ export default function Header(){
                 The House
               </Link>
               <Link 
-                href="/partners" 
-                onClick={() => setOpen(false)}
-                className="text-white hover:text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider transition-colors"
-              >
-                Partners
-              </Link>
-              <Link 
                 href="/accelerator" 
                 onClick={() => setOpen(false)}
                 className="text-white hover:text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider transition-colors"
               >
                 Accelerator Program
               </Link>
-              <Link 
-                href="#apply" 
+              <a 
+                href="https://wa.me/3197010209759?text=Hi!%20I%20want%20to%20join%20Blue%20OX%20Kampus." 
+                target="_blank" 
+                rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
                 className="bg-[#ff4040] text-black px-4 py-2 rounded-md text-sm font-black uppercase hover:bg-[#ff4040]/90 transition-colors inline-block text-center"
               >
-                Apply
-              </Link>
+                Join Kampus
+              </a>
             </div>
           </div>
         )}
