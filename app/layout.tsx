@@ -5,7 +5,7 @@ export const metadata = {
   title: 'Blue OX Kampus — AI & VR Innovation',
   description: "Blue OX Kampus — Uganda's AI & VR innovation kampus. Training, creation and opportunity — industry-grade simulators, labs, and career pipelines in Mbarara.",
   keywords: ['AI', 'VR', 'simulation', 'training', 'Mbarara', 'Uganda', 'tech kampus', 'skills verification', 'Blue OX'],
-  authors: [{ name: 'Blue OX Kampus', url: 'https://blueoxjobs.eu' }],
+  authors: [{ name: 'Blue OX Kampus', url: 'https://www.blueoxkampus.com' }],
   generator: 'Next.js',
   applicationName: 'Blue OX Kampus',
   referrer: 'origin-when-cross-origin',
@@ -16,14 +16,14 @@ export const metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://blueoxjobs.eu'),
+  metadataBase: new URL('https://www.blueoxkampus.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: 'Blue OX Kampus — AI & VR Innovation',
     description: "Blue OX Kampus — Uganda's AI & VR innovation kampus. Training, creation and opportunity in one place.",
-    url: 'https://blueoxjobs.eu',
+    url: 'https://www.blueoxkampus.com',
     siteName: 'Blue OX Kampus',
     images: [
       { 
@@ -82,8 +82,8 @@ export default function RootLayout({ children }:{children:ReactNode}){
               '@type': 'EducationalOrganization',
               name: 'Blue OX Kampus',
               alternateName: 'BlueOX Kampus',
-              url: 'https://blueoxjobs.eu',
-              logo: 'https://blueoxjobs.eu/assets/images/logo.png',
+              url: 'https://www.blueoxkampus.com',
+              logo: 'https://www.blueoxkampus.com/assets/images/logo.png',
               description: "Uganda's AI & VR innovation kampus. Training, creation and opportunity — industry-grade simulators, labs, and career pipelines in Mbarara.",
               address: {
                 '@type': 'PostalAddress',
@@ -93,7 +93,7 @@ export default function RootLayout({ children }:{children:ReactNode}){
               contactPoint: {
                 '@type': 'ContactPoint',
                 contactType: 'customer service',
-                url: 'https://blueoxjobs.eu'
+                url: 'https://www.blueoxkampus.com'
               },
               sameAs: [
                 'https://twitter.com/blueoxjobs'
