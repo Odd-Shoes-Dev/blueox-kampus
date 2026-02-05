@@ -14,7 +14,7 @@ import ApplyCTA from '../components/ApplyCTA';
 
 export default function Page(){
   return (
-    <main className="bg-gradient-to-b from-black via-gray-900 to-black">
+    <>
       <Header />
       <Hero />
       <OfferingsGrid />
@@ -28,6 +28,6 @@ export default function Page(){
       <StartJourney />
       <ApplyCTA />
       <Footer />
-    </main>
+    </>
   );
 }
