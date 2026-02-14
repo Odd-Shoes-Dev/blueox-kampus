@@ -21,7 +21,7 @@ export default function Page() {
               {/* Hero Content */}
               <div className="text-center lg:text-left flex-1 -mt-6 sm:-mt-4 md:mt-0">
                 <h1 className="blueox-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight text-white mb-2 sm:mb-3 md:mb-4">
-                  FROM <span className="text-[#ff4040]">ISOLATION</span> TO <span className="text-blue-500">INDUSTRY</span>
+                  THE BLUE OX: <span className="text-[#ff4040]">UGANDA'S</span> AI & VR <span className="text-blue-500">KAMPUS</span>
                 </h1>
                 <p className="text-base sm:text-xl md:text-2xl text-gray-300 leading-relaxed mb-6 sm:mb-8">
                   Blue Ox Kampus delivers immersive, industry-aligned technical education to students, refugees, women, persons with disabilities, and underserved youth, bridging the last mile between talent and opportunity.
