@@ -9,11 +9,11 @@ export default function Footer(){
           <img src="/assets/images/logo.png" alt="logo" className="w-10" />
           <div>
             <div className="font-extrabold">BLUE OX KAMPUS</div>
-            <div className="text-xs text-gray-400">Uganda's first AI and VR innovation kampus</div>
+            <div className="text-xs text-gray-400">From Isolation to Industry</div>
           </div>
         </div>
         <div className="text-sm text-gray-400 text-center">
-          <a href="mailto:jobs@blueoxjobs.eu" className="hover:underline">jobs@blueoxjobs.eu</a>
+          <a href="mailto:blueoxrecruit@gmail.com" className="hover:underline">blueoxrecruit@gmail.com</a>
           <div className="mt-1">
             <a href="https://wa.me/3197010209759" className="hover:underline">WhatsApp: +3197010209759</a>
           </div>

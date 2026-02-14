@@ -15,60 +15,89 @@ export default function AcademyPage() {
           <Reveal delay={0.1}>
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-3 py-2 px-4 rounded-full bg-red-600/30 backdrop-blur-sm text-[#ff8080] text-sm font-bold mb-6 border border-[#ff4040]/30">
-                • VR Skilling Academy
+                • Foundation Programs
               </div>
               <h1 className="text-5xl md:text-7xl font-extrabold mb-6 text-white">
-                Train In VR Today. <span className="text-[#ff4040]">Land A Job In Europe In 90 Days.</span>
+                Immersive <span className="text-[#ff4040]">Technical Education</span> for All
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-4">
-                We don't just "teach skills." We fill contracts.
+                Industry-aligned training delivered directly to refugees, women, youth with disabilities, and underserved communities.
               </p>
-              <p className="text-gray-400 text-lg mb-12">(No waste. No injuries. Just results.)</p>
+              <p className="text-gray-400 text-lg mb-12">(Zero material waste. Zero injury risk. Maximum impact.)</p>
 
-              {/* 90-Day Pipeline Section */}
-              <div className="max-w-4xl mx-auto">
-                <div className="glass rounded-2xl p-8 md:p-12">
-                  <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                    Europe is facing a massive shortage of skilled tradespeople. We have the direct contracts to fill those spots. We use VR Simulation to train you to European standards in record time, then we help you land the job.
-                  </p>
-
+              {/* Program Overview Section */}
+              <div className="max-w-5xl mx-auto">
+                <div className="blueox-card p-8 md:p-12">
                   <h4 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
-                    THE <span className="text-[#ff4040]">"90-DAY"</span> PIPELINE:
+                    OUR <span className="text-[#ff4040]">5 PROGRAMS</span>
                   </h4>
 
                   <div className="space-y-6 mb-8">
                     <div className="bg-black/30 rounded-xl p-6">
-                      <h5 className="text-xl font-bold text-[#ff4040] mb-3">
-                        1. ZERO-RISK MASTERY (DAYS 1-60):
-                      </h5>
+                      <div className="flex items-center gap-4 mb-3">
+                        <img src="/icons/fire.svg" alt="Fire" className="w-10 h-10" />
+                        <h5 className="text-xl font-bold text-white">
+                          1. VR Welding & Industrial Fabrication
+                        </h5>
+                      </div>
                       <p className="text-gray-300 leading-relaxed">
-                        Master Welding, Automotive Repair, or Nursing in our hyper-realistic VR simulators. You get 100% certified confidence without wasting materials or risking safety.
+                        Advanced simulation training that builds muscle memory, safety discipline, and procedural accuracy without material waste. Aligned with European industry standards through partnership with Dig in Vision.
                       </p>
                     </div>
 
                     <div className="bg-black/30 rounded-xl p-6">
-                      <h5 className="text-xl font-bold text-blue-400 mb-3">
-                        2. THE STANDARD CHECK:
-                      </h5>
+                      <div className="flex items-center gap-4 mb-3">
+                        <img src="/icons/solar-panel.svg" alt="Solar Panel" className="w-10 h-10" />
+                        <h5 className="text-xl font-bold text-white">
+                          2. Solar Installation & Green Energy
+                        </h5>
+                      </div>
                       <p className="text-gray-300 leading-relaxed">
-                        Our VR metrics prove you are ready. No guessing. If you pass the sim, you know the job.
+                        Hands-on simulation training in photovoltaic installation, system troubleshooting, and maintenance. Supporting Uganda's renewable energy growth and regional green economy.
                       </p>
                     </div>
 
                     <div className="bg-black/30 rounded-xl p-6">
-                      <h5 className="text-xl font-bold text-purple-400 mb-3">
-                        3. THE EUROPEAN PLACEMENT (DAYS 61-90):
-                      </h5>
+                      <div className="flex items-center gap-4 mb-3">
+                        <img src="/icons/charging-station.svg" alt="Charging Station" className="w-10 h-10" />
+                        <h5 className="text-xl font-bold text-white">
+                          3. EV & Mechatronics Engineering
+                        </h5>
+                      </div>
                       <p className="text-gray-300 leading-relaxed">
-                        We don't just wave goodbye. We actually help you. Because we hold direct recruitment contracts, we connect our top graduates directly to European employers who are desperate for certified talent.
+                        Foundational skills for emerging electric mobility and industrial automation sectors. Preparing youth for future-facing industries.
+                      </p>
+                    </div>
+
+                    <div className="bg-black/30 rounded-xl p-6">
+                      <div className="flex items-center gap-4 mb-3">
+                        <img src="/icons/headset.svg" alt="Headset" className="w-10 h-10" />
+                        <h5 className="text-xl font-bold text-white">
+                          4. Customer Care & Workplace Readiness
+                        </h5>
+                      </div>
+                      <p className="text-gray-300 leading-relaxed">
+                        Structured soft-skill and service excellence training to improve employability in local and international markets.
+                      </p>
+                    </div>
+
+                    <div className="bg-black/30 rounded-xl p-6">
+                      <div className="flex items-center gap-4 mb-3">
+                        <img src="/icons/graduation-cap.svg" alt="Graduation Cap" className="w-10 h-10" />
+                        <h5 className="text-xl font-bold text-white">
+                          5. VR Career Guidance for Secondary Schools
+                        </h5>
+                      </div>
+                      <p className="text-gray-300 leading-relaxed">
+                        Immersive career exposure for students lacking real-world insight into technical professions. Students explore trades virtually before making academic decisions.
                       </p>
                     </div>
                   </div>
 
                   <div className="text-center">
-                    <a href="https://wa.me/3197010209759?text=Hi!%20I%20want%20to%20start%20VR%20training%20and%20land%20a%20job%20in%20Europe." target="_blank" rel="noopener noreferrer" className="inline-block bg-[#ff4040] hover:bg-[#ff2020] px-10 py-5 rounded-full text-white font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl">
-                      <i className="fas fa-play-circle mr-2"></i>
-                      START MY TRAINING
+                    <a href="https://wa.me/3197010209759?text=Hi!%20I'm%20interested%20in%20enrolling%20in%20a%20program." target="_blank" rel="noopener noreferrer" className="inline-block bg-[#ff4040] hover:bg-[#ff2020] px-10 py-5 rounded-full text-white font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl">
+                      <img src="/icons/user-check.svg" alt="Enroll" className="inline w-6 h-6 mr-2" />
+                      ENROLL NOW
                     </a>
                   </div>
                 </div>
@@ -114,147 +143,80 @@ export default function AcademyPage() {
           <Reveal delay={0.5}>
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-white">
-                Why VR Training <span className="text-[#ff4040]">Works</span>
+                Why <span className="text-[#ff4040]">VR</span> Training?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Traditional vocational training is broken—expensive, dangerous, and slow. Our VR simulations fix all of that.
+                VR makes technical training accessible, affordable, and safe for everyone.
               </p>
             </div>
           </Reveal>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <Reveal delay={0.6}>
-              <div className="glass p-8 rounded-xl">
-                <div className="text-5xl font-black text-[#ff4040] mb-4">70%</div>
-                <h3 className="text-2xl font-bold text-white mb-3">Job Placement Rate</h3>
+              <div className="blueox-card p-8">
+                <div className="text-5xl font-black text-[#ff4040] mb-4">90%</div>
+                <h3 className="text-2xl font-bold text-white mb-3">Lower Training Cost</h3>
                 <p className="text-gray-400">
-                  Our VR graduates secure employment within 6 months of completing their training
+                  VR reduces per-student training cost from $500 to $50 through simulation efficiency
                 </p>
               </div>
             </Reveal>
 
             <Reveal delay={0.7}>
-              <div className="glass p-8 rounded-xl">
-                <div className="text-5xl font-black text-blue-400 mb-4">90%</div>
-                <h3 className="text-2xl font-bold text-white mb-3">Cost Savings</h3>
+              <div className="blueox-card p-8">
+                <div className="text-5xl font-black text-blue-400 mb-4">0</div>
+                <h3 className="text-2xl font-bold text-white mb-3">Material Waste</h3>
                 <p className="text-gray-400">
-                  No material waste, no injuries, no expensive equipment damage during learning
+                  No gas, electrodes, or metal waste. Practice unlimited times without consumables
                 </p>
               </div>
             </Reveal>
 
             <Reveal delay={0.8}>
-              <div className="glass p-8 rounded-xl">
-                <div className="text-5xl font-black text-purple-400 mb-4">5x</div>
-                <h3 className="text-2xl font-bold text-white mb-3">Faster Learning</h3>
+              <div className="blueox-card p-8">
+                <div className="text-5xl font-black text-purple-400 mb-4">100%</div>
+                <h3 className="text-2xl font-bold text-white mb-3">Safety</h3>
                 <p className="text-gray-400">
-                  Master skills in weeks instead of years with unlimited practice in safe VR environments
+                  Zero injury risk, accessible for persons with disabilities, portable to remote zones
                 </p>
               </div>
             </Reveal>
           </div>
 
-          {/* Training Programs Details */}
+          {/* Target Beneficiaries */}
           <Reveal delay={0.9}>
             <div className="mb-16">
-              <h3 className="text-3xl font-bold text-white mb-8 text-center">Available <span className="text-[#ff4040]">Training Programs</span></h3>
-              
-              {/* Welding */}
-              <div className="glass rounded-2xl p-8 md:p-12 mb-8">
-                <div className="flex items-center mb-6">
-                  <i className="fas fa-fire text-5xl text-[#ff4040] mr-4"></i>
-                  <h4 className="text-3xl font-bold text-white">Welding Mastery</h4>
+              <h3 className="text-3xl font-bold text-white mb-8 text-center">Who We <span className="text-[#ff4040]">Serve</span></h3>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="blueox-card p-8 text-center">
+                  <img src="/icons/home.svg" alt="Home" className="w-16 h-16 mx-auto mb-4" />
+                  <h4 className="text-xl font-bold text-white mb-2">Refugees</h4>
+                  <p className="text-gray-400">In Nakivale Settlement and across Western Uganda</p>
                 </div>
-                <p className="text-gray-300 text-lg mb-6">
-                  Master industrial welding techniques through immersive VR simulations. Practice unlimited times without burning a single welding rod.
-                </p>
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <h5 className="text-xl font-bold text-white mb-3">What You'll Learn:</h5>
-                    <ul className="text-gray-300 space-y-2">
-                      <li>• <strong className="text-[#ff4040]">MIG Welding</strong> - Metal Inert Gas welding techniques</li>
-                      <li>• <strong className="text-[#ff4040]">TIG Welding</strong> - Tungsten Inert Gas precision welding</li>
-                      <li>• <strong className="text-[#ff4040]">Stick Welding</strong> - Shielded Metal Arc Welding (SMAW)</li>
-                      <li>• Safety protocols and equipment handling</li>
-                      <li>• Quality inspection and troubleshooting</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="text-xl font-bold text-white mb-3">Program Details:</h5>
-                    <ul className="text-gray-300 space-y-2">
-                      <li>• <strong>Duration:</strong> 8-12 weeks</li>
-                      <li>• <strong>Format:</strong> VR simulations + real-world practice</li>
-                      <li>• <strong>Certification:</strong> Industry-recognized certificate</li>
-                      <li>• <strong>Job Support:</strong> Career placement assistance</li>
-                      <li>• <strong>Zero Risk:</strong> No injuries, no waste</li>
-                    </ul>
-                  </div>
+                <div className="blueox-card p-8 text-center">
+                  <img src="/icons/female.svg" alt="Female" className="w-16 h-16 mx-auto mb-4" />
+                  <h4 className="text-xl font-bold text-white mb-2">Women</h4>
+                  <p className="text-gray-400">Entering technical trades and technical fields</p>
                 </div>
-              </div>
-
-              {/* Automotive */}
-              <div className="glass rounded-2xl p-8 md:p-12 mb-8">
-                <div className="flex items-center mb-6">
-                  <i className="fas fa-car text-5xl text-blue-400 mr-4"></i>
-                  <h4 className="text-3xl font-bold text-white">Automotive Repair</h4>
+                <div className="blueox-card p-8 text-center">
+                  <img src="/icons/wheelchair.svg" alt="Wheelchair" className="w-16 h-16 mx-auto mb-4" />
+                  <h4 className="text-xl font-bold text-white mb-2">Persons with Disabilities</h4>
+                  <p className="text-gray-400">Accessible VR training environments</p>
                 </div>
-                <p className="text-gray-300 text-lg mb-6">
-                  Learn to diagnose and repair vehicles in a fully-equipped virtual garage. Practice on different makes and models without expensive equipment.
-                </p>
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <h5 className="text-xl font-bold text-white mb-3">What You'll Learn:</h5>
-                    <ul className="text-gray-300 space-y-2">
-                      <li>• <strong className="text-blue-400">Engine Diagnostics</strong> - Identify and fix engine problems</li>
-                      <li>• <strong className="text-blue-400">Transmission Repair</strong> - Manual and automatic systems</li>
-                      <li>• <strong className="text-blue-400">Electrical Systems</strong> - Modern vehicle electronics</li>
-                      <li>• Brake systems and suspension</li>
-                      <li>• Routine maintenance procedures</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="text-xl font-bold text-white mb-3">Program Details:</h5>
-                    <ul className="text-gray-300 space-y-2">
-                      <li>• <strong>Duration:</strong> 10-16 weeks</li>
-                      <li>• <strong>Format:</strong> VR garage simulations</li>
-                      <li>• <strong>Certification:</strong> Automotive technician certificate</li>
-                      <li>• <strong>Tools:</strong> Virtual diagnostic equipment</li>
-                      <li>• <strong>Vehicles:</strong> Multiple makes and models</li>
-                    </ul>
-                  </div>
+                <div className="blueox-card p-8 text-center">
+                  <img src="/icons/school.svg" alt="School" className="w-16 h-16 mx-auto mb-4" />
+                  <h4 className="text-xl font-bold text-white mb-2">Rural Students</h4>
+                  <p className="text-gray-400">Secondary school career guidance programs</p>
                 </div>
-              </div>
-
-              {/* Medical */}
-              <div className="glass rounded-2xl p-8 md:p-12 mb-8">
-                <div className="flex items-center mb-6">
-                  <i className="fas fa-heartbeat text-5xl text-purple-400 mr-4"></i>
-                  <h4 className="text-3xl font-bold text-white">Medical Procedures Training</h4>
+                <div className="blueox-card p-8 text-center">
+                  <img src="/icons/user-graduate.svg" alt="User Graduate" className="w-16 h-16 mx-auto mb-4" />
+                  <h4 className="text-xl font-bold text-white mb-2">Out-of-School Youth</h4>
+                  <p className="text-gray-400">Second-chance skills training opportunities</p>
                 </div>
-                <p className="text-gray-300 text-lg mb-6">
-                  Practice critical medical procedures in zero-risk VR environments. Perfect your technique before working with real patients.
-                </p>
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <h5 className="text-xl font-bold text-white mb-3">What You'll Learn:</h5>
-                    <ul className="text-gray-300 space-y-2">
-                      <li>• <strong className="text-purple-400">Emergency Response</strong> - Critical care procedures</li>
-                      <li>• <strong className="text-purple-400">Patient Assessment</strong> - Vital signs and diagnostics</li>
-                      <li>• <strong className="text-purple-400">Basic Procedures</strong> - IV insertion, wound care</li>
-                      <li>• Sterilization and safety protocols</li>
-                      <li>• Patient communication skills</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="text-xl font-bold text-white mb-3">Program Details:</h5>
-                    <ul className="text-gray-300 space-y-2">
-                      <li>• <strong>Duration:</strong> 12-20 weeks</li>
-                      <li>• <strong>Format:</strong> VR patient simulations</li>
-                      <li>• <strong>Certification:</strong> Medical assistant certificate</li>
-                      <li>• <strong>Safety:</strong> Zero patient risk during training</li>
-                      <li>• <strong>Scenarios:</strong> Real-world emergency situations</li>
-                    </ul>
-                  </div>
+                <div className="blueox-card p-8 text-center">
+                  <img src="/icons/building.svg" alt="Building" className="w-16 h-16 mx-auto mb-4" />
+                  <h4 className="text-xl font-bold text-white mb-2">TVET Institutions</h4>
+                  <p className="text-gray-400">Upgrading traditional vocational training</p>
                 </div>
               </div>
             </div>
@@ -263,17 +225,17 @@ export default function AcademyPage() {
           {/* Enrollment Process */}
           <Reveal delay={1.0}>
             <div className="mb-16">
-              <h3 className="text-3xl font-bold text-white mb-8 text-center">How to <span className="text-[#ff4040]">Enroll</span></h3>
+              <h3 className="text-3xl font-bold text-white mb-8 text-center">How to <span className="text-[#ff4040]">Apply</span></h3>
               <div className="grid md:grid-cols-4 gap-6">
                 {[
-                  { step: 1, title: 'Choose Program', desc: 'Select your training track: Welding, Automotive, or Medical', icon: 'fa-clipboard-list' },
-                  { step: 2, title: 'Assessment', desc: 'Quick skills assessment to customize your learning path', icon: 'fa-user-check' },
-                  { step: 3, title: 'Start Training', desc: 'Begin VR simulations with expert instructor guidance', icon: 'fa-vr-cardboard' },
-                  { step: 4, title: 'Get Certified', desc: 'Complete program and receive industry certification', icon: 'fa-certificate' }
+                  { step: 1, title: 'Choose Program', desc: 'Select the training track that matches your goals and interests', icon: 'clipboard-list.svg' },
+                  { step: 2, title: 'Complete Application', desc: 'Fill out the enrollment form via WhatsApp or in-person', icon: 'user-check.svg' },
+                  { step: 3, title: 'Start Training', desc: 'Begin VR simulations with expert guidance from local instructors', icon: 'vr-cardboard.svg' },
+                  { step: 4, title: 'Graduate & Work', desc: 'Complete program, get certified, and access job placement support', icon: 'certificate.svg' }
                 ].map((step) => (
-                  <div key={step.step} className="glass p-6 rounded-xl text-center">
+                  <div key={step.step} className="blueox-card p-6 text-center">
                     <div className="w-16 h-16 bg-[#ff4040] rounded-full flex items-center justify-center mx-auto mb-4">
-                      <i className={`fas ${step.icon} text-2xl text-white`}></i>
+                      <img src={`/icons/${step.icon}`} alt={step.title} className="w-8 h-8 invert" />
                     </div>
                     <h4 className="text-xl font-bold text-white mb-2">Step {step.step}</h4>
                     <h5 className="text-lg font-semibold text-[#ff4040] mb-2">{step.title}</h5>
@@ -291,15 +253,15 @@ export default function AcademyPage() {
               <div className="space-y-4">
                 {[
                   { q: 'Do I need VR experience to start?', a: 'No! We provide complete orientation and training on VR equipment. Most students adapt within the first session.' },
-                  { q: 'Are the certifications recognized by employers?', a: 'Yes! Our programs are industry-aligned and employers value the hands-on VR training experience.' },
-                  { q: 'What happens after I complete the program?', a: 'We provide job placement assistance and connect you with our network of hiring partners. 70% of graduates find employment within 6 months.' },
-                  { q: 'Can I practice outside of class hours?', a: 'Depending on your program package, you may have access to VR equipment for additional practice sessions.' },
-                  { q: 'What if I need to take a break from training?', a: 'We offer flexible scheduling. You can pause and resume your training as needed.' },
-                  { q: 'Do you provide financial assistance?', a: 'Yes! We offer payment plans and scholarship opportunities. Contact us to discuss options.' }
+                  { q: 'Are the programs free?', a: 'We offer scholarship opportunities for refugees, women, and persons with disabilities. Contact us to discuss eligibility and funding options.' },
+                  { q: 'What happens after I complete the program?', a: 'We provide job placement assistance through our ethical workforce pathways—both local Ugandan opportunities and international placements through formal labor agreements.' },
+                  { q: 'Can persons with disabilities participate?', a: 'Yes! VR training is highly accessible. We work with each individual to ensure equipment and programs are adapted to their needs.' },
+                  { q: 'How long are the programs?', a: 'Programs range from 8-20 weeks depending on the track. We offer flexible scheduling to accommodate different needs.' },
+                  { q: 'Do you offer mobile training units?', a: 'Yes! We deploy mobile VR training labs directly to refugee settlements, rural schools, and underserved communities.' }
                 ].map((faq, i) => (
-                  <div key={i} className="glass p-6 rounded-xl">
+                  <div key={i} className="blueox-card p-6">
                     <h4 className="text-lg font-bold text-white mb-2">
-                      <i className="fas fa-question-circle text-[#ff4040] mr-2"></i>
+                      <img src="/icons/question-circle.svg" alt="Question" className="inline w-6 h-6 mr-2" />
                       {faq.q}
                     </h4>
                     <p className="text-gray-400 ml-7">{faq.a}</p>
@@ -312,22 +274,22 @@ export default function AcademyPage() {
           {/* CTA */}
           <Reveal delay={1.2}>
             <div className="text-center">
-              <div className="glass rounded-2xl border-2 border-[#ff4040]/50 p-8 mb-8">
+              <div className="blueox-card border-2 border-[#ff4040]/50 p-8 mb-8">
                 <h3 className="text-3xl font-bold text-white mb-4">
                   Ready to Master a New Skill?
                 </h3>
                 <p className="text-xl text-gray-300 mb-2">
-                  Join the next generation of certified professionals
+                  Join us in building the workforce of the future
                 </p>
                 <p className="text-gray-400">
-                  Admissions for Feb 2026 intake are now open
+                  Training cohorts starting soon
                 </p>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="https://wa.me/3197010209759?text=Hi!%20I'm%20interested%20in%20VR%20Training%20at%20Blue%20OX%20Academy" target="_blank" rel="noopener noreferrer" className="bg-red-600 hover:bg-[#ff2020] px-10 py-5 rounded-full text-white font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl flex items-center gap-3">
-                  <i className="fab fa-whatsapp text-2xl"></i>
-                  START MY VR TRAINING
+                <a href="https://wa.me/3197010209759?text=Hi!%20I'm%20interested%20in%20enrolling%20in%20a%20training%20program." target="_blank" rel="noopener noreferrer" className="bg-[#ff4040] hover:bg-[#ff2020] px-10 py-5 rounded-full text-white font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl flex items-center gap-3">
+                  <img src="/icons/users.svg" alt="Apply" className="w-6 h-6 invert" />
+                  APPLY NOW
                 </a>
                 <Link href="/" className="border-2 border-white/30 px-10 py-5 rounded-full backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-lg text-white">
                   Back to Home
@@ -335,8 +297,8 @@ export default function AcademyPage() {
               </div>
               
               <div className="mt-8 text-gray-400">
-                <p>Email: <a href="mailto:hello@theblueox.com" className="text-[#ff4040] hover:underline">hello@theblueox.com</a></p>
-                <p className="mt-2 text-sm">Looking for startup accelerator? <Link href="/accelerator" className="text-[#ff4040] hover:underline">View Accelerator Program</Link></p>
+                <p>Or visit us: <span className="text-white">Blue Ox Kampus, Western Uganda</span></p>
+                <p className="mt-2 text-sm">Want to support our mission? <Link href="/" className="text-[#ff4040] hover:underline">Become a Funding Partner</Link></p>
               </div>
             </div>
           </Reveal>

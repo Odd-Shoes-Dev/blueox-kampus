@@ -1,14 +1,14 @@
 {
-  "name": "Blue OX Kampus — AI & VR Innovation",
-  "short_name": "BlueOX",
-  "description": "Blue OX Kampus — Uganda's AI & VR innovation kampus. Training, creation and opportunity — industry-grade simulators, labs, and career pipelines in Mbarara.",
+  "name": "Blue Ox Kampus — VR Technical Training for Underserved Communities",
+  "short_name": "Blue Ox",
+  "description": "Blue Ox Kampus delivers immersive, industry-aligned technical education to students, refugees, women, persons with disabilities, and underserved youth in Western Uganda through VR-based training. From isolation to industry.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#05080f",
   "theme_color": "#ff4040",
-  "categories": ["education", "technology", "innovation"],
+  "categories": ["education", "social", "nonprofit"],
   "lang": "en",
   "dir": "ltr",
   "icons": [

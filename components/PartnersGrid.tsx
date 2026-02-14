@@ -108,7 +108,7 @@ export default function PartnersGrid(){
                   className="inline-flex items-center gap-2 text-[#ff4040] hover:text-[#ff8080] transition-colors font-semibold text-sm"
                 >
                   Visit Website
-                  <i className="fas fa-external-link-alt text-xs"></i>
+                  <img src="/icons/external-link-alt.svg" alt="External link" className="w-4 h-4" />
                 </a>
               </div>
             </Reveal>

@@ -1,43 +1,52 @@
-# Blue OX Kampus — Next.js (TypeScript) Starter
+# Blue Ox Kampus — VR Technical Training Platform
 
-This repository contains a Next.js App Router (TypeScript) starter scaffolded from your existing landing pages. It uses Tailwind CSS and is configured for deployment on Vercel.
+Blue Ox Kampus is a foundation-focused platform delivering immersive, industry-aligned technical education to students, refugees, women, persons with disabilities, and underserved youth in Western Uganda. Built with Next.js 14, TypeScript, and Tailwind CSS.
 
-## What I added
-- Next.js (App Router) + TypeScript
-- Tailwind CSS, PostCSS
-- Basic components: `Header`, `Hero`, `OfferingsGrid`, `SkillsSection`, `HouseCard`, `Footer`
-- A placeholder API route: `POST /api/apply` (logs submissions) — replace with your email/DB solution later
-- `styles/globals.css` includes fonts (Syne, Space Mono) and Tailwind
+## Mission
+**From Isolation to Industry** — Bridging the last mile between talent and opportunity through accessible, cost-efficient VR-based technical education.
+
+## Tech Stack
+- **Framework**: Next.js 14 (App Router) + TypeScript
+- **Styling**: Tailwind CSS with custom Blue Ox design system
+- **3D Models**: model-viewer for VR equipment visualization
+- **Icons**: Custom SVG icon library (32+ icons in `/public/icons/`)
+- **Fonts**: Orbitron (headings), Rajdhani (body), Space Mono (technical)
+- **Deployment**: Vercel
+
+## Key Features
+- VR-based technical training programs (welding, solar, EV, customer care)
+- Target beneficiaries: students, refugees, women, PWDs, out-of-school youth
+- Partnership with Dig in Vision (European VR simulation developer)
+- Ethical workforce pathways (local + international placement)
+- Mobile-optimized responsive design
+
+## Project Structure
+- `app/` - Next.js App Router pages
+  - `page.tsx` - Homepage (hero section only)
+  - `academy/` - Programs page
+  - `partners/` - Partners & funding page
+  - `house/` - Community space page
+- `components/` - React components
+- `public/icons/` - Custom SVG icon library
+- `styles/` - Global styles and Tailwind config
 
 ## Setup (local)
 1. Install dependencies:
-
+   ```bash
    npm install
+   ```
 
 2. Run development server:
-
+   ```bash
    npm run dev
+   ```
 
 3. Build for production:
-
+   ```bash
    npm run build
+   ```
 
-4. Lint/format:
-
-   npm run lint
-   npm run format
-
-## Assets
-Please move your existing `assets/images/logo.png` and `assets/images/logo_name.png` into `public/assets/images/` so the site can reference them as `/assets/images/logo.png`.
-
-## Deploying to Vercel
-1. Sign in to Vercel and import this repository (or link your Git provider and repo).
-2. Vercel will detect Next.js and set everything up. No additional server is required for the placeholder API route; it will run as a serverless function.
-
-## Notes
-- I did not configure email or persistent storage for form submissions — the `POST /api/apply` route is a placeholder. When you are ready, we can integrate SMTP, SendGrid, or a simple DB.
-- If you want, I can initialize a Git repo and create a GitHub repo for you and set up automatic Vercel deploys.
-
----
-
-If you want, I can now: (a) initialize git, (b) move assets into `public`, or (c) push a sample commit. Which do you want next?
+## Contact
+- **Email**: blueoxrecruit@gmail.com
+- **WhatsApp**: +3197010209759
+- **Website**: https://www.blueoxkampus.com

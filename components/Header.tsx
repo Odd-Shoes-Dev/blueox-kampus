@@ -43,14 +43,14 @@ export default function Header(){
           </div>
 
           <nav className="hidden lg:flex gap-6 text-xs uppercase font-bold tracking-widest">
-            <Link href="/" className={pathname === '/' ? 'text-[#ff4040]' : 'hover:text-[#ff4040] transition-colors'}>Kampus</Link>
-            <Link href="/academy" className={pathname === '/academy' ? 'text-[#ff4040]' : 'hover:text-[#ff4040] transition-colors'}>Academy</Link>
+            <Link href="/" className={pathname === '/' ? 'text-[#ff4040]' : 'hover:text-[#ff4040] transition-colors'}>Home</Link>
+            <Link href="/academy" className={pathname === '/academy' ? 'text-[#ff4040]' : 'hover:text-[#ff4040] transition-colors'}>Programs</Link>
             <Link href="/house" className={pathname === '/house' ? 'text-[#ff4040]' : 'hover:text-[#ff4040] transition-colors'}>The House</Link>
-            <Link href="/accelerator" className={pathname === '/accelerator' ? 'text-[#ff4040]' : 'hover:text-[#ff4040] transition-colors'}>Accelerator Program</Link>
+            <Link href="/partners" className={pathname === '/partners' ? 'text-[#ff4040]' : 'hover:text-[#ff4040] transition-colors'}>Partners</Link>
           </nav>
 
           <div className="flex items-center gap-2 sm:gap-3">
-            <a href="https://wa.me/3197010209759?text=Hi!%20I%20want%20to%20join%20Blue%20OX%20Kampus." target="_blank" rel="noopener noreferrer" className="hidden md:inline-block bg-[#ff4040] text-black px-4 py-2 rounded-md text-sm font-black uppercase hover:bg-[#ff2020] transition-colors">Join Kampus</a>
+            <a href="https://wa.me/3197010209759?text=Hi!%20I%20want%20to%20fund%20a%20training%20cohort." target="_blank" rel="noopener noreferrer" className="hidden md:inline-block bg-[#ff4040] text-white px-4 py-2 rounded-md text-sm font-black uppercase hover:bg-[#ff2020] transition-colors">Fund Training</a>
             {/* mobile toggle - now flows naturally in flex container */}
             <button ref={btnRef} className="lg:hidden p-2 rounded-md bg-white/5 hover:bg-white/10 transition-colors" aria-label="menu" onClick={() => setOpen(v => !v)}>
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -67,14 +67,14 @@ export default function Header(){
                 onClick={() => setOpen(false)}
                 className={pathname === '/' ? 'text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider' : 'text-white hover:text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider transition-colors'}
               >
-                Kampus
+                Home
               </Link>
               <Link 
                 href="/academy" 
                 onClick={() => setOpen(false)}
                 className={pathname === '/academy' ? 'text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider' : 'text-white hover:text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider transition-colors'}
               >
-                Academy
+                Programs
               </Link>
               <Link 
                 href="/house" 
@@ -84,20 +84,20 @@ export default function Header(){
                 The House
               </Link>
               <Link 
-                href="/accelerator" 
+                href="/partners" 
                 onClick={() => setOpen(false)}
-                className={pathname === '/accelerator' ? 'text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider' : 'text-white hover:text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider transition-colors'}
+                className={pathname === '/partners' ? 'text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider' : 'text-white hover:text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider transition-colors'}
               >
-                Accelerator Program
+                Partners
               </Link>
               <a 
-                href="https://wa.me/3197010209759?text=Hi!%20I%20want%20to%20join%20Blue%20OX%20Kampus." 
+                href="https://wa.me/3197010209759?text=Hi!%20I%20want%20to%20fund%20a%20training%20cohort." 
                 target="_blank" 
                 rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
-                className="bg-[#ff4040] text-black px-4 py-2 rounded-md text-sm font-black uppercase hover:bg-[#ff4040]/90 transition-colors inline-block text-center"
+                className="bg-[#ff4040] text-white px-4 py-2 rounded-md text-sm font-black uppercase hover:bg-[#ff4040]/90 transition-colors inline-block text-center"
               >
-                Join Kampus
+                Fund Training
               </a>
             </div>
           </div>

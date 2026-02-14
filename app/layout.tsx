@@ -2,15 +2,15 @@ import './globals.css';
 import { ReactNode } from 'react';
 
 export const metadata = {
-  title: 'Blue OX Kampus — AI & VR Innovation',
-  description: "Blue OX Kampus — Uganda's AI & VR innovation kampus. Training, creation and opportunity — industry-grade simulators, labs, and career pipelines in Mbarara.",
-  keywords: ['AI', 'VR', 'simulation', 'training', 'Mbarara', 'Uganda', 'tech kampus', 'skills verification', 'Blue OX'],
-  authors: [{ name: 'Blue OX Kampus', url: 'https://www.blueoxkampus.com' }],
+  title: 'Blue Ox Kampus — VR Technical Training for Refugees & Underserved Communities',
+  description: "Blue Ox Kampus delivers immersive, industry-aligned technical education to students, refugees, women, persons with disabilities, and underserved youth in Western Uganda — bridging the last mile between talent and opportunity through VR-based training.",
+  keywords: ['VR training', 'technical education', 'refugees', 'Uganda', 'Nakivale Settlement', 'vocational training', 'welding simulation', 'solar installation', 'women empowerment', 'disability inclusion', 'workforce development', 'TVET', 'Blue Ox Kampus'],
+  authors: [{ name: 'Blue Ox Kampus', url: 'https://www.blueoxkampus.com' }],
   generator: 'Next.js',
-  applicationName: 'Blue OX Kampus',
+  applicationName: 'Blue Ox Kampus',
   referrer: 'origin-when-cross-origin',
-  creator: 'Blue OX Kampus',
-  publisher: 'Blue OX Kampus',
+  creator: 'Blue Ox Kampus',
+  publisher: 'Blue Ox Kampus',
   formatDetection: {
     email: false,
     address: false,
@@ -21,16 +21,16 @@ export const metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Blue OX Kampus — AI & VR Innovation',
-    description: "Blue OX Kampus — Uganda's AI & VR innovation kampus. Training, creation and opportunity in one place.",
+    title: 'Blue Ox Kampus — From Isolation to Industry',
+    description: "Delivering VR-based technical training to refugees, students, women, and persons with disabilities across Western Uganda. Building skills, creating opportunity, and bridging the last mile to employment.",
     url: 'https://www.blueoxkampus.com',
-    siteName: 'Blue OX Kampus',
+    siteName: 'Blue Ox Kampus',
     images: [
       { 
         url: '/assets/images/logo.png', 
         width: 1200,
         height: 630,
-        alt: 'Blue OX Kampus — AI & VR Innovation' 
+        alt: 'Blue Ox Kampus — VR Technical Training for Underserved Communities' 
       }
     ],
     locale: 'en_US',
@@ -38,8 +38,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Blue OX Kampus — AI & VR Innovation',
-    description: "Blue OX Kampus — industry-grade AI & VR simulators, training and career pipelines in Mbarara, Uganda.",
+    title: 'Blue Ox Kampus — From Isolation to Industry',
+    description: "VR-based technical training for refugees, students, women, and PWDs in Western Uganda. 90% lower cost, zero waste, maximum inclusion.",
     images: ['/assets/images/logo.png'],
     site: '@blueoxjobs'
   },
@@ -80,20 +80,32 @@ export default function RootLayout({ children }:{children:ReactNode}){
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'EducationalOrganization',
-              name: 'Blue OX Kampus',
+              name: 'Blue Ox Kampus',
               alternateName: 'BlueOX Kampus',
               url: 'https://www.blueoxkampus.com',
               logo: 'https://www.blueoxkampus.com/assets/images/logo.png',
-              description: "Uganda's AI & VR innovation kampus. Training, creation and opportunity — industry-grade simulators, labs, and career pipelines in Mbarara.",
+              description: "Blue Ox Kampus delivers immersive, industry-aligned technical education to students, refugees, women, persons with disabilities, and underserved youth in Western Uganda through VR-based training programs. From isolation to industry.",
+              mission: "Bridging the last mile between talent and opportunity through accessible, cost-efficient VR-based technical education for underserved communities.",
               address: {
                 '@type': 'PostalAddress',
-                addressLocality: 'Mbarara',
+                addressRegion: 'Western Uganda',
+                addressLocality: 'Nakivale Settlement',
                 addressCountry: 'Uganda'
               },
               contactPoint: {
                 '@type': 'ContactPoint',
                 contactType: 'customer service',
+                email: 'blueoxrecruit@gmail.com',
+                telephone: '+3197010209759',
                 url: 'https://www.blueoxkampus.com'
+              },
+              areaServed: {
+                '@type': 'Place',
+                name: 'Western Uganda'
+              },
+              audience: {
+                '@type': 'Audience',
+                audienceType: ['Students', 'Refugees', 'Women', 'Persons with Disabilities', 'Out-of-school Youth']
               },
               sameAs: [
                 'https://twitter.com/blueoxjobs'

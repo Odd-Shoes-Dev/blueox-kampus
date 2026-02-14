@@ -92,53 +92,53 @@ export default function VRShowcase() {
             <div className="space-y-6 sm:space-y-8 mt-8 lg:mt-0">
               <div className="space-y-4 sm:space-y-6">
                 <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
-                  Vocational training is broken—expensive, dangerous, and slow. We fixed it with <span className="text-[#ff4040] font-semibold italic">VR simulations</span> that let you:
+                  Traditional vocational training is expensive, dangerous, and inaccessible. We fixed it with <span className="text-[#ff4040] font-semibold italic">VR simulations</span> that make technical education available to everyone:
                 </p>
               </div>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
-                    <i className="fas fa-fire text-[#ff4040] text-xl"></i>
+                    <img src="/icons/fire.svg" alt="Fire" className="w-8 h-8" />
                   </div>
                   <p className="text-gray-300 text-base sm:text-lg">
-                    <span className="text-white font-semibold">Master welding (MIG, TIG, Stick)</span> without burning a single rod.
+                    <span className="text-white font-semibold">Master welding (MIG, TIG, Stick)</span> without consuming materials or risk of injury.
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
-                    <i className="fas fa-car text-[#ff4040] text-xl"></i>
+                    <img src="/icons/solar-panel.svg" alt="Solar Panel" className="w-8 h-8" />
                   </div>
                   <p className="text-gray-300 text-base sm:text-lg">
-                    <span className="text-white font-semibold">Diagnose and repair engines</span> in a virtual garage.
+                    <span className="text-white font-semibold">Install solar systems</span> through simulated hands-on practice.
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
-                    <i className="fas fa-heartbeat text-[#ff4040] text-xl"></i>
+                    <img src="/icons/wheelchair.svg" alt="Wheelchair" className="w-8 h-8" />
                   </div>
                   <p className="text-gray-300 text-base sm:text-lg">
-                    <span className="text-white font-semibold">Practice medical procedures</span> in a zero-risk environment.
+                    <span className="text-white font-semibold">Accessible for all</span> — including persons with disabilities in remote areas.
                   </p>
                 </div>
               </div>
 
               <div className="bg-gray-800/30 rounded-lg p-6 border border-gray-700">
                 <p className="text-xl text-white">
-                  <span className="text-[#ff4040] font-bold">Result?</span> Certified skills in weeks, not years. <span className="text-[#ff4040] font-semibold">No waste. No injuries. Just results.</span>
+                  <span className="text-[#ff4040] font-bold">Result?</span> Certified skills at 90% lower cost. <span className="text-blue-500 font-semibold">Zero waste. Zero injuries. Maximum access.</span>
                 </p>
               </div>
 
               <div className="pt-4 sm:pt-6">
                 <a 
-                  href="https://wa.me/3197010209759?text=Hi!%20I%20would%20like%20to%20start%20my%20VR%20training%20at%20Blue%20OX%20Kampus." 
+                  href="https://wa.me/3197010209759?text=Hi!%20I%20would%20like%20to%20learn%20more%20about%20VR%20training." 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-block w-full sm:w-auto bg-[#ff4040] hover:bg-[#ff2020] text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#ff4040]/25 transition-all duration-300 text-center"
                 >
-                  START MY VR TRAINING
+                  LEARN MORE
                 </a>
               </div>
             </div>

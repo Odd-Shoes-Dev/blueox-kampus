@@ -370,14 +370,14 @@ export default function PartnersPage() {
                   Contact Us on WhatsApp
                 </a>
                 <a 
-                  href="mailto:hello@theblueox.com"
+                  href="mailto:blueoxrecruit@gmail.com"
                   className="border-2 border-white/30 px-10 py-5 rounded-full backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-lg text-white inline-block"
                 >
                   Email Us
                 </a>
               </div>
               <p className="text-gray-400 text-sm mt-6">
-                Email: <a href="mailto:hello@theblueox.com" className="text-[#ff4040] hover:underline">hello@theblueox.com</a>
+                Email: <a href="mailto:blueoxrecruit@gmail.com" className="text-[#ff4040] hover:underline">blueoxrecruit@gmail.com</a>
               </p>
             </div>
           </Reveal>
