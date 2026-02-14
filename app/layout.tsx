@@ -2,7 +2,7 @@ import './globals.css';
 import { ReactNode } from 'react';
 
 export const metadata = {
-  title: 'Blue Ox Kampus — VR Technical Training for Refugees & Underserved Communities',
+  title: 'Blue Ox Kampus — VR Technical Training for Students, Refugees & Underserved Communities',
   description: "Blue Ox Kampus delivers immersive, industry-aligned technical education to students, refugees, women, persons with disabilities, and underserved youth in Western Uganda, bridging the last mile between talent and opportunity through VR-based training.",
   keywords: ['VR training', 'technical education', 'refugees', 'Uganda', 'Nakivale Settlement', 'vocational training', 'welding simulation', 'solar installation', 'women empowerment', 'disability inclusion', 'workforce development', 'TVET', 'Blue Ox Kampus'],
   authors: [{ name: 'Blue Ox Kampus', url: 'https://www.blueoxkampus.com' }],
