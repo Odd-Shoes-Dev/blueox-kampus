@@ -174,7 +174,7 @@ export default function AcademyPage() {
 
             <Reveal delay={0.8}>
               <div className="blueox-card p-8">
-                <div className="text-5xl font-black text-purple-400 mb-4">100%</div>
+                <div className="text-5xl font-black text-red-500 mb-4">100%</div>
                 <h3 className="text-2xl font-bold text-white mb-3">Safety</h3>
                 <p className="text-gray-400">
                   Zero injury risk, accessible for persons with disabilities, portable to remote zones
@@ -189,6 +189,11 @@ export default function AcademyPage() {
               <h3 className="text-3xl font-bold text-white mb-8 text-center">Who We <span className="text-[#ff4040]">Serve</span></h3>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div className="blueox-card p-8 text-center">
+                  <img src="/icons/school.svg" alt="Students" className="w-16 h-16 mx-auto mb-4" />
+                  <h4 className="text-xl font-bold text-white mb-2">Students</h4>
+                  <p className="text-gray-400">Technical training and career guidance for all educational levels</p>
+                </div>
+                <div className="blueox-card p-8 text-center">
                   <img src="/icons/home.svg" alt="Home" className="w-16 h-16 mx-auto mb-4" />
                   <h4 className="text-xl font-bold text-white mb-2">Refugees</h4>
                   <p className="text-gray-400">In Nakivale Settlement and across Western Uganda</p>
@@ -197,16 +202,6 @@ export default function AcademyPage() {
                   <img src="/icons/female.svg" alt="Female" className="w-16 h-16 mx-auto mb-4" />
                   <h4 className="text-xl font-bold text-white mb-2">Women</h4>
                   <p className="text-gray-400">Entering technical trades and technical fields</p>
-                </div>
-                <div className="blueox-card p-8 text-center">
-                  <img src="/icons/wheelchair.svg" alt="Wheelchair" className="w-16 h-16 mx-auto mb-4" />
-                  <h4 className="text-xl font-bold text-white mb-2">Persons with Disabilities</h4>
-                  <p className="text-gray-400">Accessible VR training environments</p>
-                </div>
-                <div className="blueox-card p-8 text-center">
-                  <img src="/icons/school.svg" alt="School" className="w-16 h-16 mx-auto mb-4" />
-                  <h4 className="text-xl font-bold text-white mb-2">Rural Students</h4>
-                  <p className="text-gray-400">Secondary school career guidance programs</p>
                 </div>
                 <div className="blueox-card p-8 text-center">
                   <img src="/icons/user-graduate.svg" alt="User Graduate" className="w-16 h-16 mx-auto mb-4" />
@@ -235,7 +230,7 @@ export default function AcademyPage() {
                 ].map((step) => (
                   <div key={step.step} className="blueox-card p-6 text-center">
                     <div className="w-16 h-16 bg-[#ff4040] rounded-full flex items-center justify-center mx-auto mb-4">
-                      <img src={`/icons/${step.icon}`} alt={step.title} className="w-8 h-8 invert" />
+                      <img src={`/icons/${step.icon}`} alt={step.title} className="w-8 h-8" style={{ filter: 'brightness(0) invert(1)' }} />
                     </div>
                     <h4 className="text-xl font-bold text-white mb-2">Step {step.step}</h4>
                     <h5 className="text-lg font-semibold text-[#ff4040] mb-2">{step.title}</h5>
@@ -245,6 +240,14 @@ export default function AcademyPage() {
               </div>
             </div>
           </Reveal>
+
+          {/* Enroll CTA */}
+          <div className="text-center mb-16">
+            <a href="https://wa.me/3197010209759?text=Hi!%20I'm%20interested%20in%20enrolling%20in%20a%20program." target="_blank" rel="noopener noreferrer" className="inline-block bg-[#ff4040] hover:bg-[#ff2020] px-10 py-5 rounded-full text-white font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl">
+              <img src="/icons/user-check.svg" alt="Enroll" className="inline w-6 h-6 mr-2" />
+              ENROLL NOW
+            </a>
+          </div>
 
           {/* FAQs */}
           <Reveal delay={1.1}>
@@ -288,10 +291,11 @@ export default function AcademyPage() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a href="https://wa.me/3197010209759?text=Hi!%20I'm%20interested%20in%20enrolling%20in%20a%20training%20program." target="_blank" rel="noopener noreferrer" className="bg-[#ff4040] hover:bg-[#ff2020] px-10 py-5 rounded-full text-white font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl flex items-center gap-3">
-                  <img src="/icons/users.svg" alt="Apply" className="w-6 h-6 invert" />
+                  <img src="/icons/users.svg" alt="Apply" className="w-6 h-6" style={{ filter: 'brightness(0) invert(1)' }} />
                   APPLY NOW
                 </a>
-                <Link href="/" className="border-2 border-white/30 px-10 py-5 rounded-full backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-lg text-white">
+                <Link href="/" className="border-2 border-white/30 px-10 py-5 rounded-full backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-lg text-white flex items-center gap-3">
+                  <img src="/icons/arrow-right.svg" alt="Back" className="w-5 h-5" style={{ filter: 'brightness(0) invert(1)', transform: 'rotate(180deg)' }} />
                   Back to Home
                 </Link>
               </div>
