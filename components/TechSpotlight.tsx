@@ -1,4 +1,4 @@
-import { MaskIcon, HeartbeatIcon, RobotIcon } from './Icons';
+// Icons removed - component not currently in use
 import Reveal from './Reveal';
 import ScrollParallax from './ScrollParallax';
 import VRHeadset from './VRHeadset';
@@ -36,7 +36,9 @@ export default function TechSpotlight(){
               <div className="space-y-8">
                 <div className="tech-card glass-card p-6 sm:p-8 rounded-3xl flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-8 group hover:scale-105 transition-all duration-500 border-2 border-transparent hover:border-[#ff4040]/30">
                   <div className="tech-icon w-16 h-16 bg-gradient-to-br from-[#ff4040]/20 to-[#ff2020]/30 rounded-2xl flex items-center justify-center text-[#ff4040] group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 flex-shrink-0">
-                    <MaskIcon className="w-8 h-8" />
+                    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 18l-8-4V8l8 4v8z" />
+                    </svg>
                   </div>
                   <div className="flex-1">
                     <h4 className="font-black uppercase text-sm tracking-widest mb-3 text-[#ff4040]">
@@ -67,7 +69,9 @@ export default function TechSpotlight(){
 
                 <div className="tech-card glass-card p-6 sm:p-8 rounded-3xl flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-8 group hover:scale-105 transition-all duration-500 border-2 border-transparent hover:border-blue-400/30">
                   <div className="tech-icon w-16 h-16 bg-gradient-to-br from-blue-500/20 to-blue-600/30 rounded-2xl flex items-center justify-center text-blue-400 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 flex-shrink-0">
-                    <HeartbeatIcon className="w-8 h-8" />
+                    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2c-5.33 4.55-8 8.48-8 13.16C4 19.23 7.58 22 12 22s8-2.77 8-6.84C20 10.48 17.33 6.55 12 2z" />
+                    </svg>
                   </div>
                   <div className="flex-1">
                     <h4 className="font-black uppercase text-sm tracking-widest mb-3 text-blue-400">
@@ -96,7 +100,9 @@ export default function TechSpotlight(){
 
                 <div className="tech-card glass-card p-6 sm:p-8 rounded-3xl flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-8 group hover:scale-105 transition-all duration-500 border-2 border-transparent hover:border-green-400/30">
                   <div className="tech-icon w-16 h-16 bg-gradient-to-br from-green-500/20 to-green-600/30 rounded-2xl flex items-center justify-center text-green-400 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 flex-shrink-0">
-                    <RobotIcon className="w-8 h-8" />
+                    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1v-3a1 1 0 0 0-1-1h-1a7 7 0 0 1-7 7v3.5c0 .83-.67 1.5-1.5 1.5h-2c-.83 0-1.5-.67-1.5-1.5V19a7 7 0 0 1-7-7H2a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z" />
+                    </svg>
                   </div>
                   <div className="flex-1">
                     <h4 className="font-black uppercase text-sm tracking-widest mb-3 text-green-400">
