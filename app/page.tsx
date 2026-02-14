@@ -50,49 +50,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* WHO WE SERVE SECTION */}
-      <section className="relative bg-black py-16 sm:py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <Reveal delay={0.1}>
-            <div className="mb-16">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-8 text-center">Who We <span className="text-[#ff4040]">Serve</span></h2>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="blueox-card p-8 text-center">
-                  <img src="/icons/school.svg" alt="Students" className="w-16 h-16 mx-auto mb-4" />
-                  <h4 className="text-xl font-bold text-white mb-2">Students</h4>
-                  <p className="text-gray-400">Secondary school career guidance and technical training</p>
-                </div>
-                <div className="blueox-card p-8 text-center">
-                  <img src="/icons/home.svg" alt="Refugees" className="w-16 h-16 mx-auto mb-4" />
-                  <h4 className="text-xl font-bold text-white mb-2">Refugees</h4>
-                  <p className="text-gray-400">In Nakivale Settlement and across Western Uganda</p>
-                </div>
-                <div className="blueox-card p-8 text-center">
-                  <img src="/icons/female.svg" alt="Women" className="w-16 h-16 mx-auto mb-4" />
-                  <h4 className="text-xl font-bold text-white mb-2">Women</h4>
-                  <p className="text-gray-400">Entering technical trades and technical fields</p>
-                </div>
-                <div className="blueox-card p-8 text-center">
-                  <img src="/icons/wheelchair.svg" alt="Persons with Disabilities" className="w-16 h-16 mx-auto mb-4" />
-                  <h4 className="text-xl font-bold text-white mb-2">Persons with Disabilities</h4>
-                  <p className="text-gray-400">Accessible VR training environments</p>
-                </div>
-                <div className="blueox-card p-8 text-center">
-                  <img src="/icons/user-graduate.svg" alt="Out-of-School Youth" className="w-16 h-16 mx-auto mb-4" />
-                  <h4 className="text-xl font-bold text-white mb-2">Out-of-School Youth</h4>
-                  <p className="text-gray-400">Second-chance skills training opportunities</p>
-                </div>
-                <div className="blueox-card p-8 text-center">
-                  <img src="/icons/building.svg" alt="TVET Institutions" className="w-16 h-16 mx-auto mb-4" />
-                  <h4 className="text-xl font-bold text-white mb-2">TVET Institutions</h4>
-                  <p className="text-gray-400">Upgrading traditional vocational training</p>
-                </div>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
       <Footer />
     </>
   );
