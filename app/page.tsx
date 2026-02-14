@@ -9,8 +9,8 @@ export default function Page() {
       <Header />
 
       {/* HERO SECTION */}
-      <section className="relative min-h-screen flex items-center justify-center bg-black -pt-4 sm:pt-16 md:pt-24 lg:pt-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-0">
+      <section className="relative min-h-screen flex items-start sm:items-center justify-center bg-black pt-4 sm:pt-16 md:pt-24 lg:pt-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-12 md:py-0">
           <Reveal delay={0.1}>
             <div className="flex flex-col lg:flex-row items-center justify-center gap-0 sm:gap-4 md:gap-8 lg:gap-16">
               {/* 3D Mascot Animation */}
