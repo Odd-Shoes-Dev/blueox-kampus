@@ -189,11 +189,6 @@ export default function AcademyPage() {
               <h3 className="text-3xl font-bold text-white mb-8 text-center">Who We <span className="text-[#ff4040]">Serve</span></h3>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div className="blueox-card p-8 text-center">
-                  <img src="/icons/school.svg" alt="Students" className="w-16 h-16 mx-auto mb-4" />
-                  <h4 className="text-xl font-bold text-white mb-2">Students</h4>
-                  <p className="text-gray-400">Technical training and career guidance for all educational levels</p>
-                </div>
-                <div className="blueox-card p-8 text-center">
                   <img src="/icons/home.svg" alt="Home" className="w-16 h-16 mx-auto mb-4" />
                   <h4 className="text-xl font-bold text-white mb-2">Refugees</h4>
                   <p className="text-gray-400">In Nakivale Settlement and across Western Uganda</p>
@@ -212,6 +207,11 @@ export default function AcademyPage() {
                   <img src="/icons/building.svg" alt="Building" className="w-16 h-16 mx-auto mb-4" />
                   <h4 className="text-xl font-bold text-white mb-2">TVET Institutions</h4>
                   <p className="text-gray-400">Upgrading traditional vocational training</p>
+                </div>
+                <div className="blueox-card p-8 text-center">
+                  <img src="/icons/school.svg" alt="Students" className="w-16 h-16 mx-auto mb-4" />
+                  <h4 className="text-xl font-bold text-white mb-2">Students</h4>
+                  <p className="text-gray-400">Technical training and career guidance for all educational levels</p>
                 </div>
               </div>
             </div>

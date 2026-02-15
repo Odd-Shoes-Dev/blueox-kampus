@@ -1,6 +1,6 @@
 # Blue Ox Kampus — VR Technical Training Platform
 
-Blue Ox Kampus is a foundation-focused platform delivering immersive, industry-aligned technical education to students, refugees, women, persons with disabilities, and underserved youth in Western Uganda. Built with Next.js 14, TypeScript, and Tailwind CSS.
+Blue Ox Kampus is a foundation-focused platform delivering immersive, industry-aligned technical education to refugees, women, persons with disabilities, underserved youth, and students in Western Uganda. Built with Next.js 14, TypeScript, and Tailwind CSS.
 
 ## Mission
 **From Isolation to Industry** — Bridging the last mile between talent and opportunity through accessible, cost-efficient VR-based technical education.
@@ -15,7 +15,7 @@ Blue Ox Kampus is a foundation-focused platform delivering immersive, industry-a
 
 ## Key Features
 - VR-based technical training programs (welding, solar, EV, customer care)
-- Target beneficiaries: students, refugees, women, PWDs, out-of-school youth
+- Target beneficiaries: refugees, women, persons with disabilities, underserved youth, students
 - Partnership with Dig in Vision (European VR simulation developer)
 - Ethical workforce pathways (local + international placement)
 - Mobile-optimized responsive design

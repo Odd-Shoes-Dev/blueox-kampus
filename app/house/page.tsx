@@ -1,6 +1,7 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Reveal from '../../components/Reveal';
+import InsideTheKampus from '../../components/InsideTheKampus';
 
 export default function HousePage() {
   const rooms = [
@@ -75,6 +76,8 @@ export default function HousePage() {
           </Reveal>
         </div>
       </section>
+
+      <InsideTheKampus />
 
       {/* Facilities Section */}
       <section className="relative py-20 bg-black">

@@ -2,8 +2,8 @@ import './globals.css';
 import { ReactNode } from 'react';
 
 export const metadata = {
-  title: 'Blue Ox Kampus — VR Technical Training for Students, Refugees & Underserved Communities',
-  description: "Blue Ox Kampus delivers immersive, industry-aligned technical education to students, refugees, women, persons with disabilities, and underserved youth in Western Uganda, bridging the last mile between talent and opportunity through VR-based training.",
+  title: 'Blue Ox Kampus — VR Technical Training for Refugees & Underserved Communities',
+  description: "Blue Ox Kampus delivers immersive, industry-aligned technical education to refugees, women, persons with disabilities, underserved youth, and students in Western Uganda, bridging the last mile between talent and opportunity through VR-based training.",
   keywords: ['VR training', 'technical education', 'refugees', 'Uganda', 'Nakivale Settlement', 'vocational training', 'welding simulation', 'solar installation', 'women empowerment', 'disability inclusion', 'workforce development', 'TVET', 'Blue Ox Kampus'],
   authors: [{ name: 'Blue Ox Kampus', url: 'https://www.blueoxkampus.com' }],
   generator: 'Next.js',
@@ -22,7 +22,7 @@ export const metadata = {
   },
   openGraph: {
     title: 'Blue Ox Kampus — From Isolation to Industry',
-    description: "Delivering VR-based technical training to refugees, students, women, and persons with disabilities across Western Uganda. Building skills, creating opportunity, and bridging the last mile to employment.",
+    description: "Delivering VR-based technical training to refugees, women, persons with disabilities, underserved youth, and students across Western Uganda. Building skills, creating opportunity, and bridging the last mile to employment.",
     url: 'https://www.blueoxkampus.com',
     siteName: 'Blue Ox Kampus',
     images: [
@@ -39,7 +39,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Blue Ox Kampus — From Isolation to Industry',
-    description: "VR-based technical training for refugees, students, women, and PWDs in Western Uganda. 90% lower cost, zero waste, maximum inclusion.",
+    description: "VR-based technical training for refugees, women, persons with disabilities, underserved youth, and students in Western Uganda. 90% lower cost, zero waste, maximum inclusion.",
     images: ['/assets/images/logo.png'],
     site: '@blueoxjobs'
   },
@@ -84,7 +84,7 @@ export default function RootLayout({ children }:{children:ReactNode}){
               alternateName: 'BlueOX Kampus',
               url: 'https://www.blueoxkampus.com',
               logo: 'https://www.blueoxkampus.com/assets/images/logo.png',
-              description: "Blue Ox Kampus delivers immersive, industry-aligned technical education to students, refugees, women, persons with disabilities, and underserved youth in Western Uganda through VR-based training programs. From isolation to industry.",
+              description: "Blue Ox Kampus delivers immersive, industry-aligned technical education to refugees, women, persons with disabilities, underserved youth, and students in Western Uganda through VR-based training programs. From isolation to industry.",
               mission: "Bridging the last mile between talent and opportunity through accessible, cost-efficient VR-based technical education for underserved communities.",
               address: {
                 '@type': 'PostalAddress',
@@ -105,7 +105,7 @@ export default function RootLayout({ children }:{children:ReactNode}){
               },
               audience: {
                 '@type': 'Audience',
-                audienceType: ['Students', 'Refugees', 'Women', 'Persons with Disabilities', 'Out-of-school Youth']
+                audienceType: ['Refugees', 'Women', 'Persons with Disabilities', 'Out-of-school Youth', 'Students']
               },
               sameAs: [
                 'https://twitter.com/blueoxjobs'
