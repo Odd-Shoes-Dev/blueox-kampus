@@ -1,13 +1,25 @@
+'use client';
+
+import { useState } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Reveal from '../../components/Reveal';
 import VRShowcase from '../../components/VRShowcase';
+import ApplicationForm, { FormType } from '../../components/ApplicationForm';
 import Link from 'next/link';
 
 export default function AcademyPage() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [formType, setFormType] = useState<FormType>('academy');
+
+  const openForm = (type: FormType) => {
+    setFormType(type);
+    setIsFormOpen(true);
+  };
+
   return (
     <>
-      <Header />
+      <Header onFundClick={() => openForm('fund')} />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-12 bg-black">
@@ -92,10 +104,10 @@ export default function AcademyPage() {
                   </div>
 
                   <div className="text-center">
-                    <a href="https://wa.me/3197010209759?text=Hi!%20I'm%20interested%20in%20enrolling%20in%20a%20program." target="_blank" rel="noopener noreferrer" className="inline-block bg-[#ff4040] hover:bg-[#ff2020] px-10 py-5 rounded-full text-white font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl">
+                    <button onClick={() => openForm('academy')} className="inline-block bg-[#ff4040] hover:bg-[#ff2020] px-10 py-5 rounded-full text-white font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl">
                       <img src="/icons/user-check.svg" alt="Enroll" className="inline w-6 h-6 mr-2" />
                       ENROLL NOW
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -240,10 +252,10 @@ export default function AcademyPage() {
 
           {/* Enroll CTA */}
           <div className="text-center mb-16">
-            <a href="https://wa.me/3197010209759?text=Hi!%20I'm%20interested%20in%20enrolling%20in%20a%20program." target="_blank" rel="noopener noreferrer" className="inline-block bg-[#ff4040] hover:bg-[#ff2020] px-10 py-5 rounded-full text-white font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl">
+            <button onClick={() => openForm('academy')} className="inline-block bg-[#ff4040] hover:bg-[#ff2020] px-10 py-5 rounded-full text-white font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl">
               <img src="/icons/user-check.svg" alt="Enroll" className="inline w-6 h-6 mr-2" />
               ENROLL NOW
-            </a>
+            </button>
           </div>
 
           {/* FAQs */}
@@ -287,10 +299,10 @@ export default function AcademyPage() {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="https://wa.me/3197010209759?text=Hi!%20I'm%20interested%20in%20enrolling%20in%20a%20training%20program." target="_blank" rel="noopener noreferrer" className="bg-[#ff4040] hover:bg-[#ff2020] px-10 py-5 rounded-full text-white font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl flex items-center gap-3">
+                <button onClick={() => openForm('academy')} className="bg-[#ff4040] hover:bg-[#ff2020] px-10 py-5 rounded-full text-white font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl flex items-center gap-3">
                   <img src="/icons/users.svg" alt="Apply" className="w-6 h-6" style={{ filter: 'brightness(0) invert(1)' }} />
                   APPLY NOW
-                </a>
+                </button>
                 <Link href="/" className="border-2 border-white/30 px-10 py-5 rounded-full backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-lg text-white flex items-center gap-3">
                   <img src="/icons/arrow-right.svg" alt="Back" className="w-5 h-5" style={{ filter: 'brightness(0) invert(1)', transform: 'rotate(180deg)' }} />
                   Back to Home
@@ -305,6 +317,12 @@ export default function AcademyPage() {
           </Reveal>
         </div>
       </section>
+
+      <ApplicationForm 
+        isOpen={isFormOpen}
+        onClose={() => setIsFormOpen(false)}
+        formType={formType}
+      />
 
       <Footer />
     </>

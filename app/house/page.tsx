@@ -1,9 +1,21 @@
+'use client';
+
+import { useState } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Reveal from '../../components/Reveal';
 import InsideTheKampus from '../../components/InsideTheKampus';
+import ApplicationForm, { FormType } from '../../components/ApplicationForm';
 
 export default function HousePage() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [formType, setFormType] = useState<FormType>('academy');
+
+  const openForm = (type: FormType) => {
+    setFormType(type);
+    setIsFormOpen(true);
+  };
+
   const rooms = [
     {
       id: 1,
@@ -38,7 +50,7 @@ export default function HousePage() {
 
   return (
     <>
-      <Header />
+      <Header onFundClick={() => openForm('fund')} />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-black">
@@ -191,17 +203,15 @@ export default function HousePage() {
                 Ready to Book Your Stay?
               </h2>
               <p className="text-gray-300 mb-8 text-lg">
-                Contact us on WhatsApp for immediate booking assistance and special offers for Academy students.
+                Submit your booking request and we'll get back to you with availability and special offers for Academy students.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="https://wa.me/3197010209759?text=Hi!%20I'm%20interested%20in%20booking%20a%20room%20at%20Blue%20OX%20Kampus%20House"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  onClick={() => openForm('academy')}
                   className="bg-red-600 hover:bg-[#ff2020] px-10 py-5 rounded-full text-white font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl inline-block"
                 >
-                  Book on WhatsApp
-                </a>
+                  Book Now
+                </button>
                 <a 
                   href="tel:+3197010209759"
                   className="border-2 border-white/30 px-10 py-5 rounded-full backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-lg text-white inline-block"
@@ -217,6 +227,12 @@ export default function HousePage() {
           </Reveal>
         </div>
       </section>
+
+      <ApplicationForm 
+        isOpen={isFormOpen}
+        onClose={() => setIsFormOpen(false)}
+        formType={formType}
+      />
 
       <Footer />
     </>

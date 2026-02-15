@@ -1,8 +1,20 @@
+'use client';
+
+import { useState } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Reveal from '../../components/Reveal';
+import ApplicationForm, { FormType } from '../../components/ApplicationForm';
 
 export default function PartnersPage() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [formType, setFormType] = useState<FormType>('partner');
+
+  const openForm = (type: FormType) => {
+    setFormType(type);
+    setIsFormOpen(true);
+  };
+
   const partners = [
     {
       name: 'SIMX',
@@ -157,7 +169,7 @@ export default function PartnersPage() {
 
   return (
     <>
-      <Header />
+      <Header onFundClick={() => openForm('fund')} />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-black">
@@ -357,18 +369,15 @@ export default function PartnersPage() {
                 Become a Partner
               </h2>
               <p className="text-gray-300 mb-8 text-lg">
-                Join us in building Uganda's tech future. Let's discuss how we can collaborate to create opportunities 
-                and drive innovation together.
+                Join us in building Uganda's tech future. Submit your partnership inquiry and let's discuss how we can collaborate to create opportunities and drive innovation together.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="https://wa.me/3197010209759?text=Hi!%20I'm%20interested%20in%20becoming%20a%20partner%20with%20Blue%20OX%20Kampus"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  onClick={() => openForm('partner')}
                   className="bg-red-600 hover:bg-[#ff2020] px-10 py-5 rounded-full text-white font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl inline-block"
                 >
-                  Contact Us on WhatsApp
-                </a>
+                  Partner With Us
+                </button>
                 <a 
                   href="mailto:blueoxrecruit@gmail.com"
                   className="border-2 border-white/30 px-10 py-5 rounded-full backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-lg text-white inline-block"
@@ -383,6 +392,12 @@ export default function PartnersPage() {
           </Reveal>
         </div>
       </section>
+
+      <ApplicationForm 
+        isOpen={isFormOpen}
+        onClose={() => setIsFormOpen(false)}
+        formType={formType}
+      />
 
       <Footer />
     </>

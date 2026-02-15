@@ -2,9 +2,10 @@ import './globals.css';
 import { ReactNode } from 'react';
 
 export const metadata = {
-  title: 'Blue Ox Kampus — VR Technical Training for Refugees & Underserved Communities',
-  description: "Blue Ox Kampus delivers immersive, industry-aligned technical education to refugees, women, persons with disabilities, underserved youth, and students in Western Uganda, bridging the last mile between talent and opportunity through VR-based training.",
-  keywords: ['VR training', 'technical education', 'refugees', 'Uganda', 'Nakivale Settlement', 'vocational training', 'welding simulation', 'solar installation', 'women empowerment', 'disability inclusion', 'workforce development', 'TVET', 'Blue Ox Kampus'],
+  title: 'Blue Ox Kampus — AI & VR-Powered TVET Training for Refugees & Underserved Communities',
+  description: "Blue Ox Kampus transforms traditional TVET through AI and VR simulation, delivering industry-aligned technical education to refugees, women, persons with disabilities, underserved youth, and students in Western Uganda. Next-generation vocational training bridging talent to opportunity.",
+  keywords: ['TVET Uganda', 'VR training', 'AI-powered TVET', 'technical education', 'refugees', 'Uganda', 'Nakivale Settlement', 'vocational training', 'welding simulation', 'solar installation', 'women empowerment', 'disability inclusion', 'workforce development', 'Blue Ox Kampus', 'simulation-based training', 'modern TVET'],
+
   authors: [{ name: 'Blue Ox Kampus', url: 'https://www.blueoxkampus.com' }],
   generator: 'Next.js',
   applicationName: 'Blue Ox Kampus',
@@ -21,8 +22,8 @@ export const metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Blue Ox Kampus — From Isolation to Industry',
-    description: "Delivering VR-based technical training to refugees, women, persons with disabilities, underserved youth, and students across Western Uganda. Building skills, creating opportunity, and bridging the last mile to employment.",
+    title: 'Blue Ox Kampus — AI & VR-Powered TVET Training',
+    description: "Transforming traditional TVET through AI and VR simulation. Delivering technical training to refugees, women, persons with disabilities, underserved youth, and students across Western Uganda. Zero waste, maximum inclusion.",
     url: 'https://www.blueoxkampus.com',
     siteName: 'Blue Ox Kampus',
     images: [
@@ -38,8 +39,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Blue Ox Kampus — From Isolation to Industry',
-    description: "VR-based technical training for refugees, women, persons with disabilities, underserved youth, and students in Western Uganda. 90% lower cost, zero waste, maximum inclusion.",
+    title: 'Blue Ox Kampus — AI & VR-Powered TVET',
+    description: "Next-generation TVET using AI and VR simulation. Training refugees, women, persons with disabilities, and underserved youth in Western Uganda. 90% lower cost, zero waste, maximum inclusion.",
     images: ['/assets/images/logo.png'],
     site: '@blueoxjobs'
   },

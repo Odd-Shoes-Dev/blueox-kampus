@@ -1,12 +1,25 @@
+'use client';
+
+import { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Reveal from '../components/Reveal';
 import InsideTheKampus from '../components/InsideTheKampus';
+import ApplicationForm from '../components/ApplicationForm';
+
+type FormType = 'fund' | 'partner' | 'academy';
 
 export default function Page() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [formType, setFormType] = useState<FormType>('fund');
+
+  const openForm = (type: FormType) => {
+    setFormType(type);
+    setIsFormOpen(true);
+  };
   return (
     <>
-      <Header />
+      <Header onFundClick={() => openForm('fund')} />
 
       {/* HERO SECTION */}
       <section className="relative min-h-screen flex items-start sm:items-center justify-center bg-black pt-12 sm:pt-16 md:pt-24 lg:pt-32">
@@ -16,28 +29,24 @@ export default function Page() {
               {/* Hero Content */}
               <div className="text-center flex-1">
                 <h1 className="blueox-heading text-4xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight text-white mb-2 sm:mb-3 md:mb-4 pt-20 sm:pt-16 md:pt-0">
-                  THE BLUE OX: <span className="text-[#ff4040]">UGANDA'S</span> AI & VR <span className="text-blue-500">KAMPUS</span>
+                  THE BLUE OX: <span className="text-[#ff4040]">UGANDA'S</span> AI & VR <span className="text-blue-500">TRAINING</span> KAMPUS
                 </h1>
                 <p className="text-lg sm:text-lg md:text-2xl text-gray-300 leading-relaxed mb-6 sm:mb-8 pt-10 sm:pt-0">
                   Blue Ox Kampus delivers immersive, industry-aligned technical education to refugees, women, persons with disabilities, underserved youth, and students, bridging the last mile between talent and opportunity.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-6 sm:pt-0">
-                  <a
-                    href="https://wa.me/3197010209759?text=Hi!%20I%20want%20to%20fund%20a%20training%20cohort."
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={() => openForm('fund')}
                     className="bg-[#ff4040] hover:bg-[#ff2020] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-lg sm:text-lg md:text-lg transition-all hover:scale-105 shadow-2xl"
                   >
                     Fund a Training Cohort
-                  </a>
-                  <a
-                    href="https://wa.me/3197010209759?text=Hi!%20I'm%20interested%20in%20partnering%20with%20Blue%20Ox."
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  </button>
+                  <button
+                    onClick={() => openForm('partner')}
                     className="bg-transparent border-2 border-blue-500 hover:bg-blue-500/20 text-blue-500 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-lg sm:text-lg md:text-lg transition-all hover:scale-105"
                   >
                     Partner With Us
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -72,6 +81,76 @@ export default function Page() {
         </div>
       </div>
 
+      {/* Talent Exists Section */}
+      <section className="py-24 px-6 bg-gradient-to-b from-black via-[#0a0f1a] to-black">
+        <div className="max-w-6xl mx-auto">
+          <Reveal>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter mb-6">
+                Talent Exists. <span className="text-[#ff4040]">Access Does Not.</span>
+              </h2>
+              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                Across Western Uganda and refugee settlements like Nakivale, thousands of youth are capable, motivated, and ready to work.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.2}>
+            <div className="grid md:grid-cols-2 gap-12 mt-16">
+              {/* Left Column - What They Lack */}
+              <div className="space-y-6">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 border-l-4 border-[#ff4040] pl-4">
+                  But they lack:
+                </h3>
+                <div className="space-y-4">
+                  {[
+                    'Exposure to real technical career pathways',
+                    'Access to modern training equipment',
+                    'Financial ability to afford consumable-based TVET',
+                    'Geographic proximity to certified institutions',
+                    'Career guidance before choosing life-altering academic paths'
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start gap-3 group">
+                      <div className="w-2 h-2 bg-[#ff4040] rounded-full mt-2 group-hover:scale-150 transition-transform" />
+                      <p className="text-lg md:text-xl text-gray-300 leading-relaxed group-hover:text-white transition-colors">
+                        {item}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Right Column - Who's Excluded */}
+              <div className="space-y-6">
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
+                  <p className="text-lg md:text-xl text-gray-300 mb-6 leading-relaxed">
+                    Traditional vocational systems are expensive, centralized, and material-heavy.
+                  </p>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 border-l-4 border-blue-500 pl-4">
+                    The most vulnerable are excluded first:
+                  </h3>
+                  <div className="space-y-4">
+                    {[
+                      'Women with caregiving responsibilities',
+                      'Refugees without travel means',
+                      'Youth with disabilities',
+                      'Rural secondary students without career exposure'
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-start gap-3 group">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 group-hover:scale-150 transition-transform" />
+                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed group-hover:text-white transition-colors">
+                          {item}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       <InsideTheKampus />
 
       {/* Final CTA Section */}
@@ -80,15 +159,21 @@ export default function Page() {
           <h2 className="text-5xl font-black mb-8 uppercase italic">Ready to pull up?</h2>
           <p className="text-gray-500 mb-12 font-bold uppercase tracking-widest text-sm">Applications for Feb 2026 Intake are Open</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="https://wa.me/3197010209759?text=Hi!%20I%20want%20to%20apply%20for%20the%20training%20program." target="_blank" rel="noopener noreferrer" className="bg-[#ff4040] hover:bg-[#ff2020] text-white px-12 py-6 rounded-2xl font-black uppercase tracking-widest shadow-2xl transition">
+            <button onClick={() => openForm('academy')} className="bg-[#ff4040] hover:bg-[#ff2020] text-white px-12 py-6 rounded-2xl font-black uppercase tracking-widest shadow-2xl transition">
               Join Academy
-            </a>
-            <a href="https://wa.me/3197010209759?text=Hi!%20I%20want%20to%20become%20a%20partner." target="_blank" rel="noopener noreferrer" className="bg-white/5 hover:bg-white/10 border border-white/10 text-white px-12 py-6 rounded-2xl font-black uppercase tracking-widest transition">
+            </button>
+            <button onClick={() => openForm('partner')} className="bg-white/5 hover:bg-white/10 border border-white/10 text-white px-12 py-6 rounded-2xl font-black uppercase tracking-widest transition">
               Partner Portal
-            </a>
+            </button>
           </div>
         </div>
       </section>
+
+      <ApplicationForm 
+        isOpen={isFormOpen} 
+        onClose={() => setIsFormOpen(false)} 
+        formType={formType} 
+      />
 
       <Footer />
     </>
