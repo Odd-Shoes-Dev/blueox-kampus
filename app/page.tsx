@@ -36,6 +36,8 @@ export default function Page() {
                 <div className="max-w-2xl mx-auto my-6 sm:my-8">
                   <video 
                     className="w-full rounded-2xl shadow-2xl border border-white/10"
+                    autoPlay
+                    muted
                     controls
                     playsInline
                   >
