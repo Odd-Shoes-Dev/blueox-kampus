@@ -22,19 +22,32 @@ export default function Page() {
       <Header onFundClick={() => openForm('fund')} />
 
       {/* HERO SECTION */}
-      <section className="relative min-h-screen flex items-start sm:items-center justify-center bg-black pt-12 sm:pt-16 md:pt-24 lg:pt-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-12 md:py-0">
+      <section className="relative min-h-screen flex items-start sm:items-center justify-center bg-black pt-8 sm:pt-16 md:pt-24 lg:pt-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 sm:py-12 md:py-0">
           <Reveal delay={0.1}>
             <div className="flex flex-col items-center justify-center">
               {/* Hero Content */}
               <div className="text-center flex-1">
-                <h1 className="blueox-heading text-4xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight text-white mb-2 sm:mb-3 md:mb-4 pt-20 sm:pt-16 md:pt-0">
+                <h1 className="blueox-heading text-4xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight text-white mb-2 sm:mb-3 md:mb-4 pt-24 sm:pt-20 md:pt-0">
                   THE BLUE OX: <span className="text-[#ff4040]">UGANDA'S</span> AI & VR <span className="text-blue-500">TRAINING</span> KAMPUS
                 </h1>
-                <p className="text-lg sm:text-lg md:text-2xl text-gray-300 leading-relaxed mb-6 sm:mb-8 pt-10 sm:pt-0">
+                
+                {/* Intro Video */}
+                <div className="max-w-2xl mx-auto my-6 sm:my-8">
+                  <video 
+                    className="w-full rounded-2xl shadow-2xl border border-white/10"
+                    controls
+                    playsInline
+                  >
+                    <source src="/assets/videos/BlueOx_intro.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+
+                <p className="text-lg sm:text-lg md:text-2xl text-gray-300 leading-relaxed mb-4 sm:mb-8 pt-4 sm:pt-0">
                   Blue Ox Kampus delivers immersive, industry-aligned technical education to refugees, women, persons with disabilities, underserved youth, and students, bridging the last mile between talent and opportunity.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-6 sm:pt-0">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-8 sm:pt-0">
                   <button
                     onClick={() => openForm('fund')}
                     className="bg-[#ff4040] hover:bg-[#ff2020] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-lg sm:text-lg md:text-lg transition-all hover:scale-105 shadow-2xl"
