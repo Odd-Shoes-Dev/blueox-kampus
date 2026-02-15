@@ -15,18 +15,18 @@ export default function Page() {
             <div className="flex flex-col items-center justify-center">
               {/* Hero Content */}
               <div className="text-center flex-1">
-                <h1 className="blueox-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight text-white mb-2 sm:mb-3 md:mb-4">
+                <h1 className="blueox-heading text-4xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight text-white mb-2 sm:mb-3 md:mb-4 pt-20 sm:pt-16 md:pt-0">
                   THE BLUE OX: <span className="text-[#ff4040]">UGANDA'S</span> AI & VR <span className="text-blue-500">KAMPUS</span>
                 </h1>
-                <p className="text-base sm:text-xl md:text-2xl text-gray-300 leading-relaxed mb-6 sm:mb-8">
+                <p className="text-lg sm:text-lg md:text-2xl text-gray-300 leading-relaxed mb-6 sm:mb-8 pt-10 sm:pt-0">
                   Blue Ox Kampus delivers immersive, industry-aligned technical education to refugees, women, persons with disabilities, underserved youth, and students, bridging the last mile between talent and opportunity.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-6 sm:pt-0">
                   <a
                     href="https://wa.me/3197010209759?text=Hi!%20I%20want%20to%20fund%20a%20training%20cohort."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-[#ff4040] hover:bg-[#ff2020] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg transition-all hover:scale-105 shadow-2xl"
+                    className="bg-[#ff4040] hover:bg-[#ff2020] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-lg sm:text-lg md:text-lg transition-all hover:scale-105 shadow-2xl"
                   >
                     Fund a Training Cohort
                   </a>
@@ -34,7 +34,7 @@ export default function Page() {
                     href="https://wa.me/3197010209759?text=Hi!%20I'm%20interested%20in%20partnering%20with%20Blue%20Ox."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-transparent border-2 border-blue-500 hover:bg-blue-500/20 text-blue-500 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg transition-all hover:scale-105"
+                    className="bg-transparent border-2 border-blue-500 hover:bg-blue-500/20 text-blue-500 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-lg sm:text-lg md:text-lg transition-all hover:scale-105"
                   >
                     Partner With Us
                   </a>

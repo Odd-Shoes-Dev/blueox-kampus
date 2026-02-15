@@ -20,9 +20,6 @@ export default function AcademyPage() {
               <h1 className="text-5xl md:text-7xl font-extrabold mb-6 text-white">
                 Immersive <span className="text-[#ff4040]">Technical Education</span> for All
               </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-4">
-                Industry-aligned training delivered directly to refugees, women, youth with disabilities, and underserved communities.
-              </p>
               <p className="text-gray-400 text-lg mb-12">(Zero material waste. Zero injury risk. Maximum impact.)</p>
 
               {/* Program Overview Section */}

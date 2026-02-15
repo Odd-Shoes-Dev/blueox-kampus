@@ -52,8 +52,7 @@ export default function HousePage() {
                 The <span className="gradient-text-3d">House</span>
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Your home away from home at Blue OX Kampus. Comfortable, affordable accommodation designed for students, 
-                developers, and innovators.
+                Your home away from home at Blue OX Kampus. Supporting your technical skills development, professional growth, and pathway to global opportunity.
               </p>
             </div>
           </Reveal>
@@ -107,80 +106,6 @@ export default function HousePage() {
         </div>
       </section>
 
-      {/* Rooms Section */}
-      <section className="relative py-20 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <Reveal delay={0.5}>
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-white">
-                Available <span className="text-[#ff4040]">Rooms</span>
-              </h2>
-              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                Choose the perfect space for your stay at Blue OX Kampus
-              </p>
-            </div>
-          </Reveal>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            {rooms.map((room, index) => (
-              <Reveal key={room.id} delay={0.6 + index * 0.1}>
-                <div className="glass rounded-2xl overflow-hidden hover:border-[#ff4040]/50 transition-all duration-300">
-                  {/* Room Image Placeholder */}
-                  <div className="aspect-video bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center">
-                    <div className="text-center p-6">
-                      <i className="fas fa-bed text-5xl mb-3 text-gray-600"></i>
-                      <p className="text-gray-500 text-sm">{room.image}</p>
-                    </div>
-                  </div>
-
-                  {/* Room Details */}
-                  <div className="p-6">
-                    <div className="flex justify-between items-start mb-4">
-                      <div>
-                        <h3 className="text-2xl font-bold text-white mb-1">{room.name}</h3>
-                        <p className="text-gray-400 text-sm">{room.type}</p>
-                      </div>
-                      <div className="text-right">
-                        <div className="text-2xl font-bold text-[#ff4040]">{room.price}</div>
-                        {room.available && (
-                          <div className="text-green-400 text-xs font-semibold mt-1">Available</div>
-                        )}
-                      </div>
-                    </div>
-
-                    <div className="flex items-center gap-2 mb-4 text-gray-300">
-                      <i className="fas fa-users text-[#ff4040]"></i>
-                      <span>{room.capacity}</span>
-                    </div>
-
-                    <div className="mb-6">
-                      <h4 className="text-sm font-semibold text-gray-400 mb-2">Amenities:</h4>
-                      <ul className="space-y-1">
-                        {room.amenities.map((amenity, i) => (
-                          <li key={i} className="text-gray-300 text-sm flex items-center gap-2">
-                            <i className="fas fa-check text-[#ff4040]"></i>
-                            {amenity}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <a 
-                      href={`https://wa.me/3197010209759?text=Hi!%20I'm%20interested%20in%20booking%20the%20${encodeURIComponent(room.name)}%20at%20Blue%20OX%20Kampus`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block w-full bg-red-600 hover:bg-[#ff2020] text-center py-3 rounded-lg text-white font-bold transition-all duration-300 hover:scale-105"
-                    >
-                      Book via WhatsApp
-                    </a>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Location & Policies */}
       <section className="relative py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -206,7 +131,7 @@ export default function HousePage() {
                   </p>
                   <p className="flex items-start gap-3">
                     <span className="text-[#ff4040] mt-1">•</span>
-                    <span>Quiet, safe neighborhood perfect for students</span>
+                    <span>Quiet, safe neighborhood </span>
                   </p>
                 </div>
 
@@ -226,28 +151,28 @@ export default function HousePage() {
                 </h3>
                 <div className="space-y-4 text-gray-300">
                   <div>
-                    <h4 className="font-semibold text-white mb-2">Check-in / Check-out</h4>
-                    <p className="text-sm">Check-in: 2:00 PM | Check-out: 11:00 AM</p>
+                    <h4 className="font-semibold text-white mb-2">Booking Duration</h4>
+                    <p className="text-sm">Flexible stays from 1 week to 3 months. Extended stays (3+ months) receive special rates.</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white mb-2">Minimum Stay</h4>
-                    <p className="text-sm">3 nights minimum (weekly & monthly discounts available)</p>
+                    <h4 className="font-semibold text-white mb-2">Academy Integration</h4>
+                    <p className="text-sm">Direct access to Blue OX Kampus training facilities. Accommodation includes shuttle service to academy.</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white mb-2">Payment</h4>
-                    <p className="text-sm">Mobile money, bank transfer, or cash accepted</p>
+                    <h4 className="font-semibold text-white mb-2">Community Standards</h4>
+                    <p className="text-sm">We foster a professional learning environment. Respect for peers, facilities, and shared spaces is essential.</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white mb-2">Cancellation</h4>
-                    <p className="text-sm">Free cancellation up to 48 hours before check-in</p>
+                    <h4 className="font-semibold text-white mb-2">Safety & Wellness</h4>
+                    <p className="text-sm">24/7 security, medical assistance on standby, and emergency protocols aligned with international standards.</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white mb-2">House Rules</h4>
+                    <h4 className="font-semibold text-white mb-2">Professional Conduct</h4>
                     <ul className="text-sm space-y-1 mt-2">
-                      <li>• No smoking inside rooms</li>
-                      <li>• Respect quiet hours (10 PM - 7 AM)</li>
-                      <li>• Keep common areas clean</li>
-                      <li>• Visitors allowed in common areas only</li>
+                      <li>• Maintain hygiene and respect shared facilities</li>
+                      <li>• Quiet hours: 10 PM - 7 AM for focus & rest</li>
+                      <li>• Professional dress code in common areas</li>
+                      <li>• Substance-free environment (no smoking/alcohol in rooms)</li>
                     </ul>
                   </div>
                 </div>
