@@ -1,10 +1,17 @@
 'use client';
 
+import { useState } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Reveal from '../../components/Reveal';
+import ApplicationForm from '../../components/ApplicationForm';
+import VanIcon from '../../components/icons/VanIcon';
+import SunIcon from '../../components/icons/SunIcon';
+import VRHeadsetIcon from '../../components/icons/VRHeadsetIcon';
+import PeopleIcon from '../../components/icons/PeopleIcon';
 
 export default function ModelPage() {
+  const [isPartnerFormOpen, setIsPartnerFormOpen] = useState(false);
   const learningPathway = [
     {
       stage: '01',
@@ -62,22 +69,22 @@ export default function ModelPage() {
 
   const mobileDeployment = [
     {
-      icon: '🚐',
+      icon: <VanIcon />,
       title: 'Mobile First',
       description: 'Bring training to settlements, towns, and schools—not the other way around'
     },
     {
-      icon: '☀️',
+      icon: <SunIcon />,
       title: 'Solar Powered',
       description: 'Generator + solar panels enable training anywhere, regardless of grid access'
     },
     {
-      icon: '📦',
+      icon: <VRHeadsetIcon />,
       title: 'Compact Setup',
       description: 'VR headsets, laptops, and equipment fit in portable cases for rapid deployment'
     },
     {
-      icon: '👥',
+      icon: <PeopleIcon />,
       title: 'Local Trainers',
       description: 'Community members certified as facilitators for sustainable operations'
     }
@@ -216,7 +223,7 @@ export default function ModelPage() {
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {mobileDeployment.map((item, i) => (
                   <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition text-center">
-                    <div className="text-5xl mb-4">{item.icon}</div>
+                    <div className="text-blue-500 mb-4 flex justify-center">{item.icon}</div>
                     <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                     <p className="text-gray-400 text-sm leading-relaxed">{item.description}</p>
                   </div>
@@ -264,12 +271,12 @@ export default function ModelPage() {
                 We co-design programs with partners to fit local context, learner needs, and budget.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/partner"
-                  className="bg-[#ff4040] hover:bg-[#ff2020] text-white px-12 py-5 rounded-full font-bold text-lg transition-all hover:scale-105 shadow-2xl inline-block"
+                <button
+                  onClick={() => setIsPartnerFormOpen(true)}
+                  className="bg-[#ff4040] hover:bg-[#ff2020] text-white px-12 py-5 rounded-full font-bold text-lg transition-all hover:scale-105 shadow-2xl"
                 >
                   Partner With Us
-                </a>
+                </button>
                 <a
                   href="/fund"
                   className="bg-transparent border-2 border-blue-500 hover:bg-blue-500/20 text-blue-500 px-12 py-5 rounded-full font-bold text-lg transition-all hover:scale-105 inline-block"
@@ -282,6 +289,11 @@ export default function ModelPage() {
         </div>
       </section>
 
+      <ApplicationForm
+        isOpen={isPartnerFormOpen}
+        onClose={() => setIsPartnerFormOpen(false)}
+        formType="partner"
+      />
       <Footer />
     </>
   );
