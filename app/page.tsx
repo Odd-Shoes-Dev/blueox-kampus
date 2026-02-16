@@ -66,9 +66,9 @@ export default function Page() {
                     </div>
                   </div>
                   <div className="bg-white/5 border border-white/10 rounded-xl p-4 sm:p-6 hover:bg-white/10 transition">
-                    <div className="text-2xl sm:text-3xl font-black text-blue-500 mb-2">Kakuma Refugee Camp in Kenya</div>
+                    <div className="text-2xl sm:text-3xl font-black text-blue-500 mb-2">Uganda's First<br/>VR Training Center</div>
                     <div className="text-xs sm:text-sm text-gray-400 leading-tight">
-                      First refugee camp VR welding center<br/>(GIZ-funded)
+                      Upgrading traditional<br/>vocational training
                     </div>
                   </div>
                   <div className="bg-white/5 border border-white/10 rounded-xl p-4 sm:p-6 hover:bg-white/10 transition">
