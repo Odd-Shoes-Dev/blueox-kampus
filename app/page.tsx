@@ -94,13 +94,13 @@ export default function Page() {
                   >
                     Train 1 Person for $50
                   </a>
-                  <button
-                    onClick={() => openForm('partner')}
+                  <a
+                    href="/fund"
                     className="bg-transparent border-2 border-blue-500 hover:bg-blue-500/20 text-blue-500 px-8 sm:px-12 py-4 sm:py-5 rounded-full font-bold text-lg transition-all hover:scale-105"
                     title="Bring mobile training to settlements, towns, and schools—where traditional TVET won't reach."
                   >
                     Deploy a VR Lab
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
