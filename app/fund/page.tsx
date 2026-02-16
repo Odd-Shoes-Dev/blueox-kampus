@@ -79,12 +79,34 @@ export default function FundPage() {
     }
   };
 
-  const handleFund = (price: number) => {
+  const handleFund = (optionId: string, price: number) => {
     setSelectedAmount(price);
-    // Whop payment integration would go here
-    // For now, we'll redirect to a Whop checkout
-    const whopCheckoutUrl = `https://whop.com/checkout?product=blue-ox-training&amount=${price}`;
-    window.open(whopCheckoutUrl, '_blank');
+    
+    // Map option IDs to Whop product IDs from environment variables
+    const productMap: Record<string, string | undefined> = {
+      'laptop': process.env.NEXT_PUBLIC_WHOP_LAPTOP_ID,
+      'one-person': process.env.NEXT_PUBLIC_WHOP_ONE_PERSON_ID,
+      'cohort': process.env.NEXT_PUBLIC_WHOP_COHORT_ID,
+      'vr-headset': process.env.NEXT_PUBLIC_WHOP_HEADSET_ID,
+      'custom': process.env.NEXT_PUBLIC_WHOP_CUSTOM_ID,
+    };
+
+    const productId = productMap[optionId];
+
+    if (!productId) {
+      console.error('Invalid product ID for:', optionId);
+      alert('This payment option is not yet configured. Please contact us directly.');
+      return;
+    }
+
+    // Build Whop checkout URL
+    const checkoutUrl = new URL('https://whop.com/checkout');
+    checkoutUrl.searchParams.append('product', productId);
+    checkoutUrl.searchParams.append('success_url', `${process.env.NEXT_PUBLIC_SITE_URL}/thank-you`);
+    checkoutUrl.searchParams.append('cancel_url', `${process.env.NEXT_PUBLIC_SITE_URL}/fund`);
+    
+    // Redirect to Whop checkout
+    window.location.href = checkoutUrl.toString();
   };
 
   return (
@@ -123,7 +145,7 @@ export default function FundPage() {
                   onChange={(e) => setSelectedAmount(Number(e.target.value))}
                 />
                 <button
-                  onClick={() => selectedAmount && handleFund(selectedAmount)}
+                  onClick={() => selectedAmount && handleFund('custom', selectedAmount)}
                   disabled={!selectedAmount || selectedAmount < 1}
                   className="bg-[#ff4040] hover:bg-[#ff2020] disabled:bg-gray-600 disabled:cursor-not-allowed text-white px-12 py-4 rounded-xl font-bold text-lg transition-all hover:scale-105 w-full sm:w-auto"
                 >
@@ -176,7 +198,7 @@ export default function FundPage() {
                   </div>
                   
                   <button
-                    onClick={() => handleFund(option.price)}
+                    onClick={() => handleFund(option.id, option.price)}
                     className={`w-full py-4 rounded-xl font-bold text-lg transition-all ${
                       option.featured
                         ? 'bg-[#ff4040] hover:bg-[#ff2020] text-white shadow-xl'
