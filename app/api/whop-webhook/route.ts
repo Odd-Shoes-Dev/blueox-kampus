@@ -19,7 +19,7 @@ export async function POST(req: Request) {
 
     // Handle different event types
     switch (payload.event) {
-      case 'payment.succeeded':
+      case 'payment_succeeded':
         console.log('Payment successful:', payload.data);
         
         // Extract payment details
@@ -52,7 +52,7 @@ export async function POST(req: Request) {
         console.log('Email notification sent to blueoxrecruit@gmail.com');
         break;
       
-      case 'payment.failed':
+      case 'payment_failed':
         console.log('Payment failed:', payload.data);
         
         // Optionally send a notification about failed payment
@@ -70,17 +70,17 @@ export async function POST(req: Request) {
         });
         break;
 
-      case 'payment.refunded':
-        console.log('Payment refunded:', payload.data);
+      case 'refund_created':
+        console.log('Refund created:', payload.data);
         
         // Send refund notification
         await resend.emails.send({
           from: 'Blue Ox Kampus <noreply@blueoxkampus.com>',
           to: 'blueoxrecruit@gmail.com',
-          subject: '🔄 Payment Refunded',
+          subject: '🔄 Refund Created',
           html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-              <h2>Payment Refunded</h2>
+              <h2>Refund Created</h2>
               <p>A payment has been refunded. Check your Whop dashboard for details.</p>
               <p><strong>Time:</strong> ${new Date().toLocaleString()}</p>
             </div>
