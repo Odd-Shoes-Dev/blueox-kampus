@@ -88,7 +88,14 @@ export default function FundPage() {
       'one-person': 'https://whop.com/blueox/train-1-person/',
       'cohort': 'https://whop.com/blueox/fund-a-cohort/',
       'vr-headset': 'https://whop.com/blueox/vr-headset-d8/',
-      'custom': 'https://whop.com/blueox/custom-amount/',
+      'custom-10': 'https://whop.com/blueox/contribute-10',
+      'custom-20': 'https://whop.com/blueox/contribute-20',
+      'custom-50': 'https://whop.com/blueox/contribute-50',
+      'custom-100': 'https://whop.com/blueox/contribute-100',
+      'custom-200': 'https://whop.com/blueox/contribute-200/',
+      'custom-500': 'https://whop.com/blueox/contribute-500',
+      'custom-1000': 'https://whop.com/blueox/contribute-1000',
+      'custom-2500': 'https://whop.com/blueox/contribute-2500',
     };
 
     const checkoutUrl = checkoutMap[optionId];
@@ -124,28 +131,36 @@ export default function FundPage() {
 
           {/* Custom Amount Section */}
           <Reveal delay={0.2}>
-            <div className="mb-16 bg-white/5 border border-white/10 rounded-2xl p-8 sm:p-12 text-center">
-              <h3 className="text-3xl font-black text-white mb-4">
-                Want to contribute a custom amount?
+            <div className="mb-16 bg-white/5 border border-white/10 rounded-2xl p-8 sm:p-12">
+              <h3 className="text-3xl font-black text-white mb-4 text-center">
+                Choose Your Contribution Amount
               </h3>
-              <p className="text-gray-400 mb-8 text-lg">
+              <p className="text-gray-400 mb-8 text-lg text-center">
                 Every dollar goes directly to training equipment, facilitator salaries, and learner support.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <input
-                  type="number"
-                  placeholder="Enter amount ($)"
-                  className="bg-black/50 border border-white/20 rounded-xl px-6 py-4 text-white text-lg w-full sm:w-64 focus:outline-none focus:border-[#ff4040]"
-                  onChange={(e) => setSelectedAmount(Number(e.target.value))}
-                />
-                <button
-                  onClick={() => selectedAmount && handleFund('custom', selectedAmount)}
-                  disabled={!selectedAmount || selectedAmount < 1}
-                  className="bg-[#ff4040] hover:bg-[#ff2020] disabled:bg-gray-600 disabled:cursor-not-allowed text-white px-12 py-4 rounded-xl font-bold text-lg transition-all hover:scale-105 w-full sm:w-auto"
-                >
-                  Contribute
-                </button>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                {[
+                  { amount: 10, id: 'custom-10' },
+                  { amount: 20, id: 'custom-20' },
+                  { amount: 50, id: 'custom-50' },
+                  { amount: 100, id: 'custom-100' },
+                  { amount: 200, id: 'custom-200' },
+                  { amount: 500, id: 'custom-500' },
+                  { amount: 1000, id: 'custom-1000' },
+                  { amount: 2500, id: 'custom-2500' },
+                ].map((item) => (
+                  <button
+                    key={item.id}
+                    onClick={() => handleFund(item.id, item.amount)}
+                    className="bg-blue-500/10 border-2 border-blue-500/30 hover:bg-blue-500/20 hover:border-blue-500 text-white px-6 py-4 rounded-xl font-bold text-lg transition-all hover:scale-105"
+                  >
+                    ${item.amount.toLocaleString()}
+                  </button>
+                ))}
               </div>
+              <p className="text-gray-500 text-sm text-center mt-6">
+                Need a custom amount over $2,500? <a href="mailto:blueoxrecruit@gmail.com" className="text-blue-500 hover:text-blue-400 underline">Contact us directly</a>
+              </p>
             </div>
           </Reveal>
 
