@@ -25,7 +25,7 @@ export default function Page() {
   };
   return (
     <>
-      <Header onFundClick={() => openForm('fund')} />
+      <Header />
 
       {/* HERO SECTION */}
       <section className="relative min-h-screen flex items-start sm:items-center justify-center bg-black pt-8 sm:pt-16 md:pt-24 lg:pt-32 pb-12 sm:pb-16">
