@@ -311,7 +311,7 @@ export default function AcademyPage() {
               
               <div className="mt-8 text-gray-400">
                 <p>Or visit us: <span className="text-white">Blue Ox Kampus, Western Uganda</span></p>
-                <p className="mt-2 text-sm">Want to support our mission? <Link href="/" className="text-[#ff4040] hover:underline">Become a Funding Partner</Link></p>
+                <p className="mt-2 text-sm">Want to support our mission? <button onClick={() => openForm('partner')} className="text-[#ff4040] hover:underline cursor-pointer">Become a Funding Partner</button></p>
               </div>
             </div>
           </Reveal>

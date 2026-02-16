@@ -10,6 +10,14 @@ interface ApplicationFormProps {
   formType: FormType;
 }
 
+const programs = [
+  { id: 'welding', name: 'VR Welding & Industrial Fabrication' },
+  { id: 'solar', name: 'Solar Installation & Green Energy' },
+  { id: 'ev', name: 'EV & Mechatronics Engineering' },
+  { id: 'customer-care', name: 'Customer Care & Workplace Readiness' },
+  { id: 'career-guidance', name: 'VR Career Guidance for Secondary Schools' }
+];
+
 export default function ApplicationForm({ isOpen, onClose, formType }: ApplicationFormProps) {
   const [formData, setFormData] = useState({
     name: '',
@@ -18,6 +26,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
     phoneCountryCode: '+256',
     organization: '',
     country: '',
+    program: '',
     message: ''
   });
 
@@ -97,6 +106,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
             phoneCountryCode: '+256',
             organization: '',
             country: '',
+            program: '',
             message: ''
           });
         }, 2000);
@@ -225,6 +235,28 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                   />
                 </div>
               </div>
+
+              {/* Program Selection (for academy) */}
+              {formType === 'academy' && (
+                <div>
+                  <label htmlFor="program" className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider">
+                    Select Program *
+                  </label>
+                  <select
+                    id="program"
+                    name="program"
+                    required
+                    value={formData.program}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:border-[#ff4040] focus:outline-none transition appearance-none"
+                  >
+                    <option value="">Choose a program...</option>
+                    {programs.map((prog) => (
+                      <option key={prog.id} value={prog.id}>{prog.name}</option>
+                    ))}
+                  </select>
+                </div>
+              )}
 
               {/* Organization (for partners/funders) */}
               {(formType === 'fund' || formType === 'partner') && (

@@ -54,12 +54,12 @@ export default function Header({ onFundClick }: HeaderProps = {}){
           </nav>
 
           <div className="flex items-center gap-2 sm:gap-3">
-            <button 
-              onClick={onFundClick || (() => window.open('https://wa.me/3197010209759?text=Hi!%20I%20want%20to%20fund%20a%20training%20cohort.', '_blank'))} 
+            <Link 
+              href="/fund"
               className="hidden md:inline-block bg-[#ff4040] text-white px-4 py-2 rounded-md text-sm font-black uppercase hover:bg-[#ff2020] transition-colors"
             >
               Fund Training
-            </button>
+            </Link>
             {/* mobile toggle - now flows naturally in flex container */}
             <button ref={btnRef} className="lg:hidden p-2 rounded-md bg-white/5 hover:bg-white/10 transition-colors" aria-label="menu" onClick={() => setOpen(v => !v)}>
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
