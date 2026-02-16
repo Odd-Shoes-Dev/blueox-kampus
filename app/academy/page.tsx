@@ -19,7 +19,7 @@ export default function AcademyPage() {
 
   return (
     <>
-      <Header onFundClick={() => openForm('fund')} />
+      <Header />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-12 bg-black">

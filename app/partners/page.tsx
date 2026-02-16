@@ -169,7 +169,7 @@ export default function PartnersPage() {
 
   return (
     <>
-      <Header onFundClick={() => openForm('fund')} />
+      <Header />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-black">

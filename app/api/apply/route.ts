@@ -47,7 +47,7 @@ export async function POST(request: Request) {
 
     // Send email using Resend
     await resend.emails.send({
-      from: 'Blue Ox Kampus <noreply@blueoxkampus.com>',
+      from: 'Blue Ox Kampus <onboarding@resend.dev>',
       to: 'blueoxrecruit@gmail.com',
       subject: `New ${formLabel} - ${name}`,
       html: emailContent,

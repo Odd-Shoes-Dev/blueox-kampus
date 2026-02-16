@@ -4,11 +4,7 @@ import Link from 'next/link';
 import { useRef, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
-interface HeaderProps {
-  onFundClick?: () => void;
-}
-
-export default function Header({ onFundClick }: HeaderProps = {}){
+export default function Header(){
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const menuRef = useRef<HTMLDivElement | null>(null);
@@ -99,19 +95,13 @@ export default function Header({ onFundClick }: HeaderProps = {}){
               >
                 Partners
               </Link>
-              <button
-                onClick={() => {
-                  setOpen(false);
-                  if (onFundClick) {
-                    onFundClick();
-                  } else {
-                    window.open('https://wa.me/3197010209759?text=Hi!%20I%20want%20to%20fund%20a%20training%20cohort.', '_blank');
-                  }
-                }}
+              <Link
+                href="/fund"
+                onClick={() => setOpen(false)}
                 className="bg-[#ff4040] text-white px-4 py-2 rounded-md text-sm font-black uppercase hover:bg-[#ff4040]/90 transition-colors inline-block text-center w-full"
               >
                 Fund Training
-              </button>
+              </Link>
             </div>
           </div>
         )}
