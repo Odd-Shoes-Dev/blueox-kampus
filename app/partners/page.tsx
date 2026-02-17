@@ -104,6 +104,47 @@ export default function PartnersPage() {
       logo: '[Add logo: Cognisco]',
       website: 'https://www.cognisco.com'
     }
+  ,
+    {
+      name: 'GiGi Foundation',
+      category: 'Education Partner',
+      description: 'GiGi Foundation builds digital skills and creates pathways into IT for socially excluded youth. They run training, internships and international projects (e.g., Jet for Africa, Digital Jumpstart) to support students across Poland, Uganda, Tanzania and Eastern Europe.',
+      services: ['Digital Skills Training', 'Internships & Mentoring', 'EduTech Tools & Platforms'],
+      logo: 'https://www.fundacjagigi.pl/img/about-bg.jpg',
+      website: 'https://www.fundacjagigi.pl/'
+    },
+    {
+      name: 'GIGI Global',
+      category: 'Investment & Strategy Partner',
+      description: 'GIGI Global is a business growth and software strategy firm delivering end-to-end IT solutions, stakeholder strategy and digital process optimisation. They partner with organisations to scale platforms and launch new digital products.',
+      services: ['Software Strategy', 'Digital Transformation', 'Project Delivery'],
+      logo: 'https://gigiglobal.com/img/logo-big.png',
+      website: 'https://gigiglobal.com/'
+    },
+    {
+      name: 'Haiven',
+      category: 'Product Partner',
+      description: 'Haiven builds community-first chat and interactive experiences for gamers and creators, focusing on honest, non-predatory monetisation and creative connection. They are actively seeking strategic partnerships and collaboration opportunities.',
+      services: ['Chat Platform', 'Community Engagement', 'Subscription Products'],
+      logo: 'https://haiven.chat/assets/logo-BujTDjL7.svg',
+      website: 'https://haiven.chat/'
+    },
+    {
+      name: 'Gravity Jack',
+      category: 'AR/VR Partner',
+      description: 'Gravity Jack are AR/VR pioneers (since 2009) delivering immersive experiences and WebAR activations for clients including Meta, T‑Mobile and branded AR campaigns. Their work spans WebAR, mobile AR, VR games and Web3 experiments.',
+      services: ['Augmented Reality', 'Virtual Reality', 'WebAR', 'Game Development'],
+      logo: '[Add logo: Gravity Jack]',
+      website: 'https://www.gravityjack.com/'
+    },
+    {
+      name: 'GLP Software',
+      category: 'Technology Partner',
+      description: 'GLP Software specialises in rapid product development, PoC and MVP delivery for startups and enterprises. They offer full-stack development, low-code/no-code options and support for EU grant-funded projects.',
+      services: ['MVP & PoC Development', 'Web & Mobile Apps', 'Product Design', 'EU Fund Support'],
+      logo: 'https://glpsoftware.pl/img/glp_0001_2.webp',
+      website: 'https://glpsoftware.pl/'
+    }
   ];
 
   const partnershipBenefits = [
