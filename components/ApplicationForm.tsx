@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-export type FormType = 'fund' | 'partner' | 'academy';
+export type FormType = 'fund' | 'partner' | 'academy' | 'pods';
 
 interface ApplicationFormProps {
   isOpen: boolean;
@@ -27,7 +27,14 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
     organization: '',
     country: '',
     program: '',
-    message: ''
+    message: '',
+    // Pods-specific fields
+    podLane: '',
+    stack: '',
+    topTasks: '',
+    duration: '',
+    podSize: '',
+    numInterns: ''
   });
 
   const countryCodes = [
@@ -56,6 +63,8 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
         return 'Fund a Training Cohort';
       case 'partner':
         return 'Partner With Us';
+      case 'pods':
+        return 'Request Billy Pod Profiles';
       case 'academy':
         return 'Join Academy';
       default:
@@ -69,6 +78,8 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
         return 'Help us empower the next generation of technical talent. Fill out the form below and our team will contact you.';
       case 'partner':
         return 'Join our network of global partners supporting skills development in Africa.';
+      case 'pods':
+        return 'Tell us about your Pod needs and we\'ll send 3–5 matched profiles with a simple start plan.';
       case 'academy':
         return 'Start your journey with Blue OX Kampus. Submit your application below.';
       default:
@@ -107,7 +118,14 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
             organization: '',
             country: '',
             program: '',
-            message: ''
+            message: '',
+            // reset pods-specific fields as well
+            podLane: '',
+            stack: '',
+            topTasks: '',
+            duration: '',
+            podSize: '',
+            numInterns: ''
           });
         }, 2000);
       }
@@ -256,6 +274,120 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                     ))}
                   </select>
                 </div>
+              )}
+
+              {/* Pods specific fields */}
+              {formType === 'pods' && (
+                <>
+                  <div>
+                    <label htmlFor="numInterns" className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider">
+                      Number of Interns
+                    </label>
+                    <select
+                      id="numInterns"
+                      name="numInterns"
+                      required
+                      value={formData.numInterns}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white focus:border-[#ff4040] focus:outline-none transition appearance-none"
+                    >
+                      <option value="">Select...</option>
+                      <option value="1">1 (Solo Pod)</option>
+                      <option value="2">2</option>
+                      <option value="3">3 (Team Pod)</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label htmlFor="podLane" className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider">
+                      Which Pod Lane
+                    </label>
+                    <select
+                      id="podLane"
+                      name="podLane"
+                      required
+                      value={formData.podLane}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white focus:border-[#ff4040] focus:outline-none transition appearance-none"
+                    >
+                      <option value="">Choose a track...</option>
+                      <option value="qa">QA Pod</option>
+                      <option value="react">React Pod</option>
+                      <option value="python">Python/Data Pod</option>
+                      <option value="support">Support Engineering Pod</option>
+                      <option value="not-sure">Not sure</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label htmlFor="stack" className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider">
+                      Your Stack & Tools
+                    </label>
+                    <input
+                      id="stack"
+                      name="stack"
+                      required
+                      value={formData.stack}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:border-[#ff4040] focus:outline-none transition"
+                      placeholder="e.g. React + Next.js + TypeScript + Jira + GitHub"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="topTasks" className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider">
+                      Top 3–5 Tasks
+                    </label>
+                    <textarea
+                      id="topTasks"
+                      name="topTasks"
+                      required
+                      rows={3}
+                      value={formData.topTasks}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:border-[#ff4040] focus:outline-none transition resize-none"
+                      placeholder="Describe the tickets or outcomes you need shipped..."
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="duration" className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider">
+                      Duration
+                    </label>
+                    <select
+                      id="duration"
+                      name="duration"
+                      required
+                      value={formData.duration}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white focus:border-[#ff4040] focus:outline-none transition appearance-none"
+                    >
+                      <option value="">Choose duration...</option>
+                      <option value="8">8 weeks</option>
+                      <option value="12">12 weeks</option>
+                      <option value="16">16 weeks</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label htmlFor="podSize" className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider">
+                      Pod Size
+                    </label>
+                    <select
+                      id="podSize"
+                      name="podSize"
+                      required
+                      value={formData.podSize}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white focus:border-[#ff4040] focus:outline-none transition appearance-none"
+                    >
+                      <option value="">Choose...</option>
+                      <option value="solo">Solo Pod (1 intern)</option>
+                      <option value="team">Team Pod (3 interns)</option>
+                      <option value="not-sure">Not sure</option>
+                    </select>
+                  </div>
+                </>
               )}
 
               {/* Organization (for partners/funders) */}

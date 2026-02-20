@@ -1,4 +1,5 @@
 import Reveal from './Reveal';
+import { UsersIcon } from './Icons';
 
 export default function OfferingsGrid(){
   return (
@@ -152,6 +153,33 @@ export default function OfferingsGrid(){
                 className="block text-center bg-white/5 hover:bg-white/10 text-white py-2 rounded-lg text-sm font-semibold transition-all"
               >
                 Learn More
+              </a>
+            </div>
+          </Reveal>
+
+          {/* Billy Pods - Intern Pods */}
+          <Reveal delay={0.45}>
+            <div className="glass rounded-2xl p-6 hover:scale-105 transition-all duration-300 flex flex-col">
+              <div className="text-sm text-[#ff4040] font-bold mb-2">BILLY PODS</div>
+              <div className="text-3xl font-bold text-white mb-2">Intern Pods</div>
+              <div className="text-gray-400 text-sm mb-6">1–3 interns + Pod Coordinator · Weekly reporting</div>
+              <div className="space-y-3 mb-6 flex-grow">
+                <div className="text-gray-300 text-sm flex items-start gap-2">
+                  <UsersIcon className="w-7 h-7 text-[#ff4040] mr-2" />
+                  <span>Shortlist in 3–5 days · Kickoff in ~7 days</span>
+                </div>
+                <div className="text-gray-300 text-sm flex items-start gap-2">
+                  <span className="ml-9">Replacement guarantee · Weekly Pod Report</span>
+                </div>
+                <div className="text-gray-300 text-sm flex items-start gap-2">
+                  <span className="ml-9">Tracks: QA · React · Python-Data · Support Eng</span>
+                </div>
+              </div>
+              <a 
+                href="/pods" 
+                className="block text-center bg-[#ff4040] hover:bg-[#ff2020] text-white py-2 rounded-lg text-sm font-semibold transition-all"
+              >
+                Request Pod Profiles
               </a>
             </div>
           </Reveal>

@@ -15,7 +15,14 @@ export async function POST(request: Request) {
       country, 
       message, 
       formType,
-      submittedAt 
+      submittedAt,
+      // pods-specific optional fields
+      podLane,
+      stack,
+      topTasks,
+      duration,
+      podSize,
+      numInterns
     } = data;
 
     // Validate required fields
@@ -27,13 +34,14 @@ export async function POST(request: Request) {
     const formTypeLabels: { [key: string]: string } = {
       'fund': 'Fund a Training Cohort',
       'partner': 'Partnership Inquiry',
-      'academy': 'Academy Application'
+      'academy': 'Academy Application',
+      'pods': 'Billy Pods Request'
     };
 
     const formLabel = formTypeLabels[formType] || formType;
 
     // Build email content
-    const emailContent = `
+    let emailContent = `
       <h2>New ${formLabel} Submission</h2>
       <p><strong>Submitted:</strong> ${submittedAt || new Date().toISOString()}</p>
       <hr />
@@ -44,6 +52,20 @@ export async function POST(request: Request) {
       ${country ? `<p><strong>Country:</strong> ${country}</p>` : ''}
       ${message ? `<p><strong>Message:</strong></p><p>${message.replace(/\n/g, '<br />')}</p>` : ''}
     `;
+
+    // Append pods-specific details if present
+    if (formType === 'pods') {
+      emailContent += `
+        <hr />
+        <h3>Billy Pods Details</h3>
+        ${podLane ? `<p><strong>Pod Lane:</strong> ${podLane}</p>` : ''}
+        ${stack ? `<p><strong>Stack & Tools:</strong> ${stack}</p>` : ''}
+        ${topTasks ? `<p><strong>Top Tasks:</strong></p><p>${topTasks.replace(/\n/g, '<br />')}</p>` : ''}
+        ${duration ? `<p><strong>Duration (weeks):</strong> ${duration}</p>` : ''}
+        ${podSize ? `<p><strong>Pod Size:</strong> ${podSize}</p>` : ''}
+        ${numInterns ? `<p><strong>Number of Interns:</strong> ${numInterns}</p>` : ''}
+      `;
+    }
 
     // Send email using Resend
     await resend.emails.send({

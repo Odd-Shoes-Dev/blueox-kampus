@@ -45,6 +45,7 @@ export default function Header(){
           <nav className="hidden lg:flex gap-6 text-xs uppercase font-bold tracking-widest">
             <Link href="/" className={pathname === '/' ? 'text-[#ff4040]' : 'hover:text-[#ff4040] transition-colors'}>Home</Link>
             <Link href="/academy" className={pathname === '/academy' ? 'text-[#ff4040]' : 'hover:text-[#ff4040] transition-colors'}>Programs</Link>
+            <Link href="/pods" className={pathname === '/pods' ? 'text-[#ff4040]' : 'hover:text-[#ff4040] transition-colors'}>Billy Pods</Link>
             <Link href="/house" className={pathname === '/house' ? 'text-[#ff4040]' : 'hover:text-[#ff4040] transition-colors'}>The House</Link>
             <Link href="/partners" className={pathname === '/partners' ? 'text-[#ff4040]' : 'hover:text-[#ff4040] transition-colors'}>Partners</Link>
           </nav>
@@ -94,6 +95,13 @@ export default function Header(){
                 className={pathname === '/partners' ? 'text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider' : 'text-white hover:text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider transition-colors'}
               >
                 Partners
+              </Link>
+              <Link 
+                href="/pods" 
+                onClick={() => setOpen(false)}
+                className={pathname === '/pods' ? 'text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider' : 'text-white hover:text-[#ff4040] py-2 text-sm font-bold uppercase tracking-wider transition-colors'}
+              >
+                Billy Pods
               </Link>
               <Link
                 href="/fund"
