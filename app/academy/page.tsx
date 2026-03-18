@@ -191,7 +191,7 @@ export default function AcademyPage() {
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <Reveal delay={0.6}>
               <div className="blueox-card p-8">
-                <div className="text-5xl font-black text-[#e05a3a] mb-4">90%</div>
+                <div className="blueox-subheading text-5xl font-black text-[#e05a3a] mb-4">90%</div>
                 <h3 className="blueox-subheading text-2xl font-bold text-black mb-3">Lower Training Cost</h3>
                 <p className="blueox-body text-gray-600">
                   VR reduces per-student training cost from $500 to $50 through simulation efficiency
@@ -201,7 +201,7 @@ export default function AcademyPage() {
 
             <Reveal delay={0.7}>
               <div className="blueox-card p-8">
-                <div className="text-5xl font-black text-blue-400 mb-4">0</div>
+                <div className="blueox-subheading text-5xl font-black text-[#e05a3a] mb-4">0</div>
                 <h3 className="blueox-subheading text-2xl font-bold text-black mb-3">Material Waste</h3>
                 <p className="blueox-body text-gray-600">
                   No gas, electrodes, or metal waste. Practice unlimited times without consumables
@@ -211,7 +211,7 @@ export default function AcademyPage() {
 
             <Reveal delay={0.8}>
               <div className="blueox-card p-8">
-                <div className="text-5xl font-black text-red-500 mb-4">100%</div>
+                <div className="blueox-subheading text-5xl font-black text-[#e05a3a] mb-4">100%</div>
                 <h3 className="blueox-subheading text-2xl font-bold text-black mb-3">Safety</h3>
                 <p className="blueox-body text-gray-600">
                   Zero injury risk, accessible for persons with disabilities, portable to remote zones
