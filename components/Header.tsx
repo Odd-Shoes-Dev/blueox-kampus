@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 
 export default function Header(){
   const [open, setOpen] = useState(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const pathname = usePathname();
   const menuRef = useRef<HTMLDivElement | null>(null);
   const btnRef = useRef<HTMLButtonElement | null>(null);
@@ -30,8 +31,35 @@ export default function Header(){
       document.removeEventListener('keydown', handleEsc);
     };
   }, [open]);
+
+  useEffect(() => {
+    const scroller = document.body;
+    let lastScrollY = scroller.scrollTop;
+
+    const handleScroll = () => {
+      const currentScrollY = scroller.scrollTop;
+      const delta = currentScrollY - lastScrollY;
+
+      if (currentScrollY <= 20) {
+        setIsHeaderVisible(true);
+      } else if (delta > 6) {
+        setIsHeaderVisible(false);
+        setOpen(false);
+      } else if (delta < -2) {
+        setIsHeaderVisible(true);
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    scroller.addEventListener('scroll', handleScroll, { passive: true });
+    return () => scroller.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 w-full h-[var(--nav-height)] z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 right-50">
+    <header
+      className={`fixed top-0 left-0 w-full h-[var(--nav-height)] z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 right-50 transition-transform duration-300 ease-out ${isHeaderVisible ? 'translate-y-0' : '-translate-y-full'}`}
+    >
         <div className="max-w-7xl mx-auto px-6 py-0 lg:mt-0 flex items-center justify-between relative">
           <div className="flex items-center gap-3">
             <Link href="/">
