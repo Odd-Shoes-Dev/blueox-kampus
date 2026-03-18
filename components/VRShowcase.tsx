@@ -18,7 +18,7 @@ export default function VRShowcase() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* 3D Model Viewer */}
             <div className="relative">
-              <div className="bg-gray-800/70 rounded-xl p-8 backdrop-blur-sm border border-gray-700">
+              <div className="bg-[#1a1a1a] rounded-xl p-8 border border-[#2f2f2f]">
                 <div className="h-96 w-full relative">
                   {createElement('model-viewer', {
                     src: currentModel === 'headset' ? '/assets/models/vr-headset-full.glb' : '/assets/models/vr-controller.glb',
@@ -29,7 +29,7 @@ export default function VRShowcase() {
                     style: {
                       width: '100%',
                       height: '100%',
-                      backgroundColor: 'transparent',
+                      backgroundColor: '#1a1a1a',
                       borderRadius: '12px'
                     },
                     'environment-image': 'neutral',
@@ -55,7 +55,7 @@ export default function VRShowcase() {
                     className={`px-4 sm:px-6 py-3 rounded-lg font-semibold transition-all flex items-center justify-center gap-2 text-sm sm:text-base ${
                       currentModel === 'headset'
                         ? 'bg-[#e05a3a] text-white shadow-lg shadow-[#e05a3a]/25'
-                        : 'bg-gray-700 text-gray-700 hover:bg-gray-600'
+                        : 'bg-[#2f2f2f] text-gray-200 hover:bg-[#4a4a4a]'
                     }`}
                   >
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -72,7 +72,7 @@ export default function VRShowcase() {
                     className={`px-4 sm:px-6 py-3 rounded-lg font-semibold transition-all flex items-center justify-center gap-2 text-sm sm:text-base ${
                       currentModel === 'controller'
                         ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/25'
-                        : 'bg-gray-700 text-gray-700 hover:bg-gray-600'
+                        : 'bg-[#2f2f2f] text-gray-200 hover:bg-[#4a4a4a]'
                     }`}
                   >
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -102,7 +102,7 @@ export default function VRShowcase() {
                     <img src="/icons/rocket.svg" alt="Fire" className="w-8 h-8" />
                   </div>
                   <p className="text-gray-700 text-base sm:text-lg">
-                    <span className="text-black font-semibold">Master welding (MIG, TIG, Stick)</span> without consuming materials or risk of injury.
+                    <span className="blueox-subheading text-[#e05a3a] font-semibold">Master welding (MIG, TIG, Stick)</span> without consuming materials or risk of injury.
                   </p>
                 </div>
 
@@ -111,7 +111,7 @@ export default function VRShowcase() {
                     <img src="/icons/strategy.svg" alt="Solar Panel" className="w-8 h-8" />
                   </div>
                   <p className="text-gray-700 text-base sm:text-lg">
-                    <span className="text-black font-semibold">Install solar systems</span> through simulated hands-on practice.
+                    <span className="blueox-subheading text-[#e05a3a] font-semibold">Install solar systems</span> through simulated hands-on practice.
                   </p>
                 </div>
 
@@ -120,12 +120,12 @@ export default function VRShowcase() {
                     <img src="/icons/team.svg" alt="Wheelchair" className="w-8 h-8" />
                   </div>
                   <p className="text-gray-700 text-base sm:text-lg">
-                    <span className="text-black font-semibold">Accessible for all</span> — including persons with disabilities in remote areas.
+                    <span className="blueox-subheading text-[#e05a3a] font-semibold">Accessible for all</span> — including persons with disabilities in remote areas.
                   </p>
                 </div>
               </div>
 
-              <div className="bg-gray-800/50 rounded-lg p-6 border border-gray-700">
+              <div className="p-0">
                 <p className="text-xl text-black">
                   <span className="text-[#e05a3a] font-bold">Result?</span> Certified skills at 90% lower cost. <span className="text-blue-500 font-semibold">Zero waste. Zero injuries. Maximum access.</span>
                 </p>
