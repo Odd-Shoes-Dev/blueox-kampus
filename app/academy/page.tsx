@@ -22,7 +22,7 @@ export default function AcademyPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-12 bg-[var(--odd-cream)]">
+      <section className="relative pt-24 md:pt-32 pb-12 bg-[var(--odd-cream)]">
         {/* Full-width ticker */}
         <div className="w-screen relative left-1/2 -translate-x-1/2 mb-8 bg-[var(--odd-cream)] py-3">
           <div className="academy-ticker bg-[var(--odd-cream)]" aria-label="Foundation programs ticker">
@@ -58,7 +58,7 @@ export default function AcademyPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <Reveal delay={0.1}>
             <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-7xl font-extrabold mb-6 text-black">
+              <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
                 Immersive <span className="text-[#e05a3a]">Technical Education</span> for All
               </h1>
               <p className="blueox-body text-gray-600 text-lg mb-12">(Zero material waste. Zero injury risk. Maximum impact.)</p>
