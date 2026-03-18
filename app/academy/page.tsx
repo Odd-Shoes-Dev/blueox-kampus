@@ -326,12 +326,10 @@ export default function AcademyPage() {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button onClick={() => openForm('academy')} className="bg-[#e05a3a] hover:bg-[#c94e30] text-white font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl flex items-center gap-3">
-                  <img src="/icons/team.svg" alt="Apply" className="w-6 h-6" style={{ filter: 'brightness(0) invert(1)' }} />
+                <button onClick={() => openForm('academy')} className="inline-block border border-[#e05a3a] bg-[#e05a3a] text-white font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-[#c94e30] hover:border-[#c94e30]">
                   APPLY NOW
                 </button>
-                <Link href="/" className="border-2 border-black/20 px-10 py-5 rounded-full backdrop-blur-sm hover:bg-black/10 transition-all duration-300 text-lg text-black flex items-center gap-3">
-                  <img src="/icons/arrow-right.svg" alt="Back" className="w-5 h-5" style={{ filter: 'brightness(0) invert(1)', transform: 'rotate(180deg)' }} />
+                <Link href="/" className="inline-block border border-black bg-transparent text-black font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-black hover:text-white">
                   Back to Home
                 </Link>
               </div>
