@@ -8,7 +8,7 @@ export default function VisualGallery(){
         <div className="absolute inset-0 pointer-events-none">
           <div className="parallax-bg opacity-10">
             <div className="absolute top-20 left-10 w-32 h-32 border border-blue-400/30 rotate-45 floating-slow" />
-            <div className="absolute bottom-20 right-20 w-24 h-24 border border-[#ff4040]/30 rounded-full floating-medium" />
+            <div className="absolute bottom-20 right-20 w-24 h-24 border border-[#e05a3a]/30 rounded-full floating-medium" />
             <div className="absolute top-1/2 left-1/3 w-40 h-40 border border-purple-400/20 transform rotate-12 floating-fast" />
           </div>
         </div>
@@ -19,12 +19,12 @@ export default function VisualGallery(){
             <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none">
               Inside <span className="text-blue-500">The Kampus</span>
             </h2>
-            <p className="text-gray-500 text-sm font-bold uppercase tracking-widest mt-4 opacity-80">
+            <p className="text-gray-600 text-sm font-bold uppercase tracking-widest mt-4 opacity-80">
               Where simulation meets reality
             </p>
           </div>
           <div className="flex space-x-2">
-            <span className="glass-pill bg-white/10 border border-white/20 px-6 py-3 rounded-full text-xs font-black uppercase tracking-widest backdrop-blur-md">
+            <span className="glass-pill bg-gray-200 border border-white/20 px-6 py-3 rounded-full text-xs font-black uppercase tracking-widest backdrop-blur-md">
               Mbarara, UG
             </span>
           </div>
@@ -48,13 +48,13 @@ export default function VisualGallery(){
                     <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
                     ACTIVE SESSION
                   </div>
-                  <h4 className="font-black text-xl uppercase text-white mb-2 tracking-tight">
+                  <h4 className="font-black text-xl uppercase text-black mb-2 tracking-tight">
                     BlueOx Academy
                   </h4>
-                  <p className="text-xs text-gray-300 font-bold uppercase tracking-widest opacity-90">
+                  <p className="text-xs text-gray-700 font-bold uppercase tracking-widest opacity-90">
                     VR Skilled Trades Training
                   </p>
-                  <div className="mt-3 flex items-center gap-3 text-xs text-gray-400">
+                  <div className="mt-3 flex items-center gap-3 text-xs text-gray-600">
                     <span className="flex items-center gap-2">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="12" cy="7" r="4" stroke="currentColor" strokeWidth="2"/>
@@ -85,17 +85,17 @@ export default function VisualGallery(){
               />
               <div className="sim-overlay-3d absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/30 flex flex-col justify-end p-8">
                 <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                  <div className="mb-3 flex items-center gap-2 text-xs text-[#ff4040]">
-                    <span className="w-2 h-2 bg-[#ff4040] rounded-full animate-pulse" />
+                  <div className="mb-3 flex items-center gap-2 text-xs text-[#e05a3a]">
+                    <span className="w-2 h-2 bg-[#e05a3a] rounded-full animate-pulse" />
                     AVAILABLE NOW
                   </div>
-                  <h4 className="font-black text-xl uppercase text-white mb-2 tracking-tight">
+                  <h4 className="font-black text-xl uppercase text-black mb-2 tracking-tight">
                     BlueOx House
                   </h4>
-                  <p className="text-xs text-gray-300 font-bold uppercase tracking-widest opacity-90">
+                  <p className="text-xs text-gray-700 font-bold uppercase tracking-widest opacity-90">
                     Living & Co-working Space
                   </p>
-                  <div className="mt-3 flex items-center gap-3 text-xs text-gray-400">
+                  <div className="mt-3 flex items-center gap-3 text-xs text-gray-600">
                     <span className="flex items-center gap-2">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" stroke="currentColor" strokeWidth="2"/>
@@ -134,13 +134,13 @@ export default function VisualGallery(){
                     <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
                     HIRING NOW
                   </div>
-                  <h4 className="font-black text-xl uppercase text-white mb-2 tracking-tight">
+                  <h4 className="font-black text-xl uppercase text-black mb-2 tracking-tight">
                     BlueOx Jobs
                   </h4>
-                  <p className="text-xs text-gray-300 font-bold uppercase tracking-widest opacity-90">
+                  <p className="text-xs text-gray-700 font-bold uppercase tracking-widest opacity-90">
                     Poland • Netherlands • UAE
                   </p>
-                  <div className="mt-3 flex items-center gap-3 text-xs text-gray-400">
+                  <div className="mt-3 flex items-center gap-3 text-xs text-gray-600">
                     <span className="flex items-center gap-2">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="2" y="7" width="20" height="14" rx="2" ry="2" stroke="currentColor" strokeWidth="2"/>
@@ -165,3 +165,11 @@ export default function VisualGallery(){
   </Reveal>
   );
 }
+
+
+
+
+
+
+
+

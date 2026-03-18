@@ -36,7 +36,7 @@ export async function POST(req: Request) {
           subject: `🎉 New Funding: $${amount} - ${productName}`,
           html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-              <h2 style="color: #ff4040;">New Funding Received!</h2>
+              <h2 style="color: #e05a3a;">New Funding Received!</h2>
               <div style="background: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
                 <p><strong>Amount:</strong> $${amount}</p>
                 <p><strong>Product:</strong> ${productName}</p>
@@ -62,7 +62,7 @@ export async function POST(req: Request) {
           subject: '⚠️ Payment Failed',
           html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-              <h2 style="color: #ff4040;">Payment Failed</h2>
+              <h2 style="color: #e05a3a;">Payment Failed</h2>
               <p>A payment attempt failed. Check your Whop dashboard for details.</p>
               <p><strong>Time:</strong> ${new Date().toLocaleString()}</p>
             </div>

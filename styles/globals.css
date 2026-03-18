@@ -4,7 +4,7 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
 }
 
@@ -16,228 +16,244 @@
 }
 
 /* ============================================
-   BLUE OX CUSTOM BRAND DESIGN SYSTEM
+   ODD SHOES BRAND DESIGN SYSTEM
    ============================================ */
 
-/* Custom Typography */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --odd-black: #1a1a1a;
+  --odd-white: #ffffff;
+  --odd-cream: #ffffff;
+  --odd-coral: #e05a3a;
+  --odd-coral-dark: #c94e30;
+  --odd-coral-light: #f4a08e;
+  --odd-gray-100: #f5f5f5;
+  --odd-gray-200: #ebebeb;
+  --odd-gray-400: #aaa;
+  --odd-gray-500: #888;
+  --odd-gray-600: #666;
+  --odd-serif: 'Playfair Display', Georgia, serif;
+  --odd-sans: 'DM Sans', -apple-system, sans-serif;
+  --odd-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --odd-transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Typography System */
 .blueox-heading {
-  font-family: 'Orbitron', sans-serif;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+  font-family: var(--odd-serif);
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: -0.02em;
 }
 
 .blueox-subheading {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--odd-serif);
   font-weight: 600;
-  letter-spacing: 0.05em;
+  letter-spacing: -0.01em;
 }
 
 .blueox-body {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--odd-sans);
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .blueox-mono {
-  font-family: 'Space Mono', monospace;
-  font-weight: 700;
-  letter-spacing: 0.03em;
+  font-family: var(--odd-mono);
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
 }
 
-/* Custom Blue OX Buttons */
+/* Button System */
 .blueox-btn {
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 700;
+  font-family: var(--odd-sans);
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0;
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: var(--odd-transition);
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-}
-
-.blueox-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s ease;
-}
-
-.blueox-btn:hover::before {
-  left: 100%;
+  cursor: pointer;
+  border: none;
 }
 
 .blueox-btn-primary {
-  background: linear-gradient(135deg, #ff4040 0%, #ff6060 100%);
-  color: #fff;
-  font-weight: 800;
-  box-shadow: 0 4px 20px rgba(255, 64, 64, 0.4);
-  border: 2px solid transparent;
+  background: var(--odd-coral);
+  color: var(--odd-white);
+  font-weight: 600;
+  box-shadow: 0 2px 12px rgba(224, 90, 58, 0.3);
 }
 
 .blueox-btn-primary:hover {
+  background: var(--odd-coral-dark);
   transform: translateY(-2px);
-  box-shadow: 0 6px 30px rgba(255, 64, 64, 0.6);
+  box-shadow: 0 4px 20px rgba(224, 90, 58, 0.4);
 }
 
 .blueox-btn-secondary {
   background: transparent;
-  color: #fff;
-  border: 2px solid #ff4040;
-  box-shadow: 0 0 20px rgba(255, 64, 64, 0.2);
+  color: var(--odd-black);
+  border: 2px solid var(--odd-black);
 }
 
 .blueox-btn-secondary:hover {
-  background: rgba(255, 64, 64, 0.1);
-  box-shadow: 0 0 30px rgba(255, 64, 64, 0.4);
-  border-color: #ff6060;
+  background: var(--odd-black);
+  color: var(--odd-white);
 }
 
 .blueox-btn-tech {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-  color: #00d9ff;
-  border: 2px solid #00d9ff;
-  font-family: 'Space Mono', monospace;
-  box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+  background: var(--odd-cream);
+  color: var(--odd-black);
+  border: 2px solid var(--odd-black);
+  font-size: 0.7rem;
 }
 
 .blueox-btn-tech:hover {
-  background: linear-gradient(135deg, #16213e 0%, #0f1624 100%);
-  box-shadow: 0 0 35px rgba(0, 217, 255, 0.5);
-  transform: translateY(-2px);
+  background: var(--odd-black);
+  color: var(--odd-cream);
 }
 
-/* Custom Blue OX Icons */
+/* Icon System */
 .blueox-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 0.75rem;
-  background: linear-gradient(135deg, rgba(255, 64, 64, 0.2), rgba(255, 96, 96, 0.2));
-  border: 2px solid rgba(255, 64, 64, 0.3);
-  transition: all 0.3s ease;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0;
+  background: var(--odd-cream);
+  border: 1px solid var(--odd-gray-200);
+  transition: var(--odd-transition);
   position: relative;
 }
 
-.blueox-icon::before {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  border-radius: 0.75rem;
-  padding: 2px;
-  background: linear-gradient(135deg, #ff4040, #00d9ff);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
 .blueox-icon:hover {
-  transform: scale(1.1) rotate(5deg);
+  background: var(--odd-coral);
+  color: var(--odd-white);
+  border-color: var(--odd-coral);
+  transform: translateY(-2px);
 }
 
-.blueox-icon:hover::before {
-  opacity: 1;
-}
-
-/* Custom Badge Styles */
+/* Badge System */
 .blueox-badge {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  background: linear-gradient(135deg, rgba(255, 64, 64, 0.2), rgba(0, 217, 255, 0.2));
-  border: 1px solid rgba(255, 64, 64, 0.5);
-  color: #ff4040;
-  letter-spacing: 0.1em;
+  font-family: var(--odd-mono);
+  font-size: 0.6rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 0;
+  background: var(--odd-cream);
+  border: 1px solid var(--odd-gray-200);
+  color: var(--odd-black);
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.blueox-badge::before {
-  content: '';
-  width: 0.5rem;
-  height: 0.5rem;
-  background: #ff4040;
-  border-radius: 50%;
-  animation: pulse 2s infinite;
+.blueox-badge:hover {
+  border-color: var(--odd-coral);
 }
 
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
-
-/* Custom Card Styles */
+/* Card System */
 .blueox-card {
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(20px);
-  border: 2px solid rgba(255, 64, 64, 0.2);
-  border-radius: 1rem;
+  background: var(--odd-white);
+  border: 1px solid var(--odd-gray-200);
+  border-radius: 0;
   padding: 2rem;
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.blueox-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #ff4040, transparent);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: var(--odd-transition);
 }
 
 .blueox-card:hover {
-  border-color: rgba(255, 64, 64, 0.5);
-  transform: translateY(-5px);
-  box-shadow: 0 10px 40px rgba(255, 64, 64, 0.2);
+  border-color: var(--odd-coral);
+  box-shadow: 0 8px 24px rgba(224, 90, 58, 0.12);
+  transform: translateY(-4px);
 }
 
-.blueox-card:hover::before {
-  opacity: 1;
+/* Typography Specimens */
+.type-heading {
+  font-family: var(--odd-serif);
+  font-weight: 600;
+  font-style: italic;
+  font-size: 2.5rem;
+  letter-spacing: -0.02em;
+  color: var(--odd-black);
 }
 
-/* Custom Number/Stat Display */
-.blueox-stat {
-  font-family: 'Orbitron', sans-serif;
-  font-weight: 900;
-  font-size: 3rem;
-  color: #ffffff;
-  letter-spacing: 0.05em;
+.type-subheading {
+  font-family: var(--odd-sans);
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: 0.03em;
+  color: var(--odd-black);
 }
 
-/* Custom Divider */
+.type-body {
+  font-family: var(--odd-sans);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--odd-gray-600);
+}
+
+.type-label {
+  font-family: var(--odd-mono);
+  font-weight: 500;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--odd-coral);
+}
+
+/* Color Swatches */
+.color-swatch {
+  border: 1px solid var(--odd-gray-200);
+  border-radius: 0;
+  padding: 1rem;
+  background: var(--odd-white);
+}
+
+.color-swatch-coral {
+  background: var(--odd-coral);
+  color: var(--odd-white);
+}
+
+.color-swatch-cream {
+  background: var(--odd-cream);
+  color: var(--odd-black);
+  border: 1px solid var(--odd-gray-200);
+}
+
+.color-swatch-dark {
+  background: var(--odd-black);
+  color: var(--odd-white);
+}
+
+/* Divider */
 .blueox-divider {
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #ff4040, transparent);
-  margin: 3rem 0;
+  height: 1px;
+  background: var(--odd-gray-200);
+  margin: 2rem 0;
 }
 
-/* End Blue OX Custom Design System */
+/* Glass morphism with Odd Shoes colors */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(224, 90, 58, 0.1);
+}
+
+/* End Odd Shoes Custom Design System */
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -257,13 +273,45 @@ html, body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: #000000;
+  color: var(--odd-black);
+  background: var(--odd-white);
   font-size: 16px;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--odd-sans);
   /* Fix body scrollbar issue */
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--odd-serif);
+  letter-spacing: -0.01em;
+}
+
+h5,
+h6 {
+  font-family: var(--odd-serif);
+  letter-spacing: -0.005em;
+  font-weight: 500;
+}
+
+button,
+label {
+  font-family: var(--odd-sans);
+  letter-spacing: 0.01em;
+  text-transform: none;
+}
+
+.mono-label {
+  font-family: var(--odd-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+section {
+  background-image: radial-gradient(circle at 20% 10%, rgba(224, 90, 58, 0.06) 0%, transparent 45%);
 }
 
 * {
@@ -287,34 +335,34 @@ aside::-webkit-scrollbar {
   display: none;
 }
 
-/* Custom black scrollbar styling to match theme */
+/* Custom scrollbar styling to match theme */
 ::-webkit-scrollbar {
   width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: var(--odd-white);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333333;
+  background: var(--odd-coral);
   border-radius: 10px;
-  border: 2px solid #000000;
+  border: 2px solid var(--odd-white);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555555;
+  background: var(--odd-coral-dark);
 }
 
 ::-webkit-scrollbar-corner {
-  background: #000000;
+  background: var(--odd-white);
 }
 
 /* Firefox scrollbar styling */
 html {
   scrollbar-width: thin;
-  scrollbar-color: #333333 #000000;
+  scrollbar-color: var(--odd-coral) var(--odd-white);
 }
 
 /* Global layout fixes */
@@ -389,13 +437,62 @@ main {
   .text-balance {
     text-wrap: balance;
   }
-  
+
   .w-screen-full {
     width: 100vw;
   }
-  
+
   .min-w-screen {
     min-width: 100vw;
+  }
+}
+
+/* Academy ticker */
+.academy-ticker {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #ffffff;
+}
+
+.academy-ticker-track {
+  display: flex;
+  align-items: center;
+  min-width: max-content;
+  width: max-content;
+  background-color: var(--odd-cream);
+  animation: academy-ticker 35s linear infinite;
+  will-change: transform;
+}
+
+.academy-ticker-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  background-color: var(--odd-cream);
+}
+
+.academy-ticker-item {
+  color: var(--odd-coral);
+  font-family: var(--odd-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin: 0 1rem;
+  text-transform: uppercase;
+}
+
+.academy-ticker-sep {
+  color: rgba(224, 90, 58, 0.65);
+  font-size: 0.9rem;
+  margin: 0 0.75rem;
+}
+
+@keyframes academy-ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
 
@@ -522,7 +619,7 @@ main {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, #ff4040, #38bdf8, #ff4040);
+  background: linear-gradient(90deg, #e05a3a, #38bdf8, #e05a3a);
   animation: scanLine 3s linear infinite;
 }
 
@@ -734,7 +831,7 @@ main {
   top: -60px;
   left: -80px;
   animation-delay: 0s;
-  background: linear-gradient(135deg, #ff4040, #ff6060);
+  background: linear-gradient(135deg, #e05a3a, #f4a08e);
   box-shadow: 0 4px 12px rgba(255, 64, 64, 0.4);
 }
 

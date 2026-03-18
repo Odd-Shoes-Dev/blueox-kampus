@@ -84,3 +84,10 @@ export default function ScrollParallax({
     </div>
   );
 }
+
+
+
+
+
+
+

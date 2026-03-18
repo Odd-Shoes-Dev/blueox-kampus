@@ -149,32 +149,32 @@ export default function PartnersPage() {
 
   const partnershipBenefits = [
     {
-      icon: 'fas fa-handshake',
+      icon: 'team.svg',
       title: 'Collaboration Opportunities',
       description: 'Work with talented students and graduates on real-world projects'
     },
     {
-      icon: 'fas fa-briefcase',
+      icon: 'strategy.svg',
       title: 'Talent Pipeline',
       description: 'Access to skilled developers, designers, and VR specialists'
     },
     {
-      icon: 'fas fa-bullhorn',
+      icon: 'share.svg',
       title: 'Brand Visibility',
       description: 'Showcase your brand to Uganda\'s growing tech community'
     },
     {
-      icon: 'fas fa-rocket',
+      icon: 'rocket.svg',
       title: 'Innovation Access',
       description: 'Collaborate on cutting-edge projects and emerging technologies'
     },
     {
-      icon: 'fas fa-globe',
+      icon: 'global.svg',
       title: 'Social Impact',
       description: 'Contribute to youth employment and technology education'
     },
     {
-      icon: 'fas fa-chart-line',
+      icon: 'chart.svg',
       title: 'Market Insights',
       description: 'Gain insights into local tech trends and market needs'
     }
@@ -213,17 +213,17 @@ export default function PartnersPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-black">
+      <section className="relative pt-32 pb-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <Reveal delay={0.1}>
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-3 py-2 px-4 rounded-full bg-red-600/30 backdrop-blur-sm text-[#ff8080] text-sm font-bold mb-6 border border-[#ff4040]/30">
+              <div className="inline-flex items-center gap-3 py-2 px-4 rounded-full bg-[#e05a3a]/30 backdrop-blur-sm text-[#f4a08e] text-sm font-bold mb-6 border border-[#e05a3a]/30">
                 • Building Together
               </div>
-              <h1 className="text-5xl md:text-7xl font-extrabold mb-6 text-white">
+              <h1 className="text-5xl md:text-7xl font-extrabold mb-6 text-black">
                 Our <span className="gradient-text-3d">Partners</span>
               </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
                 Collaborating with industry leaders, innovators, and community organizations to create opportunities 
                 and drive technological advancement in Uganda.
               </p>
@@ -233,14 +233,14 @@ export default function PartnersPage() {
       </section>
 
       {/* Partners Grid */}
-      <section className="relative py-20 bg-black">
+      <section className="relative py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <Reveal delay={0.2}>
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-white">
-                Meet Our <span className="text-[#ff4040]">Partners</span>
+              <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
+                Meet Our <span className="text-[#e05a3a]">Partners</span>
               </h2>
-              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Organizations that believe in our mission and support our students
               </p>
             </div>
@@ -249,23 +249,23 @@ export default function PartnersPage() {
           <div className="max-w-4xl mx-auto space-y-12 mb-16">
             {partners.map((partner, index) => (
               <Reveal key={index} delay={0.3 + index * 0.1}>
-                <div className="border-l-4 border-[#ff4040] pl-6">
+                <div className="border-l-4 border-[#e05a3a] pl-6">
                   <div className="mb-2">
-                    <span className="text-[#ff4040] text-sm font-semibold uppercase tracking-wide">
+                    <span className="text-[#e05a3a] text-sm font-semibold uppercase tracking-wide">
                       {partner.category}
                     </span>
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-black text-white mb-3">
+                  <h3 className="text-2xl md:text-3xl font-black text-black mb-3">
                     {partner.name}
                   </h3>
-                  <p className="text-gray-400 leading-relaxed mb-4">
+                  <p className="text-gray-600 leading-relaxed mb-4">
                     {partner.description}
                   </p>
                   <a 
                     href={partner.website} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-[#ff4040] hover:text-[#ff8080] transition-colors font-semibold text-sm"
+                    className="inline-flex items-center gap-2 text-[#e05a3a] hover:text-[#f4a08e] transition-colors font-semibold text-sm"
                   >
                     Visit Website
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -282,14 +282,14 @@ export default function PartnersPage() {
       </section>
 
       {/* Partnership Benefits */}
-      <section className="relative py-20 bg-black">
+      <section className="relative py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <Reveal delay={0.4}>
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-white">
-                Why <span className="text-[#ff4040]">Partner</span> With Us?
+              <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
+                Why <span className="text-[#e05a3a]">Partner</span> With Us?
               </h2>
-              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Benefits of joining the Blue OX Kampus ecosystem
               </p>
             </div>
@@ -298,10 +298,10 @@ export default function PartnersPage() {
           <div className="grid md:grid-cols-3 gap-6 mb-16">
             {partnershipBenefits.map((benefit, index) => (
               <Reveal key={index} delay={0.5 + index * 0.1}>
-                <div className="glass p-6 rounded-xl hover:border-[#ff4040]/50 transition-all duration-300">
-                  <i className={`${benefit.icon} text-5xl mb-4 text-[#ff4040]`}></i>
-                  <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                  <p className="text-gray-400">{benefit.description}</p>
+                <div className="glass p-6 rounded-xl hover:border-[#e05a3a]/50 transition-all duration-300">
+                  <img src={`/icons/${benefit.icon}`} alt={benefit.title} className="w-14 h-14 mb-4" />
+                  <h3 className="text-xl font-bold text-black mb-3">{benefit.title}</h3>
+                  <p className="text-gray-600">{benefit.description}</p>
                 </div>
               </Reveal>
             ))}
@@ -310,14 +310,14 @@ export default function PartnersPage() {
       </section>
 
       {/* Partnership Types */}
-      <section className="relative py-20 bg-black">
+      <section className="relative py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <Reveal delay={0.6}>
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-white">
-                Partnership <span className="text-[#ff4040]">Opportunities</span>
+              <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
+                Partnership <span className="text-[#e05a3a]">Opportunities</span>
               </h2>
-              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Find the partnership type that aligns with your organization's goals
               </p>
             </div>
@@ -326,16 +326,16 @@ export default function PartnersPage() {
           <div className="space-y-6 mb-16">
             {partnershipTypes.map((partnership, index) => (
               <Reveal key={index} delay={0.7 + index * 0.1}>
-                <div className="glass rounded-xl p-8 hover:border-[#ff4040]/50 transition-all duration-300">
+                <div className="glass rounded-xl p-8 hover:border-[#e05a3a]/50 transition-all duration-300">
                   <div className="mb-4">
-                    <h3 className="text-2xl font-bold text-white mb-2">{partnership.type}</h3>
-                    <p className="text-gray-300 leading-relaxed">{partnership.description}</p>
+                    <h3 className="text-2xl font-bold text-black mb-2">{partnership.type}</h3>
+                    <p className="text-gray-700 leading-relaxed">{partnership.description}</p>
                   </div>
                   <div>
-                    <h4 className="text-sm font-semibold text-[#ff4040] mb-2">Examples:</h4>
+                    <h4 className="text-sm font-semibold text-[#e05a3a] mb-2">Examples:</h4>
                     <div className="flex flex-wrap gap-2">
                       {partnership.examples.map((example, i) => (
-                        <span key={i} className="px-3 py-1 bg-gray-700/50 text-gray-300 rounded-full text-sm">
+                        <span key={i} className="px-3 py-1 bg-gray-700/50 text-gray-700 rounded-full text-sm">
                           {example}
                         </span>
                       ))}
@@ -349,12 +349,12 @@ export default function PartnersPage() {
       </section>
 
       {/* Testimonials Section (Placeholder) */}
-      <section className="relative py-20 bg-black">
+      <section className="relative py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <Reveal delay={0.8}>
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-white">
-                What Our Partners <span className="text-[#ff4040]">Say</span>
+              <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
+                What Our Partners <span className="text-[#e05a3a]">Say</span>
               </h2>
             </div>
           </Reveal>
@@ -362,18 +362,18 @@ export default function PartnersPage() {
           <div className="grid md:grid-cols-2 gap-8">
             <Reveal delay={0.9}>
               <div className="glass rounded-xl p-8">
-                <div className="text-[#ff4040] text-4xl mb-4">"</div>
-                <p className="text-gray-300 text-lg italic mb-6">
+                <div className="text-[#e05a3a] text-4xl mb-4">"</div>
+                <p className="text-gray-700 text-lg italic mb-6">
                   Partnering with Blue OX Kampus has given us direct access to some of the most talented young developers 
                   in East Africa. Their training programs produce job-ready graduates.
                 </p>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center">
-                    <i className="fas fa-user text-xl text-gray-400"></i>
+                    <img src="/icons/user.svg" alt="User" className="w-6 h-6" />
                   </div>
                   <div>
-                    <div className="text-white font-bold">[Partner Name]</div>
-                    <div className="text-gray-400 text-sm">[Company, Position]</div>
+                    <div className="text-black font-bold">[Partner Name]</div>
+                    <div className="text-gray-600 text-sm">[Company, Position]</div>
                   </div>
                 </div>
               </div>
@@ -381,18 +381,18 @@ export default function PartnersPage() {
 
             <Reveal delay={1.0}>
               <div className="glass rounded-xl p-8">
-                <div className="text-[#ff4040] text-4xl mb-4">"</div>
-                <p className="text-gray-300 text-lg italic mb-6">
+                <div className="text-[#e05a3a] text-4xl mb-4">"</div>
+                <p className="text-gray-700 text-lg italic mb-6">
                   The social impact component is what drew us to Blue OX Kampus. Knowing that our partnership helps 
                   fund free training for youth makes this collaboration even more meaningful.
                 </p>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center">
-                    <i className="fas fa-user text-xl text-gray-400"></i>
+                    <img src="/icons/user.svg" alt="User" className="w-6 h-6" />
                   </div>
                   <div>
-                    <div className="text-white font-bold">[Partner Name]</div>
-                    <div className="text-gray-400 text-sm">[Organization, Role]</div>
+                    <div className="text-black font-bold">[Partner Name]</div>
+                    <div className="text-gray-600 text-sm">[Organization, Role]</div>
                   </div>
                 </div>
               </div>
@@ -402,32 +402,32 @@ export default function PartnersPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-20 bg-black">
+      <section className="relative py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <Reveal delay={1.1}>
-            <div className="glass rounded-2xl border-2 border-[#ff4040]/50 p-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <div className="glass rounded-2xl border-2 border-[#e05a3a]/50 p-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
                 Become a Partner
               </h2>
-              <p className="text-gray-300 mb-8 text-lg">
+              <p className="text-gray-700 mb-8 text-lg">
                 Join us in building Uganda's tech future. Submit your partnership inquiry and let's discuss how we can collaborate to create opportunities and drive innovation together.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => openForm('partner')}
-                  className="bg-red-600 hover:bg-[#ff2020] px-10 py-5 rounded-full text-white font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl inline-block"
+                  className="bg-[#e05a3a] hover:bg-[#c94e30] text-white font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl inline-block"
                 >
                   Partner With Us
                 </button>
                 <a 
                   href="mailto:blueoxrecruit@gmail.com"
-                  className="border-2 border-white/30 px-10 py-5 rounded-full backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-lg text-white inline-block"
+                  className="border-2 border-black/20 px-10 py-5 rounded-full backdrop-blur-sm hover:bg-black/10 transition-all duration-300 text-lg text-black inline-block"
                 >
                   Email Us
                 </a>
               </div>
-              <p className="text-gray-400 text-sm mt-6">
-                Email: <a href="mailto:blueoxrecruit@gmail.com" className="text-[#ff4040] hover:underline">blueoxrecruit@gmail.com</a>
+              <p className="text-gray-600 text-sm mt-6">
+                Email: <a href="mailto:blueoxrecruit@gmail.com" className="text-[#e05a3a] hover:underline">blueoxrecruit@gmail.com</a>
               </p>
             </div>
           </Reveal>
@@ -444,3 +444,11 @@ export default function PartnersPage() {
     </>
   );
 }
+
+
+
+
+
+
+
+

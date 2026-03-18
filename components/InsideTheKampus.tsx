@@ -34,12 +34,12 @@ export default function InsideTheKampus() {
               <h2 className="text-4xl font-black uppercase tracking-tighter">
                 Inside <span className="text-blue-500">The Kampus</span>
               </h2>
-              <p className="text-gray-500 text-sm font-bold uppercase tracking-widest mt-2">
+              <p className="text-gray-600 text-sm font-bold uppercase tracking-widest mt-2">
                 Where simulation meets reality
               </p>
             </div>
             <div className="flex space-x-2">
-              <span className="bg-white/5 border border-white/10 px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest">
+              <span className="bg-white/5 border border-gray-300 px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest">
                 Mbarara, UG
               </span>
             </div>
@@ -47,7 +47,7 @@ export default function InsideTheKampus() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {cards.map((card, index) => (
-              <div key={index} className="relative overflow-hidden rounded-3xl border border-white/10 h-80 group cursor-pointer">
+              <div key={index} className="relative overflow-hidden rounded-3xl border border-gray-300 h-80 group cursor-pointer">
                 {/* Image with grayscale hover effect */}
                 <img
                   src={card.image}
@@ -60,10 +60,10 @@ export default function InsideTheKampus() {
                 
                 {/* Content overlay */}
                 <div className="absolute inset-0 flex flex-col justify-end p-6">
-                  <h4 className="font-black uppercase text-white text-lg group-hover:text-[#ff4040] transition">
+                  <h4 className="font-black uppercase text-black text-lg group-hover:text-[#e05a3a] transition">
                     {card.title}
                   </h4>
-                  <p className="text-[10px] text-gray-300 font-bold uppercase tracking-widest">
+                  <p className="text-[10px] text-gray-700 font-bold uppercase tracking-widest">
                     {card.subtitle}
                   </p>
                 </div>
@@ -75,3 +75,11 @@ export default function InsideTheKampus() {
     </section>
   );
 }
+
+
+
+
+
+
+
+

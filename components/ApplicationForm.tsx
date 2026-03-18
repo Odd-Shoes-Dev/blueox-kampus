@@ -144,12 +144,12 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-      <div className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-[#0a0f1a] rounded-2xl border border-white/10 shadow-2xl">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/20 backdrop-blur-sm">
+      <div className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-[#0a0f1a] rounded-2xl border border-gray-300 shadow-2xl">
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-white transition z-10"
+          className="absolute top-4 right-4 text-gray-600 hover:text-black transition z-10"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -159,10 +159,10 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
         <div className="p-8">
           {/* Header */}
           <div className="mb-8">
-            <h2 className="text-3xl font-black uppercase text-white mb-3">
+            <h2 className="text-3xl font-black uppercase text-black mb-3">
               {getFormTitle()}
             </h2>
-            <p className="text-gray-400">
+            <p className="text-gray-600">
               {getFormDescription()}
             </p>
           </div>
@@ -174,14 +174,14 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2">Submission Successful!</h3>
-              <p className="text-gray-400">We'll get back to you within 24-48 hours.</p>
+              <h3 className="text-2xl font-bold text-black mb-2">Submission Successful!</h3>
+              <p className="text-gray-600">We'll get back to you within 24-48 hours.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name */}
               <div>
-                <label htmlFor="name" className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider">
+                <label htmlFor="name" className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wider">
                   Full Name *
                 </label>
                 <input
@@ -191,14 +191,14 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:border-[#ff4040] focus:outline-none transition"
+                  className="w-full px-4 py-3 bg-white/60 border border-gray-300 rounded-lg text-black placeholder-gray-600 focus:border-[#e05a3a] focus:outline-none transition"
                   placeholder="Enter your full name"
                 />
               </div>
 
               {/* Email */}
               <div>
-                <label htmlFor="email" className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider">
+                <label htmlFor="email" className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wider">
                   Email Address *
                 </label>
                 <input
@@ -208,14 +208,14 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:border-[#ff4040] focus:outline-none transition"
+                  className="w-full px-4 py-3 bg-white/60 border border-gray-300 rounded-lg text-black placeholder-gray-600 focus:border-[#e05a3a] focus:outline-none transition"
                   placeholder="your.email@example.com"
                 />
               </div>
 
               {/* Phone */}
               <div>
-                <label htmlFor="phone" className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider">
+                <label htmlFor="phone" className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wider">
                   Phone Number *
                 </label>
                 <div className="flex gap-3">
@@ -231,7 +231,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                       name="phoneCountryCode"
                       value={formData.phoneCountryCode}
                       onChange={handleChange}
-                      className="w-full pl-10 pr-3 py-3 bg-black/50 border border-white/10 rounded-lg text-white focus:border-[#ff4040] focus:outline-none transition appearance-none"
+                      className="w-full px-4 py-3 bg-black/50 border border-gray-300 rounded-lg text-white focus:border-[#e05a3a] focus:outline-none transition appearance-none"
                       style={{ backgroundImage: 'none' }}
                     >
                       {countryCodes.map((item) => (
@@ -248,7 +248,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                     required
                     value={formData.phone}
                     onChange={handleChange}
-                    className="flex-1 px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:border-[#ff4040] focus:outline-none transition"
+                    className="flex-1 px-4 py-3 bg-white/60 border border-gray-300 rounded-lg text-black placeholder-gray-600 focus:border-[#e05a3a] focus:outline-none transition"
                     placeholder="712 345 678"
                   />
                 </div>
@@ -257,7 +257,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
               {/* Program Selection (for academy) */}
               {formType === 'academy' && (
                 <div>
-                  <label htmlFor="program" className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider">
+                  <label htmlFor="program" className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wider">
                     Select Program *
                   </label>
                   <select
@@ -266,7 +266,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                     required
                     value={formData.program}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:border-[#ff4040] focus:outline-none transition appearance-none"
+                    className="w-full px-4 py-3 bg-white/60 border border-gray-300 rounded-lg text-black placeholder-gray-600 focus:border-[#e05a3a] focus:outline-none transition appearance-none"
                   >
                     <option value="">Choose a program...</option>
                     {programs.map((prog) => (
@@ -280,7 +280,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
               {formType === 'pods' && (
                 <>
                   <div>
-                    <label htmlFor="numInterns" className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider">
+                    <label htmlFor="numInterns" className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wider">
                       Number of Interns
                     </label>
                     <select
@@ -289,7 +289,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                       required
                       value={formData.numInterns}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white focus:border-[#ff4040] focus:outline-none transition appearance-none"
+                      className="w-full px-4 py-3 bg-black/50 border border-gray-300 rounded-lg text-white focus:border-[#e05a3a] focus:outline-none transition appearance-none"
                     >
                       <option value="">Select...</option>
                       <option value="1">1 (Solo Pod)</option>
@@ -299,7 +299,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                   </div>
 
                   <div>
-                    <label htmlFor="podLane" className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider">
+                    <label htmlFor="podLane" className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wider">
                       Which Pod Lane
                     </label>
                     <select
@@ -308,7 +308,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                       required
                       value={formData.podLane}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white focus:border-[#ff4040] focus:outline-none transition appearance-none"
+                      className="w-full px-4 py-3 bg-black/50 border border-gray-300 rounded-lg text-white focus:border-[#e05a3a] focus:outline-none transition appearance-none"
                     >
                       <option value="">Choose a track...</option>
                       <option value="qa">QA Pod</option>
@@ -320,7 +320,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                   </div>
 
                   <div>
-                    <label htmlFor="stack" className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider">
+                    <label htmlFor="stack" className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wider">
                       Your Stack & Tools
                     </label>
                     <input
@@ -329,13 +329,13 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                       required
                       value={formData.stack}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:border-[#ff4040] focus:outline-none transition"
+                      className="w-full px-4 py-3 bg-white/60 border border-gray-300 rounded-lg text-black placeholder-gray-600 focus:border-[#e05a3a] focus:outline-none transition"
                       placeholder="e.g. React + Next.js + TypeScript + Jira + GitHub"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="topTasks" className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider">
+                    <label htmlFor="topTasks" className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wider">
                       Top 3–5 Tasks
                     </label>
                     <textarea
@@ -345,13 +345,13 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                       rows={3}
                       value={formData.topTasks}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:border-[#ff4040] focus:outline-none transition resize-none"
+                      className="w-full px-4 py-3 bg-white/60 border border-gray-300 rounded-lg text-black placeholder-gray-600 focus:border-[#e05a3a] focus:outline-none transition resize-none"
                       placeholder="Describe the tickets or outcomes you need shipped..."
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="duration" className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider">
+                    <label htmlFor="duration" className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wider">
                       Duration
                     </label>
                     <select
@@ -360,7 +360,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                       required
                       value={formData.duration}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white focus:border-[#ff4040] focus:outline-none transition appearance-none"
+                      className="w-full px-4 py-3 bg-black/50 border border-gray-300 rounded-lg text-white focus:border-[#e05a3a] focus:outline-none transition appearance-none"
                     >
                       <option value="">Choose duration...</option>
                       <option value="8">8 weeks</option>
@@ -370,7 +370,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                   </div>
 
                   <div>
-                    <label htmlFor="podSize" className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider">
+                    <label htmlFor="podSize" className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wider">
                       Pod Size
                     </label>
                     <select
@@ -379,7 +379,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                       required
                       value={formData.podSize}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white focus:border-[#ff4040] focus:outline-none transition appearance-none"
+                      className="w-full px-4 py-3 bg-black/50 border border-gray-300 rounded-lg text-white focus:border-[#e05a3a] focus:outline-none transition appearance-none"
                     >
                       <option value="">Choose...</option>
                       <option value="solo">Solo Pod (1 intern)</option>
@@ -393,7 +393,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
               {/* Organization (for partners/funders) */}
               {(formType === 'fund' || formType === 'partner') && (
                 <div>
-                  <label htmlFor="organization" className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider">
+                  <label htmlFor="organization" className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wider">
                     Organization *
                   </label>
                   <input
@@ -403,7 +403,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                     required
                     value={formData.organization}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:border-[#ff4040] focus:outline-none transition"
+                    className="w-full px-4 py-3 bg-white/60 border border-gray-300 rounded-lg text-black placeholder-gray-600 focus:border-[#e05a3a] focus:outline-none transition"
                     placeholder="Company or organization name"
                   />
                 </div>
@@ -411,7 +411,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
 
               {/* Country */}
               <div>
-                <label htmlFor="country" className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider">
+                <label htmlFor="country" className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wider">
                   Country *
                 </label>
                 <input
@@ -421,14 +421,14 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                   required
                   value={formData.country}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:border-[#ff4040] focus:outline-none transition"
+                  className="w-full px-4 py-3 bg-white/60 border border-gray-300 rounded-lg text-black placeholder-gray-600 focus:border-[#e05a3a] focus:outline-none transition"
                   placeholder="Your country"
                 />
               </div>
 
               {/* Message */}
               <div>
-                <label htmlFor="message" className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider">
+                <label htmlFor="message" className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wider">
                   Message *
                 </label>
                 <textarea
@@ -438,7 +438,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:border-[#ff4040] focus:outline-none transition resize-none"
+                  className="w-full px-4 py-3 bg-white/60 border border-gray-300 rounded-lg text-black placeholder-gray-600 focus:border-[#e05a3a] focus:outline-none transition resize-none"
                   placeholder={formType === 'academy' ? 'Tell us about your background and why you want to join...' : 'Tell us more about your interest...'}
                 />
               </div>
@@ -447,7 +447,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-[#ff4040] hover:bg-[#ff2020] text-white py-4 rounded-full font-black uppercase tracking-widest transition disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-[#e05a3a] hover:bg-[#c94e30] text-white py-4 rounded-full font-black uppercase tracking-widest transition disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? 'Submitting...' : 'Submit Application'}
               </button>
@@ -458,3 +458,12 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
     </div>
   );
 }
+
+
+
+
+
+
+
+
+

@@ -63,7 +63,7 @@ This is the exclusive brand design system for Blue OX Kampus, featuring custom f
 
 ```jsx
 <div className="blueox-icon">
-  <i className="fas fa-brain text-[#ff4040]"></i>
+  <i className="fas fa-brain text-[#e05a3a]"></i>
 </div>
 ```
 - Animated gradient border on hover
@@ -123,8 +123,8 @@ This is the exclusive brand design system for Blue OX Kampus, featuring custom f
 ## 🎨 Color Palette
 
 ### Primary Colors
-- **Coral Red**: `#ff4040` - Main brand color
-- **Coral Red Light**: `#ff6060` - Gradients, accents
+- **Coral Red**: `#e05a3a` - Main brand color
+- **Coral Red Light**: `#f4a08e` - Gradients, accents
 - **Cyan**: `#00d9ff` - Tech accent, secondary highlights
 
 ### Background Colors
@@ -149,7 +149,7 @@ This is the exclusive brand design system for Blue OX Kampus, featuring custom f
   <div className="grid grid-cols-3 gap-6">
     <div className="blueox-card">
       <div className="blueox-icon mb-4">
-        <i className="fas fa-vr-cardboard text-[#ff4040]"></i>
+        <i className="fas fa-vr-cardboard text-[#e05a3a]"></i>
       </div>
       <h3 className="blueox-subheading text-xl mb-2">VR Training</h3>
       <p className="blueox-body text-gray-400">

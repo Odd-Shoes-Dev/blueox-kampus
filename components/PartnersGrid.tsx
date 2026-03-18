@@ -76,10 +76,10 @@ export default function PartnersGrid(){
         {/* Header */}
         <Reveal delay={0.1}>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Our <span className="text-[#ff4040]">Partners</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+              Our <span className="text-[#e05a3a]">Partners</span>
             </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Collaborating with industry leaders to deliver world-class VR training experiences
             </p>
           </div>
@@ -89,26 +89,26 @@ export default function PartnersGrid(){
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {partners.map((partner, index) => (
             <Reveal key={index} delay={0.2 + index * 0.05}>
-              <div className="glass rounded-xl p-6 hover:border-[#ff4040]/50 transition-all duration-300 h-full flex flex-col">
+              <div className="glass rounded-xl p-6 hover:border-[#e05a3a]/50 transition-all duration-300 h-full flex flex-col">
                 <div className="mb-3">
-                  <span className="text-[#ff4040] text-xs font-semibold uppercase tracking-wider">
+                  <span className="text-[#e05a3a] text-xs font-semibold uppercase tracking-wider">
                     {partner.category}
                   </span>
                 </div>
-                <h3 className="text-2xl font-black text-white mb-3">
+                <h3 className="text-2xl font-black text-black mb-3">
                   {partner.name}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-grow">
+                <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">
                   {partner.description}
                 </p>
                 <a 
                   href={partner.website} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[#ff4040] hover:text-[#ff8080] transition-colors font-semibold text-sm"
+                  className="inline-flex items-center gap-2 text-[#e05a3a] hover:text-[#f4a08e] transition-colors font-semibold text-sm"
                 >
                   Visit Website
-                  <img src="/icons/external-link-alt.svg" alt="External link" className="w-4 h-4" />
+                  <img src="/icons/link.svg" alt="External link" className="w-4 h-4" />
                 </a>
               </div>
             </Reveal>
@@ -117,18 +117,18 @@ export default function PartnersGrid(){
 
         {/* CTA Section */}
         <Reveal delay={0.8}>
-          <div className="text-center bg-gray-900 rounded-2xl p-8 md:p-12 border border-[#ff4040]/20">
-            <h3 className="text-3xl md:text-4xl font-black text-white mb-4">
+          <div className="text-center bg-gray-900 rounded-2xl p-8 md:p-12 border border-[#e05a3a]/20">
+            <h3 className="text-3xl md:text-4xl font-black text-black mb-4">
               Become a Partner
             </h3>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
+            <p className="text-gray-700 text-lg max-w-2xl mx-auto mb-8">
               Join our ecosystem and help shape the future of vocational training in Africa. Let's build together.
             </p>
             <a 
               href="https://wa.me/3197010209759?text=Hi!%20I'm%20interested%20in%20partnering%20with%20Blue%20OX%20Kampus." 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-block bg-[#ff4040] hover:bg-[#ff2020] text-white px-8 py-3 rounded-full font-bold transition-all hover:scale-105"
+              className="inline-block bg-[#e05a3a] hover:bg-[#c94e30] text-white px-8 py-3 rounded-full font-bold transition-all hover:scale-105"
             >
               Partner With Us
             </a>
@@ -138,3 +138,11 @@ export default function PartnersGrid(){
     </section>
   );
 }
+
+
+
+
+
+
+
+

@@ -120,10 +120,10 @@ export default function FundPage() {
           <Reveal>
             <div className="text-center mb-16">
               <h1 className="text-5xl sm:text-6xl md:text-7xl font-black uppercase tracking-tighter mb-6">
-                Fund <span className="text-[#ff4040]">Training.</span><br/>
+                Fund <span className="text-[#e05a3a]">Training.</span><br/>
                 Change <span className="text-blue-500">Lives.</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
                 Choose how you want to impact displaced youth, refugees, women, and underserved communities in Western Uganda.
               </p>
             </div>
@@ -131,11 +131,11 @@ export default function FundPage() {
 
           {/* Custom Amount Section */}
           <Reveal delay={0.2}>
-            <div className="mb-16 bg-white/5 border border-white/10 rounded-2xl p-8 sm:p-12">
-              <h3 className="text-3xl font-black text-white mb-4 text-center">
+            <div className="mb-16 bg-white/5 border border-gray-300 rounded-2xl p-8 sm:p-12">
+              <h3 className="text-3xl font-black text-black mb-4 text-center">
                 Choose Your Contribution Amount
               </h3>
-              <p className="text-gray-400 mb-8 text-lg text-center">
+              <p className="text-gray-600 mb-8 text-lg text-center">
                 Every dollar goes directly to training equipment, facilitator salaries, and learner support.
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
@@ -152,13 +152,13 @@ export default function FundPage() {
                   <button
                     key={item.id}
                     onClick={() => handleFund(item.id, item.amount)}
-                    className="bg-blue-500/10 border-2 border-blue-500/30 hover:bg-blue-500/20 hover:border-blue-500 text-white px-6 py-4 rounded-xl font-bold text-lg transition-all hover:scale-105"
+                    className="bg-blue-500/10 border-2 border-blue-500/30 hover:bg-blue-500/20 hover:border-blue-500 text-black px-6 py-4 rounded-xl font-bold text-lg transition-all hover:scale-105"
                   >
                     ${item.amount.toLocaleString()}
                   </button>
                 ))}
               </div>
-              <p className="text-gray-500 text-sm text-center mt-6">
+              <p className="text-gray-600 text-sm text-center mt-6">
                 Need a custom amount over $2,500? <a href="mailto:blueoxrecruit@gmail.com" className="text-blue-500 hover:text-blue-400 underline">Contact us directly</a>
               </p>
             </div>
@@ -170,15 +170,15 @@ export default function FundPage() {
               {fundingOptions.map((option) => (
                 <div
                   key={option.id}
-                  className={`relative bg-white/5 border-2 rounded-2xl p-8 hover:bg-white/10 transition-all hover:scale-105 ${
+                  className={`relative bg-white/5 border-2 rounded-2xl p-8 hover:bg-black/10 transition-all hover:scale-105 ${
                     option.featured
-                      ? 'border-[#ff4040] shadow-2xl shadow-[#ff4040]/20'
-                      : 'border-white/10'
+                      ? 'border-[#e05a3a] shadow-2xl shadow-[#e05a3a]/20'
+                      : 'border-gray-300'
                   }`}
                 >
                   {option.featured && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-[#ff4040] text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider">
+                      <span className="bg-[#e05a3a] text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider">
                         Most Popular
                       </span>
                     </div>
@@ -188,15 +188,15 @@ export default function FundPage() {
                     {getIcon(option.id)}
                   </div>
                   
-                  <h3 className="text-2xl font-black text-white mb-2">
+                  <h3 className="text-2xl font-black text-black mb-2">
                     {option.title}
                   </h3>
                   
-                  <div className="text-4xl font-black text-[#ff4040] mb-4">
+                  <div className="text-4xl font-black text-[#e05a3a] mb-4">
                     ${option.price}
                   </div>
                   
-                  <p className="text-gray-400 mb-4 text-sm leading-relaxed">
+                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">
                     {option.description}
                   </p>
                   
@@ -210,8 +210,8 @@ export default function FundPage() {
                     onClick={() => handleFund(option.id, option.price)}
                     className={`w-full py-4 rounded-xl font-bold text-lg transition-all ${
                       option.featured
-                        ? 'bg-[#ff4040] hover:bg-[#ff2020] text-white shadow-xl'
-                        : 'bg-blue-500 hover:bg-blue-600 text-white'
+                        ? 'bg-[#e05a3a] hover:bg-[#c94e30] text-white shadow-xl'
+                        : 'bg-blue-500 hover:bg-blue-600 text-black'
                     }`}
                   >
                     Fund Now
@@ -225,28 +225,28 @@ export default function FundPage() {
           <Reveal delay={0.6}>
             <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="text-4xl sm:text-5xl font-black text-[#ff4040] mb-2">$50</div>
-                <div className="text-gray-400 text-sm">Per trained person</div>
+                <div className="text-4xl sm:text-5xl font-black text-[#e05a3a] mb-2">$50</div>
+                <div className="text-gray-600 text-sm">Per trained person</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl sm:text-5xl font-black text-blue-500 mb-2">90%</div>
-                <div className="text-gray-400 text-sm">Lower than traditional TVET</div>
+                <div className="text-gray-600 text-sm">Lower than traditional TVET</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl sm:text-5xl font-black text-[#ff4040] mb-2">0</div>
-                <div className="text-gray-400 text-sm">Material waste</div>
+                <div className="text-4xl sm:text-5xl font-black text-[#e05a3a] mb-2">0</div>
+                <div className="text-gray-600 text-sm">Material waste</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl sm:text-5xl font-black text-blue-500 mb-2">100%</div>
-                <div className="text-gray-400 text-sm">Transparent tracking</div>
+                <div className="text-gray-600 text-sm">Transparent tracking</div>
               </div>
             </div>
           </Reveal>
 
           {/* Trust Section */}
           <Reveal delay={0.8}>
-            <div className="mt-16 bg-black/50 border border-white/10 rounded-2xl p-8 text-center">
-              <p className="text-gray-300 leading-relaxed">
+            <div className="mt-16 bg-white/60 border border-gray-300 rounded-2xl p-8 text-center">
+              <p className="text-gray-700 leading-relaxed">
                 Built with <span className="text-blue-500 font-bold">Dig in Vision</span> and informed by deployments with <span className="text-blue-500 font-bold">Toolkit Foundation</span> and <span className="text-blue-500 font-bold">GIZ</span>. Your funds support real, field-tested training that works.
               </p>
             </div>
@@ -258,3 +258,11 @@ export default function FundPage() {
     </>
   );
 }
+
+
+
+
+
+
+
+

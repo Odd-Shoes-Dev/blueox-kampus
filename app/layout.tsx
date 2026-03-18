@@ -69,12 +69,12 @@ export default function RootLayout({ children }:{children:ReactNode}){
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#ff4040" />
+        <meta name="theme-color" content="#e05a3a" />
         <link rel="icon" type="image/x-icon" href="/assets/images/logo.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/logo.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/logo.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/logo.png" />
-        <link rel="mask-icon" href="/assets/images/logo.png" color="#ff4040" />
+        <link rel="mask-icon" href="/assets/images/logo.png" color="#e05a3a" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -129,12 +129,20 @@ export default function RootLayout({ children }:{children:ReactNode}){
         }} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
       </head>
-      <body className="bg-black">
+      <body className="bg-white text-black">
         {children}
       </body>
     </html>
   );
 }
+
+
+
+
+
+
+
+

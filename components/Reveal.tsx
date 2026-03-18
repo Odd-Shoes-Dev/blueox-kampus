@@ -63,3 +63,11 @@ export default function Reveal({ children, className = '', threshold = 0.12, roo
     </div>
   );
 }
+
+
+
+
+
+
+
+

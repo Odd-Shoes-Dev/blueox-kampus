@@ -12,13 +12,13 @@ export default function VRShowcase() {
         src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"
       />
       
-      <section className="py-20 bg-black relative overflow-hidden">
+      <section className="py-20 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* 3D Model Viewer */}
             <div className="relative">
-              <div className="bg-gray-800/50 rounded-xl p-8 backdrop-blur-sm border border-gray-700">
+              <div className="bg-gray-800/70 rounded-xl p-8 backdrop-blur-sm border border-gray-700">
                 <div className="h-96 w-full relative">
                   {createElement('model-viewer', {
                     src: currentModel === 'headset' ? '/assets/models/vr-headset-full.glb' : '/assets/models/vr-controller.glb',
@@ -40,8 +40,8 @@ export default function VRShowcase() {
                   })}
                   
                   <div className="absolute bottom-4 left-4">
-                    <div className="bg-black/50 backdrop-blur-sm rounded-lg px-3 py-2">
-                      <p className="text-white text-xs">
+                    <div className="bg-white/60 backdrop-blur-sm rounded-lg px-3 py-2">
+                      <p className="text-black text-xs">
                         Drag to rotate • Scroll to zoom • Tap to focus
                       </p>
                     </div>
@@ -54,8 +54,8 @@ export default function VRShowcase() {
                     onClick={() => setCurrentModel('headset')}
                     className={`px-4 sm:px-6 py-3 rounded-lg font-semibold transition-all flex items-center justify-center gap-2 text-sm sm:text-base ${
                       currentModel === 'headset'
-                        ? 'bg-[#ff4040] text-white shadow-lg shadow-[#ff4040]/25'
-                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                        ? 'bg-[#e05a3a] text-white shadow-lg shadow-[#e05a3a]/25'
+                        : 'bg-gray-700 text-gray-700 hover:bg-gray-600'
                     }`}
                   >
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -72,7 +72,7 @@ export default function VRShowcase() {
                     className={`px-4 sm:px-6 py-3 rounded-lg font-semibold transition-all flex items-center justify-center gap-2 text-sm sm:text-base ${
                       currentModel === 'controller'
                         ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/25'
-                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                        : 'bg-gray-700 text-gray-700 hover:bg-gray-600'
                     }`}
                   >
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -91,43 +91,43 @@ export default function VRShowcase() {
             {/* Information Panel */}
             <div className="space-y-6 sm:space-y-8 mt-8 lg:mt-0">
               <div className="space-y-4 sm:space-y-6">
-                <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
-                  Traditional vocational training is expensive, dangerous, and inaccessible. We fixed it with <span className="text-[#ff4040] font-semibold italic">VR simulations</span> that make technical education available to everyone:
+                <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
+                  Traditional vocational training is expensive, dangerous, and inaccessible. We fixed it with <span className="text-[#e05a3a] font-semibold italic">VR simulations</span> that make technical education available to everyone:
                 </p>
               </div>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
-                    <img src="/icons/fire.svg" alt="Fire" className="w-8 h-8" />
+                    <img src="/icons/rocket.svg" alt="Fire" className="w-8 h-8" />
                   </div>
-                  <p className="text-gray-300 text-base sm:text-lg">
-                    <span className="text-white font-semibold">Master welding (MIG, TIG, Stick)</span> without consuming materials or risk of injury.
+                  <p className="text-gray-700 text-base sm:text-lg">
+                    <span className="text-black font-semibold">Master welding (MIG, TIG, Stick)</span> without consuming materials or risk of injury.
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
-                    <img src="/icons/solar-panel.svg" alt="Solar Panel" className="w-8 h-8" />
+                    <img src="/icons/strategy.svg" alt="Solar Panel" className="w-8 h-8" />
                   </div>
-                  <p className="text-gray-300 text-base sm:text-lg">
-                    <span className="text-white font-semibold">Install solar systems</span> through simulated hands-on practice.
+                  <p className="text-gray-700 text-base sm:text-lg">
+                    <span className="text-black font-semibold">Install solar systems</span> through simulated hands-on practice.
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
-                    <img src="/icons/wheelchair.svg" alt="Wheelchair" className="w-8 h-8" />
+                    <img src="/icons/team.svg" alt="Wheelchair" className="w-8 h-8" />
                   </div>
-                  <p className="text-gray-300 text-base sm:text-lg">
-                    <span className="text-white font-semibold">Accessible for all</span> — including persons with disabilities in remote areas.
+                  <p className="text-gray-700 text-base sm:text-lg">
+                    <span className="text-black font-semibold">Accessible for all</span> — including persons with disabilities in remote areas.
                   </p>
                 </div>
               </div>
 
-              <div className="bg-gray-800/30 rounded-lg p-6 border border-gray-700">
-                <p className="text-xl text-white">
-                  <span className="text-[#ff4040] font-bold">Result?</span> Certified skills at 90% lower cost. <span className="text-blue-500 font-semibold">Zero waste. Zero injuries. Maximum access.</span>
+              <div className="bg-gray-800/50 rounded-lg p-6 border border-gray-700">
+                <p className="text-xl text-black">
+                  <span className="text-[#e05a3a] font-bold">Result?</span> Certified skills at 90% lower cost. <span className="text-blue-500 font-semibold">Zero waste. Zero injuries. Maximum access.</span>
                 </p>
               </div>
 
@@ -136,7 +136,7 @@ export default function VRShowcase() {
                   href="https://wa.me/3197010209759?text=Hi!%20I%20would%20like%20to%20learn%20more%20about%20VR%20training." 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-block w-full sm:w-auto bg-[#ff4040] hover:bg-[#ff2020] text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#ff4040]/25 transition-all duration-300 text-center"
+                  className="inline-block w-full sm:w-auto bg-[#e05a3a] hover:bg-[#c94e30] text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#e05a3a]/25 transition-all duration-300 text-center"
                 >
                   LEARN MORE
                 </a>
@@ -147,10 +147,17 @@ export default function VRShowcase() {
 
         {/* Background Effects */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-[#ff4040]/5 rounded-full blur-xl"></div>
+          <div className="absolute top-20 left-10 w-32 h-32 bg-[#e05a3a]/5 rounded-full blur-xl"></div>
           <div className="absolute bottom-20 right-10 w-40 h-40 bg-blue-500/5 rounded-full blur-xl"></div>
         </div>
       </section>
     </>
   );
 }
+
+
+
+
+
+
+
