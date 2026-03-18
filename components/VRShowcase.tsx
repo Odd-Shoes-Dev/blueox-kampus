@@ -126,8 +126,8 @@ export default function VRShowcase() {
               </div>
 
               <div className="p-0">
-                <p className="text-xl text-black">
-                  <span className="text-[#e05a3a] font-bold">Result?</span> Certified skills at 90% lower cost. <span className="text-blue-500 font-semibold">Zero waste. Zero injuries. Maximum access.</span>
+                <p className="blueox-body text-lg text-black">
+                  <span className="text-[#e05a3a] font-bold">Result?</span> Certified skills at 90% lower cost. <span className="text-[#e05a3a] font-semibold">Zero waste. Zero injuries. Maximum access.</span>
                 </p>
               </div>
 

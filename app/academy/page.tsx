@@ -148,7 +148,7 @@ export default function AcademyPage() {
       <div className="relative h-96 sm:h-[500px] lg:h-[600px]">
         <iframe
           src="https://www.youtube.com/embed/JUApsTgSYtQ?autoplay=1&mute=1&loop=1&playlist=JUApsTgSYtQ&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&start=0"
-          className="w-full h-full object-cover opacity-60 pointer-events-none"
+          className="w-full h-full object-cover pointer-events-none"
           style={{
             position: 'absolute',
             top: 0,
@@ -326,7 +326,7 @@ export default function AcademyPage() {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button onClick={() => openForm('academy')} className="inline-block border border-[#e05a3a] bg-[#e05a3a] text-white font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-[#c94e30] hover:border-[#c94e30]">
+                <button onClick={() => openForm('academy')} className="inline-block border border-[#e05a3a] bg-transparent text-[#e05a3a] font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-[#e05a3a] hover:text-white">
                   APPLY NOW
                 </button>
                 <Link href="/" className="inline-block border border-black bg-transparent text-black font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-black hover:text-white">

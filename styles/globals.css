@@ -56,6 +56,7 @@
 .blueox-body {
   font-family: var(--odd-sans);
   font-weight: 400;
+  font-size: 1.06rem;
   line-height: 1.7;
 }
 
@@ -275,7 +276,7 @@ html, body {
 body {
   color: var(--odd-black);
   background: var(--odd-white);
-  font-size: 16px;
+  font-size: 17px;
   font-family: var(--odd-sans);
   /* Fix body scrollbar issue */
   overflow-y: auto;
@@ -384,13 +385,13 @@ section, header, footer {
 /* Responsive font scaling */
 @media (max-width: 640px) {
   html {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 480px) {
   html {
-    font-size: 13px;
+    font-size: 15px;
   }
 }
 
