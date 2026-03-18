@@ -133,8 +133,7 @@ export default function AcademyPage() {
                   </div>
 
                   <div className="text-center">
-                    <button onClick={() => openForm('academy')} className="inline-block bg-[#e05a3a] hover:bg-[#c94e30] text-white font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl">
-                      <img src="/icons/checkmark-circle.svg" alt="Enroll" className="inline w-6 h-6 mr-2" />
+                    <button onClick={() => openForm('academy')} className="inline-block border border-black bg-transparent text-black font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-black hover:text-white">
                       ENROLL NOW
                     </button>
                   </div>
@@ -261,14 +260,14 @@ export default function AcademyPage() {
               <h3 className="blueox-subheading text-3xl font-bold text-black mb-8 text-center">How to <span className="text-[#e05a3a]">Apply</span></h3>
               <div className="grid md:grid-cols-4 gap-6">
                 {[
-                  { step: 1, title: 'Choose Program', desc: 'Select the training track that matches your goals and interests', icon: 'clipboard-list.svg' },
+                  { step: 1, title: 'Choose Program', desc: 'Select the training track that matches your goals and interests', icon: 'planner.svg' },
                   { step: 2, title: 'Complete Application', desc: 'Fill out the enrollment form via WhatsApp or in-person', icon: 'checkmark-circle.svg' },
-                  { step: 3, title: 'Start Training', desc: 'Begin VR simulations with expert guidance from local instructors', icon: 'vr-cardboard.svg' },
-                  { step: 4, title: 'Graduate & Work', desc: 'Complete program, get certified, and access job placement support', icon: 'certificate.svg' }
+                  { step: 3, title: 'Start Training', desc: 'Begin VR simulations with expert guidance from local instructors', icon: 'web.svg' },
+                  { step: 4, title: 'Graduate & Work', desc: 'Complete program, get certified, and access job placement support', icon: 'star.svg' }
                 ].map((step) => (
                   <div key={step.step} className="blueox-card p-6 text-center">
-                    <div className="w-16 h-16 bg-[#e05a3a] rounded-full flex items-center justify-center mx-auto mb-4">
-                      <img src={`/icons/${step.icon}`} alt={step.title} className="w-8 h-8" style={{ filter: 'brightness(0) invert(1)' }} />
+                    <div className="w-16 h-16 bg-white border border-gray-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <img src={`/icons/${step.icon}`} alt={step.title} className="w-8 h-8" />
                     </div>
                     <h4 className="blueox-subheading text-xl font-bold text-black mb-2">Step {step.step}</h4>
                     <h5 className="blueox-subheading text-lg font-semibold text-[#e05a3a] mb-2">{step.title}</h5>
@@ -281,8 +280,7 @@ export default function AcademyPage() {
 
           {/* Enroll CTA */}
           <div className="text-center mb-16">
-            <button onClick={() => openForm('academy')} className="inline-block bg-[#e05a3a] hover:bg-[#c94e30] text-white font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl">
-              <img src="/icons/checkmark-circle.svg" alt="Enroll" className="inline w-6 h-6 mr-2" />
+            <button onClick={() => openForm('academy')} className="inline-block border border-black bg-transparent text-black font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-black hover:text-white">
               ENROLL NOW
             </button>
           </div>
