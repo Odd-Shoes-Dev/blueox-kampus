@@ -64,7 +64,7 @@ npm install @whop-sdk/core
 
 #### Update `app/fund/page.tsx`
 
-Replace the `handleFund` function with:
+Replace the `handleFund` function with: 
 
 ```typescript
 const handleFund = async (optionId: string, price: number) => {
