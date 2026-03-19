@@ -93,10 +93,10 @@ export default function HousePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <Reveal delay={0.1}>
             <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-7xl font-extrabold mb-6 text-black">
-                The <span className="gradient-text-3d">House</span>
+              <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
+                The House
               </h1>
-              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              <p className="blueox-body text-base sm:text-lg text-gray-700 max-w-3xl mx-auto">
                 Your home away from home at Blue OX Kampus. Supporting your technical skills development, professional growth, and pathway to global opportunity.
               </p>
             </div>
