@@ -213,17 +213,50 @@ export default function PartnersPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-white">
+      <section className="relative pt-24 md:pt-32 pb-20 bg-white">
+        {/* Full-width ticker */}
+        <div className="w-screen relative left-1/2 -translate-x-1/2 mb-8 bg-white py-3">
+          <div className="academy-ticker bg-white" aria-label="Partners ticker">
+            <div className="academy-ticker-track">
+              <div className="academy-ticker-group">
+                <span className="academy-ticker-item">INDUSTRY PARTNERS</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">TECH INNOVATORS</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">HIRING PARTNERS</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">COMMUNITY ORGS</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">FUNDING PARTNERS</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">BUILDING TOGETHER</span>
+                <span className="academy-ticker-sep">•</span>
+              </div>
+              <div className="academy-ticker-group" aria-hidden="true">
+                <span className="academy-ticker-item">INDUSTRY PARTNERS</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">TECH INNOVATORS</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">HIRING PARTNERS</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">COMMUNITY ORGS</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">FUNDING PARTNERS</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">BUILDING TOGETHER</span>
+                <span className="academy-ticker-sep">•</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <Reveal delay={0.1}>
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-3 py-2 px-4 rounded-full bg-[#e05a3a]/30 backdrop-blur-sm text-[#f4a08e] text-sm font-bold mb-6 border border-[#e05a3a]/30">
-                • Building Together
-              </div>
-              <h1 className="text-5xl md:text-7xl font-extrabold mb-6 text-black">
+              <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
                 Our <span className="gradient-text-3d">Partners</span>
               </h1>
-              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              <p className="blueox-body text-base sm:text-lg text-gray-700 max-w-3xl mx-auto">
                 Collaborating with industry leaders, innovators, and community organizations to create opportunities 
                 and drive technological advancement in Uganda.
               </p>
@@ -233,14 +266,14 @@ export default function PartnersPage() {
       </section>
 
       {/* Partners Grid */}
-      <section className="relative py-20 bg-white">
+      <section className="relative -pt-8 md:pt-16 pb-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <Reveal delay={0.2}>
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
+              <h2 className="text-2xl md:text-3xl font-extrabold mb-4 text-black">
                 Meet Our <span className="text-[#e05a3a]">Partners</span>
               </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              <p className="blueox-body text-sm md:text-base text-gray-600 max-w-2xl mx-auto">
                 Organizations that believe in our mission and support our students
               </p>
             </div>
@@ -335,7 +368,7 @@ export default function PartnersPage() {
                     <h4 className="text-sm font-semibold text-[#e05a3a] mb-2">Examples:</h4>
                     <div className="flex flex-wrap gap-2">
                       {partnership.examples.map((example, i) => (
-                        <span key={i} className="px-3 py-1 bg-gray-700/50 text-gray-700 rounded-full text-sm">
+                        <span key={i} className="px-3 py-1 bg-white border border-gray-300 text-gray-700 rounded-full text-sm">
                           {example}
                         </span>
                       ))}
@@ -415,15 +448,15 @@ export default function PartnersPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => openForm('partner')}
-                  className="bg-[#e05a3a] hover:bg-[#c94e30] text-white font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl inline-block"
+                  className="inline-block border border-[#e05a3a] bg-transparent text-[#e05a3a] font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-[#e05a3a] hover:text-white"
                 >
-                  Partner With Us
+                  PARTNER WITH US
                 </button>
                 <a 
                   href="mailto:blueoxrecruit@gmail.com"
-                  className="border-2 border-black/20 px-10 py-5 rounded-full backdrop-blur-sm hover:bg-black/10 transition-all duration-300 text-lg text-black inline-block"
+                  className="inline-block border border-black bg-transparent text-black font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-black hover:text-white"
                 >
-                  Email Us
+                  EMAIL US
                 </a>
               </div>
               <p className="text-gray-600 text-sm mt-6">
