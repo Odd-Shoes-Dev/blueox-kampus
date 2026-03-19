@@ -192,7 +192,7 @@ export default function FundPage() {
                     {option.title}
                   </h3>
                   
-                  <div className="text-4xl font-black text-[#e05a3a] mb-4">
+                  <div className="blueox-subheading text-4xl text-[#e05a3a] mb-4">
                     ${option.price}
                   </div>
                   
@@ -226,19 +226,19 @@ export default function FundPage() {
           <Reveal delay={0.6}>
             <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="text-4xl sm:text-5xl font-extrabold text-[#e05a3a] mb-2">$50</div>
+                <div className="blueox-subheading text-4xl sm:text-5xl text-[#e05a3a] mb-2">$50</div>
                 <div className="blueox-body text-gray-600 text-sm">Per trained person</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl sm:text-5xl font-extrabold text-black mb-2">90%</div>
+                <div className="blueox-subheading text-4xl sm:text-5xl text-black mb-2">90%</div>
                 <div className="blueox-body text-gray-600 text-sm">Lower than traditional TVET</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl sm:text-5xl font-extrabold text-[#e05a3a] mb-2">0</div>
+                <div className="blueox-subheading text-4xl sm:text-5xl text-[#e05a3a] mb-2">0</div>
                 <div className="blueox-body text-gray-600 text-sm">Material waste</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl sm:text-5xl font-extrabold text-black mb-2">100%</div>
+                <div className="blueox-subheading text-4xl sm:text-5xl text-black mb-2">100%</div>
                 <div className="blueox-body text-gray-600 text-sm">Transparent tracking</div>
               </div>
             </div>
