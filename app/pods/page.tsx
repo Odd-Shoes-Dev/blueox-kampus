@@ -19,17 +19,50 @@ export default function PodsPage() {
     <>
       <Header />
 
-      <section className="relative pt-32 pb-20 bg-white">
+      <section className="relative pt-24 md:pt-32 pb-20 bg-white">
+        {/* Full-width ticker */}
+        <div className="w-screen relative left-1/2 -translate-x-1/2 mb-8 bg-white py-3">
+          <div className="academy-ticker bg-white" aria-label="Billy Pods ticker">
+            <div className="academy-ticker-track">
+              <div className="academy-ticker-group">
+                <span className="academy-ticker-item">NEW SERVICE</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">QA POD</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">REACT POD</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">PYTHON / DATA POD</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">SUPPORT ENG POD</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">INTERN PODS THAT SHIP</span>
+                <span className="academy-ticker-sep">•</span>
+              </div>
+              <div className="academy-ticker-group" aria-hidden="true">
+                <span className="academy-ticker-item">NEW SERVICE</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">QA POD</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">REACT POD</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">PYTHON / DATA POD</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">SUPPORT ENG POD</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">INTERN PODS THAT SHIP</span>
+                <span className="academy-ticker-sep">•</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <Reveal delay={0.1}>
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-3 py-2 px-4 rounded-full bg-[#e05a3a]/30 backdrop-blur-sm text-[#f4a08e] text-sm font-bold mb-6 border border-[#e05a3a]/30">
-                • New Service
-              </div>
-              <h1 className="text-4xl md:text-6xl font-extrabold mb-6 text-black">
+              <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
                 Billy Pods — Intern Pods that ship
               </h1>
-              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              <p className="blueox-body text-base sm:text-lg text-gray-700 max-w-3xl mx-auto">
                 For startups that need shipping capacity fast — add a Pod to your sprint without hiring.
               </p>
             </div>
@@ -51,19 +84,19 @@ export default function PodsPage() {
                 <div className="space-y-4">
                   <h3 className="text-black font-bold">Choose Your Track</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div className="p-4 bg-black/50 rounded-lg">
+                    <div className="p-4 bg-white border border-gray-200 rounded-none">
                       <div className="text-sm text-[#e05a3a] font-semibold">QA Pod</div>
                       <div className="text-gray-700 text-sm">Test cases · regression · bug triage</div>
                     </div>
-                    <div className="p-4 bg-black/50 rounded-lg">
+                    <div className="p-4 bg-white border border-gray-200 rounded-none">
                       <div className="text-sm text-[#e05a3a] font-semibold">React Pod</div>
                       <div className="text-gray-700 text-sm">UI tickets · component cleanup · page builds</div>
                     </div>
-                    <div className="p-4 bg-black/50 rounded-lg">
+                    <div className="p-4 bg-white border border-gray-200 rounded-none">
                       <div className="text-sm text-[#e05a3a] font-semibold">Python/Data Pod</div>
                       <div className="text-gray-700 text-sm">Dashboards · ETL · reporting automation</div>
                     </div>
-                    <div className="p-4 bg-black/50 rounded-lg">
+                    <div className="p-4 bg-white border border-gray-200 rounded-none">
                       <div className="text-sm text-[#e05a3a] font-semibold">Support Engineering Pod</div>
                       <div className="text-gray-700 text-sm">Docs · internal tools · ticket cleanup</div>
                     </div>
@@ -71,8 +104,8 @@ export default function PodsPage() {
                 </div>
 
                 <div className="mt-6">
-                  <button onClick={() => openRequest('pods')} className="bg-[#e05a3a] hover:bg-[#c94e30] text-white px-8 py-3 rounded-full font-bold">
-                    Request Pod Profiles
+                  <button onClick={() => openRequest('pods')} className="inline-block border border-[#e05a3a] bg-transparent text-[#e05a3a] font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-[#e05a3a] hover:text-white">
+                    REQUEST POD PROFILES
                   </button>
                 </div>
               </div>
@@ -93,18 +126,18 @@ export default function PodsPage() {
                 <h4 className="text-black font-semibold mb-2">For Builders — Apply to the Billy Talent Pool</h4>
                 <p className="text-gray-700 mb-4">We verify skill, rank candidates, and form Pods from a vetted pool. Applying does not guarantee selection.</p>
 
-                <div className="flex gap-3">
-                  <button onClick={() => openRequest('pods')} className="bg-white/5 hover:bg-black/10 text-black px-6 py-3 rounded-full font-semibold">
-                    Request Pod Profiles
+                <div className="flex flex-wrap gap-3">
+                  <button onClick={() => openRequest('pods')} className="inline-block border border-[#e05a3a] bg-transparent text-[#e05a3a] font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-[#e05a3a] hover:text-white">
+                    REQUEST POD PROFILES
                   </button>
-                  <button onClick={() => openRequest('academy')} className="border border-gray-300 px-6 py-3 rounded-full text-black">Apply to Pool</button>
+                  <button onClick={() => openRequest('academy')} className="inline-block border border-black bg-transparent text-black font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-black hover:text-white">APPLY TO POOL</button>
                 </div>
               </div>
             </Reveal>
           </div>
 
           <div className="mt-12 max-w-4xl mx-auto text-center">
-            <div className="bg-white/60 border border-gray-300 rounded-2xl p-8">
+            <div className="bg-white border border-gray-200 rounded-none p-8">
               <h4 className="text-black font-bold mb-2">Confirmation Messages</h4>
               <p className="text-gray-700 mb-4">Companies: Request received — we’ll send 3–5 matched profiles within a few business days. Interns: You’re now in the Billy Talent Pool; selected candidates receive assessment invites.</p>
               <p className="text-gray-600 text-sm">Privacy: We use this information only to match and coordinate your Pod.</p>
