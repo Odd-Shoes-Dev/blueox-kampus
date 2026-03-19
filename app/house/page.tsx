@@ -53,13 +53,46 @@ export default function HousePage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-white">
+      <section className="relative pt-24 md:pt-32 pb-20 bg-white">
+        {/* Full-width ticker */}
+        <div className="w-screen relative left-1/2 -translate-x-1/2 mb-8 bg-white py-3">
+          <div className="academy-ticker bg-white" aria-label="The House features ticker">
+            <div className="academy-ticker-track">
+              <div className="academy-ticker-group">
+                <span className="academy-ticker-item">ACCOMMODATION</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">3 MEALS DAILY</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">HIGH-SPEED WIFI</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">COWORKING SPACE</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">24/7 SECURITY</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">COMMUNITY LIVING</span>
+                <span className="academy-ticker-sep">•</span>
+              </div>
+              <div className="academy-ticker-group" aria-hidden="true">
+                <span className="academy-ticker-item">ACCOMMODATION</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">3 MEALS DAILY</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">HIGH-SPEED WIFI</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">COWORKING SPACE</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">24/7 SECURITY</span>
+                <span className="academy-ticker-sep">•</span>
+                <span className="academy-ticker-item">COMMUNITY LIVING</span>
+                <span className="academy-ticker-sep">•</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <Reveal delay={0.1}>
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-3 py-2 px-4 rounded-full bg-[#e05a3a]/30 backdrop-blur-sm text-[#f4a08e] text-sm font-bold mb-6 border border-[#e05a3a]/30">
-                • Student & Professional Accommodation
-              </div>
               <h1 className="text-5xl md:text-7xl font-extrabold mb-6 text-black">
                 The <span className="gradient-text-3d">House</span>
               </h1>

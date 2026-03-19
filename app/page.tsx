@@ -33,9 +33,11 @@ export default function Page() {
           <Reveal delay={0.1}>
             <div className="flex flex-col items-center justify-center">
               {/* Hero Content */}
-              <div className="text-center flex-1">
-                <h1 className="text-4xl md:text-5xl font-extrabold mb-6 sm:mb-8 pt-24 sm:pt-20 md:pt-0 text-black">
-                  What if the only thing between <span className="text-[#e05a3a]">a refugee and a career</span>… was a <span className="text-blue-500">VR headset</span>?
+              <div className="text-center flex-1 max-w-2xl mx-auto">
+                <h1 className="text-4xl md:text-5xl font-extrabold mb-6 sm:mb-8 pt-24 sm:pt-20 md:pt-0 text-black leading-tight">
+                  What if the only thing between<br/>
+                  <span className="text-[#e05a3a]">a refugee and a career</span>…<br/>
+                  was a <span className="text-blue-500">VR headset</span>?
                 </h1>
 
                 <h2 className="blueox-body text-base sm:text-lg text-gray-700 mb-8 sm:mb-10">
@@ -59,28 +61,28 @@ export default function Page() {
 
                 {/* Trust Badges */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto mb-12">
-                  <div className="bg-white/5 border border-gray-300 rounded-xl p-4 sm:p-6 hover:bg-black/10 transition">
-                    <div className="blueox-subheading text-3xl sm:text-4xl font-black text-[#e05a3a] mb-2">32</div>
-                    <p className="blueox-body text-xs sm:text-sm text-gray-600 leading-tight">
-                      Trainers-of-trainers trained<br/>(Kampala, DIT partnership)
+                  <div className="bg-white border border-gray-300 rounded-none p-5 hover:border-[#e05a3a] transition-colors duration-200">
+                    <div className="blueox-subheading text-3xl sm:text-4xl font-black text-[#e05a3a] mb-1">32</div>
+                    <p className="blueox-body text-xs sm:text-sm text-gray-600 leading-snug">
+                      Trainers-of-trainers trained (Kampala, DIT partnership)
                     </p>
                   </div>
-                  <div className="bg-white/5 border border-gray-300 rounded-xl p-4 sm:p-6 hover:bg-black/10 transition">
-                    <div className="blueox-subheading text-2xl sm:text-3xl font-black text-blue-500 mb-2">Uganda's First<br/>VR Training Center</div>
-                    <p className="blueox-body text-xs sm:text-sm text-gray-600 leading-tight">
-                      Upgrading traditional<br/>vocational training
+                  <div className="bg-white border border-gray-300 rounded-none p-5 hover:border-[#e05a3a] transition-colors duration-200">
+                    <div className="blueox-subheading text-xl sm:text-2xl font-black text-blue-500 mb-1">Uganda's First VR Training Center</div>
+                    <p className="blueox-body text-xs sm:text-sm text-gray-600 leading-snug">
+                      Upgrading traditional vocational training
                     </p>
                   </div>
-                  <div className="bg-white/5 border border-gray-300 rounded-xl p-4 sm:p-6 hover:bg-black/10 transition">
-                    <div className="blueox-subheading text-2xl sm:text-3xl font-black text-blue-500 mb-2">VR-First</div>
-                    <p className="blueox-body text-xs sm:text-sm text-gray-600 leading-tight">
-                      Easier transition to<br/>physical welding
+                  <div className="bg-white border border-gray-300 rounded-none p-5 hover:border-[#e05a3a] transition-colors duration-200">
+                    <div className="blueox-subheading text-2xl sm:text-3xl font-black text-blue-500 mb-1">VR-First</div>
+                    <p className="blueox-body text-xs sm:text-sm text-gray-600 leading-snug">
+                      Easier transition to physical welding
                     </p>
                   </div>
-                  <div className="bg-white/5 border border-gray-300 rounded-xl p-4 sm:p-6 hover:bg-black/10 transition">
-                    <div className="blueox-subheading text-3xl sm:text-4xl font-black text-[#e05a3a] mb-2">500+</div>
-                    <p className="blueox-body text-xs sm:text-sm text-gray-600 leading-tight">
-                      Internationally certified welders<br/>(Kenya program)
+                  <div className="bg-white border border-gray-300 rounded-none p-5 hover:border-[#e05a3a] transition-colors duration-200">
+                    <div className="blueox-subheading text-3xl sm:text-4xl font-black text-[#e05a3a] mb-1">500+</div>
+                    <p className="blueox-body text-xs sm:text-sm text-gray-600 leading-snug">
+                      Internationally certified welders (Kenya program)
                     </p>
                   </div>
                 </div>
@@ -137,11 +139,11 @@ export default function Page() {
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-black">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-6 text-black">
                 Talent is everywhere. <span className="text-[#e05a3a]">Access isn't.</span><br/>
                 <span className="text-blue-500">So we moved the lab.</span>
               </h2>
-              <p className="blueox-body text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              <p className="blueox-body text-sm md:text-base text-gray-600 max-w-4xl mx-auto leading-relaxed">
                 Displaced learners, women with caregiving responsibilities, youth with disabilities, and rural students often can't travel to training—so we bring training to them.
               </p>
             </div>
