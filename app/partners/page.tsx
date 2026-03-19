@@ -381,7 +381,7 @@ export default function PartnersPage() {
         </div>
       </section>
 
-      {/* Testimonials Section (Placeholder) */}
+      {/* Testimonials Section — hidden until real partner quotes are collected
       <section className="relative py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <Reveal delay={0.8}>
@@ -433,6 +433,7 @@ export default function PartnersPage() {
           </div>
         </div>
       </section>
+      */}
 
       {/* CTA Section */}
       <section className="relative py-20 bg-white">
