@@ -20,7 +20,7 @@ export default function ThankYouPage() {
   return (
     <>
       <Header />
-      <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black via-[#0a0f1a] to-black px-6 pt-32">
+      <section className="min-h-screen flex items-center justify-center bg-white px-6 pt-32">
         <div className="max-w-2xl mx-auto text-center">
           <div className="text-6xl mb-6">🎉</div>
           <h1 className="text-5xl font-black text-black mb-6 uppercase">

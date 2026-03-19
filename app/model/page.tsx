@@ -118,7 +118,7 @@ export default function ModelPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-black via-[#0a0f1a] to-black pt-32 pb-16 px-6">
+      <section className="relative min-h-screen flex items-center justify-center bg-white pt-32 pb-16 px-6">
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-20">

@@ -312,7 +312,7 @@ label {
 }
 
 section {
-  background-image: radial-gradient(circle at 20% 10%, rgba(224, 90, 58, 0.06) 0%, transparent 45%);
+  background-image: none;
 }
 
 * {

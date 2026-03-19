@@ -58,7 +58,7 @@ export default function Header(){
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full h-[var(--nav-height)] z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 right-50 transition-transform duration-300 ease-out ${isHeaderVisible ? 'translate-y-0' : '-translate-y-full'}`}
+      className={`fixed top-0 left-0 w-full h-[var(--nav-height)] z-50 bg-white border-b border-gray-200 right-50 transition-transform duration-300 ease-out ${isHeaderVisible ? 'translate-y-0' : '-translate-y-full'}`}
     >
         <div className="max-w-7xl mx-auto px-6 py-0 lg:mt-0 flex items-center justify-between relative">
           <div className="flex items-center gap-3">
