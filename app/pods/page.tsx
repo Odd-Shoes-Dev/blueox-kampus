@@ -104,9 +104,9 @@ export default function PodsPage() {
                 </div>
 
                 <div className="mt-6">
-                  <button onClick={() => openRequest('pods')} className="inline-block border border-[#e05a3a] bg-transparent text-[#e05a3a] font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-[#e05a3a] hover:text-white">
+                  <a href="https://www.blueoxjobs.eu/hiring" target="_blank" rel="noopener noreferrer" className="inline-block border border-[#e05a3a] bg-transparent text-[#e05a3a] font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-[#e05a3a] hover:text-white">
                     REQUEST POD PROFILES
-                  </button>
+                  </a>
                 </div>
               </div>
             </Reveal>
@@ -127,9 +127,9 @@ export default function PodsPage() {
                 <p className="text-gray-700 mb-4">We verify skill, rank candidates, and form Pods from a vetted pool. Applying does not guarantee selection.</p>
 
                 <div className="flex flex-wrap gap-3">
-                  <button onClick={() => openRequest('pods')} className="inline-block border border-[#e05a3a] bg-transparent text-[#e05a3a] font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-[#e05a3a] hover:text-white">
+                  <a href="https://www.blueoxjobs.eu/hiring" target="_blank" rel="noopener noreferrer" className="inline-block border border-[#e05a3a] bg-transparent text-[#e05a3a] font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-[#e05a3a] hover:text-white">
                     REQUEST POD PROFILES
-                  </button>
+                  </a>
                   <button onClick={() => openRequest('academy')} className="inline-block border border-black bg-transparent text-black font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-black hover:text-white">APPLY TO POOL</button>
                 </div>
               </div>
@@ -145,7 +145,275 @@ export default function PodsPage() {
           </div>
         </div>
       </section>
+      {/* Track Record */}
+      <section className="relative py-16 bg-white border-t border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <Reveal>
+            <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-[#e05a3a] mb-4">Track record</p>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-black mb-3">Builders who ship. Products that exist.</h2>
+            <p className="blueox-body text-gray-600 text-sm mb-6">Builders from our network have shipped for:</p>
+            <div className="flex flex-wrap gap-3 mb-4">
+              {['Haiven', 'DevShield', 'By The Fruit', 'Dig In Vision'].map((name) => (
+                <span key={name} className="px-4 py-2 border border-gray-300 text-gray-700 text-sm blueox-body">{name}</span>
+              ))}
+            </div>
+            <p className="blueox-body text-gray-500 text-sm">Startups backed by millions in pre-seed and seed funding across AI, fintech, and VR.</p>
+          </Reveal>
+        </div>
+      </section>
 
+      {/* Execution Problem + Pipeline */}
+      <section className="relative py-16 bg-white border-t border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="grid md:grid-cols-2 gap-12 mb-16">
+            <Reveal delay={0.1}>
+              <div>
+                <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-[#e05a3a] mb-4">For founders</p>
+                <h2 className="text-2xl md:text-3xl font-extrabold text-black mb-4">Capital is flowing into faith-driven startups. Execution is still broken.</h2>
+                <blockquote className="border-l-4 border-[#e05a3a] pl-5 my-6">
+                  <p className="blueox-body text-black text-lg font-semibold">Good intentions don't ship products.<br/>Execution does.</p>
+                </blockquote>
+              </div>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <div className="pt-8 md:pt-14">
+                <p className="blueox-body text-gray-600 leading-relaxed mb-4">Hiring takes months. Misaligned builders dilute your vision mid-sprint. Your backlog keeps growing while momentum stalls.</p>
+                <p className="blueox-body text-gray-600 leading-relaxed mb-4">The founders losing ground aren't short on conviction. They're short on execution infrastructure that actually matches what they're building.</p>
+                <p className="blueox-body text-black font-semibold">Most teams don't ship weekly. Ours do.</p>
+              </div>
+            </Reveal>
+          </div>
+
+          {/* Pipeline */}
+          <Reveal delay={0.3}>
+            <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-[#e05a3a] mb-4">The BlueOx difference</p>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-black mb-3">We didn't source a talent pool. We built the campus first.</h2>
+            <p className="blueox-body text-gray-600 text-base mb-8 max-w-2xl">Every Saturday, builders compete. Top performers enter our system, commit to the Redemptive Technology code, and get deployed into your product. No CVs. No guesswork. Just proof.</p>
+            <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200 border border-gray-200 mb-6">
+              <div className="p-6">
+                <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-[#e05a3a] mb-3">Kampus</p>
+                <h3 className="font-extrabold text-black text-lg mb-2">Train</h3>
+                <p className="blueox-body text-gray-600 text-sm">VR-powered training. Weekly competitions. Top performers rise to the surface.</p>
+              </div>
+              <div className="p-6">
+                <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-[#e05a3a] mb-3">Select</p>
+                <h3 className="font-extrabold text-black text-lg mb-2">Rank</h3>
+                <p className="blueox-body text-gray-600 text-sm">Every Saturday, builders compete. Only the top 10–20% are placed. No CVs. Just proof.</p>
+              </div>
+              <div className="p-6 bg-gray-50">
+                <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-[#e05a3a] mb-3">Your startup</p>
+                <h3 className="font-extrabold text-black text-lg mb-2">Ship</h3>
+                <p className="blueox-body text-gray-600 text-sm">Weekly deliverables. Pod Coordinator manages everything. Friday report every week.</p>
+              </div>
+            </div>
+            <p className="blueox-body text-gray-500 text-sm">You're not outsourcing. You're plugging into a performance-tested execution system — built and proven before the first pod was ever deployed.</p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="relative py-16 bg-white border-t border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <Reveal>
+            <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-[#e05a3a] mb-4">How it works</p>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-black mb-3">Your backlog isn't a strategy problem. It's an execution gap.</h2>
+            <p className="blueox-body text-gray-600 text-base mb-8">Send us your stack. We match a pod. They ship from campus while you build product.</p>
+          </Reveal>
+          <div className="border border-gray-200 divide-y divide-gray-200 mb-8">
+            {([
+              { n: '1', title: 'Send your stack + top tasks', desc: 'Tech stack, 3–5 items from your backlog, timeline. We give you a template. Takes 60 seconds.', time: 'Day 1' },
+              { n: '2', title: 'Pick from ranked profiles', desc: '3–5 competition-ranked builders with portfolios and performance data. You interview. You approve.', time: 'Days 3–5' },
+              { n: '3', title: 'Kickoff & cadence set', desc: 'Pod Coordinator runs the kickoff call. Weekly sprint cadence agreed. Everything managed from campus.', time: 'Day 7' },
+              { n: '4', title: 'Weekly shipping begins', desc: 'Deliverables every week. Pod Report every Friday. Coordinator handles blockers before they hit your Slack.', time: 'Ongoing' },
+            ] as { n: string; title: string; desc: string; time: string }[]).map((step) => (
+              <Reveal key={step.n} delay={0.1}>
+                <div className="flex items-stretch">
+                  <div className="w-16 flex-shrink-0 flex items-center justify-center blueox-subheading text-3xl text-gray-200 border-r border-gray-200 py-6">
+                    {step.n}
+                  </div>
+                  <div className="flex-1 px-6 py-5">
+                    <h3 className="font-extrabold text-black text-base mb-1">{step.title}</h3>
+                    <p className="blueox-body text-gray-600 text-sm">{step.desc}</p>
+                  </div>
+                  <div className="hidden md:flex w-28 flex-shrink-0 items-center justify-end px-5 border-l border-gray-200">
+                    <span className="blueox-body text-xs text-[#e05a3a] font-semibold text-right">{step.time}</span>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="relative py-16 bg-white border-t border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <Reveal>
+            <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-[#e05a3a] mb-4">Pricing</p>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-black mb-8">A full week of shipping for what most developers charge for a single day.</h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <div className="border border-gray-200 p-8 sm:p-10 mb-6">
+              <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-gray-500 mb-4">This is not cheaper talent. This is faster execution.</p>
+              <div className="blueox-subheading text-5xl text-[#e05a3a] mb-2">$199<span className="text-2xl text-gray-400 font-normal"> / week</span></div>
+              <p className="blueox-body text-gray-600 text-sm mb-8">Per builder — campus-based, coordinator-managed, Pod Report every Friday</p>
+              <div className="grid md:grid-cols-3 gap-4">
+                <div className="border border-gray-200 p-5">
+                  <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-gray-500 mb-2">Freelancer</p>
+                  <p className="blueox-subheading text-2xl text-black mb-2">$50–90/hr</p>
+                  <p className="blueox-body text-gray-600 text-sm">No coordinator. No accountability. Often gone by week 3.</p>
+                </div>
+                <div className="border border-gray-200 p-5">
+                  <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-gray-500 mb-2">Junior hire</p>
+                  <p className="blueox-subheading text-2xl text-black mb-2">$4–6k/mo</p>
+                  <p className="blueox-body text-gray-600 text-sm">3 months to onboard. You become the manager.</p>
+                </div>
+                <div className="border border-[#e05a3a] p-5">
+                  <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-[#e05a3a] mb-2">BlueOx Pod</p>
+                  <p className="blueox-subheading text-2xl text-[#e05a3a] mb-2">$199/wk</p>
+                  <p className="blueox-body text-gray-600 text-sm">Coordinated. Shipping in 7 days. Friday report included.</p>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+          <div className="grid md:grid-cols-2 gap-4">
+            <Reveal delay={0.2}>
+              <div className="border border-gray-200 p-8">
+                <span className="blueox-body text-xs font-semibold tracking-widest uppercase text-gray-500 mb-4 block">Solo</span>
+                <h3 className="font-extrabold text-black text-xl mb-2">Solo Pod</h3>
+                <p className="blueox-subheading text-3xl text-[#e05a3a] mb-1">$2,388</p>
+                <p className="blueox-body text-gray-500 text-sm mb-5">1 builder · 12 weeks · $199/wk</p>
+                <div className="border-t border-gray-200 pt-4 space-y-2 mb-6">
+                  {['Any role category', 'Pod Coordinator included', 'Weekly Pod Reports', 'Replacement guarantee'].map(f => (
+                    <p key={f} className="blueox-body text-gray-600 text-sm"><span className="text-[#e05a3a] mr-2">—</span>{f}</p>
+                  ))}
+                </div>
+                <a href="https://www.blueoxjobs.eu/hiring" target="_blank" rel="noopener noreferrer" className="inline-block border border-[#e05a3a] bg-transparent text-[#e05a3a] font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-[#e05a3a] hover:text-white">REQUEST SOLO POD</a>
+              </div>
+            </Reveal>
+            <Reveal delay={0.25}>
+              <div className="border border-[#e05a3a] p-8">
+                <span className="blueox-body text-xs font-semibold tracking-widest uppercase text-[#e05a3a] mb-4 block">Best value</span>
+                <h3 className="font-extrabold text-black text-xl mb-2">Team Pod</h3>
+                <p className="blueox-subheading text-3xl text-[#e05a3a] mb-1">$5,970</p>
+                <p className="blueox-body text-gray-500 text-sm mb-5">3 builders · 12 weeks · ~$166/wk each</p>
+                <div className="border-t border-gray-200 pt-4 space-y-2 mb-6">
+                  {['Multi-role or single focus', 'Dedicated coordinator', 'Coordinated Pod Reports', 'Dev · Design · Ops available', 'Save 17% vs solo rate'].map(f => (
+                    <p key={f} className="blueox-body text-gray-600 text-sm"><span className="text-[#e05a3a] mr-2">—</span>{f}</p>
+                  ))}
+                </div>
+                <a href="https://www.blueoxjobs.eu/hiring" target="_blank" rel="noopener noreferrer" className="inline-block border border-[#e05a3a] bg-[#e05a3a] text-white font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-[#c94e30]">REQUEST TEAM POD</a>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* For Builders */}
+      <section className="relative py-16 bg-white border-t border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            <Reveal delay={0.1}>
+              <div>
+                <span className="blueox-body text-xs font-semibold tracking-widest uppercase px-3 py-1 border border-gray-300 text-gray-600 mb-6 inline-block">For builders</span>
+                <h2 className="text-2xl md:text-3xl font-extrabold text-black mb-4 mt-4">Get an international company on your CV. Ship real work. Build a career.</h2>
+                <p className="blueox-body text-gray-600 leading-relaxed">BlueOx Kampus places you in an execution pod with a real startup for 8–16 weeks. Work from campus. Pay nothing. Compete every Saturday — top performers get placed first.</p>
+              </div>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <div className="space-y-0 mt-4">
+                {[
+                  'Ship real features — not classroom exercises',
+                  'Work from campus: power, fibre, mentorship',
+                  'Weekly competitions — top ranks placed first',
+                  'Professional certificate + reference from startup',
+                  'Pipeline: pod → contract → full employment',
+                  'Markets: Poland · Netherlands · UAE · Gulf',
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-3 py-3 border-b border-gray-100">
+                    <span className="text-[#e05a3a] font-semibold text-sm mt-0.5">→</span>
+                    <p className="blueox-body text-gray-700 text-sm">{item}</p>
+                  </div>
+                ))}
+                <div className="pt-5">
+                  <button onClick={() => openRequest('academy')} className="inline-block border border-black bg-transparent text-black font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-black hover:text-white">JOIN THE TALENT POOL</button>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* For Universities */}
+      <section className="relative py-16 bg-white border-t border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            <Reveal delay={0.1}>
+              <div>
+                <span className="blueox-body text-xs font-semibold tracking-widest uppercase px-3 py-1 border border-[#e05a3a] text-[#e05a3a] mb-6 inline-block">For universities</span>
+                <h2 className="text-2xl md:text-3xl font-extrabold text-black mb-4 mt-4">Placements that actually lead somewhere.</h2>
+                <p className="blueox-body text-gray-600 leading-relaxed">Pre-vetted international startups. Students join live shipping pods — not coffee runs. BlueOx handles matching, coordination, supervision, and reporting. You get the outcomes dashboard.</p>
+              </div>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <div className="space-y-0 mt-4">
+                {[
+                  'Students placed in real shipping environments',
+                  'Weekly Pod Report per student',
+                  '8–16 week programs with defined deliverables',
+                  'Certificates, references, portfolio pieces',
+                  'Dashboard: placement, completion, employment rates',
+                  'Zero admin burden on your department',
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-3 py-3 border-b border-gray-100">
+                    <span className="text-[#e05a3a] font-semibold text-sm mt-0.5">→</span>
+                    <p className="blueox-body text-gray-700 text-sm">{item}</p>
+                  </div>
+                ))}
+                <div className="pt-5">
+                  <a href="mailto:blueoxrecruit@gmail.com?subject=University Partnership" className="inline-block border border-black bg-transparent text-black font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-black hover:text-white">PARTNER WITH US</a>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* For Investors / Faith Driven */}
+      <section className="relative py-16 bg-white border-t border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            <Reveal delay={0.1}>
+              <div>
+                <span className="blueox-body text-xs font-semibold tracking-widest uppercase px-3 py-1 border border-blue-500 text-blue-500 mb-6 inline-block">For investors & donors</span>
+                <h2 className="text-2xl md:text-3xl font-extrabold text-black mb-4 mt-4">For Faith Driven Investors deploying Kingdom capital.</h2>
+                <p className="blueox-body text-gray-600 leading-relaxed">If you operate from a one-pocket framework — where giving, investing, and spending all come from the same Kingdom conviction — BlueOx is a place to put capital to work. We're building a model where a Christian tech hub trains students, ships products, plants churches, and supports refugees. All from the same ecosystem.</p>
+              </div>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <div className="space-y-0 mt-4">
+                {[
+                  'Every pod placed funds church plants and refugee support',
+                  'Builder training is free — revenue from founders covers it',
+                  "Aligned with solving.org's Build, Invest, Give framework",
+                  'Impact-measurable: placements, completions, employment tracked',
+                  'ESG documentation for grant-funded and donor-advised tracks',
+                  'IOM, UNHCR, EU-Africa fund aligned for impact capital',
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-3 py-3 border-b border-gray-100">
+                    <span className="text-[#e05a3a] font-semibold text-sm mt-0.5">→</span>
+                    <p className="blueox-body text-gray-700 text-sm">{item}</p>
+                  </div>
+                ))}
+                <div className="pt-5 flex flex-wrap gap-3">
+                  <a href="/fund" className="inline-block border border-[#e05a3a] bg-[#e05a3a] text-white font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-[#c94e30]">FUND TRAINING</a>
+                  <a href="mailto:blueoxrecruit@gmail.com?subject=Investor Inquiry" className="inline-block border border-black bg-transparent text-black font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-black hover:text-white">TALK ABOUT YOUR PORTFOLIO</a>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
       <ApplicationForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} formType={formType} />
 
       <Footer />

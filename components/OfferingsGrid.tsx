@@ -176,7 +176,9 @@ export default function OfferingsGrid(){
                 </div>
               </div>
               <a 
-                href="/pods" 
+                href="https://www.blueoxjobs.eu/hiring" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block text-center bg-[#e05a3a] hover:bg-[#c94e30] text-white py-2 rounded-lg text-sm font-semibold transition-all"
               >
                 Request Pod Profiles

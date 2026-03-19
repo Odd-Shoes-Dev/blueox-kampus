@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blue Ox Kampus — Execution Infrastructure for Redemptive Technology</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:       #0D1F2D;
+    --ink-deep:  #091620;
+    --ink-mid:   #122636;
+    --ink-lift:  #1A3245;
+    --gold:      #E6AF2E;
+    --gold-dim:  rgba(230,175,46,0.11);
+    --gold-glow: rgba(230,175,46,0.20);
+    --gold-bdr:  rgba(230,175,46,0.28);
+    --steel:     #9EA3B0;
+    --steel-dim: rgba(158,163,176,0.11);
+    --steel-bdr: rgba(158,163,176,0.18);
+    --white:     #EDF2F7;
+    --muted:     #5A6572;
+    --bdr:       rgba(158,163,176,0.13);
+    --h: 'Exo 2', sans-serif;
+    --b: 'Inter', sans-serif;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--ink);color:var(--white);font-family:var(--b);font-size:16px;line-height:1.7;overflow-x:hidden}
+  body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");opacity:0.028;pointer-events:none;z-index:9999}
+
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;z-index:200;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:rgba(9,22,32,0.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--bdr)}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .logo-mark{width:34px;height:34px;background:var(--gold);border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:var(--h);font-weight:900;font-size:13px;color:var(--ink-deep);letter-spacing:-0.5px}
+  .logo-name{font-family:var(--h);font-weight:700;font-size:15px;color:var(--white);letter-spacing:0.05em;text-transform:uppercase}
+  .nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+  .nav-links a{font-size:12px;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;color:var(--steel);text-decoration:none;transition:color 0.2s}
+  .nav-links a:hover{color:var(--white)}
+  .nav-cta{background:var(--gold)!important;color:var(--ink-deep)!important;padding:8px 18px;border-radius:6px;font-weight:600!important;transition:opacity 0.2s!important}
+  .nav-cta:hover{opacity:0.84!important}
+
+  /* LAYOUT */
+  .wrap{max-width:1100px;margin:0 auto;padding:0 48px}
+  section{position:relative}
+
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+  .eyebrow::before{content:'';display:block;width:22px;height:1px;background:var(--gold)}
+
+  h1,h2,h3,h4{font-family:var(--h)}
+
+  /* HERO */
+  .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:62px;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 55% 60% at 75% 35%,rgba(230,175,46,0.07) 0%,transparent 65%),radial-gradient(ellipse 40% 55% at 15% 75%,rgba(18,38,54,0.7) 0%,transparent 70%),linear-gradient(155deg,var(--ink-deep) 0%,var(--ink) 100%)}
+  .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(230,175,46,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(230,175,46,0.04) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(ellipse 90% 80% at 60% 40%,black 20%,transparent 80%)}
+  .hero-inner{position:relative;z-index:2;padding:90px 0 72px}
+  .hero-h1{font-size:clamp(36px,5.2vw,66px);font-weight:900;line-height:1.06;letter-spacing:-0.025em;max-width:800px;margin-bottom:24px}
+  .hero-h1 em{font-style:normal;color:var(--gold)}
+  .hero-sub{font-size:17px;font-weight:300;color:rgba(237,242,247,0.58);max-width:500px;line-height:1.75;margin-bottom:40px}
+  .hero-btns{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:64px}
+
+  .btn-gold{background:var(--gold);color:var(--ink-deep);padding:13px 26px;border-radius:7px;font-family:var(--b);font-size:14px;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:opacity 0.2s,transform 0.15s;display:inline-block}
+  .btn-gold:hover{opacity:0.87;transform:translateY(-1px)}
+  .btn-outline{background:transparent;color:var(--white);padding:12px 26px;border-radius:7px;font-family:var(--b);font-size:14px;font-weight:400;text-decoration:none;border:1px solid var(--steel-bdr);cursor:pointer;transition:border-color 0.2s,background 0.2s;display:inline-block}
+  .btn-outline:hover{border-color:rgba(158,163,176,0.42);background:rgba(158,163,176,0.06)}
+
+  .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--bdr);border:1px solid var(--bdr);border-radius:12px;overflow:hidden;max-width:660px}
+  .stat-cell{background:rgba(9,22,32,0.95);padding:20px 22px;transition:background 0.2s}
+  .stat-cell:hover{background:var(--gold-dim)}
+  .stat-val{font-family:var(--h);font-size:26px;font-weight:800;color:var(--gold);line-height:1;margin-bottom:5px}
+  .stat-lbl{font-size:11px;color:var(--steel);line-height:1.4}
+
+  .scroll-hint{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;opacity:0.28}
+  .scroll-hint span{font-size:10px;letter-spacing:0.14em;text-transform:uppercase}
+  .scroll-line{width:1px;height:28px;background:linear-gradient(to bottom,var(--white),transparent);animation:sp 2s ease-in-out infinite}
+  @keyframes sp{0%,100%{opacity:0.3;transform:scaleY(1)}50%{opacity:1;transform:scaleY(1.25)}}
+
+  /* MARQUEE */
+  .marquee-wrap{border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);background:rgba(230,175,46,0.04);padding:13px 0;overflow:hidden}
+  .marquee-track{display:flex;gap:52px;animation:mq 24s linear infinite;white-space:nowrap}
+  .mq-item{font-size:11px;letter-spacing:0.13em;text-transform:uppercase;color:var(--muted);flex-shrink:0}
+  .mq-item strong{color:var(--gold);font-weight:600}
+  .mq-dot{color:rgba(158,163,176,0.28);margin:0 4px}
+  @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* SECTIONS */
+  .sp{padding:88px 0}
+  .sb{border-top:1px solid var(--bdr)}
+  .section-h{font-size:clamp(24px,3.2vw,38px);font-weight:800;line-height:1.15;letter-spacing:-0.02em;margin-bottom:12px}
+  .section-sub{font-size:16px;font-weight:300;color:rgba(237,242,247,0.5);max-width:480px;margin-bottom:48px;line-height:1.75}
+
+  /* AUDIENCE GRID */
+  .aud-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--bdr);border:1px solid var(--bdr);border-radius:14px;overflow:hidden}
+  .aud-card{background:var(--ink-deep);padding:28px 22px;text-decoration:none;display:block;transition:background 0.2s}
+  .aud-card:hover{background:var(--gold-dim)}
+  .aud-icon{width:38px;height:38px;border:1px solid var(--bdr);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:17px;margin-bottom:16px}
+  .aud-tag{font-size:10px;letter-spacing:0.13em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;font-weight:600}
+  .aud-card h3{font-size:16px;font-weight:700;margin-bottom:8px;color:var(--white);letter-spacing:-0.01em}
+  .aud-card p{font-size:13px;color:var(--steel);line-height:1.6}
+  .aud-arrow{display:inline-block;margin-top:14px;font-size:18px;color:var(--gold);opacity:0;transform:translateX(-4px);transition:opacity 0.2s,transform 0.2s}
+  .aud-card:hover .aud-arrow{opacity:1;transform:translateX(0)}
+
+  /* CHIPS */
+  .chip-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+  .chip{padding:7px 16px;border:1px solid var(--gold-bdr);border-radius:100px;font-size:13px;color:rgba(237,242,247,0.7);background:var(--gold-dim)}
+
+  /* PROBLEM */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+  .pull-quote{font-family:var(--h);font-size:clamp(18px,2.2vw,24px);font-weight:700;line-height:1.35;border-left:3px solid var(--gold);padding-left:22px;margin:28px 0;color:var(--white);letter-spacing:-0.01em}
+
+  /* PIPELINE */
+  .pipeline{display:grid;grid-template-columns:1fr 32px 1fr 32px 1fr;align-items:stretch;margin:48px 0 24px;border:1px solid var(--bdr);border-radius:14px;overflow:hidden;background:rgba(9,22,32,0.5)}
+  .pipe-node{padding:28px 24px;border-right:1px solid var(--bdr)}
+  .pipe-node:last-child{border-right:none}
+  .pipe-node.active{background:var(--gold-dim)}
+  .pipe-conn{display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:20px;opacity:0.4;border-right:1px solid var(--bdr)}
+  .pipe-tag{font-size:10px;letter-spacing:0.13em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:600}
+  .pipe-node h3{font-size:18px;font-weight:800;margin-bottom:8px;color:var(--white);letter-spacing:-0.01em}
+  .pipe-node p{font-size:13px;color:var(--steel);line-height:1.6}
+
+  /* PRICING */
+  .price-hero{background:var(--gold-dim);border:1px solid var(--gold-bdr);border-radius:16px;padding:48px;margin:48px 0 28px;position:relative;overflow:hidden}
+  .price-hero::before{content:'';position:absolute;top:-60px;right:-60px;width:240px;height:240px;background:radial-gradient(circle,rgba(230,175,46,0.13),transparent 70%);pointer-events:none}
+  .price-num{font-family:var(--h);font-size:76px;font-weight:900;color:var(--gold);line-height:1;letter-spacing:-0.035em;margin-bottom:6px}
+  .price-num sup{font-size:34px;vertical-align:super}
+  .price-num span{font-size:22px;font-weight:300;color:var(--steel)}
+  .price-desc{font-size:14px;color:var(--steel);margin-bottom:32px}
+  .cmp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .cmp-cell{background:rgba(9,22,32,0.85);border:1px solid var(--bdr);border-radius:10px;padding:16px}
+  .cmp-cell.hi{border-color:var(--gold-bdr);background:rgba(230,175,46,0.06)}
+  .cmp-lbl{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;font-weight:600}
+  .cmp-val{font-family:var(--h);font-size:20px;font-weight:800;color:var(--white);margin-bottom:4px}
+  .cmp-cell.hi .cmp-val{color:var(--gold)}
+  .cmp-txt{font-size:12px;color:var(--steel);line-height:1.5}
+
+  .pkg-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+  .pkg{background:rgba(9,22,32,0.7);border:1px solid var(--bdr);border-radius:14px;padding:30px;transition:border-color 0.2s,background 0.2s}
+  .pkg:hover{border-color:var(--gold-bdr);background:var(--gold-dim)}
+  .pkg.featured{border-color:var(--gold-bdr)}
+  .pkg-badge{display:inline-block;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;padding:4px 11px;border-radius:100px;margin-bottom:16px;font-weight:600}
+  .pkg-badge.def{background:var(--steel-dim);color:var(--steel)}
+  .pkg-badge.best{background:rgba(230,175,46,0.18);color:var(--gold)}
+  .pkg-name{font-size:21px;font-weight:800;letter-spacing:-0.01em}
+  .pkg-price{font-family:var(--h);font-size:34px;font-weight:900;color:var(--gold);letter-spacing:-0.02em;margin:12px 0 4px}
+  .pkg-rate{font-size:12px;color:var(--steel);margin-bottom:20px}
+  .pkg-div{height:1px;background:var(--bdr);margin:18px 0}
+  .pkg-feats{list-style:none}
+  .pkg-feats li{font-size:13px;color:rgba(237,242,247,0.65);padding:5px 0 5px 18px;position:relative;line-height:1.5;border-bottom:1px solid rgba(158,163,176,0.07)}
+  .pkg-feats li:last-child{border-bottom:none}
+  .pkg-feats li::before{content:'—';position:absolute;left:0;color:var(--gold);font-size:11px}
+
+  /* STEPS */
+  .steps{border:1px solid var(--bdr);border-radius:14px;overflow:hidden;margin:48px 0}
+  .step-row{display:flex;align-items:stretch;border-bottom:1px solid var(--bdr);transition:background 0.2s}
+  .step-row:last-child{border-bottom:none}
+  .step-row:hover{background:var(--gold-dim)}
+  .step-n{width:64px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:var(--h);font-size:34px;font-weight:900;color:rgba(230,175,46,0.13);border-right:1px solid var(--bdr)}
+  .step-c{padding:24px 28px;flex:1}
+  .step-c h3{font-size:17px;font-weight:700;margin-bottom:5px;color:var(--white)}
+  .step-c p{font-size:14px;color:var(--steel);line-height:1.65}
+  .step-t{width:110px;flex-shrink:0;display:flex;align-items:center;justify-content:flex-end;padding:0 22px;border-left:1px solid var(--bdr)}
+  .step-t span{font-size:11px;color:var(--gold);text-align:right;letter-spacing:0.04em;font-weight:600}
+
+  /* AUD SECTIONS */
+  .aud-sp{padding:88px 0;border-top:1px solid var(--bdr)}
+  .aud-layout{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+  .aud-badge{display:inline-block;font-size:10px;letter-spacing:0.13em;text-transform:uppercase;padding:5px 13px;border-radius:100px;margin-bottom:20px;font-weight:600}
+  .ab-talent{background:rgba(76,190,110,0.1);color:#72D68A;border:1px solid rgba(76,190,110,0.2)}
+  .ab-uni{background:rgba(230,175,46,0.1);color:var(--gold);border:1px solid var(--gold-bdr)}
+  .ab-inv{background:rgba(100,150,220,0.1);color:#8AADDF;border:1px solid rgba(100,150,220,0.2)}
+  .feat-list{list-style:none;margin:20px 0 28px}
+  .feat-list li{font-size:14px;color:rgba(237,242,247,0.62);padding:7px 0 7px 22px;position:relative;border-bottom:1px solid rgba(230,175,46,0.07);line-height:1.55}
+  .feat-list li:last-child{border-bottom:none}
+  .feat-list li::before{content:'→';position:absolute;left:0;color:var(--gold);font-size:12px}
+
+  /* ORIGIN */
+  .origin-card{background:var(--gold-dim);border:1px solid var(--gold-bdr);border-radius:16px;padding:56px;position:relative;overflow:hidden}
+  .origin-card::after{content:'"';position:absolute;top:-30px;right:40px;font-family:var(--h);font-size:220px;font-weight:900;color:rgba(230,175,46,0.05);line-height:1;pointer-events:none}
+  .origin-body{display:grid;grid-template-columns:1fr 1fr;gap:52px;margin-top:32px}
+  .origin-body p{font-size:15px;font-weight:300;color:rgba(237,242,247,0.6);line-height:1.85}
+
+  /* FINAL CTA */
+  .final-cta{padding:108px 0;border-top:1px solid var(--bdr);text-align:center}
+  .final-cta h2{font-size:clamp(26px,4vw,50px);font-weight:900;letter-spacing:-0.025em;line-height:1.12;max-width:680px;margin:0 auto 16px}
+  .final-cta p{font-size:16px;font-weight:300;color:rgba(237,242,247,0.46);max-width:420px;margin:0 auto 40px;line-height:1.75}
+  .final-btns{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
+
+  /* FOOTER */
+  footer{border-top:1px solid var(--bdr);padding:40px 0}
+  .footer-inner{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:28px}
+  .footer-left p{font-size:12px;color:var(--muted);line-height:1.9}
+  .footer-links{display:flex;gap:24px;flex-wrap:wrap;padding-top:4px}
+  .footer-links a{font-size:12px;color:var(--steel);text-decoration:none;transition:color 0.2s}
+  .footer-links a:hover{color:var(--white)}
+
+  /* RESPONSIVE */
+  /* ── TABLET: 860px ── */
+  @media(max-width:860px){
+    nav{padding:0 20px}
+    .nav-links li:not(:last-child){display:none}
+    .wrap{padding:0 22px}
+    .hero-inner{padding:72px 0 56px}
+    .hero-stats{grid-template-columns:repeat(2,1fr);max-width:100%}
+    .aud-grid{grid-template-columns:repeat(2,1fr)}
+    .two-col,.aud-layout,.origin-body,.pkg-grid{grid-template-columns:1fr;gap:32px}
+    .pipeline{grid-template-columns:1fr}
+    .pipe-conn{display:none}
+    .pipe-node{border-right:none;border-bottom:1px solid var(--bdr)}
+    .pipe-node:last-child{border-bottom:none}
+    .cmp-grid{grid-template-columns:1fr}
+    .price-hero{padding:28px}
+    .origin-card{padding:32px}
+    .step-t{display:none}
+    .price-num{font-size:54px}
+    .sp,.aud-sp{padding:64px 0}
+    .final-cta{padding:72px 0}
+    .footer-inner{flex-direction:column;gap:24px}
+    .footer-links{flex-wrap:wrap;gap:16px}
+  }
+
+  /* ── MOBILE: 480px ── */
+  @media(max-width:480px){
+    /* Nav */
+    nav{height:56px}
+    .logo-name{font-size:13px}
+
+    /* Hero */
+    .hero{min-height:100svh}
+    .hero-inner{padding:64px 0 48px}
+    .eyebrow{font-size:10px;margin-bottom:14px}
+    .hero-h1{font-size:34px;letter-spacing:-0.02em;margin-bottom:18px}
+    .hero-sub{font-size:15px;margin-bottom:0}
+
+    /* Speed anchors strip — stack vertically on very small screens */
+    .speed-strip{flex-direction:column;align-items:flex-start;gap:8px;margin-bottom:28px}
+    .speed-dot{display:none}
+
+    /* Hero buttons — full width */
+    .hero-btns{flex-direction:column;align-items:stretch;gap:10px;margin-bottom:48px}
+    .hero-btns .btn-gold,
+    .hero-btns .btn-outline{text-align:center;padding:14px 20px}
+
+    /* Stats — 2x2 grid, full width */
+    .hero-stats{grid-template-columns:repeat(2,1fr);max-width:100%}
+    .stat-val{font-size:22px}
+    .stat-lbl{font-size:10px}
+
+    /* Sections */
+    .sp,.aud-sp{padding:52px 0}
+    .section-h{font-size:24px;letter-spacing:-0.015em}
+    .section-sub{font-size:14px;margin-bottom:32px}
+    .eyebrow{margin-bottom:12px}
+
+    /* Audience grid — single column */
+    .aud-grid{grid-template-columns:1fr}
+    .aud-card{padding:22px 18px}
+
+    /* Pipeline — single column */
+    .pipeline{grid-template-columns:1fr;border-radius:10px}
+    .pipe-node{padding:22px 20px}
+    .pipe-node h3{font-size:16px}
+
+    /* Mid-funnel CTA banner — stack */
+    .pod-breakdown-banner{flex-direction:column;align-items:stretch;padding:20px}
+    .pod-breakdown-banner a{text-align:center}
+
+    /* Pricing */
+    .price-hero{padding:22px 20px;border-radius:12px}
+    .price-num{font-size:48px}
+    .price-num sup{font-size:24px}
+    .price-num span{font-size:16px}
+    .price-desc{font-size:13px;margin-bottom:20px}
+    .cmp-grid{grid-template-columns:1fr;gap:8px}
+    .cmp-cell{padding:14px}
+    .cmp-val{font-size:18px}
+
+    /* Packages */
+    .pkg-grid{grid-template-columns:1fr;gap:12px}
+    .pkg{padding:24px 20px}
+    .pkg-price{font-size:28px}
+    .pkg-name{font-size:18px}
+    .pkg-feats li{font-size:12px}
+
+    /* Steps */
+    .steps{border-radius:10px}
+    .step-n{width:48px;font-size:26px}
+    .step-c{padding:18px 16px}
+    .step-c h3{font-size:15px}
+    .step-c p{font-size:13px}
+
+    /* Audience sections */
+    .aud-layout{grid-template-columns:1fr;gap:24px}
+    .feat-list li{font-size:13px;padding:6px 0 6px 20px}
+
+    /* Audience router — single column */
+    .aud-grid .aud-card{display:flex;align-items:center;gap:16px;padding:18px 16px}
+    .aud-icon{margin-bottom:0;flex-shrink:0}
+    .aud-arrow{margin-top:0;margin-left:auto}
+
+    /* Origin card */
+    .origin-card{padding:24px 20px;border-radius:12px}
+    .origin-card::after{font-size:140px;top:-10px;right:20px}
+    .origin-body{grid-template-columns:1fr;gap:16px;margin-top:20px}
+    .origin-body p{font-size:14px}
+
+    /* Redemptive tech code grid */
+    .rtcode-grid{grid-template-columns:1fr!important}
+
+    /* Final CTA */
+    .final-cta{padding:56px 0}
+    .final-cta h2{font-size:26px}
+    .final-cta p{font-size:14px;margin-bottom:28px}
+    .final-btns{flex-direction:column;align-items:stretch;gap:10px}
+    .final-btns .btn-gold,
+    .final-btns .btn-outline{text-align:center;padding:14px 20px}
+
+    /* Footer */
+    .footer-inner{flex-direction:column;gap:20px}
+    .footer-links{gap:14px}
+    .footer-links a{font-size:11px}
+  }
+
+  /* ── MOBILE NAV DRAWER ── */
+  .hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:36px;height:36px;cursor:pointer;background:none;border:none;padding:4px}
+  .hamburger span{display:block;width:22px;height:2px;background:var(--white);border-radius:2px;transition:all 0.25s}
+  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .mobile-nav{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(9,22,32,0.98);backdrop-filter:blur(16px);border-bottom:1px solid var(--bdr);z-index:199;padding:16px 22px 24px;flex-direction:column;gap:4px}
+  .mobile-nav a{display:block;font-size:15px;font-weight:500;color:var(--steel);text-decoration:none;padding:12px 0;border-bottom:1px solid var(--bdr);letter-spacing:0.03em;transition:color 0.2s}
+  .mobile-nav a:last-child{border-bottom:none;margin-top:8px}
+  .mobile-nav a:hover{color:var(--white)}
+  .mobile-nav .mob-cta{background:var(--gold);color:var(--ink-deep)!important;border-radius:7px;padding:12px 20px;text-align:center;font-weight:600;border:none}
+  @media(max-width:480px){
+    .hamburger{display:flex}
+    .nav-links{display:none}
+    nav{height:56px}
+  }
+  @media(max-width:360px){
+    .wrap{padding:0 16px}
+    .hero-h1{font-size:29px}
+    .price-num{font-size:42px}
+    .stat-val{font-size:20px}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="#">
+    <div class="logo-mark">BO</div>
+    <span class="logo-name">Blue Ox Kampus</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#founders">Founders</a></li>
+    <li><a href="#talent">Builders</a></li>
+    <li><a href="#universities">Universities</a></li>
+    <li><a href="#investors">Investors</a></li>
+    <li><a href="#request" class="nav-cta">Request a Pod</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE NAV DRAWER -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#founders" class="mob-link">Founders</a>
+  <a href="#talent" class="mob-link">Builders</a>
+  <a href="#universities" class="mob-link">Universities</a>
+  <a href="#investors" class="mob-link">Investors</a>
+  <a href="#request" class="mob-cta">Request a Pod →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="eyebrow">Mbarara, Uganda · EU · US · Gulf</div>
+      <h1 class="hero-h1">
+        Execution pods for founders<br>
+        building <em>redemptive</em><br>
+        technology.
+      </h1>
+      <p class="hero-sub">
+        Competition-selected builders deployed into managed teams that ship your product weekly — without hiring, delays, or loss of control.
+      </p>
+      <div class="speed-strip" style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:32px;">
+        <span style="font-size:13px;font-weight:600;color:var(--gold);font-family:var(--h);letter-spacing:0.04em;">7 days to kickoff</span>
+        <span class="speed-dot" style="color:var(--bdr);">·</span>
+        <span style="font-size:13px;font-weight:600;color:var(--gold);font-family:var(--h);letter-spacing:0.04em;">Weekly output</span>
+        <span class="speed-dot" style="color:var(--bdr);">·</span>
+        <span style="font-size:13px;font-weight:600;color:var(--gold);font-family:var(--h);letter-spacing:0.04em;">No hiring</span>
+        <span class="speed-dot" style="color:var(--bdr);">·</span>
+        <span style="font-size:13px;font-weight:600;color:var(--gold);font-family:var(--h);letter-spacing:0.04em;">From $199/week</span>
+      </div>
+      <div class="hero-btns">
+        <a href="#request" class="btn-gold">Request a Pod →</a>
+        <a href="#how-it-works" class="btn-outline">See how a pod works</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-cell">
+          <div class="stat-val">$199</div>
+          <div class="stat-lbl">Per builder<br>per week</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-val">7 days</div>
+          <div class="stat-lbl">Request<br>to kickoff</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-val">300+</div>
+          <div class="stat-lbl">Builders<br>trained</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-val">15+</div>
+          <div class="stat-lbl">Products<br>shipped</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="mq-item"><strong>Haiven</strong><span class="mq-dot">·</span>AI Platform</span>
+    <span class="mq-item"><strong>DevShield</strong><span class="mq-dot">·</span>Security</span>
+    <span class="mq-item"><strong>By The Fruit</strong><span class="mq-dot">·</span>Faith Tech</span>
+    <span class="mq-item"><strong>Dig In Vision</strong><span class="mq-dot">·</span>VR Simulation</span>
+    <span class="mq-item">Competition-Ranked Builders<span class="mq-dot">·</span>Not Resumes</span>
+    <span class="mq-item">No Hiring<span class="mq-dot">·</span>No Managing<span class="mq-dot">·</span>Just Output</span>
+    <span class="mq-item">Mbarara, Uganda<span class="mq-dot">·</span>Shipping Globally</span>
+    <span class="mq-item">Redemptive Technology<span class="mq-dot">·</span>Built Weekly</span>
+    <span class="mq-item"><strong>Haiven</strong><span class="mq-dot">·</span>AI Platform</span>
+    <span class="mq-item"><strong>DevShield</strong><span class="mq-dot">·</span>Security</span>
+    <span class="mq-item"><strong>By The Fruit</strong><span class="mq-dot">·</span>Faith Tech</span>
+    <span class="mq-item"><strong>Dig In Vision</strong><span class="mq-dot">·</span>VR Simulation</span>
+    <span class="mq-item">Competition-Ranked Builders<span class="mq-dot">·</span>Not Resumes</span>
+    <span class="mq-item">No Hiring<span class="mq-dot">·</span>No Managing<span class="mq-dot">·</span>Just Output</span>
+    <span class="mq-item">Mbarara, Uganda<span class="mq-dot">·</span>Shipping Globally</span>
+    <span class="mq-item">Redemptive Technology<span class="mq-dot">·</span>Built Weekly</span>
+  </div>
+</div>
+
+
+<!-- TRACK RECORD -->
+<section class="sp sb">
+  <div class="wrap">
+    <div class="eyebrow">Track record</div>
+    <h2 class="section-h">Builders who ship. Products that exist.</h2>
+    <p style="font-size:15px;color:rgba(237,242,247,0.52);font-weight:300;margin-bottom:6px;">Builders from our network have shipped for:</p>
+    <div class="chip-row">
+      <span class="chip">Haiven</span>
+      <span class="chip">DevShield</span>
+      <span class="chip">By The Fruit</span>
+      <span class="chip">Dig In Vision</span>
+    </div>
+    <p style="margin-top:20px;font-size:13px;color:var(--muted);">Startups backed by millions in pre-seed and seed funding across AI, fintech, and VR.</p>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="sp sb" id="founders">
+  <div class="wrap">
+    <div class="two-col">
+      <div>
+        <div class="eyebrow">For founders</div>
+        <p style="font-family:var(--h);font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--steel);margin-bottom:14px;">Execution is the bottleneck. Not vision.</p>
+        <h2 class="section-h">Capital is flowing into faith-driven startups. Execution is still broken.</h2>
+        <div class="pull-quote">Good intentions don't ship products.<br>Execution does.</div>
+      </div>
+      <div style="padding-top:8px">
+        <p style="font-size:15px;color:rgba(237,242,247,0.54);font-weight:300;line-height:1.85;margin-bottom:20px;">Hiring takes months. Misaligned builders dilute your vision mid-sprint. Your backlog keeps growing while momentum stalls. Every week you don't ship is a week your mission is delayed.</p>
+        <p style="font-size:15px;color:rgba(237,242,247,0.54);font-weight:300;line-height:1.85;">The founders losing ground aren't short on conviction. They're short on execution infrastructure that actually matches what they're building.</p>
+        <p style="font-family:var(--h);font-size:15px;font-weight:700;color:var(--white);margin-top:20px;letter-spacing:-0.01em;">Most teams don't ship weekly. Ours do.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PIPELINE -->
+<section class="sp sb" id="how-it-works">
+  <div class="wrap">
+    <div class="eyebrow">The BlueOx difference</div>
+    <h2 class="section-h">We didn't source a talent pool.<br>We built the campus first.</h2>
+    <p class="section-sub">Every Saturday, builders compete. Top performers enter our system, commit to the Redemptive Technology code, and get deployed into your product. No CVs. No guesswork. Just proof.</p>
+    <div class="pipeline">
+      <div class="pipe-node">
+        <div class="pipe-tag">Kampus</div>
+        <h3>Train</h3>
+        <p>VR-powered training. Weekly competitions. Top performers rise to the surface.</p>
+      </div>
+      <div class="pipe-conn">›</div>
+      <div class="pipe-node">
+        <div class="pipe-tag">Select</div>
+        <h3>Rank</h3>
+        <p>Every Saturday, builders compete. Only the top 10–20% are placed. No CVs. Just proof.</p>
+      </div>
+      <div class="pipe-conn">›</div>
+      <div class="pipe-node active">
+        <div class="pipe-tag">Your startup</div>
+        <h3>Ship</h3>
+        <p>Weekly deliverables. Pod Coordinator manages everything. Friday report every week.</p>
+      </div>
+    </div>
+    <p style="font-size:13px;color:var(--muted);">You're not outsourcing. You're plugging into a performance-tested execution system — built and proven before the first pod was ever deployed.</p>
+    <div class="pod-breakdown-banner" style="margin-top:32px;padding:24px 28px;border:1px solid var(--gold-bdr);border-radius:10px;background:var(--gold-dim);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+      <div>
+        <p style="font-family:var(--h);font-size:15px;font-weight:700;color:var(--white);margin-bottom:4px;">Not sure what a pod would look like for your product?</p>
+        <p style="font-size:13px;color:var(--steel);">Book a free 15-min breakdown. We'll map out exactly how a pod would clear your backlog.</p>
+      </div>
+      <a href="mailto:blueoxrecruit@gmail.com?subject=Pod Breakdown Request" class="btn-gold" style="white-space:nowrap;font-size:13px;padding:10px 22px;text-decoration:none;">Get a free pod breakdown →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="sp sb" id="pricing">
+  <div class="wrap">
+    <div class="eyebrow">Pricing</div>
+    <h2 class="section-h">A full week of shipping for what most developers charge for a single day.</h2>
+    <div class="price-hero">
+      <p style="font-family:var(--h);font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--steel);margin-bottom:16px;">This is not cheaper talent. This is faster execution.</p>
+      <div class="price-num"><sup>$</sup>199<span> / week</span></div>
+      <p class="price-desc">Per builder — campus-based, coordinator-managed, Pod Report every Friday</p>
+      <div class="cmp-grid">
+        <div class="cmp-cell">
+          <div class="cmp-lbl">Freelancer</div>
+          <div class="cmp-val">$50–90/hr</div>
+          <div class="cmp-txt">No coordinator. No accountability. Often gone by week 3.</div>
+        </div>
+        <div class="cmp-cell">
+          <div class="cmp-lbl">Junior hire</div>
+          <div class="cmp-val">$4–6k/mo</div>
+          <div class="cmp-txt">3 months to onboard. You become the manager.</div>
+        </div>
+        <div class="cmp-cell hi">
+          <div class="cmp-lbl">BlueOx Pod</div>
+          <div class="cmp-val">$199/wk</div>
+          <div class="cmp-txt">Coordinated. Shipping in 7 days. Friday report included.</div>
+        </div>
+      </div>
+    </div>
+    <div class="pkg-grid">
+      <div class="pkg">
+        <span class="pkg-badge def">Solo</span>
+        <div class="pkg-name">Solo Pod</div>
+        <div class="pkg-price">$2,388</div>
+        <div class="pkg-rate">1 builder · 12 weeks · $199/wk</div>
+        <div class="pkg-div"></div>
+        <ul class="pkg-feats">
+          <li>Any role category</li>
+          <li>Pod Coordinator included</li>
+          <li>Weekly Pod Reports</li>
+          <li>Replacement guarantee</li>
+        </ul>
+        <a href="#request" class="btn-outline" style="margin-top:24px;font-size:13px;padding:10px 22px;">Request Solo Pod</a>
+      </div>
+      <div class="pkg featured">
+        <span class="pkg-badge best">Best value</span>
+        <div class="pkg-name">Team Pod</div>
+        <div class="pkg-price">$5,970</div>
+        <div class="pkg-rate">3 builders · 12 weeks · ~$166/wk each</div>
+        <div class="pkg-div"></div>
+        <ul class="pkg-feats">
+          <li>Multi-role or single focus</li>
+          <li>Dedicated coordinator</li>
+          <li>Coordinated Pod Reports</li>
+          <li>Dev · Design · Ops available</li>
+          <li>Save 17% vs solo rate</li>
+        </ul>
+        <a href="#request" class="btn-gold" style="margin-top:24px;font-size:13px;padding:10px 22px;text-decoration:none;display:inline-block;">Request Team Pod →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="sp sb">
+  <div class="wrap">
+    <div class="eyebrow">How it works</div>
+    <h2 class="section-h">Your backlog isn't a strategy problem.<br>It's an execution gap.</h2>
+    <p class="section-sub">Send us your stack. We match a pod. They ship from campus while you build product.</p>
+    <div class="steps">
+      <div class="step-row">
+        <div class="step-n">1</div>
+        <div class="step-c"><h3>Send your stack + top tasks</h3><p>Tech stack, 3–5 items from your backlog, timeline. We give you a template. Takes 60 seconds.</p></div>
+        <div class="step-t"><span>Day 1</span></div>
+      </div>
+      <div class="step-row">
+        <div class="step-n">2</div>
+        <div class="step-c"><h3>Pick from ranked profiles</h3><p>3–5 competition-ranked builders with portfolios and performance data. You interview. You approve.</p></div>
+        <div class="step-t"><span>Days 3–5</span></div>
+      </div>
+      <div class="step-row">
+        <div class="step-n">3</div>
+        <div class="step-c"><h3>Kickoff &amp; cadence set</h3><p>Pod Coordinator runs the kickoff call. Weekly sprint cadence agreed. Everything managed from campus.</p></div>
+        <div class="step-t"><span>Day 7</span></div>
+      </div>
+      <div class="step-row">
+        <div class="step-n">4</div>
+        <div class="step-c"><h3>Weekly shipping begins</h3><p>Deliverables every week. Pod Report every Friday. Coordinator handles blockers before they hit your Slack.</p></div>
+        <div class="step-t"><span>Ongoing</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE ROUTER — appears after full founder journey -->
+<section class="sp sb">
+  <div class="wrap">
+    <div class="eyebrow">Not a founder?</div>
+    <h2 class="section-h">BlueOx serves more than one side of this mission.</h2>
+    <p class="section-sub">Jump to what's relevant to you.</p>
+    <div class="aud-grid">
+      <a href="#talent" class="aud-card">
+        <div class="aud-icon">🏆</div>
+        <div class="aud-tag">Builders</div>
+        <h3>Join a Pod</h3>
+        <p>Compete. Get placed. Ship real work internationally.</p>
+        <span class="aud-arrow">→</span>
+      </a>
+      <a href="#universities" class="aud-card">
+        <div class="aud-icon">🎓</div>
+        <div class="aud-tag">Universities</div>
+        <h3>Partner with us</h3>
+        <p>Structured placements. Tracked outcomes. Zero admin.</p>
+        <span class="aud-arrow">→</span>
+      </a>
+      <a href="#investors" class="aud-card">
+        <div class="aud-icon">◆</div>
+        <div class="aud-tag">Investors &amp; Donors</div>
+        <h3>Back the mission</h3>
+        <p>Fund training. Deploy capital with measurable impact.</p>
+        <span class="aud-arrow">→</span>
+      </a>
+      <a href="#request" class="aud-card">
+        <div class="aud-icon">⚡</div>
+        <div class="aud-tag">Founders</div>
+        <h3>Request a Pod</h3>
+        <p>Ready to ship? Start here. 7 days to kickoff.</p>
+        <span class="aud-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOR TALENT -->
+<section class="aud-sp" id="talent">
+  <div class="wrap">
+    <div class="aud-layout">
+      <div>
+        <span class="aud-badge ab-talent">For builders</span>
+        <h2 class="section-h" style="font-size:clamp(22px,3vw,32px);">Get an international company on your CV. Ship real work. Build a career.</h2>
+        <p style="font-size:15px;color:rgba(237,242,247,0.54);font-weight:300;line-height:1.85;margin-top:16px;">BlueOx Kampus places you in an execution pod with a real startup for 8–16 weeks. Work from campus. Pay nothing. Compete every Saturday — top performers get placed first.</p>
+      </div>
+      <div>
+        <ul class="feat-list">
+          <li>Ship real features — not classroom exercises</li>
+          <li>Work from campus: power, fibre, mentorship</li>
+          <li>Weekly competitions — top ranks placed first</li>
+          <li>Professional certificate + reference from startup</li>
+          <li>Pipeline: pod → contract → full employment</li>
+          <li>Markets: Poland · Netherlands · UAE · Gulf</li>
+        </ul>
+        <a href="https://www.blueoxkampus.com/profile" class="btn-outline" style="font-size:13px;padding:10px 22px;">Join the talent pool</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR UNIVERSITIES -->
+<section class="aud-sp" id="universities">
+  <div class="wrap">
+    <div class="aud-layout">
+      <div>
+        <span class="aud-badge ab-uni">For universities</span>
+        <h2 class="section-h" style="font-size:clamp(22px,3vw,32px);">Placements that actually lead somewhere.</h2>
+        <p style="font-size:15px;color:rgba(237,242,247,0.54);font-weight:300;line-height:1.85;margin-top:16px;">Pre-vetted international startups. Students join live shipping pods — not coffee runs. BlueOx handles matching, coordination, supervision, and reporting. You get the outcomes dashboard.</p>
+      </div>
+      <div>
+        <ul class="feat-list">
+          <li>Students placed in real shipping environments</li>
+          <li>Weekly Pod Report per student</li>
+          <li>8–16 week programs with defined deliverables</li>
+          <li>Certificates, references, portfolio pieces</li>
+          <li>Dashboard: placement, completion, employment rates</li>
+          <li>Zero admin burden on your department</li>
+        </ul>
+        <a href="mailto:blueoxrecruit@gmail.com?subject=University Partnership" class="btn-outline" style="font-size:13px;padding:10px 22px;">Partner with us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR INVESTORS -->
+<section class="aud-sp" id="investors">
+  <div class="wrap">
+    <div class="aud-layout">
+      <div>
+        <span class="aud-badge ab-inv">For investors &amp; donors</span>
+        <h2 class="section-h" style="font-size:clamp(22px,3vw,32px);">For Faith Driven Investors deploying Kingdom capital.</h2>
+        <p style="font-size:15px;color:rgba(237,242,247,0.54);font-weight:300;line-height:1.85;margin-top:16px;">If you operate from a one-pocket framework — where giving, investing, and spending all come from the same Kingdom conviction — BlueOx is a place to put capital to work. We're not just solving an execution problem. We're building a model where a Christian tech hub trains students, ships products, plants churches, and supports refugees. All from the same ecosystem.</p>
+      </div>
+      <div>
+        <ul class="feat-list">
+          <li>Every pod placed funds church plants and refugee support</li>
+          <li>Builder training is free — revenue from founders covers it</li>
+          <li>Aligned with solving.org's Build, Invest, Give framework</li>
+          <li>Impact-measurable: placements, completions, employment tracked</li>
+          <li>ESG documentation for grant-funded and donor-advised tracks</li>
+          <li>IOM, UNHCR, EU-Africa fund aligned for impact capital</li>
+        </ul>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;">
+          <a href="https://www.blueoxkampus.com/fund" class="btn-gold" style="font-size:13px;padding:10px 22px;text-decoration:none;">Fund training</a>
+          <a href="mailto:blueoxrecruit@gmail.com?subject=Investor Inquiry" class="btn-outline" style="font-size:13px;padding:10px 22px;">Talk about your portfolio</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORIGIN STORY -->
+<section class="sp sb">
+  <div class="wrap">
+    <div class="origin-card">
+      <div class="eyebrow">Who we are</div>
+      <h2 class="section-h" style="max-width:620px;">A Christian-first technology hub. Not Christian-adjacent. Not faith-friendly. <em style="font-style:normal;color:var(--gold);">Christian first.</em></h2>
+      <div class="origin-body">
+        <p>Every builder at BlueOx Kampus is a Christian. They're selected through weekly Saturday coding competitions from software engineering students across Uganda — the top performers enter our system, commit to our code of Redemptive Technology, and ship for founders who are building products that push back darkness in the world.</p>
+        <p>We plant churches with our finances. We practice radical generosity through supporting refugees. We are inspired by the framework of solving the world's 32 greatest problems — the conviction that the Church is called to minister in Word and Deed, and that technology is one of the most powerful tools available to do both.</p>
+      </div>
+      <div style="margin-top:36px; padding-top:28px; border-top:1px solid var(--gold-bdr);">
+        <p style="font-family:var(--h);font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">The code of redemptive technology</p>
+        <div class="rtcode-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;">
+          <div style="padding:14px 16px;border:1px solid var(--bdr);border-radius:8px;font-size:13px;color:var(--steel);line-height:1.6;"><strong style="color:var(--white);display:block;margin-bottom:4px;font-family:var(--h);font-size:13px;">Build for people</strong>Technology that serves, not exploits. Products that create value for the people who use them.</div>
+          <div style="padding:14px 16px;border:1px solid var(--bdr);border-radius:8px;font-size:13px;color:var(--steel);line-height:1.6;"><strong style="color:var(--white);display:block;margin-bottom:4px;font-family:var(--h);font-size:13px;">Excellence as worship</strong>Doing excellent work is an act of worship. Shipping matters. Quality matters. Integrity matters.</div>
+          <div style="padding:14px 16px;border:1px solid var(--bdr);border-radius:8px;font-size:13px;color:var(--steel);line-height:1.6;"><strong style="color:var(--white);display:block;margin-bottom:4px;font-family:var(--h);font-size:13px;">Radical generosity</strong>Revenue funds church plants, supports refugees, and keeps training free for builders who have nothing.</div>
+          <div style="padding:14px 16px;border:1px solid var(--bdr);border-radius:8px;font-size:13px;color:var(--steel);line-height:1.6;"><strong style="color:var(--white);display:block;margin-bottom:4px;font-family:var(--h);font-size:13px;">Jesus as framework</strong>Not a values statement on a wall. The actual model for how we work, lead, build, and relate to one another.</div>
+        </div>
+      </div>
+      <div style="margin-top:24px;">
+        <p style="font-size:13px;color:var(--muted);">Aligned with the Faith Driven Entrepreneur movement and inspired by <a href="https://solving.org" target="_blank" style="color:var(--gold);text-decoration:none;">solving.org</a> — the conviction that Christians are called to Build, Invest, and Give toward the world's 32 greatest problems.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="request">
+  <div class="wrap">
+    <p style="font-family:var(--h);font-size:13px;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:var(--steel);margin-bottom:20px;display:block;">Most founders wait too long to fix execution. The ones who don't — win.</p>
+    <h2>If you're building something that matters — it needs to ship.</h2>
+    <p>You have a calling. You have a backlog. 7 days to kickoff. $199/week. Send us your stack.</p>
+    <div class="final-btns">
+      <a href="https://www.blueoxkampus.com/hiring" class="btn-gold">Request a Pod →</a>
+      <a href="mailto:blueoxrecruit@gmail.com?subject=15-min Breakdown Request" class="btn-outline">Get a 15-min Breakdown</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+          <div class="logo-mark" style="width:30px;height:30px;font-size:12px;border-radius:6px;">BO</div>
+          <span style="font-family:var(--h);font-weight:700;font-size:14px;letter-spacing:0.05em;text-transform:uppercase;">Blue Ox Kampus</span>
+        </div>
+        <p>Mbarara, Uganda · EU · US · Gulf</p>
+        <p style="margin-top:8px;color:var(--steel);font-size:13px;font-weight:500;">Not a dev shop. Not a talent marketplace.<br>Execution infrastructure for redemptive technology.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.blueoxkampus.com/hiring">Hire a Pod</a>
+        <a href="https://www.blueoxkampus.com/profile">Join as Builder</a>
+        <a href="https://www.blueoxkampus.com/fund">Fund Training</a>
+        <a href="https://www.blueoxkampus.com/partners">Universities</a>
+        <a href="mailto:blueoxrecruit@gmail.com">Email us</a>
+        <a href="https://wa.me/3197010209759">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex';
+  });
+  document.querySelectorAll('.mobile-nav a').forEach(a => {
+    a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileNav.style.display = 'none';
+    });
+  });
+
+  // Nav active highlight on scroll
+  const secs = document.querySelectorAll('section[id]');
+  const nls = document.querySelectorAll('.nav-links a[href^="#"]');
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    secs.forEach(s => { if (window.scrollY >= s.offsetTop - 80) cur = s.id; });
+    nls.forEach(a => {
+      if (!a.classList.contains('nav-cta'))
+        a.style.color = a.getAttribute('href') === '#' + cur ? 'var(--white)' : '';
+    });
+  });
+
+  // Fade-up on scroll
+  const targets = document.querySelectorA
