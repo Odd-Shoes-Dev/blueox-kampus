@@ -144,8 +144,8 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/20 backdrop-blur-sm">
-      <div className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-[#0a0f1a] rounded-2xl border border-gray-300 shadow-2xl">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm">
+      <div className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-white rounded-none border border-gray-200 shadow-2xl">
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -159,10 +159,10 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
         <div className="p-8">
           {/* Header */}
           <div className="mb-8">
-            <h2 className="text-3xl font-black uppercase text-black mb-3">
+            <h2 className="text-3xl font-extrabold uppercase tracking-tight text-black mb-3">
               {getFormTitle()}
             </h2>
-            <p className="text-gray-600">
+            <p className="blueox-body text-gray-600">
               {getFormDescription()}
             </p>
           </div>
@@ -191,7 +191,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white/60 border border-gray-300 rounded-lg text-black placeholder-gray-600 focus:border-[#e05a3a] focus:outline-none transition"
+                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-none text-black placeholder-gray-500 focus:border-[#e05a3a] focus:outline-none transition blueox-body"
                   placeholder="Enter your full name"
                 />
               </div>
@@ -208,7 +208,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white/60 border border-gray-300 rounded-lg text-black placeholder-gray-600 focus:border-[#e05a3a] focus:outline-none transition"
+                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-none text-black placeholder-gray-500 focus:border-[#e05a3a] focus:outline-none transition blueox-body"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -231,7 +231,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                       name="phoneCountryCode"
                       value={formData.phoneCountryCode}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-black/50 border border-gray-300 rounded-lg text-white focus:border-[#e05a3a] focus:outline-none transition appearance-none"
+                      className="w-full pl-10 pr-4 py-3 bg-white border border-gray-300 rounded-none text-black focus:border-[#e05a3a] focus:outline-none transition appearance-none blueox-body"
                       style={{ backgroundImage: 'none' }}
                     >
                       {countryCodes.map((item) => (
@@ -248,7 +248,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                     required
                     value={formData.phone}
                     onChange={handleChange}
-                    className="flex-1 px-4 py-3 bg-white/60 border border-gray-300 rounded-lg text-black placeholder-gray-600 focus:border-[#e05a3a] focus:outline-none transition"
+                    className="flex-1 px-4 py-3 bg-white border border-gray-300 rounded-none text-black placeholder-gray-500 focus:border-[#e05a3a] focus:outline-none transition blueox-body"
                     placeholder="712 345 678"
                   />
                 </div>
@@ -266,7 +266,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                     required
                     value={formData.program}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/60 border border-gray-300 rounded-lg text-black placeholder-gray-600 focus:border-[#e05a3a] focus:outline-none transition appearance-none"
+                    className="w-full px-4 py-3 bg-white border border-gray-300 rounded-none text-black focus:border-[#e05a3a] focus:outline-none transition appearance-none blueox-body"
                   >
                     <option value="">Choose a program...</option>
                     {programs.map((prog) => (
@@ -289,7 +289,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                       required
                       value={formData.numInterns}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-black/50 border border-gray-300 rounded-lg text-white focus:border-[#e05a3a] focus:outline-none transition appearance-none"
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-none text-black focus:border-[#e05a3a] focus:outline-none transition appearance-none blueox-body"
                     >
                       <option value="">Select...</option>
                       <option value="1">1 (Solo Pod)</option>
@@ -308,7 +308,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                       required
                       value={formData.podLane}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-black/50 border border-gray-300 rounded-lg text-white focus:border-[#e05a3a] focus:outline-none transition appearance-none"
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-none text-black focus:border-[#e05a3a] focus:outline-none transition appearance-none blueox-body"
                     >
                       <option value="">Choose a track...</option>
                       <option value="qa">QA Pod</option>
@@ -329,7 +329,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                       required
                       value={formData.stack}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/60 border border-gray-300 rounded-lg text-black placeholder-gray-600 focus:border-[#e05a3a] focus:outline-none transition"
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-none text-black placeholder-gray-500 focus:border-[#e05a3a] focus:outline-none transition blueox-body"
                       placeholder="e.g. React + Next.js + TypeScript + Jira + GitHub"
                     />
                   </div>
@@ -345,7 +345,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                       rows={3}
                       value={formData.topTasks}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/60 border border-gray-300 rounded-lg text-black placeholder-gray-600 focus:border-[#e05a3a] focus:outline-none transition resize-none"
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-none text-black placeholder-gray-500 focus:border-[#e05a3a] focus:outline-none transition resize-none blueox-body"
                       placeholder="Describe the tickets or outcomes you need shipped..."
                     />
                   </div>
@@ -360,7 +360,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                       required
                       value={formData.duration}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-black/50 border border-gray-300 rounded-lg text-white focus:border-[#e05a3a] focus:outline-none transition appearance-none"
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-none text-black focus:border-[#e05a3a] focus:outline-none transition appearance-none blueox-body"
                     >
                       <option value="">Choose duration...</option>
                       <option value="8">8 weeks</option>
@@ -379,7 +379,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                       required
                       value={formData.podSize}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-black/50 border border-gray-300 rounded-lg text-white focus:border-[#e05a3a] focus:outline-none transition appearance-none"
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-none text-black focus:border-[#e05a3a] focus:outline-none transition appearance-none blueox-body"
                     >
                       <option value="">Choose...</option>
                       <option value="solo">Solo Pod (1 intern)</option>
@@ -403,7 +403,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                     required
                     value={formData.organization}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/60 border border-gray-300 rounded-lg text-black placeholder-gray-600 focus:border-[#e05a3a] focus:outline-none transition"
+                    className="w-full px-4 py-3 bg-white border border-gray-300 rounded-none text-black placeholder-gray-500 focus:border-[#e05a3a] focus:outline-none transition blueox-body"
                     placeholder="Company or organization name"
                   />
                 </div>
@@ -421,7 +421,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                   required
                   value={formData.country}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white/60 border border-gray-300 rounded-lg text-black placeholder-gray-600 focus:border-[#e05a3a] focus:outline-none transition"
+                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-none text-black placeholder-gray-500 focus:border-[#e05a3a] focus:outline-none transition blueox-body"
                   placeholder="Your country"
                 />
               </div>
@@ -438,7 +438,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white/60 border border-gray-300 rounded-lg text-black placeholder-gray-600 focus:border-[#e05a3a] focus:outline-none transition resize-none"
+                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-none text-black placeholder-gray-500 focus:border-[#e05a3a] focus:outline-none transition resize-none blueox-body"
                   placeholder={formType === 'academy' ? 'Tell us about your background and why you want to join...' : 'Tell us more about your interest...'}
                 />
               </div>
@@ -447,7 +447,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-[#e05a3a] hover:bg-[#c94e30] text-white py-4 rounded-full font-black uppercase tracking-widest transition disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full inline-block border border-[#e05a3a] bg-[#e05a3a] text-white font-semibold text-sm px-6 py-3 rounded-none transition-all duration-300 ease-in-out hover:bg-[#c94e30] hover:border-[#c94e30] uppercase tracking-widest disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? 'Submitting...' : 'Submit Application'}
               </button>
