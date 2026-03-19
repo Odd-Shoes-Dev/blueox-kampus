@@ -241,15 +241,15 @@ export default function HousePage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => openForm('academy')}
-                  className="bg-[#e05a3a] hover:bg-[#c94e30] text-white font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl inline-block"
+                  className="inline-block border border-[#e05a3a] bg-transparent text-[#e05a3a] font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-[#e05a3a] hover:text-white"
                 >
-                  Book Now
+                  BOOK NOW
                 </button>
                 <a 
                   href="tel:+3197010209759"
-                  className="border-2 border-black/20 px-10 py-5 rounded-full backdrop-blur-sm hover:bg-black/10 transition-all duration-300 text-lg text-black inline-block"
+                  className="inline-block border border-black bg-transparent text-black font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-black hover:text-white"
                 >
-                  Call Us
+                  CALL US
                 </a>
               </div>
               <p className="text-gray-600 text-sm mt-6">
