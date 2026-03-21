@@ -153,6 +153,20 @@ export default function Page() {
               <p className="blueox-body text-gray-600 max-w-2xl mx-auto">
                 Every Saturday, builders compete. Top performers enter our system, commit to the Redemptive Technology code, and get deployed into your product. No CVs. No guesswork. Just proof.
               </p>
+
+              {/* Vibe Coding Competition Video */}
+              <div className="mt-10 max-w-xs mx-auto">
+                <div className="relative overflow-hidden" style={{ paddingBottom: '177.78%' }}>
+                  <iframe
+                    className="absolute top-0 left-0 w-full h-full"
+                    src="https://www.youtube.com/embed/5N2mMOmKhRQ?autoplay=1&mute=1&loop=1&playlist=5N2mMOmKhRQ&controls=1&rel=0"
+                    title="First Vibe Coding Competition at Blue OX Kampus"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+                <p className="text-center text-xs text-gray-500 mt-3 uppercase tracking-widest font-semibold">First Vibe Coding Competition · Blue OX Kampus</p>
+              </div>
             </div>
           </Reveal>
 
