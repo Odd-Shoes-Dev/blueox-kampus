@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import Reveal from './Reveal';
 import ApplicationForm from './ApplicationForm';
+
+export default function PartnersGrid() {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const partners = [
     {
