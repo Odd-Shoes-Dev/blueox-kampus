@@ -7,10 +7,12 @@ import Footer from '../components/Footer';
 import Reveal from '../components/Reveal';
 import ApplicationForm from '../components/ApplicationForm';
 import InvestorForm from '../components/InvestorForm';
+import BreakdownForm from '../components/BreakdownForm';
 
 export default function Page() {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [isInvestorFormOpen, setIsInvestorFormOpen] = useState(false);
+  const [isBreakdownFormOpen, setIsBreakdownFormOpen] = useState(false);
   return (
     <>
       <Header />
@@ -176,12 +178,12 @@ export default function Page() {
                 <p className="font-bold text-black mb-1">Not sure what a pod would look like for your product?</p>
                 <p className="text-gray-600 text-sm">Book a free 15-min breakdown. We&apos;ll map out exactly how a pod would clear your backlog.</p>
               </div>
-              <a
-                href="mailto:blueoxrecruit@gmail.com?subject=Pod Breakdown Request"
+              <button
+                onClick={() => setIsBreakdownFormOpen(true)}
                 className="shrink-0 border border-[#e05a3a] bg-transparent text-[#e05a3a] font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 hover:bg-[#e05a3a] hover:text-white"
               >
                 GET A FREE POD BREAKDOWN
-              </a>
+              </button>
             </div>
           </Reveal>
         </div>
@@ -559,9 +561,9 @@ export default function Page() {
                 <a href="https://www.blueoxjobs.eu/hiring" target="_blank" rel="noopener noreferrer" className="border border-[#e05a3a] bg-[#e05a3a] text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#c94e30] hover:border-[#c94e30]">
                   REQUEST A POD →
                 </a>
-                <a href="mailto:blueoxrecruit@gmail.com?subject=15-min Breakdown Request" className="border border-black bg-transparent text-black font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-black hover:text-white">
+                <button onClick={() => setIsBreakdownFormOpen(true)} className="border border-black bg-transparent text-black font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-black hover:text-white">
                   GET A 15-MIN BREAKDOWN
-                </a>
+                </button>
               </div>
             </div>
           </Reveal>
@@ -570,6 +572,7 @@ export default function Page() {
 
       <ApplicationForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} formType="partner" />
       <InvestorForm isOpen={isInvestorFormOpen} onClose={() => setIsInvestorFormOpen(false)} />
+      <BreakdownForm isOpen={isBreakdownFormOpen} onClose={() => setIsBreakdownFormOpen(false)} />
       <Footer />
     </>
   );
