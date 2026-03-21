@@ -332,6 +332,35 @@ export default function AcademyPage() {
         </div>
       </section>
 
+      {/* INSIDE THE KAMPUS */}
+      <section className="relative py-20 bg-black">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <Reveal delay={0.1}>
+            <div className="text-center mb-10">
+              <p className="text-[#e05a3a] text-xs font-semibold uppercase tracking-widest mb-3">Mbarara, Uganda</p>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
+                Inside the <span className="text-[#e05a3a]">Kampus</span>
+              </h2>
+              <p className="text-gray-400 text-sm max-w-xl mx-auto">
+                See where the training happens — a real look at the facilities, the equipment, and the energy at Blue OX Kampus.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.2}>
+            <div className="relative w-full overflow-hidden rounded-none border border-white/10" style={{ paddingBottom: '56.25%' }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/r59abfC8z1M?autoplay=1&mute=1&loop=1&playlist=r59abfC8z1M&controls=1&rel=0&modestbranding=1"
+                title="Inside Blue OX Kampus"
+                allow="autoplay; encrypted-media; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* FAQs */}
       <section className="relative py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">

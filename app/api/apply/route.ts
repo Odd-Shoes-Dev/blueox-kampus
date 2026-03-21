@@ -37,7 +37,8 @@ export async function POST(request: Request) {
       'academy': 'Academy Application',
       'pods': 'Billy Pods Request',
       'investor': 'Investor Inquiry',
-      'breakdown': 'Pod Breakdown Request'
+      'breakdown': 'Pod Breakdown Request',
+      'builder_question': 'Builder Question'
     };
 
     const formLabel = formTypeLabels[formType] || formType;

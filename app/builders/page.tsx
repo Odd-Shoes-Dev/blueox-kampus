@@ -5,11 +5,13 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Reveal from '../../components/Reveal';
 import ApplicationForm, { FormType } from '../../components/ApplicationForm';
+import BuilderFAQForm from '../../components/BuilderFAQForm';
 import Link from 'next/link';
 
 export default function BuildersPage() {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [formType, setFormType] = useState<FormType>('academy');
+  const [isFAQFormOpen, setIsFAQFormOpen] = useState(false);
 
   const openForm = (type: FormType) => {
     setFormType(type);
@@ -315,12 +317,12 @@ export default function BuildersPage() {
                 >
                   APPLY NOW
                 </button>
-                <a
-                  href="mailto:blueoxrecruit@gmail.com?subject=Builders Enquiry"
+                <button
+                  onClick={() => setIsFAQFormOpen(true)}
                   className="border border-black bg-transparent text-black font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 ease-in-out hover:bg-black hover:text-white"
                 >
                   ASK A QUESTION
-                </a>
+                </button>
               </div>
             </div>
           </Reveal>
@@ -336,6 +338,7 @@ export default function BuildersPage() {
           formType={formType}
         />
       )}
+      <BuilderFAQForm isOpen={isFAQFormOpen} onClose={() => setIsFAQFormOpen(false)} />
     </>
   );
 }
