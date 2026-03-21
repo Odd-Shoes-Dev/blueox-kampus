@@ -6,9 +6,11 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Reveal from '../components/Reveal';
 import ApplicationForm from '../components/ApplicationForm';
+import InvestorForm from '../components/InvestorForm';
 
 export default function Page() {
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const [isInvestorFormOpen, setIsInvestorFormOpen] = useState(false);
   return (
     <>
       <Header />
@@ -434,9 +436,9 @@ export default function Page() {
                   <Link href="/fund" className="border border-[#e05a3a] bg-[#e05a3a] text-white font-semibold text-sm px-6 py-3 rounded-none transition-all duration-300 hover:bg-[#c94e30] hover:border-[#c94e30] inline-block">
                     FUND TRAINING
                   </Link>
-                  <a href="mailto:blueoxrecruit@gmail.com?subject=Investor Inquiry" className="border border-black bg-transparent text-black font-semibold text-sm px-6 py-3 rounded-none transition-all duration-300 hover:bg-black hover:text-white inline-block">
+                  <button onClick={() => setIsInvestorFormOpen(true)} className="border border-black bg-transparent text-black font-semibold text-sm px-6 py-3 rounded-none transition-all duration-300 hover:bg-black hover:text-white inline-block">
                     TALK ABOUT YOUR PORTFOLIO
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -567,6 +569,7 @@ export default function Page() {
       </section>
 
       <ApplicationForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} formType="partner" />
+      <InvestorForm isOpen={isInvestorFormOpen} onClose={() => setIsInvestorFormOpen(false)} />
       <Footer />
     </>
   );

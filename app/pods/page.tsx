@@ -5,10 +5,12 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Reveal from '../../components/Reveal';
 import ApplicationForm, { FormType } from '../../components/ApplicationForm';
+import InvestorForm from '../../components/InvestorForm';
 
 export default function PodsPage() {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [formType, setFormType] = useState<FormType>('pods');
+  const [isInvestorFormOpen, setIsInvestorFormOpen] = useState(false);
 
   const openRequest = (type: FormType = 'pods') => {
     setFormType(type);
@@ -407,7 +409,7 @@ export default function PodsPage() {
                 ))}
                 <div className="pt-5 flex flex-wrap gap-3">
                   <a href="/fund" className="inline-block border border-[#e05a3a] bg-[#e05a3a] text-white font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-[#c94e30]">FUND TRAINING</a>
-                  <a href="mailto:blueoxrecruit@gmail.com?subject=Investor Inquiry" className="inline-block border border-black bg-transparent text-black font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-black hover:text-white">TALK ABOUT YOUR PORTFOLIO</a>
+                  <button onClick={() => setIsInvestorFormOpen(true)} className="inline-block border border-black bg-transparent text-black font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-black hover:text-white">TALK ABOUT YOUR PORTFOLIO</button>
                 </div>
               </div>
             </Reveal>
@@ -415,6 +417,7 @@ export default function PodsPage() {
         </div>
       </section>
       <ApplicationForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} formType={formType} />
+      <InvestorForm isOpen={isInvestorFormOpen} onClose={() => setIsInvestorFormOpen(false)} />
 
       <Footer />
     </>
