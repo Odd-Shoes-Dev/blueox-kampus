@@ -1,413 +1,573 @@
-'use client';
+﻿'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Reveal from '../components/Reveal';
-import InsideTheKampus from '../components/InsideTheKampus';
 import ApplicationForm from '../components/ApplicationForm';
-
-type FormType = 'fund' | 'partner' | 'academy';
 
 export default function Page() {
   const [isFormOpen, setIsFormOpen] = useState(false);
-  const [formType, setFormType] = useState<FormType>('fund');
-
-  const images = [
-    '/assets/images/image1.png',
-    '/assets/images/image2.png',
-    '/assets/images/image3.png'
-  ];
-
-  const openForm = (type: FormType) => {
-    setFormType(type);
-    setIsFormOpen(true);
-  };
   return (
     <>
       <Header />
 
-      {/* HERO SECTION */}
-      <section className="relative min-h-screen flex items-start sm:items-center justify-center bg-white pt-8 sm:pt-16 md:pt-24 lg:pt-32 pb-12 sm:pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 sm:py-12 md:py-0">
-          <Reveal delay={0.1}>
-            <div className="flex flex-col items-center justify-center">
-              {/* Hero Content */}
-              <div className="text-center flex-1 max-w-2xl mx-auto">
-                <h1 className="text-4xl md:text-5xl font-extrabold mb-6 sm:mb-8 pt-24 sm:pt-20 md:pt-0 text-black leading-tight">
-                  What if the only thing between<br/>
-                  <span className="text-[#e05a3a]">a refugee and a career</span>…<br/>
-                  was a <span className="text-blue-500">VR headset</span>?
-                </h1>
-
-                <h2 className="blueox-body text-base sm:text-lg text-gray-700 mb-8 sm:mb-10">
-                  Tens of thousands displaced.<br/>
-                  Zero accessible training centers.
-                </h2>
-                
-                {/* Intro Video */}
-                <div className="max-w-3xl mx-auto my-8 sm:my-12">
-                  <video 
-                    className="w-full rounded-2xl shadow-2xl border border-gray-300"
-                    autoPlay
-                    muted
-                    controls
-                    playsInline
-                  >
-                    <source src="/assets/videos/BlueOx_intro.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-
-                {/* Trust Badges */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto mb-12">
-                  <div className="bg-white border border-gray-300 rounded-none p-5 hover:border-[#e05a3a] transition-colors duration-200">
-                    <div className="blueox-subheading text-3xl sm:text-4xl font-black text-[#e05a3a] mb-1">32</div>
-                    <p className="blueox-body text-xs sm:text-sm text-gray-600 leading-snug">
-                      Trainers-of-trainers trained (Kampala, DIT partnership)
-                    </p>
-                  </div>
-                  <div className="bg-white border border-gray-300 rounded-none p-5 hover:border-[#e05a3a] transition-colors duration-200">
-                    <div className="blueox-subheading text-xl sm:text-2xl font-black text-blue-500 mb-1">Uganda's First VR Training Center</div>
-                    <p className="blueox-body text-xs sm:text-sm text-gray-600 leading-snug">
-                      Upgrading traditional vocational training
-                    </p>
-                  </div>
-                  <div className="bg-white border border-gray-300 rounded-none p-5 hover:border-[#e05a3a] transition-colors duration-200">
-                    <div className="blueox-subheading text-2xl sm:text-3xl font-black text-blue-500 mb-1">VR-First</div>
-                    <p className="blueox-body text-xs sm:text-sm text-gray-600 leading-snug">
-                      Easier transition to physical welding
-                    </p>
-                  </div>
-                  <div className="bg-white border border-gray-300 rounded-none p-5 hover:border-[#e05a3a] transition-colors duration-200">
-                    <div className="blueox-subheading text-3xl sm:text-4xl font-black text-[#e05a3a] mb-1">500+</div>
-                    <p className="blueox-body text-xs sm:text-sm text-gray-600 leading-snug">
-                      Internationally certified welders (Kenya program)
-                    </p>
-                  </div>
-                </div>
-
-                {/* CTAs */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 sm:pt-0">
-                  <a
-                    href="/fund"
-                    className="inline-block border border-[#e05a3a] bg-[#e05a3a] text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 ease-in-out hover:bg-[#c94e30] hover:border-[#c94e30]"
-                    title="One learner. One cohort cycle. Assessed and job-ready."
-                  >
-                    TRAIN 1 PERSON FOR $50
-                  </a>
-                  <a
-                    href="/fund"
-                    className="inline-block border border-black bg-transparent text-black font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 ease-in-out hover:bg-black hover:text-white"
-                    title="Bring mobile training to settlements, towns, and schools—where traditional TVET won't reach."
-                  >
-                    DEPLOY A VR LAB
-                  </a>
-                </div>
+      {/* HERO */}
+      <section className="relative bg-white pt-24 md:pt-32 pb-20 md:pb-20">
+        <div className="max-w-6xl mx-auto px-6 sm:px-6">
+          <Reveal>
+            <div className="text-center mb-16">
+              <div className="text-[#e05a3a] text-xs font-semibold uppercase tracking-wider mb-4">
+                Mbarara, Uganda · EU · US · Gulf
               </div>
+              <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-6 text-black leading-tight">
+                Execution pods for founders<br />
+                building <span className="text-[#e05a3a]">redemptive</span><br />
+                technology.
+              </h1>
+              <p className="blueox-body text-base sm:text-lg text-gray-700 max-w-3xl mx-auto mb-4">
+                Competition-selected builders deployed into managed teams that ship your product weekly — without hiring, delays, or loss of control.
+              </p>
+              <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm font-semibold text-[#e05a3a] mb-8">
+                {['7 days to kickoff', 'Weekly output', 'No hiring', 'From $199/week'].map(txt => (
+                  <span key={txt}>{txt}</span>
+                ))}
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://www.blueoxjobs.eu/hiring" target="_blank" rel="noopener noreferrer" className="border border-[#e05a3a] bg-[#e05a3a] text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#c94e30] hover:border-[#c94e30]">
+                  REQUEST A POD →
+                </a>
+                <a href="#how-it-works" className="border border-black bg-transparent text-black font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-black hover:text-white">
+                  SEE HOW A POD WORKS
+                </a>
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.2}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {[
+                { val: '$199',   lbl: 'Per builder / week' },
+                { val: '7 days', lbl: 'Request to kickoff' },
+                { val: '300+',   lbl: 'Builders trained' },
+                { val: '15+',    lbl: 'Products shipped' },
+              ].map(({ val, lbl }) => (
+                <div key={val} className="text-center">
+                  <div className="blueox-subheading text-4xl sm:text-5xl text-[#e05a3a] mb-2">{val}</div>
+                  <div className="blueox-body text-gray-600 text-sm">{lbl}</div>
+                </div>
+              ))}
             </div>
           </Reveal>
         </div>
       </section>
 
-      {/* Image Gallery Section */}
-      <div className="relative bg-white py-12 sm:py-16 lg:py-20 mt-12 sm:mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {images.map((image, index) => (
-              <div key={index} className="relative h-64 sm:h-72 lg:h-80 overflow-hidden rounded-lg">
-                <img
-                  src={image}
-                  alt={`VR Training ${index + 1}`}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            ))}
+      {/* MARQUEE */}
+      <div className="w-screen relative left-1/2 -translate-x-1/2 bg-white py-3 border-t border-b border-gray-200">
+        <div className="academy-ticker bg-white" aria-label="Partners and products ticker">
+          <div className="academy-ticker-track">
+            <div className="academy-ticker-group">
+              {['Haiven', 'DevShield', 'By The Fruit', 'Dig In Vision', 'Competition-Ranked Builders', 'No Hiring · Just Output', 'Mbarara Uganda', 'Shipping Globally', 'Redemptive Technology'].map(item => (
+                <span key={item}>
+                  <span className="academy-ticker-item">{item}</span>
+                  <span className="academy-ticker-sep">•</span>
+                </span>
+              ))}
+            </div>
+            <div className="academy-ticker-group" aria-hidden="true">
+              {['Haiven', 'DevShield', 'By The Fruit', 'Dig In Vision', 'Competition-Ranked Builders', 'No Hiring · Just Output', 'Mbarara Uganda', 'Shipping Globally', 'Redemptive Technology'].map(item => (
+                <span key={item}>
+                  <span className="academy-ticker-item">{item}</span>
+                  <span className="academy-ticker-sep">•</span>
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
-        
-        {/* Floating 3D Elements */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="floating-cube absolute top-20 left-10 w-16 h-16 border border-blue-400/30 transform rotate-45" />
-          <div className="floating-sphere absolute top-40 right-20 w-12 h-12 bg-[#e05a3a]/20 rounded-full" />
-          <div className="floating-pyramid absolute bottom-32 left-1/4 w-20 h-20 border-l border-r border-[#e05a3a]/30" />
         </div>
       </div>
 
-      {/* Talent is Everywhere Section */}
-      <section className="py-24 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
+      {/* TRACK RECORD */}
+      <section className="relative py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <Reveal>
-            <div className="text-center mb-16">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-6 text-black">
-                Talent is everywhere. <span className="text-[#e05a3a]">Access isn't.</span><br/>
-                <span className="text-blue-500">So we moved the lab.</span>
-              </h2>
-              <p className="blueox-body text-sm md:text-base text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                Displaced learners, women with caregiving responsibilities, youth with disabilities, and rural students often can't travel to training—so we bring training to them.
-              </p>
+            <div className="text-center">
+              <div className="text-[#e05a3a] text-xs font-semibold uppercase tracking-wider mb-4">Track record</div>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">Builders who ship. Products that exist.</h2>
+              <p className="blueox-body text-gray-600 text-sm mb-6">Builders from our network have shipped for:</p>
+              <div className="flex flex-wrap justify-center gap-3 mb-4">
+                {['Haiven', 'DevShield', 'By The Fruit', 'Dig In Vision'].map(c => (
+                  <span key={c} className="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-full text-sm font-semibold">
+                    {c}
+                  </span>
+                ))}
+              </div>
+              <p className="blueox-body text-gray-500 text-sm">Startups backed by millions in pre-seed and seed funding across AI, fintech, and VR.</p>
             </div>
           </Reveal>
+        </div>
+      </section>
 
-          <Reveal delay={0.2}>
-            <div className="max-w-4xl mx-auto space-y-12">
-              {/* What We Deliver */}
-              <div className="blueox-card border border-gray-200 rounded-2xl p-8 sm:p-12">
-                <p className="blueox-body text-xl md:text-2xl text-black leading-relaxed mb-8">
-                  VR welding, solar installation, EV skills, workplace readiness, and career guidance—delivered directly to settlements, towns, and schools.
+      {/* FOR FOUNDERS */}
+      <section className="relative py-20 bg-white border-t border-gray-100" id="founders">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <Reveal>
+            <div className="grid md:grid-cols-2 gap-16 items-start">
+              <div>
+                <div className="text-[#e05a3a] text-xs font-semibold uppercase tracking-wider mb-4">For founders</div>
+                <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">Execution is the bottleneck. Not vision.</p>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-6">
+                  Capital is flowing into faith-driven startups. Execution is still broken.
+                </h2>
+                <blockquote className="border-l-4 border-[#e05a3a] pl-6 italic text-xl text-gray-700 my-6">
+                  Good intentions don&apos;t ship products. Execution does.
+                </blockquote>
+              </div>
+              <div className="pt-2">
+                <p className="blueox-body text-gray-600 leading-relaxed mb-4">
+                  Hiring takes months. Misaligned builders dilute your vision mid-sprint. Your backlog keeps growing while momentum stalls. Every week you don&apos;t ship is a week your mission is delayed.
                 </p>
-                <div className="grid sm:grid-cols-3 gap-6 pt-6 border-t border-gray-200">
-                  <div>
-                    <div className="blueox-subheading text-blue-500 text-lg mb-2">Safer learning</div>
-                    <p className="blueox-body text-gray-600 text-sm">No burns, no injuries, no risk</p>
-                  </div>
-                  <div>
-                    <div className="blueox-subheading text-[#e05a3a] text-lg mb-2">Lower cost</div>
-                    <p className="blueox-body text-gray-600 text-sm">90% less than physical consumables</p>
-                  </div>
-                  <div>
-                    <div className="blueox-subheading text-blue-500 text-lg mb-2">Zero waste</div>
-                    <p className="blueox-body text-gray-600 text-sm">No metal, gas, or material waste</p>
-                  </div>
-                </div>
-                <p className="blueox-body text-gray-600 text-lg mt-8 leading-relaxed">
-                  Training aligned to real job demand.
+                <p className="blueox-body text-gray-600 leading-relaxed mb-4">
+                  The founders losing ground aren&apos;t short on conviction. They&apos;re short on execution infrastructure that actually matches what they&apos;re building.
                 </p>
+                <p className="font-bold text-black">Most teams don&apos;t ship weekly. Ours do.</p>
               </div>
             </div>
           </Reveal>
         </div>
       </section>
 
-      {/* Evidence Section - Light Background */}
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <details className="bg-white border-2 border-[#e05a3a] rounded-2xl p-8 sm:p-10 group">
-            <summary className="blueox-subheading text-xl sm:text-2xl text-black cursor-pointer list-none flex items-center justify-between group-hover:text-[#e05a3a] transition">
-              <span>See the evidence ↓</span>
-            </summary>
-            <div className="mt-6 space-y-4">
-              <p className="blueox-body text-gray-700 leading-relaxed text-lg">
-                Not experimental: Toolkit and GIZ deployed VR welding in Kakuma Refugee Camp, Kenya. 
-                In Uganda, Toolkit iSkills partnered with the Directorate of Industrial Training 
-                and Dig in Vision to train 32 trainers-of-trainers on VR welding technology. 
-                Toolkit reports VR-first learners transition more easily into physical practice. 
-                Blue Ox brings this model to Western Uganda—toward refugee settlements, towns, 
-                and rural schools.
+      {/* PIPELINE */}
+      <section className="relative py-20 bg-white border-t border-gray-100" id="how-it-works">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <Reveal>
+            <div className="text-center mb-12">
+              <div className="text-[#e05a3a] text-xs font-semibold uppercase tracking-wider mb-4">The BlueOx difference</div>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">
+                We didn&apos;t source a talent pool. We built the campus first.
+              </h2>
+              <p className="blueox-body text-gray-600 max-w-2xl mx-auto">
+                Every Saturday, builders compete. Top performers enter our system, commit to the Redemptive Technology code, and get deployed into your product. No CVs. No guesswork. Just proof.
               </p>
-              <a 
-                href="/model" 
-                className="inline-block text-[#e05a3a] hover:text-[#c94e30] font-bold text-lg transition mt-4"
+            </div>
+          </Reveal>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            {[
+              { label: 'Kampus',       title: 'Train', body: 'VR-powered training. Weekly competitions. Top performers rise to the surface.' },
+              { label: 'Select',       title: 'Rank',  body: 'Every Saturday, builders compete. Only the top 10–20% are placed. No CVs. Just proof.' },
+              { label: 'Your startup', title: 'Ship',  body: 'Weekly deliverables. Pod Coordinator manages everything. Friday report every week.' },
+            ].map(({ label, title, body }, index) => (
+              <Reveal key={title} delay={0.1 + index * 0.1}>
+                <div className={`glass p-8 rounded-xl transition-all duration-300 hover:border-[#e05a3a]/50 ${index === 2 ? 'border-[#e05a3a]/30' : ''}`}>
+                  <div className="text-[#e05a3a] text-xs font-semibold uppercase tracking-wider mb-2">{label}</div>
+                  <h3 className="text-2xl font-black text-black mb-3">{title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{body}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal delay={0.4}>
+            <div className="bg-white border border-gray-200 rounded-none p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div>
+                <p className="font-bold text-black mb-1">Not sure what a pod would look like for your product?</p>
+                <p className="text-gray-600 text-sm">Book a free 15-min breakdown. We&apos;ll map out exactly how a pod would clear your backlog.</p>
+              </div>
+              <a
+                href="mailto:blueoxrecruit@gmail.com?subject=Pod Breakdown Request"
+                className="shrink-0 border border-[#e05a3a] bg-transparent text-[#e05a3a] font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 hover:bg-[#e05a3a] hover:text-white"
               >
-                See how the model works →
+                GET A FREE POD BREAKDOWN
               </a>
             </div>
-          </details>
+          </Reveal>
         </div>
       </section>
 
-      <InsideTheKampus />
-
-      {/* Bridge Section */}
-      <section className="py-20 px-6 bg-white border-t border-gray-200">
-        <div className="max-w-6xl mx-auto">
+      {/* PRICING */}
+      <section className="relative py-20 bg-white border-t border-gray-100" id="pricing">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <Reveal>
-            <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-[#e05a3a] mb-4">How it all fits together</p>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-black mb-4 max-w-3xl">
-              One campus. Two expressions of the same mission.
-            </h2>
-            <p className="blueox-body text-gray-600 text-base max-w-2xl mb-12">
-              The Kampus is not two organisations sharing a building. It is one integrated model where every part funds and feeds every other part.
+            <div className="text-center mb-12">
+              <div className="text-[#e05a3a] text-xs font-semibold uppercase tracking-wider mb-4">Pricing</div>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">
+                A full week of shipping for what most developers charge for a single day.
+              </h2>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.2}>
+            <div className="text-center mb-12">
+              <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">This is not cheaper talent. This is faster execution.</p>
+              <div className="blueox-subheading text-7xl text-[#e05a3a] leading-none mb-2">
+                <sup className="text-3xl align-super">$</sup>199<span className="text-3xl font-normal text-gray-400"> / week</span>
+              </div>
+              <p className="blueox-body text-gray-500 text-sm">Per builder — campus-based, coordinator-managed, Pod Report every Friday</p>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.3}>
+            <div className="grid md:grid-cols-3 gap-4 mb-10">
+              {[
+                { label: 'Freelancer',  val: '$50–90/hr', txt: 'No coordinator. No accountability. Often gone by week 3.', hi: false },
+                { label: 'Junior hire', val: '$4–6k/mo',  txt: '3 months to onboard. You become the manager.', hi: false },
+                { label: 'BlueOx Pod', val: '$199/wk',    txt: 'Coordinated. Shipping in 7 days. Friday report included.', hi: true },
+              ].map(({ label, val, txt, hi }) => (
+                <div key={label} className={`bg-white border rounded-none p-6 ${hi ? 'border-[#e05a3a]' : 'border-gray-200'}`}>
+                  <div className="text-xs uppercase tracking-widest text-gray-500 mb-2 font-semibold">{label}</div>
+                  <div className={`blueox-subheading text-3xl mb-3 ${hi ? 'text-[#e05a3a]' : 'text-black'}`}>{val}</div>
+                  <p className="text-gray-600 text-sm">{txt}</p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                badge: 'Solo', title: 'Solo Pod', price: '$2,388',
+                sub: '1 builder · 12 weeks · $199/wk',
+                features: ['Any role category', 'Pod Coordinator included', 'Weekly Pod Reports', 'Replacement guarantee'],
+                featured: false, cta: 'Request Solo Pod',
+              },
+              {
+                badge: 'Best value', title: 'Team Pod', price: '$5,970',
+                sub: '3 builders · 12 weeks · ~$166/wk each',
+                features: ['Multi-role or single focus', 'Dedicated coordinator', 'Coordinated Pod Reports', 'Dev · Design · Ops available', 'Save 17% vs solo rate'],
+                featured: true, cta: 'Request Team Pod →',
+              },
+            ].map(({ badge, title, price, sub, features, featured, cta }, i) => (
+              <Reveal key={title} delay={0.4 + i * 0.1}>
+                <div className={`relative bg-white border rounded-none p-8 transition-all duration-200 ${featured ? 'border-[#e05a3a]' : 'border-gray-200 hover:border-[#e05a3a]'}`}>
+                  {featured && (
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                      <span className="bg-[#e05a3a] text-white px-4 py-1 text-sm font-semibold uppercase tracking-wider">Best Value</span>
+                    </div>
+                  )}
+                  <div className={`inline-block text-xs px-3 py-1 font-semibold uppercase tracking-wider mb-4 border ${featured ? 'bg-[#e05a3a]/10 text-[#e05a3a] border-[#e05a3a]/20' : 'bg-gray-50 text-gray-600 border-gray-200'}`}>{badge}</div>
+                  <h3 className="text-2xl font-black text-black mb-1">{title}</h3>
+                  <div className={`blueox-subheading text-4xl mb-1 ${featured ? 'text-[#e05a3a]' : 'text-black'}`}>{price}</div>
+                  <p className="text-gray-500 text-sm mb-6">{sub}</p>
+                  <div className="border-t border-gray-100 my-4" />
+                  <ul className="space-y-2 mb-6">
+                    {features.map(f => (
+                      <li key={f} className="flex items-start gap-2 text-sm text-gray-600">
+                        <img src="/icons/check.svg" alt="" className="w-4 h-4 mt-0.5 shrink-0" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                  <a href="https://www.blueoxjobs.eu/hiring" target="_blank" rel="noopener noreferrer" className={`w-full inline-block text-center font-semibold text-sm px-6 py-3 rounded-none transition-all duration-300 ${
+                    featured
+                      ? 'border border-[#e05a3a] bg-[#e05a3a] text-white hover:bg-[#c94e30] hover:border-[#c94e30]'
+                      : 'border border-[#e05a3a] bg-transparent text-[#e05a3a] hover:bg-[#e05a3a] hover:text-white'
+                  }`}>{cta}</a>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* HOW IT WORKS STEPS */}
+      <section className="relative py-20 bg-white border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <Reveal>
+            <div className="text-center mb-12">
+              <div className="text-[#e05a3a] text-xs font-semibold uppercase tracking-wider mb-4">How it works</div>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">
+                Your backlog isn&apos;t a strategy problem. It&apos;s an execution gap.
+              </h2>
+              <p className="blueox-body text-gray-600 max-w-2xl mx-auto">
+                Send us your stack. We match a pod. They ship from campus while you build product.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="space-y-6">
+            {[
+              { step: 1, icon: 'planner.svg', title: 'Send your stack + top tasks',    body: 'Tech stack, 3–5 items from your backlog, timeline. We give you a template. Takes 60 seconds.', time: 'Day 1' },
+              { step: 2, icon: 'team.svg',    title: 'Pick from ranked profiles',      body: '3–5 competition-ranked builders with portfolios and performance data. You interview. You approve.', time: 'Days 3–5' },
+              { step: 3, icon: 'rocket.svg',  title: 'Kickoff & cadence set',          body: 'Pod Coordinator runs the kickoff call. Weekly sprint cadence agreed. Everything managed from campus.', time: 'Day 7' },
+              { step: 4, icon: 'chart.svg',   title: 'Weekly shipping begins',         body: 'Deliverables every week. Pod Report every Friday. Coordinator handles blockers before they hit your Slack.', time: 'Ongoing' },
+            ].map((item, i) => (
+              <Reveal key={item.step} delay={0.1 + i * 0.1}>
+                <div className="border-l-4 border-[#e05a3a] pl-6 flex items-start gap-6">
+                  <div className="shrink-0">
+                    <div className="w-12 h-12 bg-white border border-gray-200 rounded-full flex items-center justify-center">
+                      <img src={`/icons/${item.icon}`} alt={`Step ${item.step}`} className="w-6 h-6" />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="text-[#e05a3a] text-xs font-semibold uppercase tracking-wider mb-1">Step {item.step} · {item.time}</div>
+                    <h3 className="text-xl font-black text-black mb-2">{item.title}</h3>
+                    <p className="text-gray-600 leading-relaxed">{item.body}</p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* AUDIENCE ROUTER */}
+      <section className="relative py-20 bg-white border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <Reveal>
+            <div className="text-center mb-12">
+              <div className="text-[#e05a3a] text-xs font-semibold uppercase tracking-wider mb-4">Not a founder?</div>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">BlueOx serves more than one side of this mission.</h2>
+              <p className="blueox-body text-gray-600">Jump to what is relevant to you.</p>
+            </div>
+          </Reveal>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { icon: 'crown.svg',   tag: 'Builders',           title: 'Join a Pod',       body: 'Compete. Get placed. Ship real work internationally.',     href: '/builders' },
+              { icon: 'book.svg',    tag: 'Universities',        title: 'Partner with us',  body: 'Structured placements. Tracked outcomes. Zero admin.',     href: '#universities' },
+              { icon: 'diamond.svg', tag: 'Investors & Donors',  title: 'Back the mission', body: 'Fund training. Deploy capital with measurable impact.',    href: '#investors' },
+              { icon: 'rocket.svg',  tag: 'Founders',            title: 'Request a Pod',    body: 'Ready to ship? Start here. 7 days to kickoff.',           href: 'https://www.blueoxjobs.eu/hiring' },
+            ].map(({ icon, tag, title, body, href }, index) => (
+              <Reveal key={tag} delay={0.1 + index * 0.1}>
+                <a href={href} className="glass p-6 rounded-xl block hover:border-[#e05a3a]/50 transition-all duration-300 group">
+                  <img src={`/icons/${icon}`} alt={tag} className="w-10 h-10 mb-4" />
+                  <div className="text-[#e05a3a] text-xs font-semibold uppercase tracking-wider mb-2">{tag}</div>
+                  <h3 className="text-lg font-black text-black mb-2 group-hover:text-[#e05a3a] transition-colors">{title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-3">{body}</p>
+                  <span className="text-[#e05a3a] text-lg">→</span>
+                </a>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FOR BUILDERS */}
+      <section className="relative py-20 bg-white border-t border-gray-100" id="talent">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <Reveal>
+            <div className="grid md:grid-cols-2 gap-16 items-start">
+              <div>
+                <span className="inline-block text-xs px-4 py-1.5 font-semibold uppercase tracking-wider mb-4 bg-green-50 text-green-700 border border-green-200 rounded-full">For builders</span>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">
+                  Get an international company on your CV. Ship real work. Build a career.
+                </h2>
+                <p className="blueox-body text-gray-600 leading-relaxed">
+                  BlueOx Kampus places you in an execution pod with a real startup for 8–16 weeks. Work from campus. Pay nothing. Compete every Saturday — top performers get placed first.
+                </p>
+              </div>
+              <div>
+                <ul className="space-y-3 mb-6">
+                  {['Ship real features — not classroom exercises', 'Work from campus: power, fibre, mentorship', 'Weekly competitions — top ranks placed first', 'Professional certificate + reference from startup', 'Pipeline: pod → contract → full employment', 'Markets: Poland · Netherlands · UAE · Gulf'].map(f => (
+                    <li key={f} className="flex items-start gap-3 text-sm text-gray-600">
+                      <img src="/icons/check.svg" alt="" className="w-4 h-4 mt-0.5 shrink-0" />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <Link href="/builders" className="border border-black bg-transparent text-black font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-black hover:text-white inline-block">
+                  JOIN THE TALENT POOL
+                </Link>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* FOR UNIVERSITIES */}
+      <section className="relative py-20 bg-white border-t border-gray-100" id="universities">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <Reveal>
+            <div className="grid md:grid-cols-2 gap-16 items-start">
+              <div>
+                <span className="inline-block text-xs px-4 py-1.5 font-semibold uppercase tracking-wider mb-4 bg-yellow-50 text-yellow-700 border border-yellow-200 rounded-full">For universities</span>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">
+                  Placements that actually lead somewhere.
+                </h2>
+                <p className="blueox-body text-gray-600 leading-relaxed">
+                  Pre-vetted international startups. Students join live shipping pods — not coffee runs. BlueOx handles matching, coordination, supervision, and reporting. You get the outcomes dashboard.
+                </p>
+              </div>
+              <div>
+                <ul className="space-y-3 mb-6">
+                  {['Students placed in real shipping environments', 'Weekly Pod Report per student', '8–16 week programs with defined deliverables', 'Certificates, references, portfolio pieces', 'Dashboard: placement, completion, employment rates', 'Zero admin burden on your department'].map(f => (
+                    <li key={f} className="flex items-start gap-3 text-sm text-gray-600">
+                      <img src="/icons/check.svg" alt="" className="w-4 h-4 mt-0.5 shrink-0" />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <button onClick={() => setIsFormOpen(true)} className="border border-black bg-transparent text-black font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-black hover:text-white inline-block">
+                  PARTNER WITH US
+                </button>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* FOR INVESTORS */}
+      <section className="relative py-20 bg-white border-t border-gray-100" id="investors">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <Reveal>
+            <div className="grid md:grid-cols-2 gap-16 items-start">
+              <div>
+                <span className="inline-block text-xs px-4 py-1.5 font-semibold uppercase tracking-wider mb-4 bg-blue-50 text-blue-700 border border-blue-200 rounded-full">For investors &amp; donors</span>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">
+                  For Faith Driven Investors deploying Kingdom capital.
+                </h2>
+                <p className="blueox-body text-gray-600 leading-relaxed">
+                  If you operate from a one-pocket framework — where giving, investing, and spending all come from the same Kingdom conviction — BlueOx is a place to put capital to work. We are building a model where a Christian tech hub trains students, ships products, plants churches, and supports refugees.
+                </p>
+              </div>
+              <div>
+                <ul className="space-y-3 mb-6">
+                  {['Every pod placed funds church plants and refugee support', 'Builder training is free — revenue from founders covers it', "Aligned with solving.org's Build, Invest, Give framework", 'Impact-measurable: placements, completions, employment tracked', 'ESG documentation for grant-funded and donor-advised tracks', 'IOM, UNHCR, EU-Africa fund aligned for impact capital'].map(f => (
+                    <li key={f} className="flex items-start gap-3 text-sm text-gray-600">
+                      <img src="/icons/check.svg" alt="" className="w-4 h-4 mt-0.5 shrink-0" />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex gap-3 flex-wrap">
+                  <Link href="/fund" className="border border-[#e05a3a] bg-[#e05a3a] text-white font-semibold text-sm px-6 py-3 rounded-none transition-all duration-300 hover:bg-[#c94e30] hover:border-[#c94e30] inline-block">
+                    FUND TRAINING
+                  </Link>
+                  <a href="mailto:blueoxrecruit@gmail.com?subject=Investor Inquiry" className="border border-black bg-transparent text-black font-semibold text-sm px-6 py-3 rounded-none transition-all duration-300 hover:bg-black hover:text-white inline-block">
+                    TALK ABOUT YOUR PORTFOLIO
+                  </a>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* VR TRAINING TEASER */}
+      <section className="relative py-20 bg-white border-t border-gray-100" id="vr-training">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <Reveal>
+            <div className="text-center mb-12">
+              <div className="text-[#e05a3a] text-xs font-semibold uppercase tracking-wider mb-4">VR Training Academy</div>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">
+                The same campus that trains our builders also trains the workforce of Western Uganda.
+              </h2>
+              <p className="blueox-body text-gray-600 max-w-3xl mx-auto">
+                Blue Ox Kampus delivers VR-powered TVET to refugees, women, persons with disabilities, and underserved youth — at 90% lower cost than traditional vocational training.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            {[
+              { icon: 'rocket.svg',    title: 'VR Welding',          body: 'MIG, TIG, and Stick welding simulation aligned to EU standards.' },
+              { icon: 'lightbulb.svg', title: 'Solar Installation',  body: "Photovoltaic systems, green energy for Uganda's off-grid future." },
+              { icon: 'mobile.svg',    title: 'EV & Mechatronics',   body: 'Electric mobility and industrial automation skills.' },
+              { icon: 'team.svg',      title: 'Workplace Readiness', body: 'Soft skills, interview prep, and career guidance.' },
+            ].map(({ icon, title, body }, i) => (
+              <Reveal key={title} delay={0.1 + i * 0.1}>
+                <div className="bg-white border border-gray-200 rounded-none p-6 hover:border-[#e05a3a] transition-all duration-200">
+                  <img src={`/icons/${icon}`} alt={title} className="w-10 h-10 mb-4" />
+                  <h3 className="font-black text-black mb-2">{title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{body}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal delay={0.5}>
+            <div className="text-center">
+              <Link href="/academy" className="border border-[#e05a3a] bg-transparent text-[#e05a3a] font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#e05a3a] hover:text-white inline-block">
+                EXPLORE THE ACADEMY
+              </Link>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ORIGIN STORY */}
+      <section className="relative py-20 bg-white border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <Reveal>
+            <div className="text-center mb-10">
+              <div className="text-[#e05a3a] text-xs font-semibold uppercase tracking-wider mb-4">Who we are</div>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4 max-w-3xl mx-auto">
+                A Christian-first technology hub. Not Christian-adjacent. Not faith-friendly.{' '}
+                <span className="text-[#e05a3a]">Christian first.</span>
+              </h2>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <div className="grid md:grid-cols-2 gap-12 mb-12">
+              <p className="blueox-body text-gray-600 leading-relaxed">
+                Every builder at BlueOx Kampus is a Christian. They are selected through weekly Saturday coding competitions from software engineering students across Uganda — the top performers enter our system, commit to our code of Redemptive Technology, and ship for founders who are building products that push back darkness in the world.
+              </p>
+              <p className="blueox-body text-gray-600 leading-relaxed">
+                We plant churches with our finances. We practice radical generosity through supporting refugees. We are inspired by the framework of solving the world&apos;s 32 greatest problems — the conviction that the Church is called to minister in Word and Deed, and that technology is one of the most powerful tools available to do both.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.2}>
+            <div className="border-t border-gray-200 pt-8">
+              <p className="text-xs font-bold uppercase tracking-widest text-[#e05a3a] mb-6">The code of redemptive technology</p>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {[
+                  { title: 'Build for people',     body: 'Technology that serves, not exploits. Products that create value for the people who use them.' },
+                  { title: 'Excellence as worship', body: 'Doing excellent work is an act of worship. Shipping matters. Quality matters. Integrity matters.' },
+                  { title: 'Radical generosity',    body: 'Revenue funds church plants, supports refugees, and keeps training free for builders who have nothing.' },
+                  { title: 'Jesus as framework',    body: 'Not a values statement on a wall. The actual model for how we work, lead, build, and relate to one another.' },
+                ].map(({ title, body }) => (
+                  <div key={title} className="bg-white border border-gray-200 rounded-none p-5 hover:border-[#e05a3a] transition-all duration-200">
+                    <h4 className="font-black text-black mb-2 text-sm">{title}</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">{body}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.3}>
+            <p className="blueox-body text-gray-500 text-sm mt-6">
+              Aligned with the Faith Driven Entrepreneur movement and inspired by{' '}
+              <a href="https://solving.org" target="_blank" rel="noreferrer" className="text-[#e05a3a] hover:underline">solving.org</a>
+              {' '}— the conviction that Christians are called to Build, Invest, and Give toward the world&apos;s 32 greatest problems.
             </p>
           </Reveal>
-          <div className="grid md:grid-cols-2 gap-px bg-gray-200 border border-gray-200">
-            <Reveal delay={0.1}>
-              <div className="bg-white p-10">
-                <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-gray-400 mb-4">Track 01 — Vocational</p>
-                <h3 className="text-lg font-extrabold text-black mb-4">VR Training for displaced communities</h3>
-                <p className="blueox-body text-gray-600 text-sm leading-relaxed mb-6">
-                  Refugees and youth in Western Uganda learn vocational skills — welding, fabrication — using VR headsets before ever touching real equipment. Cheaper. Safer. Proven. VR-first learners transition to physical practice faster than traditional methods.
-                </p>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-3">
-                    <span className="text-[#e05a3a] font-bold mt-0.5">→</span>
-                    <span className="blueox-body text-gray-700 text-sm">VR headsets replace expensive equipment and physical infrastructure</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-[#e05a3a] font-bold mt-0.5">→</span>
-                    <span className="blueox-body text-gray-700 text-sm">Trainers-of-trainers model multiplies impact across communities</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-[#e05a3a] font-bold mt-0.5">→</span>
-                    <span className="blueox-body text-gray-700 text-sm">Certified welders placed into employment or self-employment</span>
-                  </li>
-                </ul>
-              </div>
-            </Reveal>
-            <Reveal delay={0.15}>
-              <div className="bg-white p-10">
-                <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-gray-400 mb-4">Track 02 — Software</p>
-                <h3 className="text-lg font-extrabold text-black mb-4">Execution pods for founders who need to ship</h3>
-                <p className="blueox-body text-gray-600 text-sm leading-relaxed mb-6">
-                  Software engineering students from across Uganda compete weekly. Top performers are selected into the Kampus, trained further, and placed into Billy Pods — lean execution teams that ship real products for international founders within 7 days.
-                </p>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-3">
-                    <span className="text-[#e05a3a] font-bold mt-0.5">→</span>
-                    <span className="blueox-body text-gray-700 text-sm">Weekly competitions surface the top 1% of builders</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-[#e05a3a] font-bold mt-0.5">→</span>
-                    <span className="blueox-body text-gray-700 text-sm">Pods generate revenue that directly funds vocational training</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-[#e05a3a] font-bold mt-0.5">→</span>
-                    <span className="blueox-body text-gray-700 text-sm">Builders earn internationally while staying rooted in Uganda</span>
-                  </li>
-                </ul>
-              </div>
-            </Reveal>
-          </div>
-          <Reveal delay={0.2}>
-            <div className="border-l-4 border-[#e05a3a] bg-gray-50 border border-gray-200 mt-px p-8">
-              <p className="blueox-body text-gray-700 text-sm leading-relaxed">
-                <span className="font-extrabold text-black">The loop closes itself.</span> Founders pay pods → pods revenue funds VR training → trained welders get jobs → employed welders support the next cohort → more builders enter the Kampus. No grants required to sustain the cycle.
+        </div>
+      </section>
+
+      {/* FINAL CTA */}
+      <section className="relative py-24 bg-white border-t border-gray-200 text-center" id="request">
+        <div className="max-w-4xl mx-auto px-6">
+          <Reveal>
+            <div className="bg-white border-2 border-[#e05a3a]/50 rounded-none p-12">
+              <p className="blueox-body text-gray-600 mb-4 text-sm font-semibold uppercase tracking-widest">
+                Most founders wait too long to fix execution. The ones who don&apos;t — win.
               </p>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* Audience Router */}
-      <section className="py-20 px-6 bg-white border-t border-gray-200">
-        <div className="max-w-6xl mx-auto">
-          <Reveal>
-            <div className="mb-10">
-              <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-[#e05a3a] mb-4">More than one side of this mission</p>
-              <h2 className="text-2xl md:text-3xl font-extrabold text-black mb-2">BlueOx serves more than one audience.</h2>
-              <p className="blueox-body text-gray-600 text-base">Jump to what's relevant to you.</p>
-            </div>
-          </Reveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-gray-200 border border-gray-200">
-            <Reveal delay={0.1}>
-              <a href="https://www.blueoxjobs.eu/hiring" target="_blank" rel="noopener noreferrer" className="bg-white p-8 block group hover:bg-gray-50 transition-colors duration-200">
-                <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-[#e05a3a] mb-3">Founders</p>
-                <h3 className="text-lg font-extrabold text-black mb-2 group-hover:text-[#e05a3a] transition-colors">Request a Pod</h3>
-                <p className="blueox-body text-gray-600 text-sm">Ready to ship? 7 days to kickoff.</p>
-                <span className="inline-block mt-4 text-[#e05a3a] text-sm font-semibold">→</span>
-              </a>
-            </Reveal>
-            <Reveal delay={0.15}>
-              <a href="/academy" className="bg-white p-8 block group hover:bg-gray-50 transition-colors duration-200">
-                <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-[#e05a3a] mb-3">Builders</p>
-                <h3 className="text-lg font-extrabold text-black mb-2 group-hover:text-[#e05a3a] transition-colors">Join a Pod</h3>
-                <p className="blueox-body text-gray-600 text-sm">Compete. Get placed. Ship real work internationally.</p>
-                <span className="inline-block mt-4 text-[#e05a3a] text-sm font-semibold">→</span>
-              </a>
-            </Reveal>
-            <Reveal delay={0.2}>
-              <a href="/partners" className="bg-white p-8 block group hover:bg-gray-50 transition-colors duration-200">
-                <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-[#e05a3a] mb-3">Universities</p>
-                <h3 className="text-lg font-extrabold text-black mb-2 group-hover:text-[#e05a3a] transition-colors">Partner with us</h3>
-                <p className="blueox-body text-gray-600 text-sm">Structured placements. Tracked outcomes. Zero admin.</p>
-                <span className="inline-block mt-4 text-[#e05a3a] text-sm font-semibold">→</span>
-              </a>
-            </Reveal>
-            <Reveal delay={0.25}>
-              <a href="/fund" className="bg-white p-8 block group hover:bg-gray-50 transition-colors duration-200">
-                <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-[#e05a3a] mb-3">Investors & Donors</p>
-                <h3 className="text-lg font-extrabold text-black mb-2 group-hover:text-[#e05a3a] transition-colors">Back the mission</h3>
-                <p className="blueox-body text-gray-600 text-sm">Fund training. Deploy capital with measurable impact.</p>
-                <span className="inline-block mt-4 text-[#e05a3a] text-sm font-semibold">→</span>
-              </a>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Who We Are / Christian Identity */}
-      <section className="py-20 px-6 bg-white border-t border-gray-200">
-        <div className="max-w-6xl mx-auto">
-          <Reveal>
-            <div className="border border-gray-200 p-10 sm:p-16">
-              <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-[#e05a3a] mb-6">Who we are</p>
-              <h2 className="text-2xl md:text-3xl font-extrabold text-black mb-3 max-w-2xl">
-                A Christian-first technology hub. Not Christian-adjacent. Not faith-friendly. <span className="text-[#e05a3a]">Christian first.</span>
+              <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-4">
+                If you&apos;re building something that matters — it needs to ship.
               </h2>
-              <div className="grid md:grid-cols-2 gap-8 mt-8 mb-12">
-                <p className="blueox-body text-gray-600 leading-relaxed">
-                  Every builder at BlueOx Kampus is a Christian. They're selected through weekly Saturday coding competitions from software engineering students across Uganda — the top performers enter our system, commit to our code of Redemptive Technology, and ship for founders who are building products that push back darkness in the world.
-                </p>
-                <p className="blueox-body text-gray-600 leading-relaxed">
-                  We plant churches with our finances. We practice radical generosity through supporting refugees. We are inspired by the conviction that the Church is called to minister in Word and Deed, and that technology is one of the most powerful tools available to do both.
-                </p>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-8 border-t border-gray-200">
-                <div className="p-5 border border-gray-200">
-                  <h4 className="font-extrabold text-black text-sm mb-2">Build for people</h4>
-                  <p className="blueox-body text-gray-600 text-sm">Technology that serves, not exploits. Products that create value for the people who use them.</p>
-                </div>
-                <div className="p-5 border border-gray-200">
-                  <h4 className="font-extrabold text-black text-sm mb-2">Excellence as worship</h4>
-                  <p className="blueox-body text-gray-600 text-sm">Doing excellent work is an act of worship. Shipping matters. Quality matters. Integrity matters.</p>
-                </div>
-                <div className="p-5 border border-gray-200">
-                  <h4 className="font-extrabold text-black text-sm mb-2">Radical generosity</h4>
-                  <p className="blueox-body text-gray-600 text-sm">Revenue funds church plants, supports refugees, and keeps training free for builders who have nothing.</p>
-                </div>
-                <div className="p-5 border border-gray-200">
-                  <h4 className="font-extrabold text-black text-sm mb-2">Jesus as framework</h4>
-                  <p className="blueox-body text-gray-600 text-sm">Not a values statement on a wall. The actual model for how we work, lead, build, and relate to one another.</p>
-                </div>
-              </div>
-              <p className="blueox-body text-gray-500 text-sm mt-8">
-                Aligned with the Faith Driven Entrepreneur movement and inspired by <a href="https://solving.org" target="_blank" rel="noopener noreferrer" className="text-[#e05a3a] hover:underline">solving.org</a> — the conviction that Christians are called to Build, Invest, and Give toward the world's 32 greatest problems.
+              <p className="blueox-body text-gray-600 text-lg mb-8 max-w-xl mx-auto">
+                You have a calling. You have a backlog. 7 days to kickoff. $199/week. Send us your stack.
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://www.blueoxjobs.eu/hiring" target="_blank" rel="noopener noreferrer" className="border border-[#e05a3a] bg-[#e05a3a] text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#c94e30] hover:border-[#c94e30]">
+                  REQUEST A POD →
+                </a>
+                <a href="mailto:blueoxrecruit@gmail.com?subject=15-min Breakdown Request" className="border border-black bg-transparent text-black font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-black hover:text-white">
+                  GET A 15-MIN BREAKDOWN
+                </a>
+              </div>
             </div>
           </Reveal>
         </div>
       </section>
 
-      {/* Final CTA Section */}
-      <section className="py-24 px-6 text-center">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-8 text-black">Ready to pull up?</h2>
-          <p className="blueox-body text-gray-600 mb-12 uppercase tracking-widest text-sm">Applications for Feb 2026 Intake are Open</p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button onClick={() => openForm('academy')} className="inline-block border border-[#e05a3a] bg-transparent text-[#e05a3a] font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-[#e05a3a] hover:text-white">
-              JOIN ACADEMY
-            </button>
-            <button onClick={() => openForm('partner')} className="inline-block border border-black bg-transparent text-black font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-black hover:text-white">
-              PARTNER PORTAL
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Credits Section */}
-      <section className="py-16 px-6 bg-white/50 border-t border-gray-200">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="blueox-body text-gray-600 leading-relaxed text-sm sm:text-base">
-            Built with <span className="text-blue-500 font-bold">Dig in Vision</span> and informed by field deployments with <span className="text-blue-500 font-bold">Toolkit Foundation</span> and <span className="text-blue-500 font-bold">GIZ</span>; including VR welding deployment in Kakuma Refugee Camp, Kenya.
-          </p>
-        </div>
-      </section>
-
-      <ApplicationForm 
-        isOpen={isFormOpen} 
-        onClose={() => setIsFormOpen(false)} 
-        formType={formType} 
-      />
-
+      <ApplicationForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} formType="partner" />
       <Footer />
     </>
   );
 }
-
-
-
-
-
-
-
-

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRef, useEffect } from 'react';
@@ -19,9 +19,7 @@ export default function Header(){
         setOpen(false);
       }
     }
-
     function handleEsc(e: KeyboardEvent){ if (e.key === 'Escape') setOpen(false); }
-
     document.addEventListener('mousedown', handleDocClick);
     document.addEventListener('touchstart', handleDocClick);
     document.addEventListener('keydown', handleEsc);
@@ -35,120 +33,105 @@ export default function Header(){
   useEffect(() => {
     const scroller = document.body;
     let lastScrollY = scroller.scrollTop;
-
     const handleScroll = () => {
       const currentScrollY = scroller.scrollTop;
       const delta = currentScrollY - lastScrollY;
-
-      if (currentScrollY <= 20) {
-        setIsHeaderVisible(true);
-      } else if (delta > 6) {
-        setIsHeaderVisible(false);
-        setOpen(false);
-      } else if (delta < -2) {
-        setIsHeaderVisible(true);
-      }
-
+      if (currentScrollY <= 20) setIsHeaderVisible(true);
+      else if (delta > 6) { setIsHeaderVisible(false); setOpen(false); }
+      else if (delta < -2) setIsHeaderVisible(true);
       lastScrollY = currentScrollY;
     };
-
     scroller.addEventListener('scroll', handleScroll, { passive: true });
     return () => scroller.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const navLink = (active: boolean) =>
+    `text-xs font-bold tracking-widest uppercase transition-colors ${active ? 'text-[#e05a3a]' : 'hover:text-[#e05a3a]'}`;
+
+  const mobileLinkCls = (active: boolean) =>
+    `py-2 text-sm font-bold uppercase tracking-wider border-b border-gray-100 transition-colors ${active ? 'text-[#e05a3a]' : 'text-black hover:text-[#e05a3a]'}`;
+
   return (
     <header
-      className={`fixed top-0 left-0 w-full h-[var(--nav-height)] z-50 bg-white border-b border-gray-200 right-50 transition-transform duration-300 ease-out ${isHeaderVisible ? 'translate-y-0' : '-translate-y-full'}`}
+      className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ease-out backdrop-blur-[14px] h-[var(--nav-height)] bg-white border-b border-gray-200 ${isHeaderVisible ? 'translate-y-0' : '-translate-y-full'}`}
     >
-        <div className="max-w-7xl mx-auto px-6 py-0 lg:mt-0 flex items-center justify-between relative">
-          <div className="flex items-center gap-3">
-            <Link href="/">
-              <img src="/assets/images/logo_name.png" alt="Blue OX" className="w-20 sm:w-24 md:w-28 h-auto mt-2 lg:mt-0" />
-            </Link>
-            <div className="block">
-              <span className="text-xs sm:text-sm font-black tracking-tighter uppercase leading-none block text-black">Blue <span className="text-[#e05a3a]">OX</span> <span className="text-blue-500">Kampus</span></span>
-            </div>
-          </div>
+      <div className="max-w-[1100px] mx-auto px-6 sm:px-12 flex items-center justify-between h-full relative">
 
-          <nav className="hidden lg:flex gap-6 text-xs uppercase font-bold tracking-widest">
-            <Link href="/" className={pathname === '/' ? 'text-[#e05a3a]' : 'hover:text-[#e05a3a] transition-colors'}>Home</Link>
-            <Link href="/academy" className={pathname === '/academy' ? 'text-[#e05a3a]' : 'hover:text-[#e05a3a] transition-colors'}>Programs</Link>
-            <Link href="/pods" className={pathname === '/pods' ? 'text-[#e05a3a]' : 'hover:text-[#e05a3a] transition-colors'}>Billy Pods</Link>
-            <Link href="/house" className={pathname === '/house' ? 'text-[#e05a3a]' : 'hover:text-[#e05a3a] transition-colors'}>The House</Link>
-            <Link href="/partners" className={pathname === '/partners' ? 'text-[#e05a3a]' : 'hover:text-[#e05a3a] transition-colors'}>Partners</Link>
-          </nav>
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2.5">
+          <img src="/assets/images/logo_name.png" alt="Blue OX" className="w-20 sm:w-24 md:w-28 h-auto" />
+          <span className="text-xs sm:text-sm font-black tracking-tighter uppercase leading-none text-black">
+            Blue <span className="text-[#e05a3a]">OX</span> <span className="text-blue-500">Kampus</span>
+          </span>
+        </Link>
 
-          <div className="flex items-center gap-2 sm:gap-3">
-            <Link 
+        {/* Desktop nav */}
+        <nav className="hidden lg:flex gap-6 text-xs uppercase font-bold tracking-widest">
+          <Link href="/"         className={navLink(pathname === '/')}>Home</Link>
+          <Link href="/academy"  className={navLink(pathname === '/academy')}>Academy</Link>
+          <Link href="/builders" className={navLink(pathname === '/builders')}>Builders</Link>
+          <Link href="/partners" className={navLink(pathname === '/partners')}>Partners</Link>
+        </nav>
+
+        {/* Right CTAs + hamburger */}
+        <div className="flex items-center gap-2 sm:gap-3">
+          <a
+            href="https://www.blueoxjobs.eu/hiring"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:inline-block border border-[#e05a3a] text-[#e05a3a] px-4 py-2 rounded-md text-sm font-black uppercase hover:bg-[#e05a3a] hover:text-white transition-colors"
+          >
+            Request a Pod
+          </a>
+          <Link
+            href="/fund"
+            className="hidden md:inline-block bg-[#e05a3a] text-white px-4 py-2 rounded-md text-sm font-black uppercase hover:bg-[#c94e30] transition-colors"
+          >
+            Fund Training
+          </Link>
+          <button
+            ref={btnRef}
+            className="lg:hidden p-2 rounded-md transition-colors hover:bg-black/10"
+            aria-label="menu"
+            onClick={() => setOpen(v => !v)}
+          >
+            <svg className="w-5 h-5 stroke-current" viewBox="0 0 24 24" fill="none">
+              <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile drawer */}
+      {open && (
+        <div
+          ref={menuRef}
+          className="lg:hidden absolute top-full left-0 w-full backdrop-blur-md py-4 px-6 flex flex-col gap-1 bg-white/95 border-t border-gray-200"
+        >
+          <Link href="/"         onClick={() => setOpen(false)} className={mobileLinkCls(pathname === '/')}>Home</Link>
+          <Link href="/academy"  onClick={() => setOpen(false)} className={mobileLinkCls(pathname === '/academy')}>Academy</Link>
+          <Link href="/builders" onClick={() => setOpen(false)} className={mobileLinkCls(pathname === '/builders')}>Builders</Link>
+          <Link href="/partners" onClick={() => setOpen(false)} className={mobileLinkCls(pathname === '/partners')}>Partners</Link>
+          <div className="flex gap-2 mt-3">
+            <a
+              href="https://www.blueoxjobs.eu/hiring"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="flex-1 border border-[#e05a3a] text-[#e05a3a] px-4 py-3 text-sm font-black uppercase text-center block hover:bg-[#e05a3a] hover:text-white transition-colors rounded-md"
+            >
+              Request a Pod
+            </a>
+            <Link
               href="/fund"
-              className="hidden md:inline-block bg-[#e05a3a] text-white px-4 py-2 rounded-md text-sm font-black uppercase hover:bg-[#c94e30] transition-colors"
+              onClick={() => setOpen(false)}
+              className="flex-1 bg-[#e05a3a] text-white px-4 py-3 text-sm font-black uppercase text-center block hover:bg-[#c94e30] transition-colors rounded-md"
             >
               Fund Training
             </Link>
-            {/* mobile toggle - now flows naturally in flex container */}
-            <button ref={btnRef} className="lg:hidden p-2 rounded-md bg-white/5 hover:bg-black/10 transition-colors" aria-label="menu" onClick={() => setOpen(v => !v)}>
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
-            </button>
           </div>
         </div>
-
-        {/* Mobile menu - render only when open */}
-        {open && (
-          <div ref={menuRef} className="lg:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-md border-t border-gray-200 py-4 px-6">
-            <div className="flex flex-col gap-4 max-w-7xl mx-auto">
-              <Link 
-                href="/" 
-                onClick={() => setOpen(false)}
-                className={pathname === '/' ? 'text-[#e05a3a] py-2 text-sm font-bold uppercase tracking-wider' : 'text-black hover:text-[#e05a3a] py-2 text-sm font-bold uppercase tracking-wider transition-colors'}
-              >
-                Home
-              </Link>
-              <Link 
-                href="/academy" 
-                onClick={() => setOpen(false)}
-                className={pathname === '/academy' ? 'text-[#e05a3a] py-2 text-sm font-bold uppercase tracking-wider' : 'text-black hover:text-[#e05a3a] py-2 text-sm font-bold uppercase tracking-wider transition-colors'}
-              >
-                Programs
-              </Link>
-              <Link 
-                href="/house" 
-                onClick={() => setOpen(false)}
-                className={pathname === '/house' ? 'text-[#e05a3a] py-2 text-sm font-bold uppercase tracking-wider' : 'text-black hover:text-[#e05a3a] py-2 text-sm font-bold uppercase tracking-wider transition-colors'}
-              >
-                The House
-              </Link>
-              <Link 
-                href="/partners" 
-                onClick={() => setOpen(false)}
-                className={pathname === '/partners' ? 'text-[#e05a3a] py-2 text-sm font-bold uppercase tracking-wider' : 'text-black hover:text-[#e05a3a] py-2 text-sm font-bold uppercase tracking-wider transition-colors'}
-              >
-                Partners
-              </Link>
-              <Link 
-                href="/pods" 
-                onClick={() => setOpen(false)}
-                className={pathname === '/pods' ? 'text-[#e05a3a] py-2 text-sm font-bold uppercase tracking-wider' : 'text-black hover:text-[#e05a3a] py-2 text-sm font-bold uppercase tracking-wider transition-colors'}
-              >
-                Billy Pods
-              </Link>
-              <Link
-                href="/fund"
-                onClick={() => setOpen(false)}
-                className="bg-[#e05a3a] text-white px-4 py-2 rounded-md text-sm font-black uppercase hover:bg-[#e05a3a]/90 transition-colors inline-block text-center w-full"
-              >
-                Fund Training
-              </Link>
-            </div>
-          </div>
-        )}
-      </header>
+      )}
+    </header>
   );
 }
-
-
-
-
-
-
-
-

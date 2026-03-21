@@ -371,7 +371,7 @@ export default function PodsPage() {
                   </div>
                 ))}
                 <div className="pt-5">
-                  <a href="mailto:blueoxrecruit@gmail.com?subject=University Partnership" className="inline-block border border-black bg-transparent text-black font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-black hover:text-white">PARTNER WITH US</a>
+                  <button onClick={() => openRequest('partner')} className="inline-block border border-black bg-transparent text-black font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-black hover:text-white">PARTNER WITH US</button>
                 </div>
               </div>
             </Reveal>
