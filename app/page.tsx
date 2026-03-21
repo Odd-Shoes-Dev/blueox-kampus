@@ -18,27 +18,27 @@ export default function Page() {
       <Header />
 
       {/* HERO */}
-      <section className="relative bg-white pt-24 md:pt-32 pb-20 md:pb-20">
+      <section className="relative bg-white pt-28 md:pt-36 pb-24 md:pb-28">
         <div className="max-w-6xl mx-auto px-6 sm:px-6">
           <Reveal>
-            <div className="text-center mb-16">
-              <div className="text-[#e05a3a] text-xs font-semibold uppercase tracking-wider mb-4">
+            <div className="text-center mb-20">
+              <div className="text-[#e05a3a] text-xs font-semibold uppercase tracking-wider mb-6">
                 Mbarara, Uganda · EU · US · Gulf
               </div>
-              <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-6 text-black leading-tight">
+              <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-8 text-black leading-tight">
                 Execution pods for founders<br />
                 building <span className="text-[#e05a3a]">redemptive</span><br />
                 technology.
               </h1>
-              <p className="blueox-body text-base sm:text-lg text-gray-700 max-w-3xl mx-auto mb-4">
+              <p className="blueox-body text-base sm:text-lg text-gray-700 max-w-3xl mx-auto mb-8">
                 Competition-selected builders deployed into managed teams that ship your product weekly — without hiring, delays, or loss of control.
               </p>
-              <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm font-semibold text-[#e05a3a] mb-8">
+              <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm font-semibold text-[#e05a3a] mb-12">
                 {['7 days to kickoff', 'Weekly output', 'No hiring', 'From $199/week'].map(txt => (
                   <span key={txt}>{txt}</span>
                 ))}
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-5 justify-center">
                 <a href="https://www.blueoxjobs.eu/hiring" target="_blank" rel="noopener noreferrer" className="border border-[#e05a3a] bg-[#e05a3a] text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#c94e30] hover:border-[#c94e30]">
                   REQUEST A POD →
                 </a>
@@ -50,7 +50,7 @@ export default function Page() {
           </Reveal>
 
           <Reveal delay={0.2}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
               {[
                 { val: '$199',   lbl: 'Per builder / week' },
                 { val: '7 days', lbl: 'Request to kickoff' },
@@ -58,7 +58,7 @@ export default function Page() {
                 { val: '15+',    lbl: 'Products shipped' },
               ].map(({ val, lbl }) => (
                 <div key={val} className="text-center">
-                  <div className="blueox-subheading text-4xl sm:text-5xl text-[#e05a3a] mb-2">{val}</div>
+                  <div className="blueox-subheading text-4xl sm:text-5xl text-[#e05a3a] mb-3">{val}</div>
                   <div className="blueox-body text-gray-600 text-sm">{lbl}</div>
                 </div>
               ))}
