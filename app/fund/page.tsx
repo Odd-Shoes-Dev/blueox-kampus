@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Bebas_Neue, Libre_Baskerville, Space_Mono } from 'next/font/google';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Reveal from '../../components/Reveal';
@@ -10,6 +11,10 @@ import PeopleIcon from '../../components/icons/PeopleIcon';
 import VRHeadsetIcon from '../../components/icons/VRHeadsetIcon';
 import VanIcon from '../../components/icons/VanIcon';
 import BuildingIcon from '../../components/icons/BuildingIcon';
+
+const bebasNeue = Bebas_Neue({ weight: '400', subsets: ['latin'], variable: '--font-bebas' });
+const libreBaskerville = Libre_Baskerville({ weight: ['400', '700'], subsets: ['latin'], variable: '--font-libre' });
+const spaceMono = Space_Mono({ weight: ['400', '700'], subsets: ['latin'], variable: '--font-mono' });
 
 export default function FundPage() {
   const [selectedAmount, setSelectedAmount] = useState<number | null>(null);
@@ -111,7 +116,13 @@ export default function FundPage() {
   };
 
   return (
-    <>
+    <div className={`${bebasNeue.variable} ${libreBaskerville.variable} ${spaceMono.variable}`}>
+      <style dangerouslySetInnerHTML={{ __html: `
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+        .font-bebas { font-family: 'Bebas Neue', sans-serif; }
+        .font-libre { font-family: 'Libre Baskerville', serif; }
+      `}} />
       <Header />
 
       {/* Hero Section */}
@@ -119,11 +130,12 @@ export default function FundPage() {
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
+              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-4">/ Funding</div>
+              <h1 className="text-4xl md:text-5xl font-bebas text-[#0044CC] mb-6 leading-tight uppercase">
                 Fund <span className="text-[#F58220]">Training.</span><br/>
                 Change Lives.
               </h1>
-              <p className="blueox-body text-base sm:text-lg text-gray-700 max-w-3xl mx-auto">
+              <p className="font-libre text-base sm:text-lg text-gray-600 max-w-3xl mx-auto italic">
                 Choose how you want to impact displaced youth, refugees, women, and underserved communities in Western Uganda.
               </p>
             </div>
@@ -132,10 +144,11 @@ export default function FundPage() {
           {/* Custom Amount Section */}
           <Reveal delay={0.2}>
             <div className="mb-16 bg-white border border-gray-200 rounded-none p-8 sm:p-12">
-              <h3 className="text-2xl font-extrabold text-black mb-4 text-center">
+              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-4 text-center">/ Contribute</div>
+              <h3 className="text-3xl md:text-4xl font-bebas text-[#0044CC] mb-4 text-center uppercase">
                 Choose Your Contribution Amount
               </h3>
-              <p className="blueox-body text-gray-600 mb-8 text-base text-center">
+              <p className="font-libre text-gray-600 mb-8 text-base text-center italic">
                 Every dollar goes directly to training equipment, facilitator salaries, and learner support.
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
@@ -158,7 +171,7 @@ export default function FundPage() {
                   </button>
                 ))}
               </div>
-              <p className="blueox-body text-gray-600 text-sm text-center mt-6">
+              <p className="font-libre text-gray-600 text-sm text-center mt-6">
                 Need a custom amount over $2,500? <a href="mailto:blueoxrecruit@gmail.com" className="text-[#F58220] hover:underline">Contact us directly</a>
               </p>
             </div>
@@ -188,20 +201,20 @@ export default function FundPage() {
                     {getIcon(option.id)}
                   </div>
                   
-                  <h3 className="text-2xl font-black text-black mb-2">
+                  <h3 className="text-2xl font-bebas text-[#0044CC] mb-2 uppercase">
                     {option.title}
                   </h3>
                   
-                  <div className="blueox-subheading text-4xl text-[#F58220] mb-4">
+                  <div className="font-bebas text-4xl text-[#F58220] mb-4 uppercase">
                     ${option.price}
                   </div>
                   
-                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                  <p className="font-libre text-gray-600 mb-4 text-sm leading-relaxed">
                     {option.description}
                   </p>
                   
                   <div className="bg-white border border-gray-200 rounded-none p-3 mb-6">
-                    <p className="blueox-body text-gray-700 text-sm flex items-start gap-2">
+                    <p className="font-libre text-gray-700 text-sm flex items-start gap-2">
                       <img src="/icons/lightbulb.svg" alt="" className="w-4 h-4 mt-0.5 shrink-0" />
                       {option.impact}
                     </p>
@@ -226,20 +239,20 @@ export default function FundPage() {
           <Reveal delay={0.6}>
             <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="blueox-subheading text-4xl sm:text-5xl text-[#F58220] mb-2">$50</div>
-                <div className="blueox-body text-gray-600 text-sm">Per trained person</div>
+                <div className="font-bebas text-5xl sm:text-6xl text-[#F58220] mb-2 uppercase">$50</div>
+                <div className="font-mono text-gray-600 text-xs font-black uppercase tracking-widest">Per trained person</div>
               </div>
               <div className="text-center">
-                <div className="blueox-subheading text-4xl sm:text-5xl text-black mb-2">90%</div>
-                <div className="blueox-body text-gray-600 text-sm">Lower than traditional TVET</div>
+                <div className="font-bebas text-5xl sm:text-6xl text-[#0044CC] mb-2 uppercase">90%</div>
+                <div className="font-mono text-gray-600 text-xs font-black uppercase tracking-widest">Lower than traditional TVET</div>
               </div>
               <div className="text-center">
-                <div className="blueox-subheading text-4xl sm:text-5xl text-[#F58220] mb-2">0</div>
-                <div className="blueox-body text-gray-600 text-sm">Material waste</div>
+                <div className="font-bebas text-5xl sm:text-6xl text-[#F58220] mb-2 uppercase">0</div>
+                <div className="font-mono text-gray-600 text-xs font-black uppercase tracking-widest">Material waste</div>
               </div>
               <div className="text-center">
-                <div className="blueox-subheading text-4xl sm:text-5xl text-black mb-2">100%</div>
-                <div className="blueox-body text-gray-600 text-sm">Transparent tracking</div>
+                <div className="font-bebas text-5xl sm:text-6xl text-[#0044CC] mb-2 uppercase">100%</div>
+                <div className="font-mono text-gray-600 text-xs font-black uppercase tracking-widest">Transparent tracking</div>
               </div>
             </div>
           </Reveal>
@@ -247,7 +260,8 @@ export default function FundPage() {
           {/* Trust Section */}
           <Reveal delay={0.8}>
             <div className="mt-16 bg-white border border-gray-200 rounded-none p-8 text-center">
-              <p className="blueox-body text-gray-700">
+              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-4">/ Trust</div>
+              <p className="font-libre text-gray-700 italic">
                 Built with <span className="text-[#F58220] font-semibold">Dig in Vision</span> and informed by deployments with <span className="text-[#F58220] font-semibold">Toolkit Foundation</span> and <span className="text-[#F58220] font-semibold">GIZ</span>. Your funds support real, field-tested training that works.
               </p>
             </div>
@@ -256,7 +270,7 @@ export default function FundPage() {
       </section>
 
       <Footer />
-    </>
+    </div>
   );
 }
 

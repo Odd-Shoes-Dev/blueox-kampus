@@ -1,5 +1,26 @@
 'use client';
 
+import { Bebas_Neue, Libre_Baskerville, Space_Mono } from 'next/font/google';
+
+const bebasNeue = Bebas_Neue({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-bebas',
+});
+
+const libreBaskerville = Libre_Baskerville({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  variable: '--font-libre',
+});
+
+const spaceMono = Space_Mono({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  variable: '--font-mono',
+});
+
+
 import { useState } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -74,7 +95,13 @@ export default function BuildersPage() {
   ];
 
   return (
-    <>
+    <div className={`${bebasNeue.variable} ${libreBaskerville.variable} ${spaceMono.variable} min-h-screen flex flex-col`}>
+      <style dangerouslySetInnerHTML={{ __html: `
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+        
+        .font-bebas { font-family: 'Bebas Neue', sans-serif; }
+        .font-libre { font-family: 'Libre Baskerville', serif; }
+      `}} />
       <Header />
 
       {/* Hero Section */}
@@ -119,17 +146,18 @@ export default function BuildersPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <Reveal>
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
+              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-4">/ Placements</div>
+              <h1 className="text-4xl md:text-5xl font-bebas text-[#0044CC] mb-6 leading-tight uppercase">
                 Get an International Company<br />
                 on Your <span className="text-[#F58220]">CV.</span>
               </h1>
-              <p className="blueox-body text-base sm:text-lg text-gray-700 max-w-3xl mx-auto mb-8">
+              <p className="font-libre text-base sm:text-lg text-gray-600 italic max-w-3xl mx-auto mb-8">
                 BlueOx Kampus places you in an execution pod with a real startup for 816 weeks. Work from campus. Pay nothing. Compete every Saturday  top performers get placed first.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => openForm('academy')}
-                  className="border border-[#F58220] bg-[#F58220] text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 ease-in-out hover:bg-[#c94e30] hover:border-[#c94e30]"
+                  className="border border-[#0044CC] bg-[#0044CC] text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 ease-in-out hover:bg-[#0033AA] hover:border-[#0033AA]"
                 >
                   APPLY TO THE TALENT POOL
                 </button>
@@ -147,20 +175,20 @@ export default function BuildersPage() {
           <Reveal delay={0.2}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-4">
               <div className="text-center">
-                <div className="blueox-subheading text-4xl sm:text-5xl text-[#F58220] mb-2">Free</div>
-                <div className="blueox-body text-gray-600 text-sm">No cost to join</div>
+                <div className="font-bebas text-5xl sm:text-6xl text-[#F58220] mb-2 uppercase">Free</div>
+                <div className="font-mono text-gray-500 text-[10px] uppercase tracking-widest">No cost to join</div>
               </div>
               <div className="text-center">
-                <div className="blueox-subheading text-4xl sm:text-5xl text-black mb-2">816wk</div>
-                <div className="blueox-body text-gray-600 text-sm">Pod duration</div>
+                <div className="font-bebas text-5xl sm:text-6xl text-[#0044CC] mb-2 uppercase">816wk</div>
+                <div className="font-mono text-gray-500 text-[10px] uppercase tracking-widest">Pod duration</div>
               </div>
               <div className="text-center">
-                <div className="blueox-subheading text-4xl sm:text-5xl text-[#F58220] mb-2">Top 20%</div>
-                <div className="blueox-body text-gray-600 text-sm">Placed by competition rank</div>
+                <div className="font-bebas text-5xl sm:text-6xl text-[#F58220] mb-2 uppercase">Top 20%</div>
+                <div className="font-mono text-gray-500 text-[10px] uppercase tracking-widest">Placed by competition rank</div>
               </div>
               <div className="text-center">
-                <div className="blueox-subheading text-4xl sm:text-5xl text-black mb-2">4+</div>
-                <div className="blueox-body text-gray-600 text-sm">Active markets</div>
+                <div className="font-bebas text-5xl sm:text-6xl text-[#0044CC] mb-2 uppercase">4+</div>
+                <div className="font-mono text-gray-500 text-[10px] uppercase tracking-widest">Active markets</div>
               </div>
             </div>
           </Reveal>
@@ -172,10 +200,11 @@ export default function BuildersPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <Reveal delay={0.1}>
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
+              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-4">/ Value</div>
+              <h2 className="text-4xl md:text-5xl font-bebas text-[#0044CC] mb-6 leading-tight uppercase">
                 What You <span className="text-[#F58220]">Get</span>
               </h2>
-              <p className="blueox-body text-base sm:text-lg text-gray-700 max-w-2xl mx-auto">
+              <p className="font-libre text-base sm:text-lg text-gray-600 italic max-w-2xl mx-auto">
                 Every builder in a pod works on a live product with real users. Your work ships. Your name goes on it.
               </p>
             </div>
@@ -186,8 +215,8 @@ export default function BuildersPage() {
               <Reveal key={index} delay={0.2 + index * 0.1}>
                 <div className="glass p-6 rounded-xl hover:border-[#F58220]/50 transition-all duration-300">
                   <img src={`/icons/${f.icon}`} alt={f.title} className="w-12 h-12 mb-4" />
-                  <h3 className="text-xl font-bold text-black mb-2">{f.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{f.desc}</p>
+                  <h3 className="text-xl font-bebas text-[#0044CC] uppercase tracking-wide mb-2">{f.title}</h3>
+                  <p className="font-libre text-gray-600 text-sm leading-relaxed">{f.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -200,10 +229,11 @@ export default function BuildersPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <Reveal delay={0.1}>
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
+              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-4">/ Process</div>
+              <h2 className="text-4xl md:text-5xl font-bebas text-[#0044CC] mb-6 leading-tight uppercase">
                 Compete. Rank. Place. <span className="text-[#F58220]">Ship.</span>
               </h2>
-              <p className="blueox-body text-base sm:text-lg text-gray-700 max-w-2xl mx-auto">
+              <p className="font-libre text-base sm:text-lg text-gray-600 italic max-w-2xl mx-auto">
                 The path from student to international shipping pod is a 4-step process. No CVs. No guesswork. Just proof.
               </p>
             </div>
@@ -220,8 +250,8 @@ export default function BuildersPage() {
                   </div>
                   <div className="flex-1">
                     <div className="text-[#F58220] text-xs font-semibold uppercase tracking-wider mb-1">Step {item.step}</div>
-                    <h3 className="text-xl font-black text-black mb-2">{item.title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                    <h3 className="text-2xl font-bebas text-[#0044CC] uppercase tracking-wide mb-2">{item.title}</h3>
+                    <p className="font-libre text-gray-600 leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               </Reveal>
@@ -235,10 +265,11 @@ export default function BuildersPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <Reveal delay={0.1}>
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
+              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-4">/ Pod Types</div>
+              <h2 className="text-4xl md:text-5xl font-bebas text-[#0044CC] mb-6 leading-tight uppercase">
                 Pick Your <span className="text-[#F58220]">Specialisation</span>
               </h2>
-              <p className="blueox-body text-base sm:text-lg text-gray-700 max-w-2xl mx-auto">
+              <p className="font-libre text-base sm:text-lg text-gray-600 italic max-w-2xl mx-auto">
                 Tell us your stack. We match you to the right pod.
               </p>
             </div>
@@ -249,9 +280,9 @@ export default function BuildersPage() {
               <Reveal key={index} delay={0.2 + index * 0.1}>
                 <div className="bg-white border border-gray-200 rounded-none p-6 hover:border-[#F58220] transition-all duration-300">
                   <img src={`/icons/${pod.icon}`} alt={pod.title} className="w-10 h-10 mb-4" />
-                  <h3 className="text-xl font-black text-black mb-1">{pod.title}</h3>
+                  <h3 className="text-2xl font-bebas text-[#0044CC] uppercase tracking-wide mb-1">{pod.title}</h3>
                   <div className="text-[#F58220] text-xs font-semibold uppercase tracking-wide mb-3">{pod.stack}</div>
-                  <p className="text-gray-600 text-sm leading-relaxed">{pod.desc}</p>
+                  <p className="font-libre text-gray-600 text-sm leading-relaxed">{pod.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -264,10 +295,11 @@ export default function BuildersPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <Reveal delay={0.1}>
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
+              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-4">/ Pathway</div>
+              <h2 className="text-4xl md:text-5xl font-bebas text-[#0044CC] mb-6 leading-tight uppercase">
                 The Pipeline Doesn't Stop <span className="text-[#F58220]">at the Pod.</span>
               </h2>
-              <p className="blueox-body text-base sm:text-lg text-gray-700 max-w-2xl mx-auto">
+              <p className="font-libre text-base sm:text-lg text-gray-600 italic max-w-2xl mx-auto">
                 Builders who ship well get promoted. The pathway is clear and intentional.
               </p>
             </div>
@@ -288,9 +320,9 @@ export default function BuildersPage() {
                   )}
                   <img src={`/icons/${stage.icon}`} alt={stage.title} className="w-12 h-12 mb-4 text-blue-500" style={{ display: 'block' }} />
                   <div className="text-[#F58220] text-xs font-semibold uppercase tracking-wide mb-1">{stage.stage}</div>
-                  <h3 className="text-2xl font-black text-black mb-1">{stage.title}</h3>
-                  <div className="blueox-subheading text-3xl text-[#F58220] mb-4">{stage.price}</div>
-                  <p className="text-gray-600 text-sm leading-relaxed">{stage.desc}</p>
+                  <h3 className="text-3xl font-bebas text-[#0044CC] uppercase tracking-wide mb-1">{stage.title}</h3>
+                  <div className="font-bebas text-4xl text-[#F58220] mb-4 uppercase">{stage.price}</div>
+                  <p className="font-libre text-gray-600 text-sm leading-relaxed">{stage.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -303,17 +335,18 @@ export default function BuildersPage() {
         <div className="max-w-6xl mx-auto px-6 text-center">
           <Reveal>
             <div className="bg-white border border-gray-200 rounded-none p-12">
-              <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
+              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-4">/ Application</div>
+              <h2 className="text-4xl md:text-5xl font-bebas text-[#0044CC] mb-6 leading-tight uppercase">
                 Ready to Compete?<br />
                 Ready to <span className="text-[#F58220]">Ship?</span>
               </h2>
-              <p className="blueox-body text-gray-700 text-lg mb-8 max-w-xl mx-auto">
+              <p className="font-libre text-gray-600 text-lg italic mb-8 max-w-xl mx-auto">
                 Submit your application. We will reach out with the next competition date and onboarding details.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => openForm('academy')}
-                  className="border border-[#F58220] bg-[#F58220] text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 ease-in-out hover:bg-[#c94e30] hover:border-[#c94e30]"
+                  className="border border-[#0044CC] bg-[#0044CC] text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 ease-in-out hover:bg-[#0033AA] hover:border-[#0033AA]"
                 >
                   APPLY NOW
                 </button>
@@ -339,6 +372,6 @@ export default function BuildersPage() {
         />
       )}
       <BuilderFAQForm isOpen={isFAQFormOpen} onClose={() => setIsFAQFormOpen(false)} />
-    </>
+    </div>
   );
 }
