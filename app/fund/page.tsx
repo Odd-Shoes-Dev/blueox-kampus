@@ -120,7 +120,7 @@ export default function FundPage() {
           <Reveal>
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
-                Fund <span className="text-[#e05a3a]">Training.</span><br/>
+                Fund <span className="text-[#F58220]">Training.</span><br/>
                 Change Lives.
               </h1>
               <p className="blueox-body text-base sm:text-lg text-gray-700 max-w-3xl mx-auto">
@@ -152,14 +152,14 @@ export default function FundPage() {
                   <button
                     key={item.id}
                     onClick={() => handleFund(item.id, item.amount)}
-                    className="border border-gray-300 bg-white text-black px-6 py-3 rounded-none font-semibold text-base transition-all duration-200 hover:border-[#e05a3a] hover:text-[#e05a3a]"
+                    className="border border-gray-300 bg-white text-black px-6 py-3 rounded-none font-semibold text-base transition-all duration-200 hover:border-[#F58220] hover:text-[#F58220]"
                   >
                     ${item.amount.toLocaleString()}
                   </button>
                 ))}
               </div>
               <p className="blueox-body text-gray-600 text-sm text-center mt-6">
-                Need a custom amount over $2,500? <a href="mailto:blueoxrecruit@gmail.com" className="text-[#e05a3a] hover:underline">Contact us directly</a>
+                Need a custom amount over $2,500? <a href="mailto:blueoxrecruit@gmail.com" className="text-[#F58220] hover:underline">Contact us directly</a>
               </p>
             </div>
           </Reveal>
@@ -172,13 +172,13 @@ export default function FundPage() {
                   key={option.id}
                   className={`relative bg-white border rounded-none p-8 transition-all duration-200 ${
                     option.featured
-                      ? 'border-[#e05a3a]'
-                      : 'border-gray-200 hover:border-[#e05a3a]'
+                      ? 'border-[#F58220]'
+                      : 'border-gray-200 hover:border-[#F58220]'
                   }`}
                 >
                   {option.featured && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-[#e05a3a] text-white px-4 py-1 rounded-none text-sm font-semibold uppercase tracking-wider">
+                      <span className="bg-[#F58220] text-white px-4 py-1 rounded-none text-sm font-semibold uppercase tracking-wider">
                         Most Popular
                       </span>
                     </div>
@@ -192,7 +192,7 @@ export default function FundPage() {
                     {option.title}
                   </h3>
                   
-                  <div className="blueox-subheading text-4xl text-[#e05a3a] mb-4">
+                  <div className="blueox-subheading text-4xl text-[#F58220] mb-4">
                     ${option.price}
                   </div>
                   
@@ -211,8 +211,8 @@ export default function FundPage() {
                     onClick={() => handleFund(option.id, option.price)}
                     className={`w-full inline-block font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out ${
                       option.featured
-                        ? 'border border-[#e05a3a] bg-[#e05a3a] text-white hover:bg-[#c94e30] hover:border-[#c94e30]'
-                        : 'border border-[#e05a3a] bg-transparent text-[#e05a3a] hover:bg-[#e05a3a] hover:text-white'
+                        ? 'border border-[#F58220] bg-[#F58220] text-white hover:bg-[#c94e30] hover:border-[#c94e30]'
+                        : 'border border-[#F58220] bg-transparent text-[#F58220] hover:bg-[#F58220] hover:text-white'
                     }`}
                   >
                     FUND NOW
@@ -226,7 +226,7 @@ export default function FundPage() {
           <Reveal delay={0.6}>
             <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="blueox-subheading text-4xl sm:text-5xl text-[#e05a3a] mb-2">$50</div>
+                <div className="blueox-subheading text-4xl sm:text-5xl text-[#F58220] mb-2">$50</div>
                 <div className="blueox-body text-gray-600 text-sm">Per trained person</div>
               </div>
               <div className="text-center">
@@ -234,7 +234,7 @@ export default function FundPage() {
                 <div className="blueox-body text-gray-600 text-sm">Lower than traditional TVET</div>
               </div>
               <div className="text-center">
-                <div className="blueox-subheading text-4xl sm:text-5xl text-[#e05a3a] mb-2">0</div>
+                <div className="blueox-subheading text-4xl sm:text-5xl text-[#F58220] mb-2">0</div>
                 <div className="blueox-body text-gray-600 text-sm">Material waste</div>
               </div>
               <div className="text-center">
@@ -248,7 +248,7 @@ export default function FundPage() {
           <Reveal delay={0.8}>
             <div className="mt-16 bg-white border border-gray-200 rounded-none p-8 text-center">
               <p className="blueox-body text-gray-700">
-                Built with <span className="text-[#e05a3a] font-semibold">Dig in Vision</span> and informed by deployments with <span className="text-[#e05a3a] font-semibold">Toolkit Foundation</span> and <span className="text-[#e05a3a] font-semibold">GIZ</span>. Your funds support real, field-tested training that works.
+                Built with <span className="text-[#F58220] font-semibold">Dig in Vision</span> and informed by deployments with <span className="text-[#F58220] font-semibold">Toolkit Foundation</span> and <span className="text-[#F58220] font-semibold">GIZ</span>. Your funds support real, field-tested training that works.
               </p>
             </div>
           </Reveal>

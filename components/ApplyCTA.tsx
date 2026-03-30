@@ -8,7 +8,7 @@ export default function ApplyCTA(){
         <h2 className="text-5xl font-black mb-8 uppercase italic">Ready to pull up?</h2>
         <p className="text-gray-600 mb-12 font-bold uppercase tracking-widest text-sm">Applications for Feb 2026 Intake are Open</p>
         <div className="flex justify-center">
-          <a href="https://wa.me/3197010209759" target="_blank" rel="noopener noreferrer" className="bg-[#e05a3a] px-12 py-6 rounded-2xl font-black uppercase tracking-widest shadow-2xl hover:bg-[#c94e30] transition inline-block text-center">Join Academy</a>
+          <a href="https://wa.me/3197010209759" target="_blank" rel="noopener noreferrer" className="bg-[#F58220] px-12 py-6 rounded-2xl font-black uppercase tracking-widest shadow-2xl hover:bg-[#c94e30] transition inline-block text-center">Join Academy</a>
         </div>
         </div>
       </section>

@@ -10,7 +10,7 @@ export default function AISection() {
         <div className="text-center mb-16">
           <Reveal delay={0.1}>
             <h2 className="text-4xl md:text-5xl font-black uppercase mb-4">
-              AI & <span className="text-[#e05a3a]">MVP</span> Development
+              AI & <span className="text-[#F58220]">MVP</span> Development
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               From "what if?" to "wow!" in just 5 days. We turn your ideas into real working products.
@@ -21,11 +21,11 @@ export default function AISection() {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           <Reveal delay={0.15}>
-            <div className="glass p-8 rounded-2xl text-center hover:border-[#e05a3a]/50 transition-all">
-              <div className="w-16 h-16 bg-[#e05a3a]/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <div className="glass p-8 rounded-2xl text-center hover:border-[#F58220]/50 transition-all">
+              <div className="w-16 h-16 bg-[#F58220]/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <img src="/icons/lightbulb.svg" alt="MVP Development" className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-black uppercase mb-3 text-[#e05a3a]">MVP Development</h3>
+              <h3 className="text-xl font-black uppercase mb-3 text-[#F58220]">MVP Development</h3>
               <p className="text-gray-600 text-sm mb-4">Launch your startup with a working product in 5 days</p>
               <div className="text-2xl font-black text-black">15 Credits</div>
               <div className="text-sm text-gray-600">$750</div>
@@ -67,7 +67,7 @@ export default function AISection() {
               </div>
               <p className="text-gray-600 leading-relaxed">
                 Born in 2020 as Cybernor in Kampala, we helped students build portfolios. In 2024, we rebranded to 
-                <span className="text-[#e05a3a] font-bold"> Blue OX</span> - moving from helping people find 
+                <span className="text-[#F58220] font-bold"> Blue OX</span> - moving from helping people find 
                 opportunities to <span className="font-bold text-black">creating them</span>.
               </p>
             </div>
@@ -91,7 +91,7 @@ export default function AISection() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
           <Reveal delay={0.55}>
             <div className="p-6 rounded-xl bg-white/40 border border-gray-300/30 text-center">
-              <div className="text-3xl font-black text-[#e05a3a] mb-1">50+</div>
+              <div className="text-3xl font-black text-[#F58220] mb-1">50+</div>
               <div className="text-sm text-gray-600">MVPs Launched</div>
             </div>
           </Reveal>
@@ -123,7 +123,7 @@ export default function AISection() {
           <div className="text-center">
             <Link 
               href="/academy" 
-              className="inline-block bg-[#e05a3a] hover:bg-[#c94e30] text-white font-bold uppercase transition-all duration-300 hover:scale-105"
+              className="inline-block bg-[#F58220] hover:bg-[#c94e30] text-white font-bold uppercase transition-all duration-300 hover:scale-105"
             >
               Learn More
             </Link>

@@ -123,7 +123,7 @@ export default function ModelPage() {
           <Reveal>
             <div className="text-center mb-20">
               <h1 className="text-5xl sm:text-6xl md:text-7xl font-black uppercase tracking-tighter mb-6">
-                The <span className="text-[#e05a3a]">VR-First</span><br/>
+                The <span className="text-[#F58220]">VR-First</span><br/>
                 Training <span className="text-blue-500">Model</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
@@ -143,7 +143,7 @@ export default function ModelPage() {
                   <div key={index} className="bg-white/5 border border-gray-300 rounded-2xl p-8 hover:bg-black/10 transition">
                     <div className="grid md:grid-cols-[100px_1fr] gap-6">
                       <div>
-                        <div className="text-6xl font-black text-[#e05a3a]/30">{stage.stage}</div>
+                        <div className="text-6xl font-black text-[#F58220]/30">{stage.stage}</div>
                         <div className="text-blue-500 font-bold text-sm mt-2">{stage.duration}</div>
                       </div>
                       <div>
@@ -169,11 +169,11 @@ export default function ModelPage() {
           <Reveal delay={0.4}>
             <div className="mb-24">
               <h2 className="text-4xl md:text-5xl font-black text-center text-black mb-12 uppercase tracking-tighter">
-                90% <span className="text-[#e05a3a]">Lower Cost</span>
+                90% <span className="text-[#F58220]">Lower Cost</span>
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 {/* Traditional */}
-                <div className="bg-white/5 border border-[#e05a3a]/30 rounded-2xl p-8">
+                <div className="bg-white/5 border border-[#F58220]/30 rounded-2xl p-8">
                   <h3 className="text-2xl font-bold text-black mb-4">{costComparison.traditional.label}</h3>
                   <div className="text-5xl font-black text-red-500 mb-6">
                     ${costComparison.traditional.perLearner}
@@ -197,7 +197,7 @@ export default function ModelPage() {
                     </span>
                   </div>
                   <h3 className="text-2xl font-bold text-black mb-4">{costComparison.vrFirst.label}</h3>
-                  <div className="text-5xl font-black text-[#e05a3a] mb-6">
+                  <div className="text-5xl font-black text-[#F58220] mb-6">
                     ${costComparison.vrFirst.perLearner}
                     <span className="text-lg text-gray-600 font-normal">/learner</span>
                   </div>
@@ -236,7 +236,7 @@ export default function ModelPage() {
           <Reveal delay={0.8}>
             <div>
               <h2 className="text-4xl md:text-5xl font-black text-center text-black mb-12 uppercase tracking-tighter">
-                Field-Tested <span className="text-[#e05a3a]">Evidence</span>
+                Field-Tested <span className="text-[#F58220]">Evidence</span>
               </h2>
               <div className="bg-white/60 border border-gray-300 rounded-2xl p-8 sm:p-12">
                 <p className="text-xl text-gray-700 mb-8 leading-relaxed text-center">
@@ -263,7 +263,7 @@ export default function ModelPage() {
 
           {/* CTA */}
           <Reveal delay={1.0}>
-            <div className="mt-20 bg-gradient-to-r from-[#e05a3a]/10 to-blue-500/10 border border-gray-300 rounded-2xl p-12 text-center">
+            <div className="mt-20 bg-gradient-to-r from-[#F58220]/10 to-blue-500/10 border border-gray-300 rounded-2xl p-12 text-center">
               <h3 className="text-3xl md:text-4xl font-black text-black mb-4">
                 Want to deploy this model in your community?
               </h3>
@@ -273,7 +273,7 @@ export default function ModelPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => setIsPartnerFormOpen(true)}
-                  className="bg-[#e05a3a] hover:bg-[#c94e30] text-white px-12 py-5 rounded-full font-bold text-lg transition-all hover:scale-105 shadow-2xl"
+                  className="bg-[#F58220] hover:bg-[#c94e30] text-white px-12 py-5 rounded-full font-bold text-lg transition-all hover:scale-105 shadow-2xl"
                 >
                   Partner With Us
                 </button>

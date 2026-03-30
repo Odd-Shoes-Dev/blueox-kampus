@@ -7,7 +7,7 @@ export default function WhyBlueOX() {
         <Reveal delay={0.1}>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-              WHY <span className="text-[#e05a3a]">BLUE OX</span>?
+              WHY <span className="text-[#F58220]">BLUE OX</span>?
             </h2>
           </div>
         </Reveal>
@@ -15,16 +15,16 @@ export default function WhyBlueOX() {
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {/* Fast */}
           <Reveal delay={0.2}>
-            <div className="glass rounded-2xl p-8 hover:border-[#e05a3a]/50 transition-all duration-300">
+            <div className="glass rounded-2xl p-8 hover:border-[#F58220]/50 transition-all duration-300">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-full bg-[#e05a3a]/20 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full bg-[#F58220]/20 flex items-center justify-center">
                   <img src="/icons/target.svg" alt="Fast" className="w-7 h-7" />
                 </div>
                 <h3 className="text-2xl font-bold text-black">WE'RE FAST.</h3>
               </div>
               <div className="space-y-3 text-gray-700">
                 <p>5-day MVPs. Instant design turnarounds.</p>
-                <p className="text-[#e05a3a] font-semibold italic">No waiting.</p>
+                <p className="text-[#F58220] font-semibold italic">No waiting.</p>
               </div>
             </div>
           </Reveal>
@@ -40,7 +40,7 @@ export default function WhyBlueOX() {
               </div>
               <div className="space-y-3 text-gray-700">
                 <p>Pay only for what you need.</p>
-                <p className="text-[#e05a3a] font-semibold italic">No hidden fees. No jargon.</p>
+                <p className="text-[#F58220] font-semibold italic">No hidden fees. No jargon.</p>
               </div>
             </div>
           </Reveal>
@@ -74,7 +74,7 @@ export default function WhyBlueOX() {
 
       {/* Background Effects */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-10 w-32 h-32 bg-[#e05a3a]/5 rounded-full blur-xl"></div>
+        <div className="absolute top-1/2 left-10 w-32 h-32 bg-[#F58220]/5 rounded-full blur-xl"></div>
         <div className="absolute top-1/2 right-10 w-40 h-40 bg-blue-500/5 rounded-full blur-xl"></div>
       </div>
     </section>

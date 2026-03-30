@@ -60,7 +60,7 @@ export default function InsideTheKampus() {
                 
                 {/* Content overlay */}
                 <div className="absolute inset-0 flex flex-col justify-end p-6">
-                  <h4 className="font-black uppercase text-black text-lg group-hover:text-[#e05a3a] transition">
+                  <h4 className="font-black uppercase text-black text-lg group-hover:text-[#F58220] transition">
                     {card.title}
                   </h4>
                   <p className="text-[10px] text-gray-700 font-bold uppercase tracking-widest">

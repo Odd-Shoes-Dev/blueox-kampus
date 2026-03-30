@@ -115,7 +115,7 @@ export default function InvestorForm({ isOpen, onClose }: InvestorFormProps) {
             <>
               {/* FAQ Section */}
               <div className="mb-8">
-                <p className="text-xs font-bold uppercase tracking-widest text-[#e05a3a] mb-4">Common Questions</p>
+                <p className="text-xs font-bold uppercase tracking-widest text-[#F58220] mb-4">Common Questions</p>
                 <div className="space-y-2">
                   {faqs.map((faq, i) => (
                     <div key={i} className="border border-gray-200">
@@ -126,7 +126,7 @@ export default function InvestorForm({ isOpen, onClose }: InvestorFormProps) {
                       >
                         <span className="text-sm font-semibold text-black pr-4">{faq.question}</span>
                         <svg
-                          className={`w-4 h-4 text-[#e05a3a] shrink-0 transition-transform duration-200 ${openFaq === i ? 'rotate-180' : ''}`}
+                          className={`w-4 h-4 text-[#F58220] shrink-0 transition-transform duration-200 ${openFaq === i ? 'rotate-180' : ''}`}
                           fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         >
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -162,7 +162,7 @@ export default function InvestorForm({ isOpen, onClose }: InvestorFormProps) {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Enter your full name"
-                    className="w-full px-4 py-3 bg-white border border-gray-300 text-black placeholder-gray-500 focus:border-[#e05a3a] focus:outline-none transition text-sm"
+                    className="w-full px-4 py-3 bg-white border border-gray-300 text-black placeholder-gray-500 focus:border-[#F58220] focus:outline-none transition text-sm"
                   />
                 </div>
                 <div>
@@ -176,7 +176,7 @@ export default function InvestorForm({ isOpen, onClose }: InvestorFormProps) {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="your.email@example.com"
-                    className="w-full px-4 py-3 bg-white border border-gray-300 text-black placeholder-gray-500 focus:border-[#e05a3a] focus:outline-none transition text-sm"
+                    className="w-full px-4 py-3 bg-white border border-gray-300 text-black placeholder-gray-500 focus:border-[#F58220] focus:outline-none transition text-sm"
                   />
                 </div>
                 <div>
@@ -190,13 +190,13 @@ export default function InvestorForm({ isOpen, onClose }: InvestorFormProps) {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Tell us about your portfolio or ask anything about investing / funding..."
-                    className="w-full px-4 py-3 bg-white border border-gray-300 text-black placeholder-gray-500 focus:border-[#e05a3a] focus:outline-none transition text-sm resize-none"
+                    className="w-full px-4 py-3 bg-white border border-gray-300 text-black placeholder-gray-500 focus:border-[#F58220] focus:outline-none transition text-sm resize-none"
                   />
                 </div>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full border border-[#e05a3a] bg-[#e05a3a] text-white font-bold text-sm py-3 uppercase tracking-wider transition-all duration-300 hover:bg-[#c94e30] disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full border border-[#F58220] bg-[#F58220] text-white font-bold text-sm py-3 uppercase tracking-wider transition-all duration-300 hover:bg-[#c94e30] disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? 'Sending...' : 'Send My Question'}
                 </button>

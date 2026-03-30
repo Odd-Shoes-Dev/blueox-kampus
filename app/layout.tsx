@@ -69,12 +69,12 @@ export default function RootLayout({ children }:{children:ReactNode}){
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#e05a3a" />
+        <meta name="theme-color" content="#F58220" />
         <link rel="icon" type="image/x-icon" href="/assets/images/logo.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/logo.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/logo.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/logo.png" />
-        <link rel="mask-icon" href="/assets/images/logo.png" color="#e05a3a" />
+        <link rel="mask-icon" href="/assets/images/logo.png" color="#F58220" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

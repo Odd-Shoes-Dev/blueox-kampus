@@ -8,7 +8,7 @@ export default function OfferingsGrid(){
         <Reveal delay={0.03}>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
-              The <span className="text-[#e05a3a]">"Visual-First"</span> Accelerator
+              The <span className="text-[#F58220]">"Visual-First"</span> Accelerator
             </h2>
             <p className="text-gray-600 text-xl max-w-3xl mx-auto mb-4 font-semibold">
               "We Build Your Entire Startup In 120 Hours. Or We Work For Free."
@@ -23,11 +23,11 @@ export default function OfferingsGrid(){
           {/* Trial Plan */}
           <Reveal delay={0.1}>
             <div className="glass rounded-2xl p-6 hover:scale-105 transition-all duration-300 flex flex-col">
-              <div className="text-sm text-[#e05a3a] font-bold mb-2">TRIAL</div>
+              <div className="text-sm text-[#F58220] font-bold mb-2">TRIAL</div>
               <div className="text-4xl font-bold text-black mb-2">$2,000</div>
               <div className="text-gray-600 text-sm mb-6">1 Month Accelerator</div>
               <div className="space-y-3 mb-6 flex-grow">
-                <div className="text-[#e05a3a] text-sm font-semibold flex items-start gap-2">
+                <div className="text-[#F58220] text-sm font-semibold flex items-start gap-2">
                   <img src="/icons/rocket.svg" alt="MVP" className="w-4 h-4 mt-1" />
                   <span>MVP in 5 Days (included)</span>
                 </div>
@@ -61,7 +61,7 @@ export default function OfferingsGrid(){
               <div className="text-gray-600 text-sm mb-1">3 Months Accelerator</div>
               <div className="text-gray-600 text-xs mb-6">$1,500/month</div>
               <div className="space-y-3 mb-6 flex-grow">
-                <div className="text-[#e05a3a] text-sm font-semibold flex items-start gap-2">
+                <div className="text-[#F58220] text-sm font-semibold flex items-start gap-2">
                   <img src="/icons/rocket.svg" alt="MVP" className="w-4 h-4 mt-1" />
                   <span>MVP in 5 Days (included)</span>
                 </div>
@@ -89,16 +89,16 @@ export default function OfferingsGrid(){
 
           {/* Scale-Up Plan - Popular */}
           <Reveal delay={0.3}>
-            <div className="p-6 bg-[#e05a3a]/10 border-2 border-[#e05a3a]/50 rounded-2xl hover:scale-105 transition-all duration-300 relative flex flex-col">
-              <div className="absolute -top-3 right-4 bg-[#e05a3a] text-white text-xs font-bold py-1 px-3 rounded-full">
+            <div className="p-6 bg-[#F58220]/10 border-2 border-[#F58220]/50 rounded-2xl hover:scale-105 transition-all duration-300 relative flex flex-col">
+              <div className="absolute -top-3 right-4 bg-[#F58220] text-white text-xs font-bold py-1 px-3 rounded-full">
                 POPULAR
               </div>
-              <div className="text-sm text-[#e05a3a] font-bold mb-2">SCALE-UP</div>
+              <div className="text-sm text-[#F58220] font-bold mb-2">SCALE-UP</div>
               <div className="text-4xl font-bold text-black mb-2">$8,000</div>
               <div className="text-gray-700 text-sm mb-1">6 Months Accelerator</div>
               <div className="text-gray-600 text-xs mb-6">$1,333/month</div>
               <div className="space-y-3 mb-6 flex-grow">
-                <div className="text-[#e05a3a] text-sm font-semibold flex items-start gap-2">
+                <div className="text-[#F58220] text-sm font-semibold flex items-start gap-2">
                   <img src="/icons/rocket.svg" alt="MVP" className="w-4 h-4 mt-1" />
                   <span>MVP in 5 Days (included)</span>
                 </div>
@@ -117,7 +117,7 @@ export default function OfferingsGrid(){
               </div>
               <a 
                 href="/accelerator" 
-                className="block text-center bg-[#e05a3a] hover:bg-[#c94e30] text-white py-2 rounded-lg text-sm font-bold transition-all"
+                className="block text-center bg-[#F58220] hover:bg-[#c94e30] text-white py-2 rounded-lg text-sm font-bold transition-all"
               >
                 Get Started
               </a>
@@ -131,7 +131,7 @@ export default function OfferingsGrid(){
               <div className="text-4xl font-bold text-black mb-2">$12,000</div>
               <div className="text-gray-600 text-sm mb-6">6 Months Accelerator</div>
               <div className="space-y-3 mb-6 flex-grow">
-                <div className="text-[#e05a3a] text-sm font-semibold flex items-start gap-2">
+                <div className="text-[#F58220] text-sm font-semibold flex items-start gap-2">
                   <img src="/icons/rocket.svg" alt="MVP" className="w-4 h-4 mt-1" />
                   <span>MVP in 5 Days (included)</span>
                 </div>
@@ -160,12 +160,12 @@ export default function OfferingsGrid(){
           {/* Billy Pods - Intern Pods */}
           <Reveal delay={0.45}>
             <div className="glass rounded-2xl p-6 hover:scale-105 transition-all duration-300 flex flex-col">
-              <div className="text-sm text-[#e05a3a] font-bold mb-2">BILLY PODS</div>
+              <div className="text-sm text-[#F58220] font-bold mb-2">BILLY PODS</div>
               <div className="text-3xl font-bold text-black mb-2">Intern Pods</div>
               <div className="text-gray-600 text-sm mb-6">1–3 interns + Pod Coordinator · Weekly reporting</div>
               <div className="space-y-3 mb-6 flex-grow">
                 <div className="text-gray-700 text-sm flex items-start gap-2">
-                  <UsersIcon className="w-7 h-7 text-[#e05a3a] mr-2" />
+                  <UsersIcon className="w-7 h-7 text-[#F58220] mr-2" />
                   <span>Shortlist in 3–5 days · Kickoff in ~7 days</span>
                 </div>
                 <div className="text-gray-700 text-sm flex items-start gap-2">
@@ -179,7 +179,7 @@ export default function OfferingsGrid(){
                 href="https://www.blueoxjobs.eu/hiring" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-center bg-[#e05a3a] hover:bg-[#c94e30] text-white py-2 rounded-lg text-sm font-semibold transition-all"
+                className="block text-center bg-[#F58220] hover:bg-[#c94e30] text-white py-2 rounded-lg text-sm font-semibold transition-all"
               >
                 Request Pod Profiles
               </a>
@@ -191,12 +191,12 @@ export default function OfferingsGrid(){
         <Reveal delay={0.5}>
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-6">
-              First <span className="text-[#e05a3a] font-bold">10 startups</span> get 15% off + priority support
+              First <span className="text-[#F58220] font-bold">10 startups</span> get 15% off + priority support
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a 
                 href="/accelerator"
-                className="inline-block border-2 border-[#e05a3a] hover:bg-[#e05a3a]/10 text-black px-8 py-3 rounded-full font-bold transition-all hover:scale-105"
+                className="inline-block border-2 border-[#F58220] hover:bg-[#F58220]/10 text-black px-8 py-3 rounded-full font-bold transition-all hover:scale-105"
               >
                 <img src="/icons/help.svg" alt="Info" className="inline w-5 h-5 mr-2" />Learn More About the Program
               </a>
@@ -204,7 +204,7 @@ export default function OfferingsGrid(){
                 href="https://wa.me/3197010209759?text=Hi!%20I'm%20interested%20in%20the%20Blue%20OX%20Accelerator%20Program" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-block bg-[#e05a3a] hover:bg-[#c94e30] text-white px-8 py-3 rounded-full font-bold transition-all hover:scale-105"
+                className="inline-block bg-[#F58220] hover:bg-[#c94e30] text-white px-8 py-3 rounded-full font-bold transition-all hover:scale-105"
               >
                 <img src="/icons/send.svg" alt="Apply" className="inline w-5 h-5 mr-2" />Apply Now
               </a>

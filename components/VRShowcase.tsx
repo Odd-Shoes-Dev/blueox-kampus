@@ -54,7 +54,7 @@ export default function VRShowcase() {
                     onClick={() => setCurrentModel('headset')}
                     className={`px-4 sm:px-6 py-3 rounded-lg font-semibold transition-all flex items-center justify-center gap-2 text-sm sm:text-base ${
                       currentModel === 'headset'
-                        ? 'bg-[#e05a3a] text-white shadow-lg shadow-[#e05a3a]/25'
+                        ? 'bg-[#F58220] text-white shadow-lg shadow-[#F58220]/25'
                         : 'bg-[#2f2f2f] text-gray-200 hover:bg-[#4a4a4a]'
                     }`}
                   >
@@ -92,7 +92,7 @@ export default function VRShowcase() {
             <div className="space-y-6 sm:space-y-8 mt-8 lg:mt-0">
               <div className="space-y-4 sm:space-y-6">
                 <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                  Traditional vocational training is expensive, dangerous, and inaccessible. We fixed it with <span className="text-[#e05a3a] font-semibold italic">VR simulations</span> that make technical education available to everyone:
+                  Traditional vocational training is expensive, dangerous, and inaccessible. We fixed it with <span className="text-[#F58220] font-semibold italic">VR simulations</span> that make technical education available to everyone:
                 </p>
               </div>
 
@@ -102,7 +102,7 @@ export default function VRShowcase() {
                     <img src="/icons/rocket.svg" alt="Fire" className="w-8 h-8" />
                   </div>
                   <p className="text-gray-700 text-base sm:text-lg">
-                    <span className="blueox-subheading text-[#e05a3a] font-semibold">Master welding (MIG, TIG, Stick)</span> without consuming materials or risk of injury.
+                    <span className="blueox-subheading text-[#F58220] font-semibold">Master welding (MIG, TIG, Stick)</span> without consuming materials or risk of injury.
                   </p>
                 </div>
 
@@ -111,7 +111,7 @@ export default function VRShowcase() {
                     <img src="/icons/strategy.svg" alt="Solar Panel" className="w-8 h-8" />
                   </div>
                   <p className="text-gray-700 text-base sm:text-lg">
-                    <span className="blueox-subheading text-[#e05a3a] font-semibold">Install solar systems</span> through simulated hands-on practice.
+                    <span className="blueox-subheading text-[#F58220] font-semibold">Install solar systems</span> through simulated hands-on practice.
                   </p>
                 </div>
 
@@ -120,14 +120,14 @@ export default function VRShowcase() {
                     <img src="/icons/team.svg" alt="Wheelchair" className="w-8 h-8" />
                   </div>
                   <p className="text-gray-700 text-base sm:text-lg">
-                    <span className="blueox-subheading text-[#e05a3a] font-semibold">Accessible for all</span> — including persons with disabilities in remote areas.
+                    <span className="blueox-subheading text-[#F58220] font-semibold">Accessible for all</span> — including persons with disabilities in remote areas.
                   </p>
                 </div>
               </div>
 
               <div className="p-0">
                 <p className="blueox-body text-lg text-black">
-                  <span className="text-[#e05a3a] font-bold">Result?</span> Certified skills at 90% lower cost. <span className="text-[#e05a3a] font-semibold">Zero waste. Zero injuries. Maximum access.</span>
+                  <span className="text-[#F58220] font-bold">Result?</span> Certified skills at 90% lower cost. <span className="text-[#F58220] font-semibold">Zero waste. Zero injuries. Maximum access.</span>
                 </p>
               </div>
 
@@ -136,7 +136,7 @@ export default function VRShowcase() {
                   href="https://wa.me/3197010209759?text=Hi!%20I%20would%20like%20to%20learn%20more%20about%20VR%20training." 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-block w-full sm:w-auto bg-[#e05a3a] hover:bg-[#c94e30] text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#e05a3a]/25 transition-all duration-300 text-center"
+                  className="inline-block w-full sm:w-auto bg-[#F58220] hover:bg-[#c94e30] text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#F58220]/25 transition-all duration-300 text-center"
                 >
                   LEARN MORE
                 </a>
@@ -147,7 +147,7 @@ export default function VRShowcase() {
 
         {/* Background Effects */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-[#e05a3a]/5 rounded-full blur-xl"></div>
+          <div className="absolute top-20 left-10 w-32 h-32 bg-[#F58220]/5 rounded-full blur-xl"></div>
           <div className="absolute bottom-20 right-10 w-40 h-40 bg-blue-500/5 rounded-full blur-xl"></div>
         </div>
       </section>

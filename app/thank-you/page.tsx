@@ -24,7 +24,7 @@ export default function ThankYouPage() {
         <div className="max-w-2xl mx-auto text-center">
           <div className="text-6xl mb-6">🎉</div>
           <h1 className="text-5xl font-black text-black mb-6 uppercase">
-            Thank You for <span className="text-[#e05a3a]">Funding</span> Training!
+            Thank You for <span className="text-[#F58220]">Funding</span> Training!
           </h1>
           <p className="text-xl text-gray-700 mb-8 leading-relaxed">
             Your contribution is directly changing lives. You'll receive a confirmation email with your receipt and impact report details.
@@ -57,7 +57,7 @@ export default function ThankYouPage() {
           </div>
           <Link 
             href="/"
-            className="inline-block bg-[#e05a3a] hover:bg-[#c94e30] text-white px-12 py-4 rounded-full font-bold text-lg transition-all hover:scale-105"
+            className="inline-block bg-[#F58220] hover:bg-[#c94e30] text-white px-12 py-4 rounded-full font-bold text-lg transition-all hover:scale-105"
           >
             Return to Homepage
           </Link>

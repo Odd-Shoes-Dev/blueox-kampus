@@ -5,7 +5,7 @@ export default function HouseCard(){
     <Reveal delay={0.21}>
       <section id="house" className="py-8 sm:py-12 px-4 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="rounded-2xl p-8 bg-[#e05a3a] text-white shadow-2xl">
+          <div className="rounded-2xl p-8 bg-[#F58220] text-white shadow-2xl">
           <div className="grid lg:grid-cols-2 gap-6 items-center">
             <div>
               <h3 className="text-2xl font-extrabold mb-2">BLUEOX HOUSE: LIVE & CREATE</h3>

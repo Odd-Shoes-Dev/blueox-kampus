@@ -79,7 +79,7 @@ export default function BreakdownForm({ isOpen, onClose }: BreakdownFormProps) {
 
         <div className="p-8">
           <div className="mb-8">
-            <p className="text-xs font-bold uppercase tracking-widest text-[#e05a3a] mb-2">Free · 15 Minutes</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-[#F58220] mb-2">Free · 15 Minutes</p>
             <h2 className="text-3xl font-extrabold uppercase tracking-tight text-black mb-2">
               Get Your Pod Breakdown
             </h2>
@@ -111,7 +111,7 @@ export default function BreakdownForm({ isOpen, onClose }: BreakdownFormProps) {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Enter your full name"
-                  className="w-full px-4 py-3 bg-white border border-gray-300 text-black placeholder-gray-500 focus:border-[#e05a3a] focus:outline-none transition text-sm"
+                  className="w-full px-4 py-3 bg-white border border-gray-300 text-black placeholder-gray-500 focus:border-[#F58220] focus:outline-none transition text-sm"
                 />
               </div>
 
@@ -126,7 +126,7 @@ export default function BreakdownForm({ isOpen, onClose }: BreakdownFormProps) {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="your.email@example.com"
-                  className="w-full px-4 py-3 bg-white border border-gray-300 text-black placeholder-gray-500 focus:border-[#e05a3a] focus:outline-none transition text-sm"
+                  className="w-full px-4 py-3 bg-white border border-gray-300 text-black placeholder-gray-500 focus:border-[#F58220] focus:outline-none transition text-sm"
                 />
               </div>
 
@@ -141,7 +141,7 @@ export default function BreakdownForm({ isOpen, onClose }: BreakdownFormProps) {
                   value={formData.product}
                   onChange={handleChange}
                   placeholder="e.g. SaaS dashboard, mobile app, e-commerce platform..."
-                  className="w-full px-4 py-3 bg-white border border-gray-300 text-black placeholder-gray-500 focus:border-[#e05a3a] focus:outline-none transition text-sm"
+                  className="w-full px-4 py-3 bg-white border border-gray-300 text-black placeholder-gray-500 focus:border-[#F58220] focus:outline-none transition text-sm"
                 />
               </div>
 
@@ -154,7 +154,7 @@ export default function BreakdownForm({ isOpen, onClose }: BreakdownFormProps) {
                   required
                   value={formData.topChallenge}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white border border-gray-300 text-black focus:border-[#e05a3a] focus:outline-none transition text-sm appearance-none"
+                  className="w-full px-4 py-3 bg-white border border-gray-300 text-black focus:border-[#F58220] focus:outline-none transition text-sm appearance-none"
                 >
                   <option value="">Select your top challenge...</option>
                   {challenges.map((c) => (
@@ -173,14 +173,14 @@ export default function BreakdownForm({ isOpen, onClose }: BreakdownFormProps) {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Stack, team size, timeline, budget — anything helpful..."
-                  className="w-full px-4 py-3 bg-white border border-gray-300 text-black placeholder-gray-500 focus:border-[#e05a3a] focus:outline-none transition text-sm resize-none"
+                  className="w-full px-4 py-3 bg-white border border-gray-300 text-black placeholder-gray-500 focus:border-[#F58220] focus:outline-none transition text-sm resize-none"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full border border-[#e05a3a] bg-[#e05a3a] text-white font-bold text-sm py-3 uppercase tracking-wider transition-all duration-300 hover:bg-[#c94e30] disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full border border-[#F58220] bg-[#F58220] text-white font-bold text-sm py-3 uppercase tracking-wider transition-all duration-300 hover:bg-[#c94e30] disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? 'Sending...' : 'Book My Free Breakdown →'}
               </button>

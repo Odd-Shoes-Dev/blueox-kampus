@@ -10,7 +10,7 @@ export default function AcceleratorPreview() {
         <div className="text-center mb-16">
           <Reveal delay={0.1}>
             <h2 className="text-4xl md:text-5xl font-black uppercase mb-4">
-              <span className="text-[#e05a3a]">Accelerator</span> Program
+              <span className="text-[#F58220]">Accelerator</span> Program
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Unlimited creative services for funded startups. Scale fast with design, MVP builds, and priority support.
@@ -22,7 +22,7 @@ export default function AcceleratorPreview() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           <Reveal delay={0.15}>
             <div className="glass p-8 rounded-2xl">
-              <div className="w-16 h-16 bg-[#e05a3a]/20 rounded-2xl flex items-center justify-center mb-4">
+              <div className="w-16 h-16 bg-[#F58220]/20 rounded-2xl flex items-center justify-center mb-4">
                 <img src="/icons/refresh.svg" alt="Unlimited" className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-black uppercase mb-3">Unlimited Requests</h3>
@@ -60,8 +60,8 @@ export default function AcceleratorPreview() {
         {/* Pricing Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
           <Reveal delay={0.4}>
-            <div className="p-6 rounded-xl bg-white/40 border border-gray-300/30 text-center hover:border-[#e05a3a]/30 transition-all">
-              <div className="text-sm text-[#e05a3a] font-bold mb-2">TRIAL</div>
+            <div className="p-6 rounded-xl bg-white/40 border border-gray-300/30 text-center hover:border-[#F58220]/30 transition-all">
+              <div className="text-sm text-[#F58220] font-bold mb-2">TRIAL</div>
               <div className="text-3xl font-black text-black mb-2">$2,000</div>
               <div className="text-gray-600 text-sm">1 Month</div>
             </div>
@@ -77,11 +77,11 @@ export default function AcceleratorPreview() {
           </Reveal>
 
           <Reveal delay={0.6}>
-            <div className="p-6 rounded-xl bg-[#e05a3a]/10 border-2 border-[#e05a3a]/50 text-center hover:border-[#e05a3a] transition-all relative">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#e05a3a] text-white text-xs font-bold py-1 px-3 rounded-full whitespace-nowrap">
+            <div className="p-6 rounded-xl bg-[#F58220]/10 border-2 border-[#F58220]/50 text-center hover:border-[#F58220] transition-all relative">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#F58220] text-white text-xs font-bold py-1 px-3 rounded-full whitespace-nowrap">
                 POPULAR
               </div>
-              <div className="text-sm text-[#e05a3a] font-bold mb-2">SCALE-UP</div>
+              <div className="text-sm text-[#F58220] font-bold mb-2">SCALE-UP</div>
               <div className="text-3xl font-black text-black mb-2">$8,000</div>
               <div className="text-gray-600 text-sm">6 Months</div>
               <div className="text-green-400 text-xs font-semibold mt-1">+2 Months Free</div>
@@ -100,14 +100,14 @@ export default function AcceleratorPreview() {
 
         {/* Early Bird Callout */}
         <Reveal delay={0.75}>
-          <div className="glass p-8 rounded-2xl text-center mb-12 border-[#e05a3a]/30">
-            <div className="flex items-center justify-center gap-2 text-[#e05a3a] text-xl font-black mb-3">
+          <div className="glass p-8 rounded-2xl text-center mb-12 border-[#F58220]/30">
+            <div className="flex items-center justify-center gap-2 text-[#F58220] text-xl font-black mb-3">
               <img src="/icons/gift.svg" alt="Offer" className="w-6 h-6" />
               <span>EARLY-BIRD OFFER</span>
             </div>
             <p className="text-gray-700 max-w-2xl mx-auto">
-              First <span className="text-[#e05a3a] font-bold">10 startups</span> get 
-              <span className="text-[#e05a3a] font-bold"> 15% off</span> all plans + priority onboarding
+              First <span className="text-[#F58220] font-bold">10 startups</span> get 
+              <span className="text-[#F58220] font-bold"> 15% off</span> all plans + priority onboarding
             </p>
           </div>
         </Reveal>
@@ -117,12 +117,12 @@ export default function AcceleratorPreview() {
           <div className="text-center">
             <Link 
               href="/accelerator" 
-              className="inline-block bg-[#e05a3a] hover:bg-[#c94e30] text-white font-bold uppercase transition-all duration-300 hover:scale-105 mb-3"
+              className="inline-block bg-[#F58220] hover:bg-[#c94e30] text-white font-bold uppercase transition-all duration-300 hover:scale-105 mb-3"
             >
               View Full Program
             </Link>
             <p className="text-gray-600 text-sm">
-              Minimum funding: <span className="text-[#e05a3a]">$150k</span>
+              Minimum funding: <span className="text-[#F58220]">$150k</span>
             </p>
           </div>
         </Reveal>

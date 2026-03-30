@@ -97,7 +97,7 @@ export default function PartnersGrid() {
         <Reveal delay={0.1}>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-              Our <span className="text-[#e05a3a]">Partners</span>
+              Our <span className="text-[#F58220]">Partners</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Collaborating with industry leaders to deliver world-class VR training experiences
@@ -109,9 +109,9 @@ export default function PartnersGrid() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {partners.map((partner, index) => (
             <Reveal key={index} delay={0.2 + index * 0.05}>
-              <div className="glass rounded-xl p-6 hover:border-[#e05a3a]/50 transition-all duration-300 h-full flex flex-col">
+              <div className="glass rounded-xl p-6 hover:border-[#F58220]/50 transition-all duration-300 h-full flex flex-col">
                 <div className="mb-3">
-                  <span className="text-[#e05a3a] text-xs font-semibold uppercase tracking-wider">
+                  <span className="text-[#F58220] text-xs font-semibold uppercase tracking-wider">
                     {partner.category}
                   </span>
                 </div>
@@ -135,7 +135,7 @@ export default function PartnersGrid() {
                   href={partner.website} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[#e05a3a] hover:text-[#f4a08e] transition-colors font-semibold text-sm"
+                  className="inline-flex items-center gap-2 text-[#F58220] hover:text-[#f4a08e] transition-colors font-semibold text-sm"
                 >
                   Visit Website
                   <img src="/icons/link.svg" alt="External link" className="w-4 h-4" />
@@ -147,7 +147,7 @@ export default function PartnersGrid() {
 
         {/* CTA Section */}
         <Reveal delay={0.8}>
-          <div className="text-center bg-gray-900 rounded-2xl p-8 md:p-12 border border-[#e05a3a]/20">
+          <div className="text-center bg-gray-900 rounded-2xl p-8 md:p-12 border border-[#F58220]/20">
             <h3 className="text-3xl md:text-4xl font-black text-black mb-4">
               Become a Partner
             </h3>
@@ -156,7 +156,7 @@ export default function PartnersGrid() {
             </p>
             <button 
               onClick={() => setIsFormOpen(true)}
-              className="inline-block bg-[#e05a3a] hover:bg-[#c94e30] text-white px-8 py-3 rounded-full font-bold transition-all hover:scale-105"
+              className="inline-block bg-[#F58220] hover:bg-[#c94e30] text-white px-8 py-3 rounded-full font-bold transition-all hover:scale-105"
             >
               Partner With Us
             </button>

@@ -276,7 +276,7 @@ export default function PartnersPage() {
           <Reveal delay={0.2}>
             <div className="text-center mb-12">
               <h2 className="text-2xl md:text-3xl font-extrabold mb-4 text-black">
-                Meet Our <span className="text-[#e05a3a]">Partners</span>
+                Meet Our <span className="text-[#F58220]">Partners</span>
               </h2>
               <p className="blueox-body text-sm md:text-base text-gray-600 max-w-2xl mx-auto">
                 Organizations that believe in our mission and support our students
@@ -287,9 +287,9 @@ export default function PartnersPage() {
           <div className="max-w-4xl mx-auto space-y-12 mb-16">
             {partners.map((partner, index) => (
               <Reveal key={index} delay={0.3 + index * 0.1}>
-                <div className="border-l-4 border-[#e05a3a] pl-6">
+                <div className="border-l-4 border-[#F58220] pl-6">
                   <div className="mb-2">
-                    <span className="text-[#e05a3a] text-sm font-semibold uppercase tracking-wide">
+                    <span className="text-[#F58220] text-sm font-semibold uppercase tracking-wide">
                       {partner.category}
                     </span>
                   </div>
@@ -313,7 +313,7 @@ export default function PartnersPage() {
                     href={partner.website} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-[#e05a3a] hover:text-[#f4a08e] transition-colors font-semibold text-sm"
+                    className="inline-flex items-center gap-2 text-[#F58220] hover:text-[#f4a08e] transition-colors font-semibold text-sm"
                   >
                     Visit Website
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -335,7 +335,7 @@ export default function PartnersPage() {
           <Reveal delay={0.4}>
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
-                Why <span className="text-[#e05a3a]">Partner</span> With Us?
+                Why <span className="text-[#F58220]">Partner</span> With Us?
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Benefits of joining the Blue OX Kampus ecosystem
@@ -346,7 +346,7 @@ export default function PartnersPage() {
           <div className="grid md:grid-cols-3 gap-6 mb-16">
             {partnershipBenefits.map((benefit, index) => (
               <Reveal key={index} delay={0.5 + index * 0.1}>
-                <div className="glass p-6 rounded-xl hover:border-[#e05a3a]/50 transition-all duration-300">
+                <div className="glass p-6 rounded-xl hover:border-[#F58220]/50 transition-all duration-300">
                   <img src={`/icons/${benefit.icon}`} alt={benefit.title} className="w-14 h-14 mb-4" />
                   <h3 className="text-xl font-bold text-black mb-3">{benefit.title}</h3>
                   <p className="text-gray-600">{benefit.description}</p>
@@ -363,7 +363,7 @@ export default function PartnersPage() {
           <Reveal delay={0.6}>
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
-                Partnership <span className="text-[#e05a3a]">Opportunities</span>
+                Partnership <span className="text-[#F58220]">Opportunities</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Find the partnership type that aligns with your organization's goals
@@ -374,13 +374,13 @@ export default function PartnersPage() {
           <div className="space-y-6 mb-16">
             {partnershipTypes.map((partnership, index) => (
               <Reveal key={index} delay={0.7 + index * 0.1}>
-                <div className="glass rounded-xl p-8 hover:border-[#e05a3a]/50 transition-all duration-300">
+                <div className="glass rounded-xl p-8 hover:border-[#F58220]/50 transition-all duration-300">
                   <div className="mb-4">
                     <h3 className="text-2xl font-bold text-black mb-2">{partnership.type}</h3>
                     <p className="text-gray-700 leading-relaxed">{partnership.description}</p>
                   </div>
                   <div>
-                    <h4 className="text-sm font-semibold text-[#e05a3a] mb-2">Examples:</h4>
+                    <h4 className="text-sm font-semibold text-[#F58220] mb-2">Examples:</h4>
                     <div className="flex flex-wrap gap-2">
                       {partnership.examples.map((example, i) => (
                         <span key={i} className="px-3 py-1 bg-white border border-gray-300 text-gray-700 rounded-full text-sm">
@@ -402,7 +402,7 @@ export default function PartnersPage() {
           <Reveal delay={0.8}>
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
-                What Our Partners <span className="text-[#e05a3a]">Say</span>
+                What Our Partners <span className="text-[#F58220]">Say</span>
               </h2>
             </div>
           </Reveal>
@@ -410,7 +410,7 @@ export default function PartnersPage() {
           <div className="grid md:grid-cols-2 gap-8">
             <Reveal delay={0.9}>
               <div className="glass rounded-xl p-8">
-                <div className="text-[#e05a3a] text-4xl mb-4">"</div>
+                <div className="text-[#F58220] text-4xl mb-4">"</div>
                 <p className="text-gray-700 text-lg italic mb-6">
                   Partnering with Blue OX Kampus has given us direct access to some of the most talented young developers 
                   in East Africa. Their training programs produce job-ready graduates.
@@ -429,7 +429,7 @@ export default function PartnersPage() {
 
             <Reveal delay={1.0}>
               <div className="glass rounded-xl p-8">
-                <div className="text-[#e05a3a] text-4xl mb-4">"</div>
+                <div className="text-[#F58220] text-4xl mb-4">"</div>
                 <p className="text-gray-700 text-lg italic mb-6">
                   The social impact component is what drew us to Blue OX Kampus. Knowing that our partnership helps 
                   fund free training for youth makes this collaboration even more meaningful.
@@ -454,7 +454,7 @@ export default function PartnersPage() {
       <section className="relative py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <Reveal delay={1.1}>
-            <div className="glass rounded-2xl border-2 border-[#e05a3a]/50 p-12">
+            <div className="glass rounded-2xl border-2 border-[#F58220]/50 p-12">
               <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
                 Become a Partner
               </h2>
@@ -464,7 +464,7 @@ export default function PartnersPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => openForm('partner')}
-                  className="inline-block border border-[#e05a3a] bg-transparent text-[#e05a3a] font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-[#e05a3a] hover:text-white"
+                  className="inline-block border border-[#F58220] bg-transparent text-[#F58220] font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-[#F58220] hover:text-white"
                 >
                   PARTNER WITH US
                 </button>
@@ -476,7 +476,7 @@ export default function PartnersPage() {
                 </a>
               </div>
               <p className="text-gray-600 text-sm mt-6">
-                Email: <a href="mailto:blueoxrecruit@gmail.com" className="text-[#e05a3a] hover:underline">blueoxrecruit@gmail.com</a>
+                Email: <a href="mailto:blueoxrecruit@gmail.com" className="text-[#F58220] hover:underline">blueoxrecruit@gmail.com</a>
               </p>
             </div>
           </Reveal>

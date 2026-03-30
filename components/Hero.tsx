@@ -29,14 +29,14 @@ export default function Hero(){
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-black mb-4">
-                  We Do <span className="text-[#e05a3a]">Two Things</span> Really, Really Well
+                  We Do <span className="text-[#F58220]">Two Things</span> Really, Really Well
               </h2>
             </div>
             
             {/* Two Cards - Full Width */}
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-16">
               {/* Accelerator Program Card */}
-              <a href="/accelerator" className="backdrop-blur-xl bg-white/30 shadow-2xl rounded-2xl p-8 lg:p-12 border-2 border-[#e05a3a]/50 hover:border-[#e05a3a] hover:bg-[#e05a3a]/10 hover:shadow-[0_0_50px_rgba(224,90,58,0.6)] hover:scale-[1.02] transition-all duration-300 group">
+              <a href="/accelerator" className="backdrop-blur-xl bg-white/30 shadow-2xl rounded-2xl p-8 lg:p-12 border-2 border-[#F58220]/50 hover:border-[#F58220] hover:bg-[#F58220]/10 hover:shadow-[0_0_50px_rgba(224,90,58,0.6)] hover:scale-[1.02] transition-all duration-300 group">
                 <div className="flex items-center gap-4 mb-6">
                   <img src="/icons/rocket.svg" alt="Accelerator" className="w-14 h-14 group-hover:scale-110 transition-transform" />
                 </div>
@@ -46,7 +46,7 @@ export default function Hero(){
                 <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-6">
                   Most agencies guess what you want. We visualize it first. We combine Rapid MVP...
                 </p>
-                <div className="text-[#e05a3a] font-bold flex items-center gap-3 text-lg">
+                <div className="text-[#F58220] font-bold flex items-center gap-3 text-lg">
                   Learn More <img src="/icons/arrow-right.svg" alt="Arrow" className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                 </div>
               </a>
@@ -72,7 +72,7 @@ export default function Hero(){
             <div className="text-center mb-16">
               <p className="text-2xl md:text-3xl lg:text-4xl text-gray-700 leading-relaxed max-w-5xl mx-auto">
                 We Turn Prayers Into Prototypes And 'What Ifs' Into Bankable Products In 5 Days.<br />
-                <span className="text-[#e05a3a] font-semibold">(Yes, really.)</span>
+                <span className="text-[#F58220] font-semibold">(Yes, really.)</span>
               </p>
             </div>
 
@@ -116,8 +116,8 @@ export default function Hero(){
           {/* Floating 3D Elements */}
           <div className="absolute inset-0 pointer-events-none">
             <div className="floating-cube absolute top-20 left-10 w-16 h-16 border border-blue-400/30 transform rotate-45" />
-            <div className="floating-sphere absolute top-40 right-20 w-12 h-12 bg-[#e05a3a]/20 rounded-full" />
-            <div className="floating-pyramid absolute bottom-32 left-1/4 w-20 h-20 border-l border-r border-[#e05a3a]/30" />
+            <div className="floating-sphere absolute top-40 right-20 w-12 h-12 bg-[#F58220]/20 rounded-full" />
+            <div className="floating-pyramid absolute bottom-32 left-1/4 w-20 h-20 border-l border-r border-[#F58220]/30" />
           </div>
         </div>
       </section>

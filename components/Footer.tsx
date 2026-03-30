@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 
 export default function Footer(){
   return (
@@ -11,7 +11,7 @@ export default function Footer(){
             <div className="flex items-center gap-2.5 mb-3">
               <img src="/assets/images/logo_name.png" alt="Blue OX" className="w-20 h-auto" />
               <span className="text-xs font-black tracking-tighter uppercase leading-none text-black">
-                Blue <span className="text-[#e05a3a]">OX</span> <span className="text-blue-500">Kampus</span>
+                Blue <span className="text-[#F58220]">OX</span> <span className="text-blue-500">Kampus</span>
               </span>
             </div>
             <p className="text-xs text-gray-400 leading-relaxed">Mbarara, Uganda · EU · US · Gulf</p>
@@ -33,11 +33,11 @@ export default function Footer(){
               { label: 'WhatsApp',        href: 'https://wa.me/3197010209759' },
             ].map(({ label, href }) => (
               href.startsWith('/') || href.startsWith('#') ? (
-                <Link key={label} href={href} className="text-xs text-gray-500 hover:text-[#e05a3a] transition-colors font-semibold uppercase tracking-wider">
+                <Link key={label} href={href} className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
                   {label}
                 </Link>
               ) : (
-                <a key={label} href={href} className="text-xs text-gray-500 hover:text-[#e05a3a] transition-colors font-semibold uppercase tracking-wider">
+                <a key={label} href={href} className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
                   {label}
                 </a>
               )
@@ -52,7 +52,7 @@ export default function Footer(){
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Blue OX Kampus on YouTube"
-            className="text-gray-400 hover:text-[#e05a3a] transition-colors"
+            className="text-gray-400 hover:text-[#F58220] transition-colors"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
               <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>

@@ -13,7 +13,7 @@ export default function TechSpotlight(){
             <div className="w-64 h-64 border border-blue-400/20 rounded-full opacity-30" />
           </ScrollParallax>
           <ScrollParallax speed={0.5} direction="down" className="absolute bottom-20 right-20">
-            <div className="w-48 h-48 border border-[#e05a3a]/20 transform rotate-45 opacity-20" />
+            <div className="w-48 h-48 border border-[#F58220]/20 transform rotate-45 opacity-20" />
           </ScrollParallax>
           <ScrollParallax speed={0.4} direction="left" scale className="absolute top-1/2 left-1/4">
             <div className="w-32 h-32 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-lg transform rotate-12" />
@@ -26,7 +26,7 @@ export default function TechSpotlight(){
               <div className="text-center lg:text-left">
                 <h2 className="text-4xl md:text-6xl font-black mb-8 uppercase leading-[0.9] tracking-tight">
                   Real Tools. <br/>
-                  <span className="text-[#e05a3a] gradient-text-3d">Real Proof.</span>
+                  <span className="text-[#F58220] gradient-text-3d">Real Proof.</span>
                 </h2>
                 <p className="text-gray-700 text-xl mb-10 leading-relaxed max-w-2xl">
                   We don't use demos. We deploy industry-grade simulation platforms used by top technical institutes globally.
@@ -34,14 +34,14 @@ export default function TechSpotlight(){
               </div>
 
               <div className="space-y-8">
-                <div className="tech-card glass-card p-6 sm:p-8 rounded-3xl flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-8 group hover:scale-105 transition-all duration-500 border-2 border-transparent hover:border-[#e05a3a]/30">
-                  <div className="tech-icon w-16 h-16 bg-gradient-to-br from-[#e05a3a]/20 to-[#c94e30]/30 rounded-2xl flex items-center justify-center text-[#e05a3a] group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 flex-shrink-0">
+                <div className="tech-card glass-card p-6 sm:p-8 rounded-3xl flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-8 group hover:scale-105 transition-all duration-500 border-2 border-transparent hover:border-[#F58220]/30">
+                  <div className="tech-icon w-16 h-16 bg-gradient-to-br from-[#F58220]/20 to-[#c94e30]/30 rounded-2xl flex items-center justify-center text-[#F58220] group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 flex-shrink-0">
                     <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                       <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 18l-8-4V8l8 4v8z" />
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-black uppercase text-sm tracking-widest mb-3 text-[#e05a3a]">
+                    <h4 className="font-black uppercase text-sm tracking-widest mb-3 text-[#F58220]">
                       DigIn Vision & WeldVR
                     </h4>
                     <p className="text-sm text-gray-700 font-medium leading-relaxed">
@@ -168,7 +168,7 @@ export default function TechSpotlight(){
                             <span>Speed</span><span>87%</span>
                           </div>
                           <div className="w-full bg-gray-700 rounded-full h-2">
-                            <div className="bg-gradient-to-r from-[#e05a3a] to-[#e05a3a] h-2 rounded-full" style={{width: '87%'}} />
+                            <div className="bg-gradient-to-r from-[#F58220] to-[#F58220] h-2 rounded-full" style={{width: '87%'}} />
                           </div>
                           
                           <div className="flex justify-between text-xs text-gray-700 mb-1">
@@ -186,7 +186,7 @@ export default function TechSpotlight(){
                           <div className="text-xs text-gray-600 uppercase tracking-wider">Active Users</div>
                         </div>
                         <div className="stat-item">
-                          <div className="text-lg sm:text-2xl font-black text-[#e05a3a]">156</div>
+                          <div className="text-lg sm:text-2xl font-black text-[#F58220]">156</div>
                           <div className="text-xs text-gray-600 uppercase tracking-wider">Certifications</div>
                         </div>
                         <div className="stat-item">

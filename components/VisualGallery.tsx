@@ -8,7 +8,7 @@ export default function VisualGallery(){
         <div className="absolute inset-0 pointer-events-none">
           <div className="parallax-bg opacity-10">
             <div className="absolute top-20 left-10 w-32 h-32 border border-blue-400/30 rotate-45 floating-slow" />
-            <div className="absolute bottom-20 right-20 w-24 h-24 border border-[#e05a3a]/30 rounded-full floating-medium" />
+            <div className="absolute bottom-20 right-20 w-24 h-24 border border-[#F58220]/30 rounded-full floating-medium" />
             <div className="absolute top-1/2 left-1/3 w-40 h-40 border border-purple-400/20 transform rotate-12 floating-fast" />
           </div>
         </div>
@@ -85,8 +85,8 @@ export default function VisualGallery(){
               />
               <div className="sim-overlay-3d absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/30 flex flex-col justify-end p-8">
                 <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                  <div className="mb-3 flex items-center gap-2 text-xs text-[#e05a3a]">
-                    <span className="w-2 h-2 bg-[#e05a3a] rounded-full animate-pulse" />
+                  <div className="mb-3 flex items-center gap-2 text-xs text-[#F58220]">
+                    <span className="w-2 h-2 bg-[#F58220] rounded-full animate-pulse" />
                     AVAILABLE NOW
                   </div>
                   <h4 className="font-black text-xl uppercase text-black mb-2 tracking-tight">

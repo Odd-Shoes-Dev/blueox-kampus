@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRef, useEffect } from 'react';
@@ -46,10 +46,10 @@ export default function Header(){
   }, []);
 
   const navLink = (active: boolean) =>
-    `text-xs font-bold tracking-widest uppercase transition-colors ${active ? 'text-[#e05a3a]' : 'hover:text-[#e05a3a]'}`;
+    `text-xs font-bold tracking-widest uppercase transition-colors ${active ? 'text-[#0044CC]' : 'text-gray-600 hover:text-[#0044CC]'}`;
 
   const mobileLinkCls = (active: boolean) =>
-    `py-2 text-sm font-bold uppercase tracking-wider border-b border-gray-100 transition-colors ${active ? 'text-[#e05a3a]' : 'text-black hover:text-[#e05a3a]'}`;
+    `py-2 text-sm font-bold uppercase tracking-wider border-b border-gray-100 transition-colors ${active ? 'text-[#F58220]' : 'text-gray-600 hover:text-[#F58220]'}`;
 
   return (
     <header
@@ -58,10 +58,10 @@ export default function Header(){
       <div className="max-w-[1100px] mx-auto px-6 sm:px-12 flex items-center justify-between h-full relative">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5">
-          <img src="/assets/images/logo_name.png" alt="Blue OX" className="w-20 sm:w-24 md:w-28 h-auto" />
-          <span className="text-xs sm:text-sm font-black tracking-tighter uppercase leading-none text-black">
-            Blue <span className="text-[#e05a3a]">OX</span> <span className="text-blue-500">Kampus</span>
+        <Link href="/" className="flex items-center gap-2.5 py-3 pr-2">
+          <img src="/assets/images/logo_name.png" alt="Blue OX" className="w-10 sm:w-11 md:w-12 h-auto" />
+          <span className="text-base sm:text-lg md:text-xl font-black tracking-tighter uppercase leading-none text-[#F58220]">
+            Blue <span className="text-[#F58220]">OX</span> <span className="text-[#0044CC]">Kampus</span>
           </span>
         </Link>
 
@@ -79,13 +79,13 @@ export default function Header(){
             href="https://www.blueoxjobs.eu/hiring"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-block border border-[#e05a3a] text-[#e05a3a] px-4 py-2 rounded-md text-sm font-black uppercase hover:bg-[#e05a3a] hover:text-white transition-colors"
+            className="hidden md:inline-block border border-[#F58220] text-[#F58220] px-4 py-2 rounded-md text-sm font-black uppercase hover:bg-[#F58220] hover:text-white transition-colors"
           >
             Request a Pod
           </a>
           <Link
             href="/fund"
-            className="hidden md:inline-block bg-[#e05a3a] text-white px-4 py-2 rounded-md text-sm font-black uppercase hover:bg-[#c94e30] transition-colors"
+            className="hidden md:inline-block bg-[#0044CC] text-white px-4 py-2 rounded-md text-sm font-black uppercase hover:bg-[#0033AA] transition-colors"
           >
             Fund Training
           </Link>
@@ -118,14 +118,14 @@ export default function Header(){
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
-              className="flex-1 border border-[#e05a3a] text-[#e05a3a] px-4 py-3 text-sm font-black uppercase text-center block hover:bg-[#e05a3a] hover:text-white transition-colors rounded-md"
+              className="flex-1 border border-[#F58220] text-[#F58220] px-4 py-3 text-sm font-black uppercase text-center block hover:bg-[#F58220] hover:text-white transition-colors rounded-md"
             >
               Request a Pod
             </a>
             <Link
               href="/fund"
               onClick={() => setOpen(false)}
-              className="flex-1 bg-[#e05a3a] text-white px-4 py-3 text-sm font-black uppercase text-center block hover:bg-[#c94e30] transition-colors rounded-md"
+              className="flex-1 bg-[#0044CC] text-white px-4 py-3 text-sm font-black uppercase text-center block hover:bg-[#0033AA] transition-colors rounded-md"
             >
               Fund Training
             </Link>

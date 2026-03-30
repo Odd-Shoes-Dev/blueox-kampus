@@ -105,7 +105,7 @@ export default function HousePage() {
           {/* House Video */}
           <Reveal delay={0.2}>
             <div className="relative mb-16 flex justify-center">
-              <div className="w-full max-w-lg aspect-video rounded-2xl border-2 border-[#e05a3a]/30 overflow-hidden">
+              <div className="w-full max-w-lg aspect-video rounded-2xl border-2 border-[#F58220]/30 overflow-hidden">
                 <video
                   autoPlay
                   loop
@@ -129,7 +129,7 @@ export default function HousePage() {
           <Reveal delay={0.3}>
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
-                Facilities & <span className="text-[#e05a3a]">Amenities</span>
+                Facilities & <span className="text-[#F58220]">Amenities</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Everything you need for a comfortable and productive stay
@@ -140,7 +140,7 @@ export default function HousePage() {
           <div className="grid md:grid-cols-3 gap-6 mb-16">
             {facilities.map((facility, index) => (
               <Reveal key={index} delay={0.4 + index * 0.1}>
-                <div className="glass p-6 rounded-xl hover:border-[#e05a3a]/50 transition-all duration-300">
+                <div className="glass p-6 rounded-xl hover:border-[#F58220]/50 transition-all duration-300">
                   <img src={`/icons/${facility.icon}`} alt={facility.name} className="w-14 h-14 mb-4" />
                   <h3 className="text-xl font-bold text-black mb-2">{facility.name}</h3>
                   <p className="text-gray-600">{facility.desc}</p>
@@ -163,26 +163,26 @@ export default function HousePage() {
                 </h3>
                 <div className="space-y-4 text-gray-700">
                   <p className="flex items-start gap-3">
-                    <span className="text-[#e05a3a] mt-1">•</span>
+                    <span className="text-[#F58220] mt-1">•</span>
                     <span>Located in Mbarara, Uganda</span>
                   </p>
                   <p className="flex items-start gap-3">
-                    <span className="text-[#e05a3a] mt-1">•</span>
+                    <span className="text-[#F58220] mt-1">•</span>
                     <span>Walking distance to Blue OX Kampus training facilities</span>
                   </p>
                   <p className="flex items-start gap-3">
-                    <span className="text-[#e05a3a] mt-1">•</span>
+                    <span className="text-[#F58220] mt-1">•</span>
                     <span>Close to restaurants, shops, and transportation</span>
                   </p>
                   <p className="flex items-start gap-3">
-                    <span className="text-[#e05a3a] mt-1">•</span>
+                    <span className="text-[#F58220] mt-1">•</span>
                     <span>Quiet, safe neighborhood </span>
                   </p>
                 </div>
 
-                <div className="mt-8 p-4 bg-[#e05a3a]/10 border border-[#e05a3a]/30 rounded-lg">
+                <div className="mt-8 p-4 bg-[#F58220]/10 border border-[#F58220]/30 rounded-lg">
                   <p className="text-gray-700 text-sm">
-                    <span className="text-[#e05a3a] font-semibold">Need directions?</span> Contact us on WhatsApp for detailed location information.
+                    <span className="text-[#F58220] font-semibold">Need directions?</span> Contact us on WhatsApp for detailed location information.
                   </p>
                 </div>
               </div>
@@ -231,7 +231,7 @@ export default function HousePage() {
       <section className="relative py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <Reveal delay={0.9}>
-            <div className="glass rounded-2xl border-2 border-[#e05a3a]/50 p-12">
+            <div className="glass rounded-2xl border-2 border-[#F58220]/50 p-12">
               <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
                 Ready to Book Your Stay?
               </h2>
@@ -241,7 +241,7 @@ export default function HousePage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => openForm('academy')}
-                  className="inline-block border border-[#e05a3a] bg-transparent text-[#e05a3a] font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-[#e05a3a] hover:text-white"
+                  className="inline-block border border-[#F58220] bg-transparent text-[#F58220] font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-[#F58220] hover:text-white"
                 >
                   BOOK NOW
                 </button>
@@ -254,7 +254,7 @@ export default function HousePage() {
               </div>
               <p className="text-gray-600 text-sm mt-6">
                 <img src="/icons/lightbulb.svg" alt="Tip" className="inline w-5 h-5 mr-2" />
-                <span className="text-[#e05a3a]">Special discount:</span> Academy students get 20% off their stay!
+                <span className="text-[#F58220]">Special discount:</span> Academy students get 20% off their stay!
               </p>
             </div>
           </Reveal>

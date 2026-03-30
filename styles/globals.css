@@ -25,7 +25,7 @@
   --odd-black: #1a1a1a;
   --odd-white: #ffffff;
   --odd-cream: #ffffff;
-  --odd-coral: #e05a3a;
+  --odd-coral: #F58220;
   --odd-coral-dark: #c94e30;
   --odd-coral-light: #f4a08e;
   --odd-gray-100: #f5f5f5;
@@ -989,7 +989,7 @@ main {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, #e05a3a, #38bdf8, #e05a3a);
+  background: linear-gradient(90deg, #F58220, #38bdf8, #F58220);
   animation: scanLine 3s linear infinite;
 }
 
@@ -1201,7 +1201,7 @@ main {
   top: -60px;
   left: -80px;
   animation-delay: 0s;
-  background: linear-gradient(135deg, #e05a3a, #f4a08e);
+  background: linear-gradient(135deg, #F58220, #f4a08e);
   box-shadow: 0 4px 12px rgba(255, 64, 64, 0.4);
 }
 
