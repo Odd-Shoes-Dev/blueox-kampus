@@ -1,0 +1,36 @@
+# Blue Ox Kampus - Robots Configuration
+# Allow search engines (SEO) while blocking scrapers and bad bots
+
+# Block all bad bots and scrapers from the start
+User-agent: AhrefsBot
+User-agent: SemrushBot
+User-agent: DotBot
+User-agent: MJ12bot
+User-agent: AhrefsBot-Abusers
+User-agent: SemrushBot-BA
+User-agent: SemrushBot-PHPC
+User-agent: SemrushBot-CrawlerBot
+User-agent: MJ12bot
+User-agent: AppEngine-Google
+Disallow: /
+
+# Block bad bots from accessing sensitive areas
+User-agent: *
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: *?*=*
+
+# Allow Google, Bing, and legitimate search engines
+User-agent: Googlebot
+User-agent: Googlebot-Mobile
+User-agent: Bingbot
+User-agent: Slurp
+User-agent: DuckDuckBot
+User-agent: Baiduspider
+User-agent: YandexBot
+Allow: /
+
+# Sitemap
+Sitemap: https://www.blueoxkampus.com/sitemap.xml
