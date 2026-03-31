@@ -11,7 +11,7 @@ export default function Footer(){
             <div className="flex items-center gap-2.5 mb-3">
               <img src="/assets/images/logo_name.png" alt="Blue OX" className="w-20 h-auto" />
               <span className="text-xs font-black tracking-tighter uppercase leading-none text-black">
-                Blue <span className="text-[#F58220]">OX</span> <span className="text-blue-500">Kampus</span>
+                Blue <span className="text-[#F58220]">OX Kampus</span>
               </span>
             </div>
             <p className="text-xs text-gray-400 leading-relaxed">Mbarara, Uganda · EU · US · Gulf</p>

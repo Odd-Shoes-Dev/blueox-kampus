@@ -44,7 +44,7 @@ export default function BuildersPage() {
       icon: 'code.svg',
       title: 'React Pod',
       stack: 'React, Next.js, TypeScript',
-      desc: 'Frontend development for web products  dashboards, landing pages, full-stack apps.',
+      desc: 'Frontend development for web products - dashboards, landing pages, full-stack apps.',
     },
     {
       icon: 'brain.svg',
@@ -80,7 +80,7 @@ export default function BuildersPage() {
 
   const features = [
     { icon: 'rocket.svg',   title: 'Ship real features',              desc: 'Work on live international products with real users. Your code ships. Your name goes on it.' },
-    { icon: 'global.svg',   title: 'Work from campus',                desc: 'Power, fibre WiFi, and mentorship  all provided. No cost to join or participate.' },
+    { icon: 'global.svg',   title: 'Work from campus',                desc: 'Power, fibre WiFi, and mentorship - all provided. No cost to join or participate.' },
     { icon: 'crown.svg',    title: 'Weekly competitions',             desc: 'Every Saturday, builders compete. Top 10-20% ranked by performance get placed first.' },
     { icon: 'document.svg', title: 'Professional certificate',        desc: 'Receive a certificate and a direct reference from your startup upon completing the pod.' },
     { icon: 'chart.svg',    title: 'Career pipeline',                 desc: 'Pod placement leads to contract work, then full employment in Poland, Netherlands, UAE, and Gulf.' },
@@ -88,8 +88,8 @@ export default function BuildersPage() {
   ];
 
   const howItWorks = [
-    { step: 1, icon: 'book.svg',     title: 'Join BlueOx Kampus',          desc: 'Enroll in campus training  fundamentals, modern frameworks, real-world problem-solving.' },
-    { step: 2, icon: 'star.svg',     title: 'Compete every Saturday',       desc: 'Weekly ranked competitions. Top 10-20% move to placement. Pure performance  no CVs.' },
+    { step: 1, icon: 'book.svg',     title: 'Join BlueOx Kampus',          desc: 'Enroll in campus training — fundamentals, modern frameworks, real-world problem-solving.' },
+    { step: 2, icon: 'star.svg',     title: 'Compete every Saturday',       desc: 'Weekly ranked competitions. Top 10-20% move to placement. Pure performance — no CVs.' },
     { step: 3, icon: 'target.svg',   title: 'Get matched to a pod',         desc: 'Based on your rank and skill profile, you are matched to a startup pod that fits your stack.' },
     { step: 4, icon: 'rocket.svg',   title: 'Ship weekly. Earn your rep.',  desc: 'Work from campus in your pod. Coordinator manages the client. You build. You ship. You grow.' },
   ];

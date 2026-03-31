@@ -67,21 +67,21 @@ export default function AcademyPage() {
   ];
 
   const whyVr = [
-    { icon: 'dollar.svg',  stat: '90%',  title: 'Lower Training Cost',  desc: 'VR reduces per-student training cost from $500 to $50 through simulation efficiency  viable even in low-resource settings.' },
+    { icon: 'dollar.svg',  stat: '90%',  title: 'Lower Training Cost',  desc: 'VR reduces per-student training cost from $500 to $50 through simulation efficiency - viable even in low-resource settings.' },
     { icon: 'water.svg',   stat: '0',    title: 'Material Waste',       desc: 'No gas, electrodes, or metal waste. Practice unlimited times without consumables. Budget goes to students, not materials.' },
     { icon: 'shield.svg',  stat: '100%', title: 'Safety',               desc: 'Zero injury risk. Accessible for persons with disabilities. Portable to remote zones including refugee settlements.' },
   ];
 
   const whoWeServe = [
-    { icon: 'location.svg', title: 'Refugees',            desc: 'In Nakivale Settlement and across Western Uganda  building skills that travel across borders.' },
+    { icon: 'location.svg', title: 'Refugees',            desc: 'In Nakivale Settlement and across Western Uganda — building skills that travel across borders.' },
     { icon: 'profile.svg',  title: 'Women',               desc: 'Entering technical trades and STEM fields. We actively remove barriers and provide safe training spaces.' },
-    { icon: 'user.svg',     title: 'Out-of-School Youth', desc: 'Second-chance skills training  because a single failure point should not define your future.' },
+    { icon: 'user.svg',     title: 'Out-of-School Youth', desc: 'Second-chance skills training - because a single failure point should not define your future.' },
     { icon: 'brand.svg',    title: 'TVET Institutions',   desc: 'Upgrading traditional vocational training with infrastructure-light, scalable VR delivery.' },
     { icon: 'book.svg',     title: 'Students',            desc: 'Technical training and career guidance for students at all educational levels.' },
   ];
 
   const enrollSteps = [
-    { step: 1, icon: 'planner.svg',       title: 'Choose Your Program',    desc: 'Select the training track that matches your goals. Not sure? Tell us your situation  we will advise.' },
+    { step: 1, icon: 'planner.svg',       title: 'Choose Your Program',    desc: 'Select the training track that matches your goals. Not sure? Tell us your situation - we will advise.' },
     { step: 2, icon: 'checkmark-circle.svg', title: 'Complete Your Application', desc: 'Fill out the enrollment form via this site, WhatsApp, or in-person at the campus.' },
     { step: 3, icon: 'web.svg',           title: 'Start VR Training',      desc: 'Begin simulations with expert guidance from local instructors. Equipment provided. No experience needed.' },
     { step: 4, icon: 'star.svg',          title: 'Graduate & Get Placed',  desc: 'Complete your program, receive a certified credential, and access job placement support.' },
@@ -90,7 +90,7 @@ export default function AcademyPage() {
   const faqs = [
     { q: 'Do I need VR experience to start?',       a: 'No. We provide complete orientation and training on VR equipment. Most students adapt within the first session.' },
     { q: 'Are the programs free?',                   a: 'We offer scholarship opportunities for refugees, women, and persons with disabilities. Contact us to discuss eligibility and funding options.' },
-    { q: 'What happens after I complete the program?', a: 'We provide job placement assistance through our ethical workforce pathways  both local Ugandan opportunities and international placements through formal labour agreements.' },
+    { q: 'What happens after I complete the program?', a: 'We provide job placement assistance through our ethical workforce pathways - both local Ugandan opportunities and international placements through formal labour agreements.' },
     { q: 'Can persons with disabilities participate?', a: 'Yes. VR training is highly accessible. We work with each individual to ensure equipment and programs are adapted to their needs.' },
     { q: 'How long are the programs?',               a: 'Programs range from 8-20 weeks depending on the track. We offer flexible scheduling to accommodate different needs.' },
     { q: 'Do you offer mobile training units?',      a: 'Yes. We deploy mobile VR training labs directly to refugee settlements, rural schools, and underserved communities.' },
@@ -363,7 +363,7 @@ export default function AcademyPage() {
                 Inside the <span className="text-[#F58220]">Kampus</span>
               </h2>
               <p className="text-gray-400 text-sm max-w-xl mx-auto">
-                See where the training happens  a real look at the facilities, the equipment, and the energy at Blue OX Kampus.
+                See where the training happens - a real look at the facilities, the equipment, and the energy at Blue OX Kampus.
               </p>
             </div>
           </Reveal>

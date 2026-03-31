@@ -227,7 +227,7 @@ export default function Page() {
               <div className="font-bebas text-7xl text-[#0044CC] leading-none mb-2 uppercase">
                 <sup className="text-3xl align-super">$</sup>199<span className="text-3xl font-normal text-gray-400"> / week</span>
               </div>
-              <p className="font-libre text-gray-500 text-sm">Per builder  campus-based, coordinator-managed, Pod Report every Friday</p>
+              <p className="font-libre text-gray-500 text-sm">Per builder - campus-based, coordinator-managed, Pod Report every Friday</p>
             </div>
           </Reveal>
 
@@ -410,7 +410,7 @@ export default function Page() {
                   Placements that actually lead somewhere.
                 </h2>
                 <p className="font-libre text-gray-600 leading-relaxed italic">
-                  Pre-vetted international startups. Students join live shipping pods  not coffee runs. BlueOx handles matching, coordination, supervision, and reporting. You get the outcomes dashboard.
+                  Pre-vetted international startups. Students join live shipping pods — not coffee runs. BlueOx handles matching, coordination, supervision, and reporting. You get the outcomes dashboard.
                 </p>
               </div>
               <div>
@@ -442,12 +442,12 @@ export default function Page() {
                   For Faith Driven Investors deploying Kingdom capital.
                 </h2>
                 <p className="font-libre text-gray-600 leading-relaxed italic">
-                  If you operate from a one-pocket framework  where giving, investing, and spending all come from the same Kingdom conviction  BlueOx is a place to put capital to work. We are building a model where a Christian tech hub trains students, ships products, plants churches, and supports refugees.
+                  If you operate from a one-pocket framework — where giving, investing, and spending all come from the same Kingdom conviction — BlueOx is a place to put capital to work. We are building a model where a Christian tech hub trains students, ships products, plants churches, and supports refugees.
                 </p>
               </div>
               <div>
                 <ul className="space-y-3 mb-6">
-                  {['Every pod placed funds church plants and refugee support', 'Builder training is free  revenue from founders covers it', "Aligned with solving.org's Build, Invest, Give framework", 'Impact-measurable: placements, completions, employment tracked', 'ESG documentation for grant-funded and donor-advised tracks', 'IOM, UNHCR, EU-Africa fund aligned for impact capital'].map(f => (
+                  {['Every pod placed funds church plants and refugee support', 'Builder training is free — revenue from founders covers it', "Aligned with solving.org's Build, Invest, Give framework", 'Impact-measurable: placements, completions, employment tracked', 'ESG documentation for grant-funded and donor-advised tracks', 'IOM, UNHCR, EU-Africa fund aligned for impact capital'].map(f => (
                     <li key={f} className="flex items-start gap-3 text-sm text-gray-600 font-libre">
                       <img src="/icons/check.svg" alt="" className="w-4 h-4 mt-0.5 shrink-0" />
                       {f}
@@ -478,7 +478,7 @@ export default function Page() {
                 The same campus that trains our builders also trains the workforce of Western Uganda.
               </h2>
               <p className="font-libre text-gray-600 max-w-3xl mx-auto italic">
-                Blue Ox Kampus delivers VR-powered TVET to refugees, women, persons with disabilities, and underserved youth  at 90% lower cost than traditional vocational training.
+                Blue Ox Kampus delivers VR-powered TVET to refugees, women, persons with disabilities, and underserved youth — at 90% lower cost than traditional vocational training.
               </p>
             </div>
           </Reveal>
@@ -526,10 +526,10 @@ export default function Page() {
           <Reveal delay={0.1}>
             <div className="grid md:grid-cols-2 gap-12 mb-12">
               <p className="font-libre text-gray-600 leading-relaxed italic">
-                Every builder at BlueOx Kampus is a Christian. They are selected through weekly Saturday coding competitions from software engineering students across Uganda  the top performers enter our system, commit to our code of Redemptive Technology, and ship for founders who are building products that push back darkness in the world.
+                Every builder at BlueOx Kampus is a Christian. They are selected through weekly Saturday coding competitions from software engineering students across Uganda — the top performers enter our system, commit to our code of Redemptive Technology, and ship for founders who are building products that push back darkness in the world.
               </p>
               <p className="font-libre text-gray-600 leading-relaxed italic">
-                We plant churches with our finances. We practice radical generosity through supporting refugees. We are inspired by the framework of solving the world&apos;s 32 greatest problems  the conviction that the Church is called to minister in Word and Deed, and that technology is one of the most powerful tools available to do both.
+                We plant churches with our finances. We practice radical generosity through supporting refugees. We are inspired by the framework of solving the world&apos;s 32 greatest problems — the conviction that the Church is called to minister in Word and Deed, and that technology is one of the most powerful tools available to do both.
               </p>
             </div>
           </Reveal>
@@ -557,7 +557,7 @@ export default function Page() {
             <p className="font-libre text-gray-500 text-sm mt-6 italic">
               Aligned with the Faith Driven Entrepreneur movement and inspired by{' '}
               <a href="https://solving.org" target="_blank" rel="noreferrer" className="text-[#0044CC] font-bebas hover:text-[#F58220] transition-colors uppercase">solving.org</a>
-              {' '} the conviction that Christians are called to Build, Invest, and Give toward the world&apos;s 32 greatest problems.
+              {' '}— the conviction that Christians are called to Build, Invest, and Give toward the world&apos;s 32 greatest problems.
             </p>
           </Reveal>
         </div>
@@ -569,10 +569,10 @@ export default function Page() {
           <Reveal>
             <div className="bg-gradient-to-br from-[#0044CC] to-[#0033AA] border-2 border-[#F58220]/30 rounded-none p-12 text-white shadow-2xl shadow-blue-500/20">
               <p className="font-mono text-blue-100 mb-4 text-sm font-black uppercase tracking-widest">
-                / Most founders wait too long to fix execution. The ones who don&apos;t  win.
+                / Most founders wait too long to fix execution. The ones who don&apos;t — win.
               </p>
               <h2 className="text-4xl md:text-5xl font-bebas text-white mb-4 leading-tight uppercase">
-                If you&apos;re building something that matters  it needs to ship.
+                If you&apos;re building something that matters — it needs to ship.
               </h2>
               <p className="font-libre text-blue-50 text-lg mb-8 max-w-xl mx-auto italic">
                 You have a calling. You have a backlog. 7 days to kickoff. $199/week. Send us your stack.
