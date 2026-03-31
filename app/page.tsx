@@ -97,6 +97,301 @@ export default function Page() {
         </div>
       </div>
 
+      {/* THE MOVEMENT */}
+      <section id="movement" className="relative py-20 bg-white border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <Reveal>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-start">
+              <div className="lg:sticky lg:top-36">
+                <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-4">/ The Movement</div>
+                <h2 className="font-bebas text-5xl md:text-7xl text-[#0044CC] leading-tight uppercase mb-10">
+                  BILLIONS ARE<br />
+                  <span className="text-gray-200">BUILDING THE</span><br />
+                  WRONG<br />THING.
+                </h2>
+                <div className="space-y-6 text-base md:text-lg text-gray-600 leading-relaxed font-libre italic">
+                  <p>Billions are being poured into systems that capture attention, shape desire, and profit from human weakness. The stories, platforms, and technologies forming this generation are too often built without truth, without conviction, and without responsibility.</p>
+                  <p className="text-[#0044CC] font-bold border-l-4 border-[#F58220] pl-6 py-2 not-italic">
+                    Blue Ox Kampus exists to answer that directly. We are raising a generation of African builders, creatives, and storytellers who are discipled in faith, sharpened in craft, and committed to shaping culture through media, technology, and storytelling.
+                  </p>
+                </div>
+              </div>
+              <div className="space-y-8">
+                <div className="bg-gray-50 border border-gray-100 rounded-lg p-8 md:p-10">
+                  <p className="font-libre text-lg text-gray-600 leading-relaxed mb-6">
+                    We build Christian creative hubs and partner with churches to transform underused spaces into creative environments for Gen Z and Gen Alpha — places where they can <strong>belong, build, become, and encounter God in the process.</strong>
+                  </p>
+                  <p className="font-libre text-lg text-gray-600 leading-relaxed">
+                    We train them. We disciple them. We run weekly competitions. And we deploy the best of them into real work with founders, ministries, and startups around the world.
+                  </p>
+                </div>
+                <div className="relative p-10 md:p-12 bg-[#0044CC] rounded-lg overflow-hidden group shadow-xl">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#F58220]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <p className="text-2xl md:text-3xl font-libre italic text-white leading-snug relative z-10">
+                    "This is not a youth program. This is not a side ministry. This is a movement raising builders who will spend their lives shaping culture with what is true, beautiful, and redemptive."
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    { n: '01', t: 'Build the hub', d: 'We activate church spaces with power, internet, and workspace for young people to create.' },
+                    { n: '02', t: 'Form and train', d: 'Builders are discipled in faith and trained in real-world creative and technical skills.' },
+                    { n: '03', t: 'Deploy the best', d: 'Top performers placed into intern pods serving founders and ministries globally.' },
+                    { n: '04', t: 'Fund the mission', d: 'Pod revenue helps sustain hub operations and expand the model to new nations.' },
+                  ].map(s => (
+                    <div key={s.n} className="bg-white border border-gray-100 rounded-lg p-6 hover:border-[#0044CC] transition-colors">
+                      <div className="font-mono text-[#F58220] text-xs font-black mb-3">{s.n}</div>
+                      <div className="font-bebas text-2xl text-[#0044CC] mb-2 uppercase">{s.t}</div>
+                      <p className="text-xs text-gray-400 font-libre leading-relaxed">{s.d}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* KINGDOM CHAPLAIN PARTNER */}
+      <section id="partner" className="bg-gray-50 border-y border-gray-100 py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <Reveal>
+            <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-4">/ Strategic Partner</div>
+            <div className="flex flex-col md:flex-row gap-12 md:gap-20 items-start max-w-5xl">
+              <div className="shrink-0 w-20 h-20 md:w-28 md:h-28 bg-[#0044CC] rounded-xl flex items-center justify-center shadow-lg relative flex-shrink-0">
+                <div className="w-12 h-12 md:w-16 md:h-16 text-white flex items-center justify-center font-bebas text-2xl md:text-4xl">KC</div>
+                <div className="absolute -bottom-2 -right-2 w-5 h-5 bg-[#F58220] rounded-lg" />
+              </div>
+              <div>
+                <h3 className="font-bebas text-5xl md:text-6xl text-[#0044CC] uppercase mb-2">Kingdom Chaplain</h3>
+                <p className="font-mono text-[#F58220] text-xs font-black tracking-widest uppercase mb-8 italic">Hub Network Expansion Partner</p>
+                <div className="space-y-6 text-base md:text-lg text-gray-600 leading-relaxed font-libre italic max-w-3xl">
+                  <p>Through our partnership with Kingdom Chaplain, we are expanding the Blue Ox model across Uganda, Malawi, and South Africa. Kingdom Chaplain brings trusted church relationships, local access, and on-the-ground infrastructure. Blue Ox brings the creative hub model, discipleship rhythm, training framework, and deployment pipeline.</p>
+                  <p className="font-bold text-gray-900 not-italic border-l-4 border-[#F58220] pl-6 py-2">
+                    "Together, we are not just opening spaces. We are building the infrastructure that will shape how Africa's next generation creates, builds, and leads."
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* FOUNDER STORY */}
+      <section id="founder" className="bg-[#0044CC] text-white py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <Reveal>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-center">
+              <div className="relative group">
+                <div className="aspect-[4/5] bg-blue-900 rounded-lg overflow-hidden relative border border-white/10">
+                  <img 
+                    src="/assets/images/obed.jpg" 
+                    alt="Obed - Founder and CEO"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="absolute -bottom-8 -right-4 md:-right-10 bg-[#F58220] p-8 md:p-10 rounded-lg shadow-2xl border border-[#EE5500]">
+                  <p className="font-bebas text-4xl md:text-5xl leading-none text-[#0044CC] mb-2">OBED</p>
+                  <p className="font-mono text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-[#0044CC]">Founder and CEO</p>
+                </div>
+              </div>
+              <div className="space-y-8 text-lg md:text-xl font-libre italic leading-relaxed text-blue-50/90">
+                <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider">/ The Founder</div>
+                <p>I spent years recruiting developers for European & US companies in the Polish market. I was finding talent everywhere — except back home in Africa.</p>
+                <div className="p-8 border-l-4 border-orange-400 bg-white/5 not-italic">
+                  <p className="text-3xl md:text-4xl font-bebas uppercase leading-tight mb-4 text-white">
+                    "The talent was there. The trust wasn't. Companies wouldn't hire African builders remotely. I came back to Uganda to solve that."
+                  </p>
+                </div>
+                <p>Church leaders everywhere were saying the next generation was drifting from church. I looked at those buildings — beautiful structures sitting empty most of the week — and saw the beginning of an answer.</p>
+                <p className="text-white font-bold not-italic">$2,500. Power. Wi-Fi. Space. Permission to build. Hundreds of young people showed up within weeks. Not for a service. To build.</p>
+                <p className="text-white font-bold not-italic">"We are not just training developers. We are raising builders, creatives, and storytellers who will spend their lives shaping culture with what is true, beautiful, and redemptive."</p>
+                <div className="flex flex-col sm:flex-row gap-4 pt-4 not-italic">
+                  <a href="https://calendly.com/builtbyhouse88/30min" target="_blank" rel="noopener noreferrer" className="border border-white bg-white text-[#0044CC] font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#F58220] hover:border-[#F58220]">
+                    TALK TO OBED
+                  </a>
+                  <a href="mailto:shift@blueoxkampus.com" className="border border-white/30 bg-transparent text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:border-white hover:bg-white/10">
+                    EMAIL DIRECTLY
+                  </a>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* THREE WAYS - REPOSITION WITH ENHANCED LAYOUT */}
+      <section id="involved" className="relative py-20 bg-white border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <Reveal>
+            <div className="mb-20 text-center">
+              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-4">/ How to get involved</div>
+              <h2 className="text-5xl md:text-7xl font-bebas text-[#0044CC] uppercase leading-tight">THREE WAYS TO<br/>JOIN THE MOVEMENT</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                {
+                  s: '01', tag: 'For founders and companies', title: 'Hire an Intern Pod',
+                  price: 'From €200/week per person',
+                  body: "Competition-ranked builders deployed into your sprint with a dedicated Pod Coordinator. Pod Report every Friday. Every hire directly funds a builder's free place at the hub.",
+                  get: "Vetted talent, fast. Direct mission funding.",
+                  tags: ['Back-end', 'Front-end', 'UI/UX', 'Motion', 'Marketing', 'Ops'],
+                  cta: 'REQUEST A POD', href: 'https://www.blueoxjobs.eu/hiring', v: 'primary'
+                },
+                {
+                  s: '02', tag: 'For seniors and studios', title: 'Build with oddshoes.dev',
+                  price: 'Senior Christian product studio',
+                  body: "Our senior studio builds production-ready software. For churches: 50% below standard rates. For everyone else: 50% of every project helps fund hub activation across Africa.",
+                  get: "Senior studio execution. High-impact budget.",
+                  tags: ['Full-stack', 'Product builds', 'Church tools', 'Faith-driven'],
+                  cta: 'VISIT ODDSHOES.DEV', href: 'https://oddshoes.dev', v: 'orange'
+                },
+                {
+                  s: '03', tag: 'For investors and partners', title: 'Activate a Creative Space',
+                  price: '$2,500 per activation',
+                  body: "$2,500 equips one church-based creative space with power, internet, and infrastructure for 50 builders. It creates a real environment for formation all year round.",
+                  get: "Measurable impact. Proven repeatable model.",
+                  tags: ['Mbarara', 'Gayaza', 'Kampala', 'Malawi', 'South Africa'],
+                  cta: 'TALK TO US', href: 'https://calendly.com/builtbyhouse88/30min', v: 'outline'
+                }
+              ].map((w, i) => (
+                <div key={i} className="relative border border-gray-100 bg-white p-8 md:p-10 rounded-lg group hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-500 flex flex-col h-full">
+                  <span className="absolute top-4 right-6 font-bebas text-5xl text-gray-100 group-hover:text-blue-100 transition-colors leading-none">{w.s}</span>
+                  <p className="font-mono text-[9px] text-gray-400 uppercase tracking-widest mb-2 font-bold italic">{w.tag}</p>
+                  <h3 className="text-3xl font-bebas text-[#0044CC] uppercase mb-1">{w.title}</h3>
+                  <p className="font-bebas text-xl text-[#F58220] mb-6">{w.price}</p>
+                  <p className="font-libre italic text-sm text-gray-500 leading-relaxed mb-6 flex-grow">{w.body}</p>
+                  <div className="bg-blue-50 border border-blue-100 rounded-lg px-4 py-3 mb-6">
+                    <span className="font-mono text-[9px] font-black text-[#0044CC] uppercase tracking-widest block mb-1">You get:</span>
+                    <span className="font-libre italic text-sm text-gray-600">{w.get}</span>
+                  </div>
+                  <div className="flex flex-wrap gap-2 mb-8">
+                    {w.tags.map(t => (
+                      <span key={t} className="px-2 py-1 bg-gray-50 text-gray-400 text-[10px] font-bebas uppercase tracking-widest rounded">{t}</span>
+                    ))}
+                  </div>
+                  <a href={w.href} target={w.href.startsWith('http') && !w.href.includes('calendly') ? '_blank' : undefined} rel={w.href.startsWith('http') && !w.href.includes('calendly') ? 'noopener noreferrer' : undefined}
+                    className={`w-full text-center font-bebas text-sm uppercase tracking-wider py-3 px-6 rounded-none transition-all duration-300 ${
+                      w.v === 'primary' ? 'bg-[#0044CC] text-white border border-[#0044CC] hover:bg-[#0033AA]' :
+                      w.v === 'orange' ? 'bg-[#F58220] text-white border border-[#F58220] hover:bg-[#EE5500]' :
+                      'border-2 border-[#0044CC] text-[#0044CC] hover:bg-[#0044CC] hover:text-white'
+                    }`}>
+                    {w.cta}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* PROOF SECTION - MBARARA CASE STUDY */}
+      <section id="proof" className="bg-[#0044CC] text-white py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <Reveal>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-center">
+              <div>
+                <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-4">/ Mbarara, Uganda · 2024</div>
+                <h2 className="text-8xl md:text-9xl font-bebas mb-6 leading-[0.8] tracking-tight text-white">$2,500</h2>
+                <h3 className="text-4xl md:text-6xl font-bebas mb-10 uppercase tracking-tight">ONE ACTIVATION.<br />ONE SPACE.<br />EVERYTHING CHANGED.</h3>
+                <div className="space-y-6 text-lg md:text-xl text-blue-50/80 font-libre italic leading-relaxed mb-12">
+                  <p>Worship Harvest Mbarara — a church building sitting empty most of the week — became a creative environment for the next generation. With $2,500, we installed power, internet, and simple workspace. Within weeks, 300 students from three schools were showing up regularly — not just to attend, but to build.</p>
+                  <p className="font-bold text-white not-italic">Two church spaces. $5,000 total. 300+ builders weekly. This is the documented baseline. It is repeatable.</p>
+                </div>
+                <div className="p-10 bg-white/10 rounded-lg border border-white/10 relative">
+                  <p className="text-2xl md:text-3xl font-libre italic mb-10 tracking-tight leading-tight">"We built this church for $50,000. It sat empty five days a week. $2,500 later, it became a place for students to build, create, and grow."</p>
+                  <div className="flex flex-col">
+                    <span className="font-bebas text-xl text-white uppercase tracking-widest">Ps. Flo and Stephen Ssenyonjo</span>
+                    <span className="font-mono text-[9px] text-blue-200 uppercase mt-1">Worship Harvest Mbarara</span>
+                  </div>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-4 md:gap-6">
+                {[
+                  { l: 'Cost per activation', v: '$2,500' },
+                  { l: 'Young builders weekly', v: '300+' },
+                  { l: 'Hubs Activated', v: '2' },
+                  { l: 'Per builder / year', v: '$42' },
+                  { l: 'Attendance increase', v: '50%+' },
+                  { l: 'Schools involved', v: '3' },
+                ].map((s, i) => (
+                  <div key={i} className="bg-white/10 p-8 md:p-10 rounded-lg border border-white/5 text-center group hover:border-orange-400/50 transition-colors">
+                    <p className="text-5xl md:text-7xl font-bebas text-orange-400 mb-2 uppercase group-hover:scale-110 transition-transform">{s.v}</p>
+                    <p className="text-[10px] font-mono font-bold text-blue-200 uppercase tracking-widest leading-tight">{s.l}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* PRODUCTION LOG / CLIENTS */}
+      <section id="clients" className="bg-white py-20 border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <Reveal>
+            <div className="mb-20 text-center max-w-4xl mx-auto">
+              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-4">/ Production Log</div>
+              <h2 className="text-5xl md:text-7xl font-bebas text-[#0044CC] uppercase leading-tight mb-8">WHO WE'VE<br/>SHIPPED FOR</h2>
+              <p className="font-libre italic text-base md:text-lg text-gray-600">Some of our strongest client relationships sit in child safety, counter-trafficking, family protection, education, and culture-shaping technology. This is what happens when conviction meets craft.</p>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+              {[
+                {
+                  icon: 'haiven', logo: '/assets/images/haiven/logo.svg', name: 'Haiven', badge: 'Eagle Venture Fund · Counter-trafficking',
+                  body: "AI platform backed by Eagle Venture Fund — the world's first dedicated counter-trafficking investment fund. Blue Ox builders contributed software development.",
+                  proof: '50,000+ children protected · 149 victims helped to escape'
+                },
+                {
+                  icon: '👁️', logo: '/assets/images/devshield/logo.png', skipLogoBg: true, name: 'DevShield', badge: 'Child safety · Roblox',
+                  body: "Real-time protection plugin blocking known predators from Roblox communities before harm reaches children. Blue Ox builders contributed to development.",
+                  proof: 'Protecting children from online predators at scale'
+                },
+                {
+                  icon: '🏠', name: 'OneHaven', badge: 'AI family safety',
+                  body: "Privacy-first AI app protecting families from online predators, scams, and harmful content. Blue Ox builders contributed to product development.",
+                  proof: '100+ families on waitlist'
+                },
+                {
+                  icon: 'diginvision', logo: '/assets/images/diginvision/logo.png', skipLogoBg: true, name: 'Dig in Vision', badge: 'Industrial XR · Europe',
+                  body: "Europe's leading industrial VR simulator. Blue Ox builders contributed VR and software work to products shaping real-world training through immersive technology.",
+                  proof: 'Real-world skills training through VR technology'
+                }
+              ].map((c, i) => (
+                <div key={i} className="border border-gray-100 bg-white p-8 md:p-10 rounded-lg group hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-500 flex flex-col h-full">
+                  <div className="flex items-center gap-4 mb-6">
+                    {c.logo && c.logo.startsWith('<svg') ? (
+                      <div className="w-40 h-14">
+                        <div dangerouslySetInnerHTML={{ __html: c.logo }} />
+                      </div>
+                    ) : c.logo && !c.logo.startsWith('[') ? (
+                      <div className={`${(c as any).skipLogoBg ? '' : 'bg-gray-900 rounded-lg p-3'} w-fit`}>
+                        <img src={c.logo} alt={c.name} className="h-12 w-auto object-contain max-w-[200px]" />
+                      </div>
+                    ) : (
+                      <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-2xl overflow-hidden">
+                        <span>{c.icon}</span>
+                      </div>
+                    )}
+                    <h4 className="text-3xl font-bebas text-[#0044CC] uppercase">{c.name}</h4>
+                  </div>
+                  <p className="font-mono text-[9px] text-[#F58220] font-black uppercase tracking-widest mb-4 italic">{c.badge}</p>
+                  <p className="font-libre italic text-gray-600 leading-relaxed mb-8 flex-grow">{c.body}</p>
+                  <div className="pt-6 border-t border-gray-100 flex items-center gap-3">
+                    <span className="text-[#F58220] font-bold">✓</span>
+                    <p className="font-bebas text-[#0044CC] text-sm uppercase tracking-widest">{c.proof}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="pt-8 border-t border-gray-100 flex flex-wrap gap-4">
+              {['By the Fruit · $100M+ raised', 'GLP Software House · 100+ MVPs', 'Wilberforce Academy Collective UK', 'International Startups · EU · US'].map((p, i) => (
+                <span key={i} className="font-mono text-[10px] font-bold text-gray-300 uppercase tracking-widest border border-gray-100 px-4 py-2 rounded-lg">{p}</span>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* TRACK RECORD */}
       <section className="relative py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -373,7 +668,6 @@ export default function Page() {
           <Reveal>
             <div className="grid md:grid-cols-2 gap-16 items-start">
               <div>
-                <span className="inline-block text-xs px-4 py-1.5 font-semibold uppercase tracking-wider mb-4 bg-green-50 text-green-700 border border-green-200 rounded-full">For builders</span>
                 <h2 className="text-4xl md:text-5xl font-bebas text-[#0044CC] mb-4 leading-tight uppercase">
                   Get an international company on your CV. Ship real work. Build a career.
                 </h2>
@@ -405,7 +699,6 @@ export default function Page() {
           <Reveal>
             <div className="grid md:grid-cols-2 gap-16 items-start">
               <div>
-                <span className="inline-block text-xs px-4 py-1.5 font-semibold uppercase tracking-wider mb-4 bg-yellow-50 text-yellow-700 border border-yellow-200 rounded-full">For universities</span>
                 <h2 className="text-4xl md:text-5xl font-bebas text-[#0044CC] mb-4 leading-tight uppercase">
                   Placements that actually lead somewhere.
                 </h2>
@@ -437,7 +730,6 @@ export default function Page() {
           <Reveal>
             <div className="grid md:grid-cols-2 gap-16 items-start">
               <div>
-                <span className="inline-block text-xs px-4 py-1.5 font-semibold uppercase tracking-wider mb-4 bg-blue-50 text-blue-700 border border-blue-200 rounded-full">For investors &amp; donors</span>
                 <h2 className="text-4xl md:text-5xl font-bebas text-[#0044CC] mb-4 leading-tight uppercase">
                   For Faith Driven Investors deploying Kingdom capital.
                 </h2>
