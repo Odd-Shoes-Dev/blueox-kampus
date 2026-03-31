@@ -46,7 +46,7 @@ export default function Page() {
               </h1>
               <div className="flex flex-col sm:flex-row gap-5 justify-start mt-12">
                 <a href="https://www.blueoxjobs.eu/hiring" target="_blank" rel="noopener noreferrer" className="border border-[#0044CC] bg-[#0044CC] text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#0033AA] hover:border-[#0033AA]">
-                  REQUEST A POD ?
+                  REQUEST A POD →
                 </a>
                 <a href="#how-it-works" className="border border-[#0044CC] bg-transparent text-[#0044CC] font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#0044CC] hover:text-white">
                   SEE HOW A POD WORKS
@@ -259,7 +259,7 @@ export default function Page() {
                 badge: 'Best value', title: 'Team Pod', price: '$5,970',
                 sub: '3 builders · 12 weeks · ~$166/wk each',
                 features: ['Multi-role or single focus', 'Dedicated coordinator', 'Coordinated Pod Reports', 'Dev · Design · Ops available', 'Save 17% vs solo rate'],
-                featured: true, cta: 'Request Team Pod ?',
+                featured: true, cta: 'Request Team Pod →',
               },
             ].map(({ badge, title, price, sub, features, featured, cta }, i) => (
               <Reveal key={title} delay={0.4 + i * 0.1}>
@@ -359,7 +359,7 @@ export default function Page() {
                   <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-2">/ {tag}</div>
                   <h3 className="text-lg font-bebas text-[#0044CC] mb-2 group-hover:text-[#F58220] transition-colors uppercase">{title}</h3>
                   <p className="font-libre text-gray-600 text-sm leading-relaxed mb-3">{body}</p>
-                  <span className="text-[#F58220] text-lg group-hover:translate-x-1 transition-transform">?</span>
+                  <span className="text-[#F58220] text-lg group-hover:translate-x-1 transition-transform">→</span>
                 </a>
               </Reveal>
             ))}
@@ -383,7 +383,7 @@ export default function Page() {
               </div>
               <div>
                 <ul className="space-y-3 mb-6">
-                  {['Ship real features - not classroom exercises', 'Work from campus: power, fibre, mentorship', 'Weekly competitions - top ranks placed first', 'Professional certificate + reference from startup', 'Pipeline: pod ? contract ? full employment', 'Markets: Poland · Netherlands · UAE · Gulf'].map(f => (
+                  {['Ship real features - not classroom exercises', 'Work from campus: power, fibre, mentorship', 'Weekly competitions - top ranks placed first', 'Professional certificate + reference from startup', 'Pipeline: pod → contract → full employment', 'Markets: Poland · Netherlands · UAE · Gulf'].map(f => (
                     <li key={f} className="flex items-start gap-3 text-sm text-gray-600 font-libre">
                       <img src="/icons/check.svg" alt="" className="w-4 h-4 mt-0.5 shrink-0" />
                       {f}
@@ -579,7 +579,7 @@ export default function Page() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://www.blueoxjobs.eu/hiring" target="_blank" rel="noopener noreferrer" className="border border-[#F58220] bg-[#F58220] text-[#0044CC] font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-white hover:border-white hover:text-[#0044CC] shadow-lg shadow-orange-500/20">
-                  REQUEST A POD ?
+                  REQUEST A POD →
                 </a>
                 <button onClick={() => setIsBreakdownFormOpen(true)} className="border border-white/50 bg-transparent text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-white hover:text-[#0044CC]">
                   GET A 15-MIN BREAKDOWN
