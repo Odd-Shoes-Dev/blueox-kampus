@@ -1,11 +1,32 @@
 import { NextResponse } from 'next/server';
 import { headers } from 'next/headers';
 import { Resend } from 'resend';
+import { checkRateLimit, getClientIp, isLikelyScraperUserAgent, isSearchCrawler } from '../../../lib/security';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
   try {
+    const userAgent = req.headers.get('user-agent') || '';
+    const isCrawler = isSearchCrawler(userAgent);
+    if (!isCrawler && isLikelyScraperUserAgent(userAgent)) {
+      return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
+    }
+
+    const ip = getClientIp(req.headers);
+    const rate = checkRateLimit(`api:whop:${ip}`, 20, 60_000);
+    if (!rate.ok) {
+      return NextResponse.json(
+        { error: 'Too many requests' },
+        { status: 429, headers: { 'Retry-After': String(rate.retryAfter) } }
+      );
+    }
+
+    const contentType = req.headers.get('content-type') || '';
+    if (!contentType.includes('application/json')) {
+      return NextResponse.json({ error: 'Unsupported content type' }, { status: 415 });
+    }
+
     const body = await req.text();
     const signature = headers().get('whop-signature');
 
@@ -15,7 +36,12 @@ export async function POST(req: Request) {
     //   return NextResponse.json({ error: 'Invalid signature' }, { status: 401 });
     // }
 
-    const payload = JSON.parse(body);
+    let payload: any;
+    try {
+      payload = JSON.parse(body);
+    } catch {
+      return NextResponse.json({ error: 'Invalid JSON payload' }, { status: 400 });
+    }
 
     // Handle different event types
     switch (payload.event) {

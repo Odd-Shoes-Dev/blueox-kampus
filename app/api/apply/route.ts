@@ -1,10 +1,31 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import { checkRateLimit, getClientIp, isLikelyScraperUserAgent, isSearchCrawler } from '../../../lib/security';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
+    const userAgent = request.headers.get('user-agent') || '';
+    const isCrawler = isSearchCrawler(userAgent);
+    if (!isCrawler && isLikelyScraperUserAgent(userAgent)) {
+      return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
+    }
+
+    const ip = getClientIp(request.headers);
+    const rate = checkRateLimit(`api:apply:${ip}`, 8, 60_000);
+    if (!rate.ok) {
+      return NextResponse.json(
+        { error: 'Too many requests' },
+        { status: 429, headers: { 'Retry-After': String(rate.retryAfter) } }
+      );
+    }
+
+    const contentType = request.headers.get('content-type') || '';
+    if (!contentType.includes('application/json')) {
+      return NextResponse.json({ error: 'Unsupported content type' }, { status: 415 });
+    }
+
     const data = await request.json();
     const { 
       name, 
@@ -22,12 +43,34 @@ export async function POST(request: Request) {
       topTasks,
       duration,
       podSize,
-      numInterns
+      numInterns,
+      website,
+      hpField
     } = data;
+
+    // Honeypot trap for generic bots.
+    if ((typeof website === 'string' && website.trim()) || (typeof hpField === 'string' && hpField.trim())) {
+      return NextResponse.json({ success: true, message: 'Application submitted successfully' });
+    }
 
     // Validate required fields
     if (!name || !email || !formType) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
+    }
+
+    if (!/^\S+@\S+\.\S+$/.test(email)) {
+      return NextResponse.json({ error: 'Invalid email format' }, { status: 400 });
+    }
+
+    if (typeof submittedAt === 'string') {
+      const submittedAtMs = Date.parse(submittedAt);
+      if (!Number.isNaN(submittedAtMs) && Date.now() - submittedAtMs < 1200) {
+        return NextResponse.json({ error: 'Submission too fast' }, { status: 429 });
+      }
+    }
+
+    if (typeof message === 'string' && message.length > 4000) {
+      return NextResponse.json({ error: 'Message too long' }, { status: 400 });
     }
 
     // Determine form type label
