@@ -92,7 +92,7 @@ export default function AcademyPage() {
     { q: 'Are the programs free?',                   a: 'We offer scholarship opportunities for refugees, women, and persons with disabilities. Contact us to discuss eligibility and funding options.' },
     { q: 'What happens after I complete the program?', a: 'We provide job placement assistance through our ethical workforce pathways  both local Ugandan opportunities and international placements through formal labour agreements.' },
     { q: 'Can persons with disabilities participate?', a: 'Yes. VR training is highly accessible. We work with each individual to ensure equipment and programs are adapted to their needs.' },
-    { q: 'How long are the programs?',               a: 'Programs range from 820 weeks depending on the track. We offer flexible scheduling to accommodate different needs.' },
+    { q: 'How long are the programs?',               a: 'Programs range from 8-20 weeks depending on the track. We offer flexible scheduling to accommodate different needs.' },
     { q: 'Do you offer mobile training units?',      a: 'Yes. We deploy mobile VR training labs directly to refugee settlements, rural schools, and underserved communities.' },
   ];
 

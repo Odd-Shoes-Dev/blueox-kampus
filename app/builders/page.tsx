@@ -81,7 +81,7 @@ export default function BuildersPage() {
   const features = [
     { icon: 'rocket.svg',   title: 'Ship real features',              desc: 'Work on live international products with real users. Your code ships. Your name goes on it.' },
     { icon: 'global.svg',   title: 'Work from campus',                desc: 'Power, fibre WiFi, and mentorship  all provided. No cost to join or participate.' },
-    { icon: 'crown.svg',    title: 'Weekly competitions',             desc: 'Every Saturday, builders compete. Top 1020% ranked by performance get placed first.' },
+    { icon: 'crown.svg',    title: 'Weekly competitions',             desc: 'Every Saturday, builders compete. Top 10-20% ranked by performance get placed first.' },
     { icon: 'document.svg', title: 'Professional certificate',        desc: 'Receive a certificate and a direct reference from your startup upon completing the pod.' },
     { icon: 'chart.svg',    title: 'Career pipeline',                 desc: 'Pod placement leads to contract work, then full employment in Poland, Netherlands, UAE, and Gulf.' },
     { icon: 'team.svg',     title: 'No bias in selection',           desc: 'Placement is 100% performance-ranked. No CVs. No favourites. Just proof of work.' },
@@ -89,7 +89,7 @@ export default function BuildersPage() {
 
   const howItWorks = [
     { step: 1, icon: 'book.svg',     title: 'Join BlueOx Kampus',          desc: 'Enroll in campus training  fundamentals, modern frameworks, real-world problem-solving.' },
-    { step: 2, icon: 'star.svg',     title: 'Compete every Saturday',       desc: 'Weekly ranked competitions. Top 1020% move to placement. Pure performance  no CVs.' },
+    { step: 2, icon: 'star.svg',     title: 'Compete every Saturday',       desc: 'Weekly ranked competitions. Top 10-20% move to placement. Pure performance  no CVs.' },
     { step: 3, icon: 'target.svg',   title: 'Get matched to a pod',         desc: 'Based on your rank and skill profile, you are matched to a startup pod that fits your stack.' },
     { step: 4, icon: 'rocket.svg',   title: 'Ship weekly. Earn your rep.',  desc: 'Work from campus in your pod. Coordinator manages the client. You build. You ship. You grow.' },
   ];
@@ -152,7 +152,7 @@ export default function BuildersPage() {
                 on Your <span className="text-[#F58220]">CV.</span>
               </h1>
               <p className="font-libre text-base sm:text-lg text-gray-600 italic max-w-3xl mx-auto mb-8">
-                BlueOx Kampus places you in an execution pod with a real startup for 816 weeks. Work from campus. Pay nothing. Compete every Saturday  top performers get placed first.
+                BlueOx Kampus places you in an execution pod with a real startup for 8-16 weeks. Work from campus. Pay nothing. Compete every Saturday - top performers get placed first.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
@@ -179,7 +179,7 @@ export default function BuildersPage() {
                 <div className="font-mono text-gray-500 text-[10px] uppercase tracking-widest">No cost to join</div>
               </div>
               <div className="text-center">
-                <div className="font-bebas text-5xl sm:text-6xl text-[#0044CC] mb-2 uppercase">816wk</div>
+                <div className="font-bebas text-5xl sm:text-6xl text-[#0044CC] mb-2 uppercase">8-16wk</div>
                 <div className="font-mono text-gray-500 text-[10px] uppercase tracking-widest">Pod duration</div>
               </div>
               <div className="text-center">
@@ -307,7 +307,7 @@ export default function BuildersPage() {
 
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {[
-              { icon: 'target.svg',  stage: 'Stage 1', title: 'Pod Builder',       price: '816 weeks', desc: 'Ship for a real startup. Earn your rep. Get certified.' },
+              { icon: 'target.svg',  stage: 'Stage 1', title: 'Pod Builder',       price: '8-16 weeks', desc: 'Ship for a real startup. Earn your rep. Get certified.' },
               { icon: 'dollar.svg',  stage: 'Stage 2', title: 'Contract Work',      price: 'Paid',       desc: 'Proven builders move to paid contracts, managed by campus.' },
               { icon: 'global.svg',  stage: 'Stage 3', title: 'Full Employment',    price: 'Placed',     desc: 'Top performers placed in Poland, Netherlands, UAE, or Gulf.' },
             ].map((stage, index) => (

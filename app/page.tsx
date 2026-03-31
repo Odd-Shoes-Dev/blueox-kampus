@@ -179,7 +179,7 @@ export default function Page() {
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {[
               { label: 'Kampus',       title: 'Train', body: 'VR-powered training. Weekly competitions. Top performers rise to the surface.' },
-              { label: 'Select',       title: 'Rank',  body: 'Every Saturday, builders compete. Only the top 1020% are placed. No CVs. Just proof.' },
+              { label: 'Select',       title: 'Rank',  body: 'Every Saturday, builders compete. Only the top 10-20% are placed. No CVs. Just proof.' },
               { label: 'Your startup', title: 'Ship',  body: 'Weekly deliverables. Pod Coordinator manages everything. Friday report every week.' },
             ].map(({ label, title, body }, index) => (
               <Reveal key={title} delay={0.1 + index * 0.1}>
@@ -234,8 +234,8 @@ export default function Page() {
           <Reveal delay={0.3}>
             <div className="grid md:grid-cols-3 gap-4 mb-10">
               {[
-                { label: 'Freelancer',  val: '$5090/hr', txt: 'No coordinator. No accountability. Often gone by week 3.', hi: false },
-                { label: 'Junior hire', val: '$46k/mo',  txt: '3 months to onboard. You become the manager.', hi: false },
+                { label: 'Freelancer',  val: '$50-90/hr', txt: 'No coordinator. No accountability. Often gone by week 3.', hi: false },
+                { label: 'Junior hire', val: '$4-6k/mo',  txt: '3 months to onboard. You become the manager.', hi: false },
                 { label: 'BlueOx Pod', val: '$199/wk',    txt: 'Coordinated. Shipping in 7 days. Friday report included.', hi: true },
               ].map(({ label, val, txt, hi }) => (
                 <div key={label} className={`bg-white border rounded-none p-6 ${hi ? 'border-[#0044CC]' : 'border-gray-200'}`}>
@@ -311,8 +311,8 @@ export default function Page() {
 
           <div className="space-y-6">
             {[
-              { step: 1, icon: 'planner.svg', title: 'Send your stack + top tasks',    body: 'Tech stack, 35 items from your backlog, timeline. We give you a template. Takes 60 seconds.', time: 'Day 1' },
-              { step: 2, icon: 'team.svg',    title: 'Pick from ranked profiles',      body: '35 competition-ranked builders with portfolios and performance data. You interview. You approve.', time: 'Days 35' },
+              { step: 1, icon: 'planner.svg', title: 'Send your stack + top tasks',    body: 'Tech stack, 3-5 items from your backlog, timeline. We give you a template. Takes 60 seconds.', time: 'Day 1' },
+              { step: 2, icon: 'team.svg',    title: 'Pick from ranked profiles',      body: '3-5 competition-ranked builders with portfolios and performance data. You interview. You approve.', time: 'Days 3-5' },
               { step: 3, icon: 'rocket.svg',  title: 'Kickoff & cadence set',          body: 'Pod Coordinator runs the kickoff call. Weekly sprint cadence agreed. Everything managed from campus.', time: 'Day 7' },
               { step: 4, icon: 'chart.svg',   title: 'Weekly shipping begins',         body: 'Deliverables every week. Pod Report every Friday. Coordinator handles blockers before they hit your Slack.', time: 'Ongoing' },
             ].map((item, i) => (
@@ -378,12 +378,12 @@ export default function Page() {
                   Get an international company on your CV. Ship real work. Build a career.
                 </h2>
                 <p className="font-libre text-gray-600 leading-relaxed italic">
-                  BlueOx Kampus places you in an execution pod with a real startup for 816 weeks. Work from campus. Pay nothing. Compete every Saturday  top performers get placed first.
+                  BlueOx Kampus places you in an execution pod with a real startup for 8-16 weeks. Work from campus. Pay nothing. Compete every Saturday - top performers get placed first.
                 </p>
               </div>
               <div>
                 <ul className="space-y-3 mb-6">
-                  {['Ship real features  not classroom exercises', 'Work from campus: power, fibre, mentorship', 'Weekly competitions  top ranks placed first', 'Professional certificate + reference from startup', 'Pipeline: pod ? contract ? full employment', 'Markets: Poland · Netherlands · UAE · Gulf'].map(f => (
+                  {['Ship real features - not classroom exercises', 'Work from campus: power, fibre, mentorship', 'Weekly competitions - top ranks placed first', 'Professional certificate + reference from startup', 'Pipeline: pod ? contract ? full employment', 'Markets: Poland · Netherlands · UAE · Gulf'].map(f => (
                     <li key={f} className="flex items-start gap-3 text-sm text-gray-600 font-libre">
                       <img src="/icons/check.svg" alt="" className="w-4 h-4 mt-0.5 shrink-0" />
                       {f}
@@ -415,7 +415,7 @@ export default function Page() {
               </div>
               <div>
                 <ul className="space-y-3 mb-6">
-                  {['Students placed in real shipping environments', 'Weekly Pod Report per student', '816 week programs with defined deliverables', 'Certificates, references, portfolio pieces', 'Dashboard: placement, completion, employment rates', 'Zero admin burden on your department'].map(f => (
+                  {['Students placed in real shipping environments', 'Weekly Pod Report per student', '8-16 week programs with defined deliverables', 'Certificates, references, portfolio pieces', 'Dashboard: placement, completion, employment rates', 'Zero admin burden on your department'].map(f => (
                     <li key={f} className="flex items-start gap-3 text-sm text-gray-600 font-libre">
                       <img src="/icons/check.svg" alt="" className="w-4 h-4 mt-0.5 shrink-0" />
                       {f}
