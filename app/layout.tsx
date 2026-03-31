@@ -2,9 +2,9 @@ import './globals.css';
 import { ReactNode } from 'react';
 
 export const metadata = {
-  title: 'Blue Ox Kampus — AI & VR-Powered TVET Training for Refugees & Underserved Communities',
-  description: "Blue Ox Kampus transforms traditional TVET through AI and VR simulation, delivering industry-aligned technical education to refugees, women, persons with disabilities, underserved youth, and students in Western Uganda. Next-generation vocational training bridging talent to opportunity.",
-  keywords: ['TVET Uganda', 'VR training', 'AI-powered TVET', 'technical education', 'refugees', 'Uganda', 'Nakivale Settlement', 'vocational training', 'welding simulation', 'solar installation', 'women empowerment', 'disability inclusion', 'workforce development', 'Blue Ox Kampus', 'simulation-based training', 'modern TVET'],
+  title: 'Blue Ox Kampus — Ship Real Work. Build a Career. Fund a Movement.',
+  description: "Blue Ox Kampus pairs talented software builders and creators with real startups in execution pods. Join a global movement: get international experience, fund kingdom initiatives, and ship products that matter. Pods in campus. Zero cost. Real impact.",
+  keywords: ['execution pods', 'builder placement', 'startup experience', 'technical talent', 'software pods', 'kingdom capital', 'faith-driven investing', 'student placement', 'university partnerships', 'product shipping', 'developer training', 'career pathways', 'international experience', 'Blue Ox Kampus', 'tech ecosystem', 'impact investing'],
 
   authors: [{ name: 'Blue Ox Kampus', url: 'https://www.blueoxkampus.com' }],
   generator: 'Next.js',
@@ -22,8 +22,8 @@ export const metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Blue Ox Kampus — AI & VR-Powered TVET Training',
-    description: "Transforming traditional TVET through AI and VR simulation. Delivering technical training to refugees, women, persons with disabilities, underserved youth, and students across Western Uganda. Zero waste, maximum inclusion.",
+    title: 'Blue Ox Kampus — Ship Real Work. Build a Career. Fund a Movement.',
+    description: "Execution pods connecting builders with startups. Gain international experience, earn certificates, and contribute to kingdom-aligned initiatives. Work from campus. Compete weekly. Get placed in real roles.",
     url: 'https://www.blueoxkampus.com',
     siteName: 'Blue Ox Kampus',
     images: [
@@ -31,7 +31,7 @@ export const metadata = {
         url: '/assets/images/logo.png', 
         width: 1200,
         height: 630,
-        alt: 'Blue Ox Kampus — VR Technical Training for Underserved Communities' 
+        alt: 'Blue Ox Kampus — Builder Execution Pods & Startup Placements' 
       }
     ],
     locale: 'en_US',
@@ -39,8 +39,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Blue Ox Kampus — AI & VR-Powered TVET',
-    description: "Next-generation TVET using AI and VR simulation. Training refugees, women, persons with disabilities, and underserved youth in Western Uganda. 90% lower cost, zero waste, maximum inclusion.",
+    title: 'Blue Ox Kampus — Execution Pods for Builders',
+    description: "Join execution pods with real startups. Get international experience, ship real products, and fund kingdom initiatives. Pay nothing. Work from campus. Compete for premium placements.",
     images: ['/assets/images/logo.png'],
     site: '@blueoxjobs'
   },
@@ -85,8 +85,8 @@ export default function RootLayout({ children }:{children:ReactNode}){
               alternateName: 'BlueOX Kampus',
               url: 'https://www.blueoxkampus.com',
               logo: 'https://www.blueoxkampus.com/assets/images/logo.png',
-              description: "Blue Ox Kampus delivers immersive, industry-aligned technical education to refugees, women, persons with disabilities, underserved youth, and students in Western Uganda through VR-based training programs. From isolation to industry.",
-              mission: "Bridging the last mile between talent and opportunity through accessible, cost-efficient VR-based technical education for underserved communities.",
+              description: "Blue Ox Kampus is a global ecosystem connecting talented builders, universities, and faith-driven investors. We operate execution pods where builders ship real products, students gain international experience, and capital funds kingdom initiatives. From isolation to impact.",
+              mission: "Connecting talented builders with execution pods that ship real products, while channeling returns into kingdom-aligned initiatives and global impact.",
               address: {
                 '@type': 'PostalAddress',
                 addressRegion: 'Western Uganda',
@@ -102,11 +102,11 @@ export default function RootLayout({ children }:{children:ReactNode}){
               },
               areaServed: {
                 '@type': 'Place',
-                name: 'Western Uganda'
+                name: 'Global (Poland, Netherlands, UAE, Gulf)'
               },
               audience: {
                 '@type': 'Audience',
-                audienceType: ['Refugees', 'Women', 'Persons with Disabilities', 'Out-of-school Youth', 'Students']
+                audienceType: ['Builders', 'Software Developers', 'Universities', 'Faith-Driven Investors', 'Startups', 'Impact Partners']
               },
               sameAs: [
                 'https://twitter.com/blueoxjobs'
