@@ -133,15 +133,15 @@ export default function Page() {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
-                    { n: '01', t: 'Build the hub', d: 'We activate church spaces with power, internet, and workspace for young people to create.' },
-                    { n: '02', t: 'Form and train', d: 'Builders are discipled in faith and trained in real-world creative and technical skills.' },
-                    { n: '03', t: 'Deploy the best', d: 'Top performers placed into intern pods serving founders and ministries globally.' },
-                    { n: '04', t: 'Fund the mission', d: 'Pod revenue helps sustain hub operations and expand the model to new nations.' },
+                    { n: '01', t: 'Build the hub', d: 'Activate church spaces with power, internet, and workspace. Create real environments where young builders can dream, create, and collaborate.' },
+                    { n: '02', t: 'Form and train', d: 'Disciple builders in faith and teach them real-world creative and technical skills. Weekly competitions. Mentorship. Community formation.' },
+                    { n: '03', t: 'Deploy the best', d: 'The top 10-20% get placed into paid intern pods serving founders and ministries globally. Real work. Real impact. Real income.' },
+                    { n: '04', t: 'Fund the mission', d: 'Pod revenue sustains hub operations and funds expansion to new nations. One hire. One builder funded. One movement multiplied.' },
                   ].map(s => (
                     <div key={s.n} className="bg-white border border-gray-100 rounded-lg p-6 hover:border-[#0044CC] transition-colors">
                       <div className="font-mono text-[#F58220] text-xs font-black mb-3">{s.n}</div>
-                      <div className="font-bebas text-2xl text-[#0044CC] mb-2 uppercase">{s.t}</div>
-                      <p className="text-xs text-gray-400 font-libre leading-relaxed">{s.d}</p>
+                      <div className="font-bebas text-2xl text-[#0044CC] mb-3 uppercase">{s.t}</div>
+                      <p className="text-sm text-gray-600 font-libre leading-relaxed">{s.d}</p>
                     </div>
                   ))}
                 </div>
@@ -231,24 +231,24 @@ export default function Page() {
                 {
                   s: '01', tag: 'For founders and companies', title: 'Hire an Intern Pod',
                   price: 'From €200/week per person',
-                  body: "Competition-ranked builders deployed into your sprint with a dedicated Pod Coordinator. Pod Report every Friday. Every hire directly funds a builder's free place at the hub.",
-                  get: "Vetted talent, fast. Direct mission funding.",
+                  body: "Top-ranked builders from weekly competitions deployed into your sprint with a dedicated Pod Coordinator managing everything. Weekly deliverables. Friday reports. Every hire directly funds a builder's university education.",
+                  get: "Vetted execution. Direct kingdom impact.",
                   tags: ['Back-end', 'Front-end', 'UI/UX', 'Motion', 'Marketing', 'Ops'],
                   cta: 'REQUEST A POD', href: 'https://www.blueoxjobs.eu/hiring', v: 'primary'
                 },
                 {
                   s: '02', tag: 'For seniors and studios', title: 'Build with oddshoes.dev',
                   price: 'Senior Christian product studio',
-                  body: "Our senior studio builds production-ready software. For churches: 50% below standard rates. For everyone else: 50% of every project helps fund hub activation across Africa.",
-                  get: "Senior studio execution. High-impact budget.",
+                  body: "Senior developers and designers ship production-ready software. For churches: 50% discount. For everyone else: 50% of revenue funds campus activation across Africa and the Global South.",
+                  get: "Senior execution. Measurable impact.",
                   tags: ['Full-stack', 'Product builds', 'Church tools', 'Faith-driven'],
                   cta: 'VISIT ODDSHOES.DEV', href: 'https://oddshoes.dev', v: 'orange'
                 },
                 {
                   s: '03', tag: 'For investors and partners', title: 'Activate a Creative Space',
                   price: '$2,500 per activation',
-                  body: "$2,500 equips one church-based creative space with power, internet, and infrastructure for 50 builders. It creates a real environment for formation all year round.",
-                  get: "Measurable impact. Proven repeatable model.",
+                  body: "One investment. One church building. One creative space with power, internet, and infrastructure for 50 young builders. Proven model. Repeatable. Documented. Deployed globally.",
+                  get: "Documented impact. Proven model.",
                   tags: ['Mbarara', 'Gayaza', 'Kampala', 'Malawi', 'South Africa'],
                   cta: 'TALK TO US', href: 'https://calendly.com/builtbyhouse88/30min', v: 'outline'
                 }
@@ -258,10 +258,10 @@ export default function Page() {
                   <p className="font-mono text-[9px] text-gray-400 uppercase tracking-widest mb-2 font-bold italic">{w.tag}</p>
                   <h3 className="text-3xl font-bebas text-[#0044CC] uppercase mb-1">{w.title}</h3>
                   <p className="font-bebas text-xl text-[#F58220] mb-6">{w.price}</p>
-                  <p className="font-libre italic text-sm text-gray-500 leading-relaxed mb-6 flex-grow">{w.body}</p>
+                  <p className="font-libre italic text-base text-gray-600 leading-relaxed mb-6 flex-grow">{w.body}</p>
                   <div className="bg-blue-50 border border-blue-100 rounded-lg px-4 py-3 mb-6">
                     <span className="font-mono text-[9px] font-black text-[#0044CC] uppercase tracking-widest block mb-1">You get:</span>
-                    <span className="font-libre italic text-sm text-gray-600">{w.get}</span>
+                    <span className="font-libre italic text-base text-gray-700 font-semibold">{w.get}</span>
                   </div>
                   <div className="flex flex-wrap gap-2 mb-8">
                     {w.tags.map(t => (
