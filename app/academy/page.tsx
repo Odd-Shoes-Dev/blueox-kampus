@@ -151,6 +151,24 @@ export default function AcademyPage() {
               <p className="font-libre text-base sm:text-lg text-gray-600 max-w-3xl mx-auto mb-10 italic">
                 Zero material waste. Zero injury risk. 90% lower cost. VR simulation makes world-class TVET training accessible for refugees, women, and youth across Western Uganda.
               </p>
+
+              {/* Video */}
+              <div className="mb-12 mt-8 flex justify-center">
+                <div className="w-full max-w-2xl">
+                  <video 
+                    width="100%" 
+                    height="auto" 
+                    controls
+                    autoPlay
+                    muted
+                    className="w-full h-auto rounded-lg shadow-xl"
+                  >
+                    <source src="/assets/videos/BlueOx_intro.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+
               <div className="flex flex-col sm:flex-row gap-5 justify-center">
                 <button
                   onClick={() => openForm('academy')}
