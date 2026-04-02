@@ -324,13 +324,13 @@ export default function Page() {
         </div>
       </section>
 
-      {/* PRODUCTION LOG / CLIENTS */}
+      {/* TRACK RECORD */}
       <section id="clients" className="bg-white py-20 border-t border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <Reveal>
             <div className="mb-20 text-center max-w-4xl mx-auto">
-              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-4">/ Production Log</div>
-              <h2 className="text-5xl md:text-7xl font-bebas text-[#0044CC] uppercase leading-tight mb-8">WHO WE'VE<br/>SHIPPED FOR</h2>
+              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-4">/ Track record</div>
+              <h2 className="text-5xl md:text-7xl font-bebas text-[#0044CC] uppercase leading-tight mb-8">BUILDERS WHO SHIP.<br/>PRODUCTS THAT EXIST.</h2>
               <p className="font-libre italic text-base md:text-lg text-gray-600">Some of our strongest client relationships sit in child safety, counter-trafficking, family protection, education, and culture-shaping technology. This is what happens when conviction meets craft.</p>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
@@ -338,22 +338,26 @@ export default function Page() {
                 {
                   icon: 'haiven', logo: '/assets/images/haiven/logo.svg', name: 'Haiven', badge: 'Eagle Venture Fund · Counter-trafficking',
                   body: "AI platform backed by Eagle Venture Fund — the world's first dedicated counter-trafficking investment fund. Blue Ox builders contributed software development.",
-                  proof: '50,000+ children protected · 149 victims helped to escape'
+                  proof: '50,000+ children protected · 149 victims helped to escape',
+                  website: 'https://haiven.gg'
                 },
                 {
                   icon: '👁️', logo: '/assets/images/devshield/logo.png', skipLogoBg: true, name: 'DevShield', badge: 'Child safety · Roblox',
                   body: "Real-time protection plugin blocking known predators from Roblox communities before harm reaches children. Blue Ox builders contributed to development.",
-                  proof: 'Protecting children from online predators at scale'
+                  proof: 'Protecting children from online predators at scale',
+                  website: 'https://devshield.gg'
                 },
                 {
-                  icon: '🏠', name: 'OneHaven', badge: 'AI family safety',
-                  body: "Privacy-first AI app protecting families from online predators, scams, and harmful content. Blue Ox builders contributed to product development.",
-                  proof: '100+ families on waitlist'
+                  icon: 'bythefruit', logo: '/assets/images/bythefruit/logo.png', skipLogoBg: true, name: 'By the Fruit', badge: 'Impact Partner · Faith-driven ventures',
+                  body: "Champions faith-driven ventures and impact-focused initiatives. By the Fruit partners with builders and entrepreneurs to create lasting value aligned with kingdom principles, connecting purpose-driven work with community investment.",
+                  proof: '$100M+ in funding across portfolio companies',
+                  website: 'https://bythefruit.com'
                 },
                 {
                   icon: 'diginvision', logo: '/assets/images/diginvision/logo.png', skipLogoBg: true, name: 'Dig in Vision', badge: 'Industrial XR · Europe',
                   body: "Europe's leading industrial VR simulator. Blue Ox builders contributed VR and software work to products shaping real-world training through immersive technology.",
-                  proof: 'Real-world skills training through VR technology'
+                  proof: 'Real-world skills training through VR technology',
+                  website: 'https://www.diginvision.com'
                 }
               ].map((c, i) => (
                 <div key={i} className="border border-gray-100 bg-white p-8 md:p-10 rounded-lg group hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-500 flex flex-col h-full">
@@ -375,9 +379,16 @@ export default function Page() {
                   </div>
                   <p className="font-mono text-[9px] text-[#F58220] font-black uppercase tracking-widest mb-4 italic">{c.badge}</p>
                   <p className="font-libre italic text-gray-600 leading-relaxed mb-8 flex-grow">{c.body}</p>
-                  <div className="pt-6 border-t border-gray-100 flex items-center gap-3">
-                    <span className="text-[#F58220] font-bold">✓</span>
-                    <p className="font-bebas text-[#0044CC] text-sm uppercase tracking-widest">{c.proof}</p>
+                  <div className="space-y-4">
+                    <div className="pt-4 border-t border-gray-100 flex items-center gap-3">
+                      <span className="text-[#F58220] font-bold">✓</span>
+                      <p className="font-bebas text-[#0044CC] text-sm uppercase tracking-widest">{c.proof}</p>
+                    </div>
+                    {(c as any).website && (
+                      <a href={(c as any).website} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[#0044CC] font-bebas text-xs uppercase tracking-widest hover:text-[#F58220] transition-colors">
+                        SEE WEBSITE →
+                      </a>
+                    )}
                   </div>
                 </div>
               ))}
@@ -391,26 +402,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* TRACK RECORD */}
-      <section className="relative py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <Reveal>
-            <div className="text-center">
-              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-4">/ Track record</div>
-              <h2 className="text-4xl md:text-5xl font-bebas text-[#0044CC] mb-4 leading-tight uppercase">Builders who ship. Products that exist.</h2>
-              <p className="font-libre text-gray-600 text-sm mb-6">Builders from our network have shipped for:</p>
-              <div className="flex flex-wrap justify-center gap-3 mb-4">
-                {['Haiven', 'DevShield', 'By The Fruit', 'Dig In Vision'].map(c => (
-                  <span key={c} className="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-full text-sm font-semibold">
-                    {c}
-                  </span>
-                ))}
-              </div>
-              <p className="font-libre text-gray-500 text-sm">Startups backed by millions in pre-seed and seed funding across AI, fintech, and VR.</p>
-            </div>
-          </Reveal>
-        </div>
-      </section>
+
 
       {/* FOR FOUNDERS */}
       <section className="relative py-20 bg-white border-t border-gray-100" id="founders">

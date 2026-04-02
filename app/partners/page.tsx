@@ -46,7 +46,7 @@ export default function PartnersPage() {
       services: ['Impact Investing', 'Faith-Driven Ventures', 'Community Projects', 'Strategic Partnerships'],
       logo: '/assets/images/bythefruit/logo.png',
       skipLogoBg: true,
-      website: 'https://bythe fruit.com'
+      website: 'https://bythefruit.com'
     },
     {
       name: 'Haiven',
@@ -54,7 +54,7 @@ export default function PartnersPage() {
       description: 'Haiven builds community-first chat and interactive experiences for gamers and creators, focusing on honest, non-predatory monetisation and creative connection. They are actively seeking strategic partnerships and collaboration opportunities.',
       services: ['Chat Platform', 'Community Engagement', 'Subscription Products'],
       logo: '/assets/images/haiven/logo.svg',
-      website: 'https://haiven.chat/'
+      website: 'https://haiven.gg'
     }
   ];
 
