@@ -22,16 +22,16 @@ export const metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Blue Ox Kampus — Ship Real Work. Build a Career. Fund a Movement.',
-    description: "Execution pods connecting builders with startups. Gain international experience, earn certificates, and contribute to kingdom-aligned initiatives. Work from campus. Compete weekly. Get placed in real roles.",
+    title: 'Blue Ox Kampus — Execution Pods for Builders',
+    description: 'Raise a global generation of builders, creatives, and storytellers discipled in faith, sharpened in craft, and committed to shaping culture. Execution pods at $199/week. Ship real products. Fund kingdom initiatives.',
     url: 'https://www.blueoxkampus.com',
     siteName: 'Blue Ox Kampus',
     images: [
       { 
-        url: '/assets/images/logo.png', 
+        url: '/assets/images/favicon.png', 
         width: 1200,
         height: 630,
-        alt: 'Blue Ox Kampus — Builder Execution Pods & Startup Placements' 
+        alt: 'Blue Ox Kampus — Raising Builders to Shape Culture' 
       }
     ],
     locale: 'en_US',
@@ -40,9 +40,10 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Blue Ox Kampus — Execution Pods for Builders',
-    description: "Join execution pods with real startups. Get international experience, ship real products, and fund kingdom initiatives. Pay nothing. Work from campus. Compete for premium placements.",
-    images: ['/assets/images/logo.png'],
-    site: '@blueoxjobs'
+    description: "Join execution pods with real startups. Get international experience, ship real products, and fund kingdom initiatives. Training at campus. Competing weekly. Deploying globally.",
+    images: ['/assets/images/favicon.png'],
+    site: '@blueoxjobs',
+    creator: '@blueoxjobs'
   },
   robots: {
     index: true,
@@ -57,9 +58,11 @@ export const metadata = {
     },
   },
   icons: {
-    icon: '/assets/images/logo.png',
-    shortcut: '/assets/images/logo.png',
-    apple: '/assets/images/logo.png',
+    icon: [
+      { url: '/assets/images/favicon.png', type: 'image/png' }
+    ],
+    shortcut: '/assets/images/favicon.png',
+    apple: '/assets/images/favicon.png',
   },
 };
 
@@ -70,11 +73,27 @@ export default function RootLayout({ children }:{children:ReactNode}){
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#F58220" />
-        <link rel="icon" type="image/x-icon" href="/assets/images/logo.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/logo.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/logo.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/logo.png" />
-        <link rel="mask-icon" href="/assets/images/logo.png" color="#F58220" />
+        
+        {/* Favicon References */}
+        <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+        <link rel="shortcut icon" href="/assets/images/favicon.png" />
+        <link rel="apple-touch-icon" href="/assets/images/favicon.png" />
+        
+        {/* GTM - Data Layer Initialization */}
+        <script dangerouslySetInnerHTML={{
+          __html: `window.dataLayer = window.dataLayer || [];`
+        }} />
+        
+        {/* Google Tag Manager */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR-GTM-ID"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YOUR-GTM-ID');
+          `
+        }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -133,6 +152,15 @@ export default function RootLayout({ children }:{children:ReactNode}){
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
       </head>
       <body className="bg-white text-black">
+        {/* Google Tag Manager (noscript block) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=G-YOUR-GTM-ID"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
         {children}
       </body>
     </html>

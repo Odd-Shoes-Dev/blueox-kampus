@@ -158,7 +158,7 @@ export default function Page() {
             <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-4">/ Strategic Partner</div>
             <div className="flex flex-col md:flex-row gap-12 md:gap-20 items-start max-w-5xl">
               <div className="shrink-0 w-20 h-20 md:w-28 md:h-28 rounded-xl flex items-center justify-center shadow-lg relative flex-shrink-0 p-3">
-                <img src="/assets/images/kingdomchaplain/logo.png" alt="Kingdom Chaplain" className="w-full h-full object-contain" />
+                <img src="/assets/images/kingdomchaplain/logo.png" alt="Kingdom Chaplain - Faith-driven venture partner" className="w-full h-full object-contain" />
               </div>
               <div>
                 <h3 className="font-bebas text-5xl md:text-6xl text-[#0044CC] uppercase mb-2">Kingdom Chaplain</h3>
