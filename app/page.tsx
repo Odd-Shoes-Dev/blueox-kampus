@@ -218,6 +218,37 @@ export default function Page() {
         </div>
       </section>
 
+      {/* CAMPUS IN ACTION */}
+      <section className="relative py-20 bg-white border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <Reveal>
+            <div className="text-center mb-12">
+              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-4">/ Inside the Campus</div>
+              <h2 className="text-4xl md:text-5xl font-bebas text-[#0044CC] mb-6 leading-tight uppercase">
+                This is where builders are formed.
+              </h2>
+              <p className="font-libre text-gray-600 max-w-2xl mx-auto italic mb-12">
+                Watch builders compete, create, and collaborate. This is the campus model we're deploying across Africa.
+              </p>
+            </div>
+
+            <div className="flex justify-center">
+              <div className="w-full max-w-4xl">
+                <div className="relative overflow-hidden bg-black rounded-lg shadow-2xl" style={{ paddingBottom: '56.25%', height: 0 }}>
+                  <iframe
+                    className="absolute top-0 left-0 w-full h-full"
+                    src="https://www.youtube.com/embed/r59abfC8z1M?autoplay=1&mute=1&controls=1&rel=0"
+                    title="Blue Ox Kampus Campus Tour"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* THREE WAYS - REPOSITION WITH ENHANCED LAYOUT */}
       <section id="involved" className="relative py-20 bg-white border-t border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
