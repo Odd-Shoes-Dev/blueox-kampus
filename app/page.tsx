@@ -118,10 +118,10 @@ export default function Page() {
               </div>
               <div className="space-y-8">
                 <div className="bg-gray-50 border border-gray-100 rounded-lg p-8 md:p-10">
-                  <p className="font-libre text-lg text-gray-600 leading-relaxed mb-6">
+                  <p className="font-libre text-lg text-[#0044CC] font-semibold leading-relaxed mb-6">
                     We build Christian creative hubs and partner with churches to transform underused spaces into creative environments for Gen Z and Gen Alpha — places where they can <strong>belong, build, become, and encounter God in the process.</strong>
                   </p>
-                  <p className="font-libre text-lg text-gray-600 leading-relaxed">
+                  <p className="font-libre text-lg text-[#0044CC] font-semibold leading-relaxed">
                     We train them. We disciple them. We run weekly competitions. And we deploy the best of them into real work with founders, ministries, and startups around the world.
                   </p>
                 </div>
