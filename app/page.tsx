@@ -2,19 +2,19 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-
-// Import Blue Ox Fonts
 import { Bebas_Neue, Libre_Baskerville, Space_Mono } from 'next/font/google';
 
-const bebasNeue = Bebas_Neue({ weight: '400', subsets: ['latin'], variable: '--font-bebas' });
-const libreBaskerville = Libre_Baskerville({ weight: ['400', '700'], subsets: ['latin'], variable: '--font-libre' });
-const spaceMono = Space_Mono({ weight: ['400', '700'], subsets: ['latin'], variable: '--font-mono' });
+// Import Blue Ox Components
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Reveal from '../components/Reveal';
 import ApplicationForm from '../components/ApplicationForm';
 import InvestorForm from '../components/InvestorForm';
 import BreakdownForm from '../components/BreakdownForm';
+
+const bebasNeue = Bebas_Neue({ weight: '400', subsets: ['latin'], variable: '--font-bebas' });
+const libreBaskerville = Libre_Baskerville({ weight: ['400', '700'], subsets: ['latin'], variable: '--font-libre' });
+const spaceMono = Space_Mono({ weight: ['400', '700'], subsets: ['latin'], variable: '--font-mono' });
 
 export default function Page() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -73,35 +73,11 @@ export default function Page() {
         </div>
       </section>
 
-      {/* MARQUEE */}
-      <div className="w-screen relative left-1/2 -translate-x-1/2 bg-white py-3 border-t border-b border-gray-200">
-        <div className="academy-ticker bg-white" aria-label="Partners and products ticker">
-          <div className="academy-ticker-track">
-            <div className="academy-ticker-group">
-              {['Haiven', 'DevShield', 'By The Fruit', 'Dig In Vision', 'Competition-Ranked Builders', 'No Hiring · Just Output', 'Mbarara Uganda', 'Shipping Globally', 'Redemptive Technology'].map(item => (
-                <span key={item}>
-                  <span className="academy-ticker-item">{item}</span>
-                  <span className="academy-ticker-sep"></span>
-                </span>
-              ))}
-            </div>
-            <div className="academy-ticker-group" aria-hidden="true">
-              {['Haiven', 'DevShield', 'By The Fruit', 'Dig In Vision', 'Competition-Ranked Builders', 'No Hiring · Just Output', 'Mbarara Uganda', 'Shipping Globally', 'Redemptive Technology'].map(item => (
-                <span key={item}>
-                  <span className="academy-ticker-item">{item}</span>
-                  <span className="academy-ticker-sep"></span>
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* EXECUTION INFRASTRUCTURE */}
-      <section className="relative py-16 md:py-24 bg-white">
+      <section className="relative py-3 md:py-4 bg-white">
         <div className="max-w-6xl mx-auto px-6 sm:px-6">
           <Reveal>
-            <div className="mb-16">
+            <div className="mb-6">
               <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-6">/ Execution Infrastructure</div>
               <h2 className="font-bebas text-5xl md:text-7xl text-[#0044CC] leading-tight uppercase">
                 4 Campuses
@@ -135,8 +111,148 @@ export default function Page() {
         </div>
       </section>
 
+      {/* MARQUEE */}
+      <div className="w-screen relative left-1/2 -translate-x-1/2 bg-white py-3 border-t border-b border-gray-200">
+        <div className="academy-ticker bg-white" aria-label="Partners and products ticker">
+          <div className="academy-ticker-track">
+            <div className="academy-ticker-group">
+              {['Haiven', 'DevShield', 'By The Fruit', 'Dig In Vision', 'Competition-Ranked Builders', 'No Hiring · Just Output', 'Mbarara Uganda', 'Shipping Globally', 'Redemptive Technology'].map(item => (
+                <span key={item}>
+                  <span className="academy-ticker-item">{item}</span>
+                  <span className="academy-ticker-sep"></span>
+                </span>
+              ))}
+            </div>
+            <div className="academy-ticker-group" aria-hidden="true">
+              {['Haiven', 'DevShield', 'By The Fruit', 'Dig In Vision', 'Competition-Ranked Builders', 'No Hiring · Just Output', 'Mbarara Uganda', 'Shipping Globally', 'Redemptive Technology'].map(item => (
+                <span key={item}>
+                  <span className="academy-ticker-item">{item}</span>
+                  <span className="academy-ticker-sep"></span>
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* HOW IT WORKS */}
+      <section className="relative py-20 bg-white border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-6 sm:px-6">
+          <Reveal>
+            <div className="mb-16">
+              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-6">/ How It Works</div>
+              <h2 className="font-bebas text-5xl md:text-7xl text-[#0044CC] leading-tight uppercase">
+                THREE<br />
+                STEPS.<br />
+                THAT&apos;S IT.
+              </h2>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                { n: '01', t: 'Tell us what you need', d: 'Share your project, your gaps, and the roles you need filled. Developer, designer, marketer — you decide the mix.' },
+                { n: '02', t: 'We send you profiles in 48hrs', d: 'You review real builder profiles from our campus. You pick the people you want on your team.' },
+                { n: '03', t: 'You ship. We supervise.', d: 'Your pod starts within 7 days. Our campus supervisors keep them accountable. You stay focused on your vision.' },
+              ].map(s => (
+                <div key={s.n} className="bg-white border border-gray-100 rounded-lg p-6 hover:border-[#0044CC] transition-colors">
+                  <div className="font-mono text-[#F58220] text-xs font-black mb-3">{s.n}</div>
+                  <div className="font-bebas text-2xl text-[#0044CC] mb-3 uppercase">{s.t}</div>
+                  <p className="text-sm text-gray-600 font-libre leading-relaxed">{s.d}</p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* DESIGN YOUR POD */}
+      <section className="relative py-3 md:py-4 bg-white border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-6 sm:px-6">
+          <Reveal>
+            <div className="mb-4">
+              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-6">/ Design Your Pod</div>
+              <h2 className="font-bebas text-6xl md:text-8xl text-[#0044CC] leading-tight uppercase font-light">
+                YOUR TEAM.<br />
+                YOUR RULES.
+              </h2>
+              <p className="font-libre text-lg md:text-xl text-gray-600 mt-8 max-w-2xl">
+                You don&apos;t get handed a generic team. You design your own — one role at a time.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-12">
+              {[
+                { role: 'Developer', desc: 'Frontend, backend, or full stack' },
+                { role: 'Designer', desc: 'UI/UX, graphics, brand' },
+                { role: 'Marketer', desc: 'Social media, content, growth' },
+                { role: 'Sales', desc: 'Outreach, leads, conversion' },
+                { role: 'Creator', desc: 'Video, audio, visual content' },
+              ].map((item, idx) => (
+                <div key={idx} className="bg-white border border-gray-100 rounded-lg p-6 hover:border-[#0044CC] transition-colors">
+                  <div className="font-bebas text-xl text-[#0044CC] mb-3 uppercase">{item.role}</div>
+                  <p className="text-sm text-gray-600 font-libre leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.2}>
+            <div className="flex justify-start">
+              <a href="https://www.blueoxjobs.eu/hiring" target="_blank" rel="noopener noreferrer" className="border border-[#0044CC] bg-[#0044CC] text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#0033AA] hover:border-[#0033AA]">
+                DESIGN MY POD →
+              </a>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* WHY TRUST OUR BUILDERS */}
+      <section className="relative py-20 bg-white border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-6 sm:px-6">
+          <Reveal>
+            <div className="mb-16">
+              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-6">/ Why Trust Our Builders</div>
+              <h2 className="font-bebas text-5xl md:text-7xl text-[#0044CC] leading-tight uppercase">
+                TRAINED.<br />
+                TESTED.<br />
+                SUPERVISED.
+              </h2>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+              {[
+                { title: 'Campus-trained from day one', desc: 'Every builder goes through hands-on AI and product development training at our campuses before they touch client work.' },
+                { title: 'Competition-tested', desc: 'Our builders pitch and ship real products in competitions. You get the ones who have already proven they can deliver under pressure.' },
+                { title: 'Supervised daily', desc: 'You\'re not hiring and hoping. Our on-campus supervisors keep your pod accountable so you never have to chase anyone.' },
+              ].map((item, idx) => (
+                <div key={idx} className="bg-white border border-gray-100 rounded-lg p-6 hover:border-[#0044CC] transition-colors">
+                  <div className="font-bebas text-xl text-[#0044CC] mb-3 uppercase">{item.title}</div>
+                  <p className="text-sm text-gray-600 font-libre leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.2}>
+            <div className="mt-12 bg-gray-50 border border-gray-100 rounded-lg p-8 md:p-10">
+              <div className="font-mono text-[#F58220] text-xs font-black mb-2 uppercase tracking-wider">Proven Track Record</div>
+              <div className="font-bebas text-3xl md:text-4xl text-[#0044CC] mb-3 uppercase">15+ Products Shipped Commercially</div>
+              <p className="text-base md:text-lg text-gray-600 font-libre leading-relaxed">
+                Our builders have already taken products to market. Your project isn&apos;t a learning exercise — it&apos;s their next win.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* THE MOVEMENT */}
-      <section id="movement" className="relative py-20 bg-white border-t border-gray-100">
+      <section id="movement" className="relative py-8 md:py-12 bg-white border-t border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <Reveal>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-start">
@@ -184,122 +300,6 @@ export default function Page() {
                   ))}
                 </div>
               </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* WHY TRUST OUR BUILDERS */}
-      <section className="relative py-20 bg-white border-t border-gray-100">
-        <div className="max-w-6xl mx-auto px-6 sm:px-6">
-          <Reveal>
-            <div className="mb-16">
-              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-6">/ Why Trust Our Builders</div>
-              <h2 className="font-bebas text-5xl md:text-7xl text-[#0044CC] leading-tight uppercase">
-                TRAINED.<br />
-                TESTED.<br />
-                SUPERVISED.
-              </h2>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.1}>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-              {[
-                { title: 'Campus-trained from day one', desc: 'Every builder goes through hands-on AI and product development training at our campuses before they touch client work.' },
-                { title: 'Competition-tested', desc: 'Our builders pitch and ship real products in competitions. You get the ones who have already proven they can deliver under pressure.' },
-                { title: 'Supervised daily', desc: 'You\'re not hiring and hoping. Our on-campus supervisors keep your pod accountable so you never have to chase anyone.' },
-              ].map((item, idx) => (
-                <div key={idx} className="bg-white border border-gray-100 rounded-lg p-6 hover:border-[#0044CC] transition-colors">
-                  <div className="font-bebas text-xl text-[#0044CC] mb-3 uppercase">{item.title}</div>
-                  <p className="text-sm text-gray-600 font-libre leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.2}>
-            <div className="mt-12 bg-gray-50 border border-gray-100 rounded-lg p-8 md:p-10">
-              <div className="font-mono text-[#F58220] text-xs font-black mb-2 uppercase tracking-wider">Proven Track Record</div>
-              <div className="font-bebas text-3xl md:text-4xl text-[#0044CC] mb-3 uppercase">15+ Products Shipped Commercially</div>
-              <p className="text-base md:text-lg text-gray-600 font-libre leading-relaxed">
-                Our builders have already taken products to market. Your project isn&apos;t a learning exercise — it&apos;s their next win.
-              </p>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* HOW IT WORKS */}
-      <section className="relative py-20 bg-white border-t border-gray-100">
-        <div className="max-w-6xl mx-auto px-6 sm:px-6">
-          <Reveal>
-            <div className="mb-16">
-              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-6">/ How It Works</div>
-              <h2 className="font-bebas text-5xl md:text-7xl text-[#0044CC] leading-tight uppercase">
-                THREE<br />
-                STEPS.<br />
-                THAT&apos;S IT.
-              </h2>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.1}>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                { n: '01', t: 'Tell us what you need', d: 'Share your project, your gaps, and the roles you need filled. Developer, designer, marketer — you decide the mix.' },
-                { n: '02', t: 'We send you profiles in 48hrs', d: 'You review real builder profiles from our campus. You pick the people you want on your team.' },
-                { n: '03', t: 'You ship. We supervise.', d: 'Your pod starts within 7 days. Our campus supervisors keep them accountable. You stay focused on your vision.' },
-              ].map(s => (
-                <div key={s.n} className="bg-white border border-gray-100 rounded-lg p-6 hover:border-[#0044CC] transition-colors">
-                  <div className="font-mono text-[#F58220] text-xs font-black mb-3">{s.n}</div>
-                  <div className="font-bebas text-2xl text-[#0044CC] mb-3 uppercase">{s.t}</div>
-                  <p className="text-sm text-gray-600 font-libre leading-relaxed">{s.d}</p>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* DESIGN YOUR POD */}
-      <section className="relative py-20 bg-white border-t border-gray-100">
-        <div className="max-w-6xl mx-auto px-6 sm:px-6">
-          <Reveal>
-            <div className="mb-16">
-              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-6">/ Design Your Pod</div>
-              <h2 className="font-bebas text-6xl md:text-8xl text-[#0044CC] leading-tight uppercase font-light">
-                YOUR TEAM.<br />
-                YOUR RULES.
-              </h2>
-              <p className="font-libre text-lg md:text-xl text-gray-600 mt-8 max-w-2xl">
-                You don&apos;t get handed a generic team. You design your own — one role at a time.
-              </p>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.1}>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-12">
-              {[
-                { role: 'Developer', desc: 'Frontend, backend, or full stack' },
-                { role: 'Designer', desc: 'UI/UX, graphics, brand' },
-                { role: 'Marketer', desc: 'Social media, content, growth' },
-                { role: 'Sales', desc: 'Outreach, leads, conversion' },
-                { role: 'Creator', desc: 'Video, audio, visual content' },
-              ].map((item, idx) => (
-                <div key={idx} className="bg-white border border-gray-100 rounded-lg p-6 hover:border-[#0044CC] transition-colors">
-                  <div className="font-bebas text-xl text-[#0044CC] mb-3 uppercase">{item.role}</div>
-                  <p className="text-sm text-gray-600 font-libre leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.2}>
-            <div className="flex justify-start">
-              <a href="https://www.blueoxjobs.eu/hiring" target="_blank" rel="noopener noreferrer" className="border border-[#0044CC] bg-[#0044CC] text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#0033AA] hover:border-[#0033AA]">
-                DESIGN MY POD →
-              </a>
             </div>
           </Reveal>
         </div>
