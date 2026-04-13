@@ -332,21 +332,26 @@ export default function Page() {
       {/* FOUNDER STORY */}
       <section id="founder" className="bg-[#0044CC] text-white py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <Reveal>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-center">
-              <div className="relative group">
-                <div className="aspect-[4/5] bg-blue-900 rounded-lg overflow-hidden relative border border-white/10">
-                  <img 
-                    src="/assets/images/obed.jpg" 
-                    alt="Obed - Founder and CEO"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <div className="absolute -bottom-8 -right-4 md:-right-10 bg-[#F58220] p-8 md:p-10 rounded-lg shadow-2xl border border-[#EE5500]">
-                  <p className="font-bebas text-4xl md:text-5xl leading-none text-[#0044CC] mb-2">OBED</p>
-                  <p className="font-mono text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-[#0044CC]">Founder and CEO</p>
-                </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-center">
+            {/* Image col — no Reveal wrapper so it never blocks layout */}
+            <div className="relative group">
+              <div className="aspect-[4/5] bg-blue-900 rounded-lg overflow-hidden relative border border-white/10">
+                <img 
+                  src="/assets/images/obed.jpg" 
+                  alt="Obed - Founder and CEO"
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                />
               </div>
+              <div className="absolute -bottom-8 -right-4 md:-right-10 bg-[#F58220] p-8 md:p-10 rounded-lg shadow-2xl border border-[#EE5500]">
+                <p className="font-bebas text-4xl md:text-5xl leading-none text-[#0044CC] mb-2">OBED</p>
+                <p className="font-mono text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-[#0044CC]">Founder and CEO</p>
+              </div>
+            </div>
+            {/* Text col — Reveal only here */}
+            <Reveal>
               <div className="space-y-8 text-lg md:text-xl font-libre italic leading-relaxed text-blue-50/90">
                 <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider">/ The Founder</div>
                 <p>I spent years recruiting developers for European & US companies in the Polish market. I was finding talent everywhere — except back home in Africa.</p>
@@ -367,8 +372,8 @@ export default function Page() {
                   </a>
                 </div>
               </div>
-            </div>
-          </Reveal>
+            </Reveal>
+          </div>
         </div>
       </section>
 

@@ -10,7 +10,7 @@ type RevealProps = {
   once?: boolean;
 };
 
-export default function Reveal({ children, className = '', threshold = 0.12, rootMargin = '0px', delay = 0, once = true }: RevealProps){
+export default function Reveal({ children, className = '', threshold = 0.08, rootMargin = '120px 0px', delay = 0, once = true }: RevealProps){
   const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -47,8 +47,8 @@ export default function Reveal({ children, className = '', threshold = 0.12, roo
         }
       });
     }, { 
-      threshold: isMobile ? 0.05 : threshold, // Lower threshold for mobile
-      rootMargin: isMobile ? '50px' : rootMargin // Earlier trigger on mobile
+      threshold: isMobile ? 0.02 : threshold,
+      rootMargin: isMobile ? '150px' : rootMargin // Trigger well before section enters viewport
     });
 
     obs.observe(el);
