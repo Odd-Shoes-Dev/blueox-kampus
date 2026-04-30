@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Request a free execution pod — Redemptive Build Pods Cohort 01. A full 3-builder pod for Christian founders. 4–8 weeks free depending on your stage.">
+<title>Request Your Pod — Redemptive Build Pods Cohort 01</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@700;800;900&family=Playfair+Display:ital,wght@0,500;1,400;1,500;1,600&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+:root {
+  --blue:       #0044CC;
+  --blue-dark:  #0033AA;
+  --blue-light: rgba(0,68,204,0.06);
+  --orange:     #F58220;
+  --orange-light: rgba(245,130,32,0.08);
+  --black:      #111111;
+  --cream:      #FDFAF4;
+  --cream-dark: #F5F0E8;
+  --white:      #FFFFFF;
+  --border:     #E2DDD4;
+  --muted:      #7A7060;
+  --text:       #1A1209;
+  --font-h:     'Exo 2', 'Arial Narrow', Impact, sans-serif;
+  --font-b:     'DM Sans', -apple-system, Helvetica, Arial, sans-serif;
+  --font-s:     'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-m:     'JetBrains Mono', 'Courier New', monospace;
+  --ease:       cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  font-family: var(--font-b);
+  background: var(--cream);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============ NAV ============ */
+nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  position: sticky; top: 0;
+  background: var(--cream);
+  z-index: 100;
+}
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo-img { width: 36px; height: 36px; object-fit: contain; }
+.logo-img-placeholder {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--orange); display: flex; align-items: center;
+  justify-content: center; flex-shrink: 0;
+}
+.logo-img-placeholder span { font-family: var(--font-h); font-weight: 900; font-size: 14px; color: var(--white); }
+.logo-text { display: flex; flex-direction: column; gap: 1px; }
+.logo-main { font-family: var(--font-h); font-weight: 900; font-size: 15px; letter-spacing: 0.05em; color: var(--blue); text-transform: uppercase; line-height: 1; }
+.logo-main b { color: var(--orange); font-weight: 900; }
+.logo-sub { font-family: var(--font-m); font-size: 8px; font-weight: 500; letter-spacing: 0.12em; color: var(--muted); text-transform: uppercase; line-height: 1; }
+.nav-pill {
+  background: var(--orange); color: var(--white);
+  font-family: var(--font-m); font-size: 9px; font-weight: 700;
+  letter-spacing: 0.12em; padding: 5px 12px;
+  border-radius: 0; text-transform: uppercase; white-space: nowrap;
+}
+
+/* ============ EYEBROW ============ */
+.eyebrow-wrap {
+  padding: 2.5rem 1.25rem 0;
+}
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--font-m); font-size: 10px; font-weight: 600;
+  letter-spacing: 0.18em; color: var(--orange); text-transform: uppercase;
+  border: 1px solid var(--border);
+  padding: 6px 14px 6px 10px;
+  border-radius: 999px;
+}
+.eyebrow::before {
+  content: '/'; font-size: 12px; color: var(--orange); font-weight: 700;
+}
+
+/* ============ HERO ============ */
+.hero { padding: 2rem 1.25rem 1rem; }
+
+h1 {
+  font-family: var(--font-h);
+  font-weight: 900;
+  font-size: clamp(56px, 17vw, 120px);
+  line-height: 0.9;
+  text-transform: uppercase;
+  color: var(--blue);
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+h1 .outline {
+  -webkit-text-stroke: 3px var(--blue);
+  color: transparent;
+  display: block;
+}
+
+.tagline {
+  font-family: var(--font-s);
+  font-size: clamp(20px, 4vw, 28px);
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.hero-cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 3rem; }
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--blue); color: var(--white);
+  font-family: var(--font-h); font-weight: 700; font-size: 13px;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 14px 24px; border: none; cursor: pointer;
+  transition: background 0.25s var(--ease), transform 0.15s;
+  text-decoration: none; border-radius: 0;
+  min-height: 48px;
+}
+.btn-primary:hover { background: var(--blue-dark); transform: translateY(-2px); }
+.btn-outline {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: var(--blue);
+  font-family: var(--font-h); font-weight: 700; font-size: 13px;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 13px 24px; border: 2px solid var(--blue); cursor: pointer;
+  transition: all 0.25s var(--ease);
+  text-decoration: none; border-radius: 0;
+  min-height: 48px;
+}
+.btn-outline:hover { background: var(--blue); color: var(--white); }
+
+/* ============ PRICING STRIP ============ */
+.pricing-strip {
+  background: var(--black);
+  padding: 1.5rem 1.25rem;
+  display: flex; flex-direction: column; gap: 10px;
+  margin-bottom: 0;
+}
+.strip-numbers { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.strip-free {
+  font-family: var(--font-h); font-weight: 900; font-size: 32px;
+  color: var(--orange); text-transform: uppercase; line-height: 1;
+  letter-spacing: -0.02em;
+}
+.strip-arrow { font-family: var(--font-m); font-size: 14px; color: rgba(255,255,255,0.3); }
+.strip-paid {
+  font-family: var(--font-h); font-weight: 900; font-size: 32px;
+  color: var(--white); line-height: 1; letter-spacing: -0.02em;
+}
+.strip-paid small { font-size: 16px; font-weight: 400; font-family: var(--font-b); }
+.strip-note { font-family: var(--font-b); font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.5; }
+.strip-note strong { color: rgba(255,255,255,0.75); font-weight: 500; }
+
+/* ============ STAGE SELECTOR ============ */
+.section-wrap { padding: 3rem 1.25rem 0; }
+.section-label {
+  font-family: var(--font-m); font-size: 10px; font-weight: 600;
+  letter-spacing: 0.18em; color: var(--orange); text-transform: uppercase;
+  margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px;
+}
+.section-label::before { content: '/'; }
+
+.selector-prompt {
+  font-family: var(--font-b); font-size: 13px; color: var(--muted);
+  margin-bottom: 1.25rem;
+}
+
+.stages { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); }
+.stage-btn {
+  background: var(--white);
+  padding: 1.1rem 1.25rem;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  cursor: pointer; border: none; border-left: 4px solid transparent;
+  border-bottom: 1px solid var(--border);
+  text-align: left; width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.2s var(--ease), border-color 0.2s;
+}
+.stage-btn:last-child { border-bottom: none; }
+.stage-btn:hover { background: var(--cream); }
+.stage-btn.active { border-left-color: var(--blue); background: var(--blue-light); }
+.stage-btn.active-o { border-left-color: var(--orange); background: var(--orange-light); }
+
+.stage-left { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0; }
+.stage-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  border: 2px solid var(--border); flex-shrink: 0;
+  transition: all 0.2s;
+}
+.stage-btn.active .stage-dot { background: var(--blue); border-color: var(--blue); }
+.stage-btn.active-o .stage-dot { background: var(--orange); border-color: var(--orange); }
+.stage-text { min-width: 0; }
+.stage-name {
+  font-family: var(--font-h); font-weight: 800; font-size: 14px;
+  text-transform: uppercase; letter-spacing: 0.04em; color: var(--text); display: block;
+  line-height: 1.2;
+}
+.stage-btn.active .stage-name { color: var(--blue); }
+.stage-btn.active-o .stage-name { color: var(--orange); }
+.stage-desc { font-family: var(--font-b); font-size: 12px; color: var(--muted); display: block; margin-top: 2px; }
+.stage-right { text-align: right; flex-shrink: 0; }
+.stage-free {
+  font-family: var(--font-h); font-weight: 800; font-size: 14px;
+  color: var(--blue); text-transform: uppercase; display: block; line-height: 1.2;
+}
+.stage-btn.active-o .stage-free { color: var(--orange); }
+.stage-then { font-family: var(--font-b); font-size: 11px; color: var(--muted); display: block; margin-top: 2px; }
+
+/* ============ OFFER PANEL ============ */
+.offer-panel { display: none; }
+.offer-panel.show { display: block; }
+
+.offer-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0; border: 1px solid var(--border); border-top: none;
+  background: var(--border);
+}
+.offer-cell { padding: 1.25rem; background: var(--blue); gap: 1px; }
+.offer-cell.wh { background: var(--white); }
+.offer-eye {
+  font-family: var(--font-m); font-size: 9px; font-weight: 600;
+  letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 6px;
+  color: rgba(255,255,255,0.45);
+}
+.offer-cell.wh .offer-eye { color: var(--orange); }
+.offer-big {
+  font-family: var(--font-h); font-weight: 900; font-size: 26px;
+  line-height: 1; margin-bottom: 4px; color: var(--white);
+  letter-spacing: -0.02em;
+}
+.offer-cell.wh .offer-big { color: var(--blue); }
+.offer-big small { font-size: 14px; font-weight: 400; font-family: var(--font-b); }
+.offer-sm { font-family: var(--font-b); font-size: 11px; line-height: 1.4; color: rgba(255,255,255,0.45); }
+.offer-cell.wh .offer-sm { color: var(--muted); }
+.offer-context {
+  background: var(--cream-dark); padding: 1rem 1.25rem;
+  font-family: var(--font-s); font-size: 14px; font-style: italic;
+  color: var(--muted); line-height: 1.6;
+  border: 1px solid var(--border); border-top: none;
+}
+
+/* ============ SPOTS ============ */
+.spots-wrap {
+  padding: 1.5rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+.spots-track { display: flex; gap: 6px; margin-bottom: 8px; flex-wrap: wrap; }
+.spot { width: 24px; height: 8px; border-radius: 0; background: var(--blue); }
+.spot.gone { background: var(--border); }
+.spots-txt { font-family: var(--font-b); font-size: 13px; color: var(--muted); }
+.spots-txt strong { color: var(--blue); font-weight: 600; }
+
+/* ============ PROOF ============ */
+.proof {
+  margin: 2.5rem 1.25rem;
+  border-left: 4px solid var(--orange);
+  padding: 1rem 1.25rem;
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.proof-title {
+  font-family: var(--font-m); font-weight: 600; font-size: 10px;
+  text-transform: uppercase; letter-spacing: 0.14em;
+  color: var(--orange); margin-bottom: 6px;
+}
+.proof-body { font-family: var(--font-b); font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+/* ============ HOW IT WORKS ============ */
+.how-wrap { padding: 3rem 1.25rem 0; }
+.big-label {
+  font-family: var(--font-h); font-weight: 900;
+  font-size: clamp(42px, 11vw, 72px);
+  text-transform: uppercase; color: var(--blue);
+  line-height: 0.92; letter-spacing: -0.02em;
+  margin-bottom: 2.5rem;
+}
+
+.steps-grid { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+.step {
+  background: var(--white); padding: 1.5rem 1.25rem;
+  transition: background 0.2s;
+}
+.step:hover { background: var(--cream); }
+.step-num {
+  font-family: var(--font-m); font-weight: 700; font-size: 11px;
+  color: var(--orange); letter-spacing: 0.1em;
+  margin-bottom: 0.6rem; display: block;
+}
+.step-title {
+  font-family: var(--font-h); font-weight: 800; font-size: 15px;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  color: var(--blue); margin-bottom: 0.5rem;
+}
+.step-desc { font-family: var(--font-b); font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+/* ============ FORM ============ */
+.rule { border: none; border-top: 2px solid var(--border); margin: 3rem 0 0; }
+.form-section { padding: 2.5rem 1.25rem 4rem; }
+
+.form-title {
+  font-family: var(--font-h); font-weight: 900;
+  font-size: clamp(36px, 9vw, 54px);
+  text-transform: uppercase; color: var(--blue);
+  line-height: 0.92; letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+.form-sub {
+  font-family: var(--font-s); font-size: 16px; font-style: italic;
+  color: var(--muted); margin-bottom: 2rem;
+}
+
+.selected-offer {
+  background: var(--blue-light); border: 1px solid rgba(0,68,204,0.2);
+  padding: 0.85rem 1rem; margin-bottom: 1.5rem;
+  display: none; align-items: center; justify-content: space-between; gap: 8px;
+}
+.selected-offer.show { display: flex; }
+.selected-offer.orange { background: var(--orange-light); border-color: rgba(245,130,32,0.25); }
+.sel-stage { font-family: var(--font-m); font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; }
+.sel-offer {
+  font-family: var(--font-h); font-weight: 900; font-size: 16px;
+  color: var(--blue); text-transform: uppercase; white-space: nowrap; letter-spacing: 0.02em;
+}
+.selected-offer.orange .sel-offer { color: var(--orange); }
+
+.field { margin-bottom: 1.1rem; }
+label {
+  display: block; font-family: var(--font-m); font-size: 9px;
+  font-weight: 600; letter-spacing: 0.16em; color: var(--muted);
+  text-transform: uppercase; margin-bottom: 6px;
+}
+
+input[type=text], input[type=email], select, textarea {
+  display: block; width: 100%;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  padding: 13px 14px;
+  font-family: var(--font-b); font-size: 16px;
+  color: var(--text); outline: none;
+  -webkit-appearance: none; appearance: none;
+  transition: border-color 0.2s var(--ease);
+}
+input[type=text]:focus, input[type=email]:focus, select:focus, textarea:focus {
+  border-color: var(--blue);
+  background: var(--white);
+}
+input::placeholder, textarea::placeholder { color: #BBB4A8; }
+select {
+  color: var(--muted); cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237A7060' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 14px center;
+  padding-right: 40px;
+}
+textarea { resize: vertical; min-height: 90px; line-height: 1.6; }
+.g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+.roles { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.role {
+  border: 1px solid var(--border); background: var(--white);
+  padding: 11px 12px; cursor: pointer;
+  display: flex; align-items: center; gap: 9px;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.2s var(--ease);
+}
+.role:hover { border-color: var(--blue); }
+.role.sel { border-color: var(--blue); background: var(--blue-light); }
+.role-box {
+  width: 14px; height: 14px; border: 1.5px solid var(--border);
+  flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s; border-radius: 0;
+}
+.role.sel .role-box { background: var(--blue); border-color: var(--blue); }
+.role.sel .role-box::after {
+  content: ''; width: 6px; height: 4px;
+  border-left: 1.5px solid #fff; border-bottom: 1.5px solid #fff;
+  transform: rotate(-45deg) translateY(-1px); display: block;
+}
+.role-lbl { font-family: var(--font-b); font-size: 13px; color: var(--muted); font-weight: 500; }
+.role.sel .role-lbl { color: var(--blue); font-weight: 600; }
+
+.err { font-family: var(--font-b); font-size: 12px; color: #D9534F; margin-top: 8px; display: none; }
+.err a { color: #D9534F; }
+
+.submit-btn {
+  display: block; width: 100%;
+  background: var(--blue); color: var(--white);
+  border: none; border-radius: 0;
+  padding: 18px; cursor: pointer;
+  font-family: var(--font-h); font-weight: 900;
+  font-size: 18px; letter-spacing: 0.08em; text-transform: uppercase;
+  margin-top: 1.5rem; min-height: 56px;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.25s var(--ease), transform 0.15s;
+}
+.submit-btn:hover { background: var(--blue-dark); transform: translateY(-2px); }
+.submit-btn:active { transform: translateY(0); }
+.submit-btn:disabled { background: #BBB4A8; cursor: not-allowed; transform: none; }
+
+.fine {
+  font-family: var(--font-s); font-size: 12px; font-style: italic;
+  color: #BBB4A8; text-align: center; margin-top: 1rem; line-height: 1.7;
+}
+
+/* ============ SUCCESS ============ */
+.success { display: none; padding: 4rem 1.25rem; text-align: center; }
+.success-mark {
+  width: 56px; height: 56px; border: 2px solid var(--blue);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1.5rem; font-size: 22px; color: var(--blue);
+}
+.success-title {
+  font-family: var(--font-h); font-weight: 900;
+  font-size: clamp(36px, 9vw, 54px);
+  text-transform: uppercase; color: var(--blue);
+  line-height: 0.92; letter-spacing: -0.02em; margin-bottom: 1.25rem;
+}
+.success-body {
+  font-family: var(--font-s); font-size: 16px; font-style: italic;
+  color: var(--muted); line-height: 1.8;
+}
+
+/* ============ FOOTER ============ */
+footer {
+  background: var(--black); padding: 2rem 1.25rem; text-align: center;
+  border-top: 1px solid #222;
+}
+.foot-logo-row { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 6px; }
+.foot-logo-main {
+  font-family: var(--font-h); font-weight: 900; font-size: 15px;
+  letter-spacing: 0.05em; color: var(--blue); text-transform: uppercase;
+  text-decoration: none;
+}
+.foot-logo-main b { color: var(--orange); }
+.foot-sub {
+  font-family: var(--font-m); font-size: 8px; font-weight: 500;
+  letter-spacing: 0.14em; color: rgba(255,255,255,0.2);
+  text-transform: uppercase; display: block; margin-bottom: 8px;
+}
+footer p { font-family: var(--font-b); font-size: 11px; color: rgba(255,255,255,0.2); line-height: 1.6; }
+
+/* ============ TABLET 480px+ ============ */
+@media (min-width: 480px) {
+  nav, .eyebrow-wrap, .hero, .section-wrap, .how-wrap,
+  .form-section, .spots-wrap, .proof { padding-left: 2rem; padding-right: 2rem; }
+  .roles { grid-template-columns: 1fr 1fr 1fr; }
+  .pricing-strip { flex-direction: row; align-items: center; padding: 1.5rem 2rem; }
+  .strip-note { margin-left: auto; text-align: right; }
+}
+
+/* ============ DESKTOP 768px+ ============ */
+@media (min-width: 768px) {
+  nav, .eyebrow-wrap, .hero, .section-wrap, .how-wrap,
+  .form-section, .spots-wrap, .proof { padding-left: 3rem; padding-right: 3rem; }
+  .pricing-strip { padding: 1.5rem 3rem; }
+  h1 { font-size: clamp(80px, 10vw, 130px); }
+  .tagline { font-size: clamp(22px, 2.5vw, 30px); }
+  .steps-grid { flex-direction: row; }
+  .step { flex: 1; }
+  .g2 { grid-template-columns: 1fr 1fr; }
+  .form-section { max-width: 720px; }
+  .offer-grid { grid-template-columns: 1fr 1fr 1fr 1fr; }
+}
+
+/* ============ WIDE 1024px+ ============ */
+@media (min-width: 1024px) {
+  nav, .eyebrow-wrap, .hero, .section-wrap, .how-wrap,
+  .form-section, .spots-wrap, .proof { padding-left: 4rem; padding-right: 4rem; }
+  .pricing-strip { padding: 1.5rem 4rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="https://blueoxkampus.com" class="logo">
+    <div class="logo-img-placeholder"><span>B</span></div>
+    <div class="logo-text">
+      <span class="logo-main">BLUE OX <b>KAMPUS</b></span>
+      <span class="logo-sub">Redemptive Build Pods</span>
+    </div>
+  </a>
+  <div class="nav-pill">Cohort 01 — Open</div>
+</nav>
+
+<!-- EYEBROW -->
+<div class="eyebrow-wrap">
+  <span class="eyebrow">For Christian Founders</span>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>
+    YOU'VE BUILT IT.<br>
+    <span class="outline">NOW LET'S</span><br>
+    SHIP IT.
+  </h1>
+  <p class="tagline">We fix that.</p>
+  <div class="hero-cta-row">
+    <a href="#request" class="btn-primary">Request Your Pod →</a>
+    <a href="#how" class="btn-outline">See How It Works</a>
+  </div>
+</div>
+
+<!-- PRICING STRIP -->
+<div class="pricing-strip">
+  <div class="strip-numbers">
+    <span class="strip-free">4–8 Weeks Free</span>
+    <span class="strip-arrow">→</span>
+    <span class="strip-paid">$199<small>/wk</small></span>
+  </div>
+  <p class="strip-note"><strong>Full 3-builder pod.</strong> Not per person. One team, one price.</p>
+</div>
+
+<!-- STAGE SELECTOR -->
+<div class="section-wrap">
+  <p class="section-label">Select Your Stage</p>
+  <p class="selector-prompt">Your free period depends on where you are. Pick your stage to see your exact offer.</p>
+</div>
+
+<div style="padding: 0 1.25rem;">
+  <div class="stages">
+    <button class="stage-btn" id="btn-ideation" onclick="selectStage('ideation')" aria-label="Ideation stage">
+      <div class="stage-left">
+        <div class="stage-dot"></div>
+        <div class="stage-text">
+          <span class="stage-name">Ideation / Concept</span>
+          <span class="stage-desc">I have an idea. Nothing built yet.</span>
+        </div>
+      </div>
+      <div class="stage-right">
+        <span class="stage-free">8 Weeks Free</span>
+        <span class="stage-then">then $199/wk</span>
+      </div>
+    </button>
+    <button class="stage-btn" id="btn-mvp" onclick="selectStage('mvp')" aria-label="MVP stage">
+      <div class="stage-left">
+        <div class="stage-dot"></div>
+        <div class="stage-text">
+          <span class="stage-name">MVP Stage</span>
+          <span class="stage-desc">Something exists. Not launched yet.</span>
+        </div>
+      </div>
+      <div class="stage-right">
+        <span class="stage-free">6 Weeks Free</span>
+        <span class="stage-then">then $199/wk</span>
+      </div>
+    </button>
+    <button class="stage-btn active-o" id="btn-revenue" onclick="selectStage('revenue')" aria-label="Post-revenue stage">
+      <div class="stage-left">
+        <div class="stage-dot"></div>
+        <div class="stage-text">
+          <span class="stage-name">Post-Revenue</span>
+          <span class="stage-desc">Live product. Paying customers.</span>
+        </div>
+      </div>
+      <div class="stage-right">
+        <span class="stage-free">4 Weeks Free</span>
+        <span class="stage-then">then $199/wk</span>
+      </div>
+    </button>
+  </div>
+</div>
+
+<!-- OFFER PANEL -->
+<div class="offer-panel" id="offer-panel" style="padding: 0 1.25rem;">
+  <div class="offer-grid">
+    <div class="offer-cell">
+      <p class="offer-eye">Your free period</p>
+      <p class="offer-big" id="o-free">—</p>
+      <p class="offer-sm">Donate what you can. No minimum.</p>
+    </div>
+    <div class="offer-cell wh">
+      <p class="offer-eye">From week <span id="o-week">—</span></p>
+      <p class="offer-big">$199<small>/wk</small></p>
+      <p class="offer-sm">Full pod. 3 builders. Not per person.</p>
+    </div>
+    <div class="offer-cell">
+      <p class="offer-eye">Kickoff</p>
+      <p class="offer-big">7 Days</p>
+      <p class="offer-sm">Request to first sprint.</p>
+    </div>
+    <div class="offer-cell wh">
+      <p class="offer-eye">Accountability</p>
+      <p class="offer-big">Weekly</p>
+      <p class="offer-sm">Friday Pod Report.</p>
+    </div>
+  </div>
+  <p class="offer-context" id="o-note"></p>
+</div>
+
+<!-- SPOTS -->
+<div class="spots-wrap" style="margin-top: 2rem;">
+  <div class="spots-track" aria-label="7 of 10 spots remaining">
+    <div class="spot"></div><div class="spot"></div><div class="spot"></div>
+    <div class="spot"></div><div class="spot"></div><div class="spot"></div>
+    <div class="spot"></div><div class="spot gone"></div>
+    <div class="spot gone"></div><div class="spot gone"></div>
+  </div>
+  <p class="spots-txt"><strong>7 spots remaining</strong> across all tiers. We cap at 10 this cohort.</p>
+</div>
+
+<!-- PROOF -->
+<div class="proof">
+  <p class="proof-title">Already shipped for</p>
+  <p class="proof-body">Haiven (counter-trafficking AI · Eagle Venture Fund) · DevShield (child safety · Roblox) · By The Fruit ($100M+ kingdom portfolio) · Dig In Vision (industrial VR · Europe). We build for founders building things that matter.</p>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="how-wrap" id="how">
+  <p class="section-label">How It Works</p>
+  <p class="big-label">THREE<br>STEPS.<br>THAT'S IT.</p>
+</div>
+
+<div style="padding: 0 1.25rem 3rem;">
+  <div class="steps-grid">
+    <div class="step">
+      <span class="step-num">01</span>
+      <p class="step-title">Tell us what you need</p>
+      <p class="step-desc">Fill in the form below. Your vision, your stage, the roles you need. Takes 2 minutes.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">02</span>
+      <p class="step-title">We confirm fit in 24 hours</p>
+      <p class="step-desc">We only work with Christian founders building redemptive technology. Every submission reviewed carefully.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">03</span>
+      <p class="step-title">You ship. We supervise.</p>
+      <p class="step-desc">Pod starts within 7 days. Campus supervisors keep builders accountable. Friday report every week.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FORM -->
+<hr class="rule">
+<div class="form-section" id="request">
+  <div id="bx-fs">
+    <p class="section-label">Request Your Pod</p>
+    <p class="form-title">JOIN<br>COHORT 01.</p>
+    <p class="form-sub">We respond within 24 hours. No hard sell — just a conversation.</p>
+
+    <div class="selected-offer" id="form-offer-display">
+      <span class="sel-stage" id="form-stage-label">—</span>
+      <span class="sel-offer" id="form-offer-label">—</span>
+    </div>
+
+    <div class="field">
+      <label for="fn">Your Name *</label>
+      <input type="text" id="fn" placeholder="First and last name" autocomplete="name">
+    </div>
+    <div class="g2">
+      <div class="field">
+        <label for="fe">Email *</label>
+        <input type="email" id="fe" placeholder="you@company.com" autocomplete="email" inputmode="email">
+      </div>
+      <div class="field">
+        <label for="fc">Company / Project</label>
+        <input type="text" id="fc" placeholder="What you're building">
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="fst">Your Stage *</label>
+      <select id="fst" onchange="syncStageFromForm()">
+        <option value="">Select your stage...</option>
+        <option value="ideation">Ideation / Concept — idea only, nothing built</option>
+        <option value="mvp">MVP Stage — something exists, not launched</option>
+        <option value="revenue">Post-Revenue — live product, paying customers</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label>Roles You Need In Your Pod</label>
+      <div class="roles">
+        <div class="role" onclick="this.classList.toggle('sel')" role="checkbox"><div class="role-box"></div><span class="role-lbl">Developer</span></div>
+        <div class="role" onclick="this.classList.toggle('sel')" role="checkbox"><div class="role-box"></div><span class="role-lbl">Designer</span></div>
+        <div class="role" onclick="this.classList.toggle('sel')" role="checkbox"><div class="role-box"></div><span class="role-lbl">Marketer</span></div>
+        <div class="role" onclick="this.classList.toggle('sel')" role="checkbox"><div class="role-box"></div><span class="role-lbl">Sales</span></div>
+        <div class="role" onclick="this.classList.toggle('sel')" role="checkbox"><div class="role-box"></div><span class="role-lbl">Creator</span></div>
+        <div class="role" onclick="this.classList.toggle('sel')" role="checkbox"><div class="role-box"></div><span class="role-lbl">Ops</span></div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="fv">In One Sentence — What Are You Building And Why? *</label>
+      <textarea id="fv" placeholder="e.g. A discipleship tracking platform for African churches that can't afford enterprise tools..."></textarea>
+    </div>
+
+    <div class="field">
+      <label for="fh">How Did You Hear About Us?</label>
+      <select id="fh">
+        <option value="">Select...</option>
+        <option>LinkedIn</option>
+        <option>Faith Driven Entrepreneur network</option>
+        <option>Referral from someone I know</option>
+        <option>Haiven / DevShield / By The Fruit</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+    <p class="err" id="err-required">Please fill in all required fields above.</p>
+    <p class="err" id="err-submit">Something went wrong. Please email <a href="mailto:info@blueoxkampus.com">info@blueoxkampus.com</a> directly.</p>
+
+    <button class="submit-btn" id="submit-btn" onclick="submitForm()">Request My Pod →</button>
+    <p class="fine">Christian founders building redemptive technology only.<br>Every submission reviewed carefully. No spam, ever.</p>
+  </div>
+
+  <div class="success" id="bx-ok">
+    <div class="success-mark">✓</div>
+    <p class="success-title">YOU'RE IN<br>THE QUEUE.</p>
+    <p class="success-body">We'll review your submission and respond within 24 hours to confirm fit and book your kickoff call.<br><br><em>God bless what you're building.</em></p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-logo-row">
+    <a href="https://blueoxkampus.com" class="foot-logo-main">BLUE OX <b>KAMPUS</b></a>
+  </div>
+  <span class="foot-sub">Redemptive Build Pods</span>
+  <p>© 2026 Blue Ox Kampus · Mbarara, Uganda · Execution infrastructure for redemptive technology.</p>
+</footer>
+
+<script>
+var tiers = {
+  ideation: { free:'8 Weeks Free', week:9, note:"You have a vision. We help you build from zero — disciplined, supervised, and shipping within 7 days of kickoff.", btn:'active', orange:false, formLabel:'Ideation / Concept', offerLabel:'8 Weeks Free → $199/wk' },
+  mvp:      { free:'6 Weeks Free', week:7, note:"You've built something real. We help you get it across the finish line and into the hands of your users.", btn:'active', orange:false, formLabel:'MVP Stage', offerLabel:'6 Weeks Free → $199/wk' },
+  revenue:  { free:'4 Weeks Free', week:5, note:"You're live and growing. We clear your backlog so you stay focused on your customers and your mission.", btn:'active-o', orange:true, formLabel:'Post-Revenue', offerLabel:'4 Weeks Free → $199/wk' }
+};
+
+function selectStage(stage) {
+  var t = tiers[stage];
+  ['ideation','mvp','revenue'].forEach(function(s) {
+    document.getElementById('btn-'+s).classList.remove('active','active-o');
+  });
+  document.getElementById('btn-'+stage).classList.add(t.btn);
+
+  var panel = document.getElementById('offer-panel');
+  panel.classList.add('show');
+  document.getElementById('o-free').textContent = t.free;
+  document.getElementById('o-week').textContent = t.week;
+  document.getElementById('o-note').textContent = t.note;
+
+  var fd = document.getElementById('form-offer-display');
+  fd.className = 'selected-offer show' + (t.orange ? ' orange' : '');
+  document.getElementById('form-stage-label').textContent = t.formLabel;
+  document.getElementById('form-offer-label').textContent = t.offerLabel;
+  document.getElementById('fst').value = stage;
+}
+
+function syncStageFromForm() {
+  var v = document.getElementById('fst').value;
+  if (v) selectStage(v);
+}
+
+async function submitForm() {
+  var n = document.getElementById('fn').value.trim();
+  var e = document.getElementById('fe').value.trim();
+  var s = document.getElementById('fst').value;
+  var v = document.getElementById('fv').value.trim();
+
+  document.getElementById('err-required').style.display = 'none';
+  document.getElementById('err-submit').style.display = 'none';
+
+  var ok = true;
+  [{v:n,id:'fn'},{v:e,id:'fe'},{v:s,id:'fst'},{v:v,id:'fv'}].forEach(function(f) {
+    var el = document.getElementById(f.id);
+    if (!f.v) { el.style.borderColor = '#D9534F'; ok = false; }
+    else el.style.borderColor = '';
+  });
+
+  if (!ok) { document.getElementById('err-required').style.display = 'block'; return; }
+
+  var roles = Array.from(document.querySelectorAll('.role.sel .role-lbl'))
+    .map(function(r) { return r.textContent; }).join(', ') || 'Not selected';
+
+  var btn = document.getElementById('submit-btn');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+
+  try {
+    var res = await fetch('https://formspree.io/f/mdaboaea', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        name: n, email: e,
+        company: document.getElementById('fc').value.trim(),
+        stage: s, roles: roles, vision: v,
+        source: document.getElementById('fh').value || 'Not specified',
+        offer: document.getElementById('form-offer-label').textContent
+      })
+    });
+    if (res.ok) {
+      document.getElementById('bx-fs').style.display = 'none';
+      document.getElementById('bx-ok').style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else { throw new Error('failed'); }
+  } catch(err) {
+    btn.disabled = false;
+    btn.textContent = 'Request My Pod →';
+    document.getElementById('err-submit').style.display = 'block';
+  }
+}
+</script>
+</body>
+</html>

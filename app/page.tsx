@@ -22,12 +22,6 @@ export default function Page() {
   const [isBreakdownFormOpen, setIsBreakdownFormOpen] = useState(false);
   return (
     <div className={`${bebasNeue.variable} ${libreBaskerville.variable} ${spaceMono.variable}`}>
-      <style dangerouslySetInnerHTML={{ __html: `
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
-        
-        .font-bebas { font-family: 'Bebas Neue', sans-serif; }
-        .font-libre { font-family: 'Libre Baskerville', serif; }
-      `}} />
       <Header />
 
       {/* HERO */}

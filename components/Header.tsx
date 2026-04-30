@@ -70,7 +70,9 @@ export default function Header(){
           <Link href="/"         className={navLink(pathname === '/')}>Home</Link>
           <Link href="/academy"  className={navLink(pathname === '/academy')}>Academy</Link>
           <Link href="/builders" className={navLink(pathname === '/builders')}>Builders</Link>
+          <Link href="/pods"     className={navLink(pathname === '/pods')}>Pods</Link>
           <Link href="/partners" className={navLink(pathname === '/partners')}>Partners</Link>
+          <Link href="/cohort"   className={navLink(pathname === '/cohort')}>Cohort</Link>
         </nav>
 
         {/* Right CTAs + hamburger */}
@@ -111,7 +113,9 @@ export default function Header(){
           <Link href="/"         onClick={() => setOpen(false)} className={mobileLinkCls(pathname === '/')}>Home</Link>
           <Link href="/academy"  onClick={() => setOpen(false)} className={mobileLinkCls(pathname === '/academy')}>Academy</Link>
           <Link href="/builders" onClick={() => setOpen(false)} className={mobileLinkCls(pathname === '/builders')}>Builders</Link>
+          <Link href="/pods"     onClick={() => setOpen(false)} className={mobileLinkCls(pathname === '/pods')}>Pods</Link>
           <Link href="/partners" onClick={() => setOpen(false)} className={mobileLinkCls(pathname === '/partners')}>Partners</Link>
+          <Link href="/cohort"   onClick={() => setOpen(false)} className={mobileLinkCls(pathname === '/cohort')}>Cohort</Link>
           <div className="flex gap-2 mt-3">
             <a
               href="https://www.blueoxjobs.eu/hiring"

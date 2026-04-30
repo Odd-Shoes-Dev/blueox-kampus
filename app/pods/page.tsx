@@ -1,11 +1,15 @@
 "use client";
 
 import { useState } from 'react';
+import { Bebas_Neue, Libre_Baskerville } from 'next/font/google';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Reveal from '../../components/Reveal';
 import ApplicationForm, { FormType } from '../../components/ApplicationForm';
 import InvestorForm from '../../components/InvestorForm';
+
+const bebasNeue = Bebas_Neue({ weight: '400', subsets: ['latin'], variable: '--font-bebas' });
+const libreBaskerville = Libre_Baskerville({ weight: ['400', '700'], subsets: ['latin'], variable: '--font-libre' });
 
 export default function PodsPage() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -18,7 +22,11 @@ export default function PodsPage() {
   };
 
   return (
-    <>
+    <div className={`${bebasNeue.variable} ${libreBaskerville.variable}`}>
+      <style dangerouslySetInnerHTML={{ __html: `
+        .font-bebas { font-family: 'Bebas Neue', sans-serif; }
+        .font-libre { font-family: 'Libre Baskerville', serif; }
+      `}} />
       <Header />
 
       <section className="relative pt-24 md:pt-32 pb-20 bg-white">
@@ -58,15 +66,26 @@ export default function PodsPage() {
           </div>
         </div>
 
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <Reveal delay={0.1}>
-            <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
-                Billy Pods — Intern Pods that ship
-              </h1>
-              <p className="blueox-body text-base sm:text-lg text-gray-700 max-w-3xl mx-auto">
-                For startups that need shipping capacity fast — add a Pod to your sprint without hiring.
+        <div className="max-w-6xl mx-auto px-6 sm:px-6">
+          <Reveal>
+            <div className="text-left mb-16 max-w-4xl">
+              <div className="inline-flex items-center gap-2 border border-blue-100 rounded-full px-4 py-2 mb-10 shadow-sm">
+                <span className="text-[#F58220] text-xs font-mono font-bold tracking-wider uppercase">/ PODS</span>
+                <span className="text-gray-300">|</span>
+                <span className="text-gray-600 text-sm font-libre italic">For startups that need shipping capacity fast.</span>
+              </div>
+              <h1 className="font-bebas text-[5.5rem] sm:text-[7rem] md:text-[10rem] mb-12 text-[#0044CC] leading-[1.1] tracking-normal uppercase text-left">INTERN<br />PODS<br /><span className="text-transparent" style={{ WebkitTextStroke: '1px #0044CC' }}>THAT</span><br />SHIP.</h1>
+              <p className="font-libre text-2xl md:text-4xl text-gray-900 mb-4 italic">
+                Add a Pod to your sprint without hiring.
               </p>
+              <div className="flex flex-col sm:flex-row gap-5 justify-start mt-12">
+                <a href="https://www.blueoxjobs.eu/hiring" target="_blank" rel="noopener noreferrer" className="border border-[#0044CC] bg-[#0044CC] text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#0033AA] hover:border-[#0033AA]">
+                  REQUEST A POD →
+                </a>
+                <button onClick={() => openRequest('pods')} className="border border-[#0044CC] bg-transparent text-[#0044CC] font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#0044CC] hover:text-white">
+                  APPLY TO POOL
+                </button>
+              </div>
             </div>
           </Reveal>
 
@@ -420,7 +439,7 @@ export default function PodsPage() {
       <InvestorForm isOpen={isInvestorFormOpen} onClose={() => setIsInvestorFormOpen(false)} />
 
       <Footer />
-    </>
+    </div>
   );
 }
 
