@@ -1279,14 +1279,14 @@ main {
   --co-ease:        cubic-bezier(0.4, 0, 0.2, 1);
 }
 .co-main { background: var(--co-cream); color: var(--co-text); min-height: 100vh; }
-.co-pricing-strip { background: var(--co-black); padding: 1.5rem 1.25rem; display: flex; flex-direction: column; gap: 10px; }
+.co-pricing-strip { background: var(--co-cream); padding: 1.5rem 1.25rem; display: flex; flex-direction: column; gap: 10px; border-top: 1px solid var(--co-border); border-bottom: 1px solid var(--co-border); }
 .co-strip-numbers { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
 .co-strip-free { font-family: var(--co-font-h); font-weight: 900; font-size: 32px; color: var(--co-orange); text-transform: uppercase; line-height: 1; letter-spacing: -0.02em; }
-.co-strip-arrow { font-family: var(--co-font-m); font-size: 14px; color: rgba(255,255,255,0.3); }
-.co-strip-paid { font-family: var(--co-font-h); font-weight: 900; font-size: 32px; color: #ffffff; line-height: 1; letter-spacing: -0.02em; }
+.co-strip-arrow { font-family: var(--co-font-m); font-size: 14px; color: var(--co-muted); }
+.co-strip-paid { font-family: var(--co-font-h); font-weight: 900; font-size: 32px; color: var(--co-blue); line-height: 1; letter-spacing: -0.02em; }
 .co-strip-paid small { font-size: 16px; font-weight: 400; font-family: var(--co-font-b); }
-.co-strip-note { font-family: var(--co-font-b); font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.5; }
-.co-strip-note strong { color: rgba(255,255,255,0.75); font-weight: 500; }
+.co-strip-note { font-family: var(--co-font-b); font-size: 13px; color: var(--co-muted); line-height: 1.5; }
+.co-strip-note strong { color: var(--co-text); font-weight: 600; }
 .co-section-wrap { padding: 3rem 1.25rem 0; }
 .co-section-label { font-family: var(--co-font-m); font-size: 10px; font-weight: 600; letter-spacing: 0.18em; color: var(--co-orange); text-transform: uppercase; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px; }
 .co-section-label::before { content: '/'; }
@@ -1392,10 +1392,11 @@ main {
   .co-steps-grid { flex-direction: row; }
   .co-step { flex: 1; }
   .co-offer-grid { grid-template-columns: 1fr 1fr 1fr 1fr; }
-  .co-form-section { max-width: 720px; }
+  .co-form-section { max-width: 720px; margin-left: auto; margin-right: auto; }
 }
 @media (min-width: 1024px) {
-  .co-section-wrap, .co-how-wrap, .co-form-section, .co-spots-wrap, .co-proof { padding-left: 4rem; padding-right: 4rem; }
+  .co-section-wrap, .co-how-wrap, .co-spots-wrap, .co-proof { padding-left: 4rem; padding-right: 4rem; }
+  .co-form-section { padding-left: 2rem; padding-right: 2rem; max-width: 760px; margin-left: auto; margin-right: auto; }
   .co-stages-wrap { padding-left: 4rem; padding-right: 4rem; }
   .co-pricing-strip { padding: 1.5rem 4rem; }
 }

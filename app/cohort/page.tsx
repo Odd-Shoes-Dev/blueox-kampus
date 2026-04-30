@@ -407,7 +407,7 @@ export default function CohortPage() {
     <>
       <Header />
 
-      <main className="co-main pt-24 md:pt-32">
+      <main className="co-main">
 
         {/* HERO */}
         <section className="relative bg-white pt-28 md:pt-36 pb-24 md:pb-28">
