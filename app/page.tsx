@@ -58,7 +58,7 @@ export default function Page() {
           <Reveal delay={0.2}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
               {[
-                { val: '$199',   lbl: 'Per builder / week' },
+                { val: '$199',   lbl: 'Per week — full 3-builder pod. Coordinator included' },
                 { val: '7 days', lbl: 'Request to kickoff' },
                 { val: '300+',   lbl: 'Builders trained' },
                 { val: '15+',    lbl: 'Products shipped' },

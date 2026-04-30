@@ -258,7 +258,7 @@ export default function PodsPage() {
             <div className="border border-gray-200 p-8 sm:p-10 mb-6">
               <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-gray-500 mb-4">This is not cheaper talent. This is faster execution.</p>
               <div className="blueox-subheading text-5xl text-[#F58220] mb-2">$199<span className="text-2xl text-gray-400 font-normal"> / week</span></div>
-              <p className="blueox-body text-gray-600 text-sm mb-8">Per builder — campus-based, coordinator-managed, Pod Report every Friday</p>
+              <p className="blueox-body text-gray-600 text-sm mb-8">Per week — full 3-builder pod. — campus-based, coordinator-managed, Pod Report every Friday</p>
               <div className="grid md:grid-cols-3 gap-4">
                 <div className="border border-gray-200 p-5">
                   <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-gray-500 mb-2">Freelancer</p>
