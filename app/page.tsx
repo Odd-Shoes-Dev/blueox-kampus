@@ -697,7 +697,7 @@ export default function Page() {
               <div className="font-bebas text-7xl text-[#0044CC] leading-none mb-2 uppercase">
                 <sup className="text-3xl align-super">$</sup>199<span className="text-3xl font-normal text-gray-400"> / week</span>
               </div>
-              <p className="font-libre text-gray-500 text-sm">Per builder - campus-based, coordinator-managed, Pod Report every Friday</p>
+              <p className="font-libre text-gray-500 text-sm">full 3-builder pod. - campus-based, coordinator-managed, Pod Report every Friday</p>
             </div>
           </Reveal>
 
