@@ -80,7 +80,7 @@ export default function BreakdownForm({ isOpen, onClose }: BreakdownFormProps) {
         <div className="p-8">
           <div className="mb-8">
             <p className="text-xs font-bold uppercase tracking-widest text-[#F58220] mb-2">Free · 15 Minutes</p>
-            <h2 className="text-3xl font-extrabold uppercase tracking-tight text-black mb-2">
+            <h2 className="font-bebas text-5xl uppercase tracking-tight text-black mb-2">
               Get Your Pod Breakdown
             </h2>
             <p className="text-gray-600 text-sm">
@@ -180,7 +180,7 @@ export default function BreakdownForm({ isOpen, onClose }: BreakdownFormProps) {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full border border-[#F58220] bg-[#F58220] text-white font-bold text-sm py-3 uppercase tracking-wider transition-all duration-300 hover:bg-[#c94e30] disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full border border-[#F58220] bg-[#F58220] text-white font-bold text-sm py-3 uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-[#F58220] disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? 'Sending...' : 'Book My Free Breakdown →'}
               </button>

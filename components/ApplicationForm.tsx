@@ -159,7 +159,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
         <div className="p-8">
           {/* Header */}
           <div className="mb-8">
-            <h2 className="text-3xl font-extrabold uppercase tracking-tight text-black mb-3">
+            <h2 className="font-bebas text-5xl uppercase tracking-tight text-black mb-3">
               {getFormTitle()}
             </h2>
             <p className="blueox-body text-gray-600">
@@ -447,7 +447,7 @@ export default function ApplicationForm({ isOpen, onClose, formType }: Applicati
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full inline-block border border-[#F58220] bg-[#F58220] text-white font-semibold text-sm px-6 py-3 rounded-none transition-all duration-300 ease-in-out hover:bg-[#c94e30] hover:border-[#c94e30] uppercase tracking-widest disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full border border-[#F58220] bg-[#F58220] text-white font-bold text-sm py-3 uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-[#F58220] disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? 'Submitting...' : 'Submit Application'}
               </button>
