@@ -268,22 +268,22 @@ export default function PodsPage() {
           <Reveal delay={0.1}>
             <div className="border border-gray-200 p-8 sm:p-10 mb-6">
               <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-gray-500 mb-4">This is not cheaper talent. This is faster execution.</p>
-              <div className="blueox-subheading text-5xl text-[#F58220] mb-2">$199<span className="text-2xl text-gray-400 font-normal"> / week</span></div>
+              <div className="font-bebas text-5xl text-[#F58220] mb-2">$199<span className="text-2xl text-gray-400"> / week</span></div>
               <p className="blueox-body text-gray-600 text-sm mb-8">Per week — full 3-builder pod. — campus-based, coordinator-managed, Pod Report every Friday</p>
               <div className="grid md:grid-cols-3 gap-4">
                 <div className="border border-gray-200 p-5">
-                  <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-gray-500 mb-2">Freelancer</p>
-                  <p className="blueox-subheading text-2xl text-black mb-2">$50–90/hr</p>
+                  <p className="font-bebas text-sm tracking-widest uppercase text-gray-500 mb-2">Freelancer</p>
+                  <p className="font-bebas text-3xl text-black mb-2">$50–90/hr</p>
                   <p className="blueox-body text-gray-600 text-sm">No coordinator. No accountability. Often gone by week 3.</p>
                 </div>
                 <div className="border border-gray-200 p-5">
-                  <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-gray-500 mb-2">Junior hire</p>
-                  <p className="blueox-subheading text-2xl text-black mb-2">$4–6k/mo</p>
+                  <p className="font-bebas text-sm tracking-widest uppercase text-gray-500 mb-2">Junior hire</p>
+                  <p className="font-bebas text-3xl text-black mb-2">$4–6k/mo</p>
                   <p className="blueox-body text-gray-600 text-sm">3 months to onboard. You become the manager.</p>
                 </div>
                 <div className="border border-[#F58220] p-5">
-                  <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-[#F58220] mb-2">BlueOx Pod</p>
-                  <p className="blueox-subheading text-2xl text-[#F58220] mb-2">$199/wk</p>
+                  <p className="font-bebas text-sm tracking-widest uppercase text-[#F58220] mb-2">BlueOx Pod</p>
+                  <p className="font-bebas text-3xl text-[#F58220] mb-2">$199/wk</p>
                   <p className="blueox-body text-gray-600 text-sm">Coordinated. Shipping in 7 days. Friday report included.</p>
                 </div>
               </div>
@@ -293,8 +293,8 @@ export default function PodsPage() {
             <Reveal delay={0.2}>
               <div className="border border-gray-200 p-8">
                 <span className="blueox-body text-xs font-semibold tracking-widest uppercase text-gray-500 mb-4 block">Solo</span>
-                <h3 className="font-extrabold text-black text-xl mb-2">Solo Pod</h3>
-                <p className="blueox-subheading text-3xl text-[#F58220] mb-1">$2,388</p>
+                <h3 className="font-bebas text-4xl text-black mb-2">Solo Pod</h3>
+                <p className="font-bebas text-4xl text-[#F58220] mb-1">$2,388</p>
                 <p className="blueox-body text-gray-500 text-sm mb-5">1 builder · 12 weeks · $199/wk</p>
                 <div className="border-t border-gray-200 pt-4 space-y-2 mb-6">
                   {['Any role category', 'Pod Coordinator included', 'Weekly Pod Reports', 'Replacement guarantee'].map(f => (
@@ -307,8 +307,8 @@ export default function PodsPage() {
             <Reveal delay={0.25}>
               <div className="border border-[#F58220] p-8">
                 <span className="blueox-body text-xs font-semibold tracking-widest uppercase text-[#F58220] mb-4 block">Best value</span>
-                <h3 className="font-extrabold text-black text-xl mb-2">Team Pod</h3>
-                <p className="blueox-subheading text-3xl text-[#F58220] mb-1">$5,970</p>
+                <h3 className="font-bebas text-4xl text-black mb-2">Team Pod</h3>
+                <p className="font-bebas text-4xl text-[#F58220] mb-1">$5,970</p>
                 <p className="blueox-body text-gray-500 text-sm mb-5">3 builders · 12 weeks · ~$166/wk each</p>
                 <div className="border-t border-gray-200 pt-4 space-y-2 mb-6">
                   {['Multi-role or single focus', 'Dedicated coordinator', 'Coordinated Pod Reports', 'Dev · Design · Ops available', 'Save 17% vs solo rate'].map(f => (
@@ -329,7 +329,7 @@ export default function PodsPage() {
             <Reveal delay={0.1}>
               <div>
                 <span className="blueox-body text-xs font-semibold tracking-widest uppercase px-3 py-1 border border-gray-300 text-gray-600 mb-6 inline-block">For builders</span>
-                <h2 className="text-2xl md:text-3xl font-extrabold text-black mb-4 mt-4">Get an international company on your CV. Ship real work. Build a career.</h2>
+                <h2 className="font-bebas text-5xl md:text-6xl text-[#0044CC] leading-tight uppercase mb-4 mt-4">Get an international company on your CV. Ship real work. Build a career.</h2>
                 <p className="blueox-body text-gray-600 leading-relaxed">BlueOx Kampus places you in an execution pod with a real startup for 8–16 weeks. Work from campus. Pay nothing. Compete every Saturday — top performers get placed first.</p>
               </div>
             </Reveal>
@@ -364,7 +364,7 @@ export default function PodsPage() {
             <Reveal delay={0.1}>
               <div>
                 <span className="blueox-body text-xs font-semibold tracking-widest uppercase px-3 py-1 border border-[#F58220] text-[#F58220] mb-6 inline-block">For universities</span>
-                <h2 className="text-2xl md:text-3xl font-extrabold text-black mb-4 mt-4">Placements that actually lead somewhere.</h2>
+                <h2 className="font-bebas text-5xl md:text-6xl text-[#0044CC] leading-tight uppercase mb-4 mt-4">Placements that actually lead somewhere.</h2>
                 <p className="blueox-body text-gray-600 leading-relaxed">Pre-vetted international startups. Students join live shipping pods — not coffee runs. BlueOx handles matching, coordination, supervision, and reporting. You get the outcomes dashboard.</p>
               </div>
             </Reveal>
@@ -399,7 +399,7 @@ export default function PodsPage() {
             <Reveal delay={0.1}>
               <div>
                 <span className="blueox-body text-xs font-semibold tracking-widest uppercase px-3 py-1 border border-blue-500 text-blue-500 mb-6 inline-block">For investors & donors</span>
-                <h2 className="text-2xl md:text-3xl font-extrabold text-black mb-4 mt-4">For Faith Driven Investors deploying Kingdom capital.</h2>
+                <h2 className="font-bebas text-5xl md:text-6xl text-[#0044CC] leading-tight uppercase mb-4 mt-4">For Faith Driven Investors deploying Kingdom capital.</h2>
                 <p className="blueox-body text-gray-600 leading-relaxed">If you operate from a one-pocket framework — where giving, investing, and spending all come from the same Kingdom conviction — BlueOx is a place to put capital to work. We're building a model where a Christian tech hub trains students, ships products, plants churches, and supports refugees. All from the same ecosystem.</p>
               </div>
             </Reveal>
