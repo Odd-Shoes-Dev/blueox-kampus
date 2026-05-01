@@ -34,7 +34,7 @@ export default function Page() {
                 <span className="text-gray-300">|</span>
                 <span className="text-gray-600 text-sm font-libre italic">If we don&apos;t shape culture, culture will disciple the next generation.</span>
               </div>
-              <h1 className="font-bebas text-[5.5rem] sm:text-[7rem] md:text-[10rem] mb-12 text-[#0044CC] leading-[1.1] tracking-normal uppercase text-left">YOU'VE<br />BUILT IT.<br /><span className="text-transparent" style={{ WebkitTextStroke: '1px #0044CC' }}>NOW LET'S</span><br />SHIP IT.</h1>
+              <h1 className="font-bebas text-[5.5rem] sm:text-[7rem] md:text-[10rem] mb-12 text-[#0044CC] leading-[1.1] tracking-normal uppercase text-left">TOO MUCH<br />TO BUILD.<br /><span className="text-transparent" style={{ WebkitTextStroke: '1px #0044CC' }}>NOT ENOUGH</span><br />HANDS.</h1>
               <p className="font-libre text-2xl md:text-4xl text-gray-900 mb-4 italic">
                 We fix that.
               </p>
