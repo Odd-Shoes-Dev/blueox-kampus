@@ -108,14 +108,14 @@ export default function InvestorForm({ isOpen, onClose }: InvestorFormProps) {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-black mb-2">Message Sent!</h3>
+              <h3 className="font-bebas text-4xl text-black mb-2">Message Sent!</h3>
               <p className="text-gray-600">We'll get back to you within 24 hours.</p>
             </div>
           ) : (
             <>
               {/* FAQ Section */}
               <div className="mb-8">
-                <p className="text-xs font-bold uppercase tracking-widest text-[#F58220] mb-4">Common Questions</p>
+                <p className="font-bebas text-2xl text-[#F58220] mb-4">Common Questions</p>
                 <div className="space-y-2">
                   {faqs.map((faq, i) => (
                     <div key={i} className="border border-gray-200">
