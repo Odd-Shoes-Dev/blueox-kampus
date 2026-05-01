@@ -1,15 +1,11 @@
 "use client";
 
 import { useState } from 'react';
-import { Bebas_Neue, Libre_Baskerville } from 'next/font/google';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Reveal from '../../components/Reveal';
 import ApplicationForm, { FormType } from '../../components/ApplicationForm';
 import InvestorForm from '../../components/InvestorForm';
-
-const bebasNeue = Bebas_Neue({ weight: '400', subsets: ['latin'], variable: '--font-bebas' });
-const libreBaskerville = Libre_Baskerville({ weight: ['400', '700'], subsets: ['latin'], variable: '--font-libre' });
 
 export default function PodsPage() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -22,11 +18,7 @@ export default function PodsPage() {
   };
 
   return (
-    <div className={`${bebasNeue.variable} ${libreBaskerville.variable}`}>
-      <style dangerouslySetInnerHTML={{ __html: `
-        .font-bebas { font-family: 'Bebas Neue', sans-serif; }
-        .font-libre { font-family: 'Libre Baskerville', serif; }
-      `}} />
+    <>
       <Header />
 
       <section className="relative pt-24 md:pt-32 pb-20 bg-white">
@@ -92,7 +84,7 @@ export default function PodsPage() {
           <div className="grid md:grid-cols-2 gap-8 items-start">
             <Reveal delay={0.2}>
               <div className="glass rounded-2xl p-8">
-                <h2 className="text-2xl font-bold text-black mb-4">Meet the Intern Pod</h2>
+                <h2 className="font-bebas text-5xl md:text-6xl text-[#0044CC] leading-tight uppercase mb-4">Meet the Intern Pod</h2>
                 <p className="text-gray-700 mb-4">
                   A Billy Pod includes coordination, cadence, and accountability — 1–3 vetted interns, a Pod Coordinator, and weekly reporting. Your team assigns tasks like a teammate; Billy runs the Pod.
                 </p>
@@ -103,7 +95,7 @@ export default function PodsPage() {
                 </ul>
 
                 <div className="space-y-4">
-                  <h3 className="text-black font-bold">Choose Your Track</h3>
+                  <h3 className="font-bebas text-3xl text-[#0044CC] uppercase leading-tight">Choose Your Track</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div className="p-4 bg-white border border-gray-200 rounded-none">
                       <div className="text-sm text-[#F58220] font-semibold">QA Pod</div>
@@ -134,7 +126,7 @@ export default function PodsPage() {
 
             <Reveal delay={0.3}>
               <div className="glass rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-black mb-4">For Startups — Request Pod Profiles</h3>
+                <h3 className="font-bebas text-5xl md:text-6xl text-[#0044CC] leading-tight uppercase mb-4">For Startups — Request Pod Profiles</h3>
                 <p className="text-gray-700 mb-4">Tell us what you need and we’ll reply with 3–5 matched profiles and a simple start plan.</p>
 
                 <h4 className="text-black font-semibold mb-2">Information Collected</h4>
@@ -171,7 +163,7 @@ export default function PodsPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <Reveal>
             <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-[#F58220] mb-4">Track record</p>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-black mb-3">Builders who ship. Products that exist.</h2>
+            <h2 className="font-bebas text-5xl md:text-7xl text-[#0044CC] leading-tight uppercase mb-3">Builders who ship. Products that exist.</h2>
             <p className="blueox-body text-gray-600 text-sm mb-6">Builders from our network have shipped for:</p>
             <div className="flex flex-wrap gap-3 mb-4">
               {['Haiven', 'DevShield', 'By The Fruit', 'Dig In Vision'].map((name) => (
@@ -190,7 +182,7 @@ export default function PodsPage() {
             <Reveal delay={0.1}>
               <div>
                 <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-[#F58220] mb-4">For founders</p>
-                <h2 className="text-2xl md:text-3xl font-extrabold text-black mb-4">Capital is flowing into faith-driven startups. Execution is still broken.</h2>
+                <h2 className="font-bebas text-5xl md:text-7xl text-[#0044CC] leading-tight uppercase mb-4">Capital is flowing into faith-driven startups. Execution is still broken.</h2>
                 <blockquote className="border-l-4 border-[#F58220] pl-5 my-6">
                   <p className="blueox-body text-black text-lg font-semibold">Good intentions don't ship products.<br/>Execution does.</p>
                 </blockquote>
@@ -208,22 +200,22 @@ export default function PodsPage() {
           {/* Pipeline */}
           <Reveal delay={0.3}>
             <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-[#F58220] mb-4">The BlueOx difference</p>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-black mb-3">We didn't source a talent pool. We built the campus first.</h2>
+            <h2 className="font-bebas text-5xl md:text-7xl text-[#0044CC] leading-tight uppercase mb-3">We didn&apos;t source a talent pool. We built the campus first.</h2>
             <p className="blueox-body text-gray-600 text-base mb-8 max-w-2xl">Every Saturday, builders compete. Top performers enter our system, commit to the Redemptive Technology code, and get deployed into your product. No CVs. No guesswork. Just proof.</p>
             <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200 border border-gray-200 mb-6">
               <div className="p-6">
                 <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-[#F58220] mb-3">Kampus</p>
-                <h3 className="font-extrabold text-black text-lg mb-2">Train</h3>
+                <h3 className="font-bebas text-3xl text-[#0044CC] uppercase mb-2">Train</h3>
                 <p className="blueox-body text-gray-600 text-sm">VR-powered training. Weekly competitions. Top performers rise to the surface.</p>
               </div>
               <div className="p-6">
                 <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-[#F58220] mb-3">Select</p>
-                <h3 className="font-extrabold text-black text-lg mb-2">Rank</h3>
+                <h3 className="font-bebas text-3xl text-[#0044CC] uppercase mb-2">Rank</h3>
                 <p className="blueox-body text-gray-600 text-sm">Every Saturday, builders compete. Only the top 10–20% are placed. No CVs. Just proof.</p>
               </div>
               <div className="p-6 bg-gray-50">
                 <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-[#F58220] mb-3">Your startup</p>
-                <h3 className="font-extrabold text-black text-lg mb-2">Ship</h3>
+                <h3 className="font-bebas text-3xl text-[#0044CC] uppercase mb-2">Ship</h3>
                 <p className="blueox-body text-gray-600 text-sm">Weekly deliverables. Pod Coordinator manages everything. Friday report every week.</p>
               </div>
             </div>
@@ -237,7 +229,7 @@ export default function PodsPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <Reveal>
             <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-[#F58220] mb-4">How it works</p>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-black mb-3">Your backlog isn't a strategy problem. It's an execution gap.</h2>
+            <h2 className="font-bebas text-5xl md:text-7xl text-[#0044CC] leading-tight uppercase mb-3">Your backlog isn&apos;t a strategy problem. It&apos;s an execution gap.</h2>
             <p className="blueox-body text-gray-600 text-base mb-8">Send us your stack. We match a pod. They ship from campus while you build product.</p>
           </Reveal>
           <div className="border border-gray-200 divide-y divide-gray-200 mb-8">
@@ -253,7 +245,7 @@ export default function PodsPage() {
                     {step.n}
                   </div>
                   <div className="flex-1 px-6 py-5">
-                    <h3 className="font-extrabold text-black text-base mb-1">{step.title}</h3>
+                    <h3 className="font-bebas text-2xl text-[#0044CC] uppercase mb-1">{step.title}</h3>
                     <p className="blueox-body text-gray-600 text-sm">{step.desc}</p>
                   </div>
                   <div className="hidden md:flex w-28 flex-shrink-0 items-center justify-end px-5 border-l border-gray-200">
@@ -271,7 +263,7 @@ export default function PodsPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <Reveal>
             <p className="blueox-body text-xs font-semibold tracking-widest uppercase text-[#F58220] mb-4">Pricing</p>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-black mb-8">A full week of shipping for what most developers charge for a single day.</h2>
+            <h2 className="font-bebas text-5xl md:text-7xl text-[#0044CC] leading-tight uppercase mb-8">A full week of shipping for what most developers charge for a single day.</h2>
           </Reveal>
           <Reveal delay={0.1}>
             <div className="border border-gray-200 p-8 sm:p-10 mb-6">
@@ -439,7 +431,7 @@ export default function PodsPage() {
       <InvestorForm isOpen={isInvestorFormOpen} onClose={() => setIsInvestorFormOpen(false)} />
 
       <Footer />
-    </div>
+    </>
   );
 }
 
