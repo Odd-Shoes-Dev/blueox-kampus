@@ -166,8 +166,13 @@ export default function PodsPage() {
             <h2 className="font-bebas text-5xl md:text-7xl text-[#0044CC] leading-tight uppercase mb-3">Builders who ship. Products that exist.</h2>
             <p className="blueox-body text-gray-600 text-sm mb-6">Builders from our network have shipped for:</p>
             <div className="flex flex-wrap gap-3 mb-4">
-              {['Haiven', 'DevShield', 'By The Fruit', 'Dig In Vision'].map((name) => (
-                <span key={name} className="px-4 py-2 border border-gray-300 text-gray-700 text-sm blueox-body">{name}</span>
+              {[
+                { name: 'Haiven', url: 'https://haiven.gg' },
+                { name: 'DevShield', url: 'https://devshield.gg' },
+                { name: 'By The Fruit', url: 'https://bythefruit.com' },
+                { name: 'Dig In Vision', url: 'https://diginvision.com' },
+              ].map((item) => (
+                <a key={item.name} href={item.url} target="_blank" rel="noopener noreferrer" className="px-4 py-2 border border-gray-300 text-gray-700 text-sm blueox-body hover:border-[#0044CC] hover:text-[#0044CC] transition-colors">{item.name}</a>
               ))}
             </div>
             <p className="blueox-body text-gray-500 text-sm">Startups backed by millions in pre-seed and seed funding across AI, fintech, and VR.</p>
