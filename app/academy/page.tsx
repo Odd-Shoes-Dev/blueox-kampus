@@ -170,12 +170,14 @@ export default function AcademyPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-5 justify-center">
-                <button
-                  onClick={() => openForm('academy')}
+                <a
+                  href="https://www.blueoxjobs.eu/profile"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="border border-[#0044CC] bg-[#0044CC] text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 ease-in-out hover:bg-[#0033AA] hover:border-[#0033AA]"
                 >
                   ENROLL NOW
-                </button>
+                </a>
                 <a
                   href="#programs"
                   className="border border-[#0044CC] bg-transparent text-[#0044CC] font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 ease-in-out hover:bg-[#0044CC] hover:text-white"
@@ -254,12 +256,14 @@ export default function AcademyPage() {
 
           <Reveal delay={0.8}>
             <div className="text-center mt-12">
-              <button
-                onClick={() => openForm('academy')}
+              <a
+                href="https://www.blueoxjobs.eu/profile"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="border border-[#0044CC] bg-transparent text-[#0044CC] font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 ease-in-out hover:bg-[#0044CC] hover:text-white"
               >
                 APPLY FOR A PROGRAM
-              </button>
+              </a>
             </div>
           </Reveal>
         </div>
@@ -456,12 +460,14 @@ export default function AcademyPage() {
                 Training cohorts starting soon.
               </p>
               <div className="flex flex-col sm:flex-row gap-5 justify-center">
-                <button
-                  onClick={() => openForm('academy')}
+                <a
+                  href="https://www.blueoxjobs.eu/profile"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="border border-[#0044CC] bg-[#0044CC] text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 ease-in-out hover:bg-[#0033AA] hover:border-[#0033AA]"
                 >
                   APPLY NOW
-                </button>
+                </a>
                 <Link
                   href="/"
                   className="border border-[#0044CC] bg-transparent text-[#0044CC] font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 ease-in-out hover:bg-[#0044CC] hover:text-white"

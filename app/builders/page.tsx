@@ -155,12 +155,14 @@ export default function BuildersPage() {
                 BlueOx Kampus places you in an execution pod with a real startup for 8-16 weeks. Work from campus. Pay nothing. Compete every Saturday - top performers get placed first.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
-                  onClick={() => openForm('academy')}
+                <a
+                  href="https://www.blueoxjobs.eu/profile"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="border border-[#0044CC] bg-[#0044CC] text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 ease-in-out hover:bg-[#0033AA] hover:border-[#0033AA]"
                 >
                   APPLY TO THE TALENT POOL
-                </button>
+                </a>
                 <a
                   href="#how-it-works"
                   className="border border-black bg-transparent text-black font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 ease-in-out hover:bg-black hover:text-white"
@@ -344,12 +346,14 @@ export default function BuildersPage() {
                 Submit your application. We will reach out with the next competition date and onboarding details.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
-                  onClick={() => openForm('academy')}
+                <a
+                  href="https://www.blueoxjobs.eu/profile"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="border border-[#0044CC] bg-[#0044CC] text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 ease-in-out hover:bg-[#0033AA] hover:border-[#0033AA]"
                 >
                   APPLY NOW
-                </button>
+                </a>
                 <button
                   onClick={() => setIsFAQFormOpen(true)}
                   className="border border-black bg-transparent text-black font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 ease-in-out hover:bg-black hover:text-white"

@@ -74,9 +74,9 @@ export default function PodsPage() {
                 <a href="https://www.blueoxjobs.eu/hiring" target="_blank" rel="noopener noreferrer" className="border border-[#0044CC] bg-[#0044CC] text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#0033AA] hover:border-[#0033AA]">
                   REQUEST A POD →
                 </a>
-                <button onClick={() => openRequest('pods')} className="border border-[#0044CC] bg-transparent text-[#0044CC] font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#0044CC] hover:text-white">
+                <a href="https://www.blueoxjobs.eu/profile" target="_blank" rel="noopener noreferrer" className="border border-[#0044CC] bg-transparent text-[#0044CC] font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#0044CC] hover:text-white">
                   APPLY TO POOL
-                </button>
+                </a>
               </div>
             </div>
           </Reveal>
@@ -143,7 +143,7 @@ export default function PodsPage() {
                   <a href="https://www.blueoxjobs.eu/hiring" target="_blank" rel="noopener noreferrer" className="inline-block border border-[#F58220] bg-transparent text-[#F58220] font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-[#F58220] hover:text-white">
                     REQUEST POD PROFILES
                   </a>
-                  <button onClick={() => openRequest('academy')} className="inline-block border border-black bg-transparent text-black font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-black hover:text-white">APPLY TO POOL</button>
+                  <a href="https://www.blueoxjobs.eu/profile" target="_blank" rel="noopener noreferrer" className="inline-block border border-black bg-transparent text-black font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-black hover:text-white">APPLY TO POOL</a>
                 </div>
               </div>
             </Reveal>
@@ -354,7 +354,7 @@ export default function PodsPage() {
                   </div>
                 ))}
                 <div className="pt-5">
-                  <button onClick={() => openRequest('academy')} className="inline-block border border-black bg-transparent text-black font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-black hover:text-white">JOIN THE TALENT POOL</button>
+                  <a href="https://www.blueoxjobs.eu/profile" target="_blank" rel="noopener noreferrer" className="inline-block border border-black bg-transparent text-black font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-black hover:text-white">JOIN THE TALENT POOL</a>
                 </div>
               </div>
             </Reveal>
