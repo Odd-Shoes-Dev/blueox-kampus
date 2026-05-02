@@ -1281,9 +1281,9 @@ main {
 .co-main { background: var(--co-cream); color: var(--co-text); min-height: 100vh; }
 .co-pricing-strip { background: var(--co-cream); padding: 1.5rem 1.25rem; display: flex; flex-direction: column; gap: 10px; border-top: 1px solid var(--co-border); border-bottom: 1px solid var(--co-border); }
 .co-strip-numbers { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
-.co-strip-free { font-family: var(--co-font-h); font-weight: 900; font-size: 32px; color: var(--co-orange); text-transform: uppercase; line-height: 1; letter-spacing: -0.02em; }
+.co-strip-free { font-family: var(--co-font-h); font-weight: 900; font-size: 32px; color: var(--co-orange); text-transform: uppercase; line-height: 1; letter-spacing: normal; }
 .co-strip-arrow { font-family: var(--co-font-m); font-size: 14px; color: var(--co-muted); }
-.co-strip-paid { font-family: var(--co-font-h); font-weight: 900; font-size: 32px; color: var(--co-blue); line-height: 1; letter-spacing: -0.02em; }
+.co-strip-paid { font-family: var(--co-font-h); font-weight: 900; font-size: 32px; color: var(--co-blue); line-height: 1; letter-spacing: normal; }
 .co-strip-paid small { font-size: 16px; font-weight: 400; font-family: var(--co-font-b); }
 .co-strip-note { font-family: var(--co-font-b); font-size: 13px; color: var(--co-muted); line-height: 1.5; }
 .co-strip-note strong { color: var(--co-text); font-weight: 600; }
@@ -1303,7 +1303,7 @@ main {
 .co-dot-blue { background: var(--co-blue) !important; border-color: var(--co-blue) !important; }
 .co-dot-orange { background: var(--co-orange) !important; border-color: var(--co-orange) !important; }
 .co-stage-text { min-width: 0; }
-.co-stage-name { font-family: var(--co-font-h); font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--co-text); display: block; line-height: 1.2; }
+.co-stage-name { font-family: var(--co-font-h); font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--co-text); display: block; line-height: 1.2; }
 .co-name-blue { color: var(--co-blue) !important; }
 .co-name-orange { color: var(--co-orange) !important; }
 .co-stage-desc { font-family: var(--co-font-b); font-size: 12px; color: var(--co-muted); display: block; margin-top: 2px; }
@@ -1317,7 +1317,7 @@ main {
 .co-offer-cell-wh { background: var(--co-white) !important; }
 .co-offer-eye { font-family: var(--co-font-m); font-size: 9px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 6px; color: rgba(255,255,255,0.45); }
 .co-offer-cell-wh .co-offer-eye { color: var(--co-orange) !important; }
-.co-offer-big { font-family: var(--co-font-h); font-weight: 900; font-size: 26px; line-height: 1; margin-bottom: 4px; color: var(--co-white); letter-spacing: -0.02em; }
+.co-offer-big { font-family: var(--co-font-h); font-weight: 900; font-size: 26px; line-height: 1; margin-bottom: 4px; color: var(--co-white); letter-spacing: normal; }
 .co-offer-big-blue { color: var(--co-blue) !important; }
 .co-offer-big small { font-size: 14px; font-weight: 400; font-family: var(--co-font-b); }
 .co-offer-sm { font-family: var(--co-font-b); font-size: 11px; line-height: 1.4; color: rgba(255,255,255,0.45); }
@@ -1333,16 +1333,16 @@ main {
 .co-proof-title { font-family: var(--co-font-m); font-weight: 600; font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--co-orange); margin-bottom: 6px; }
 .co-proof-body { font-family: var(--co-font-b); font-size: 13px; color: var(--co-muted); line-height: 1.6; }
 .co-how-wrap { padding: 3rem 1.25rem 0; }
-.co-big-label { font-family: var(--co-font-h); font-weight: 900; font-size: clamp(42px, 11vw, 72px); text-transform: uppercase; color: var(--co-blue); line-height: 0.92; letter-spacing: -0.02em; margin-bottom: 2.5rem; }
+.co-big-label { font-family: var(--co-font-h); font-weight: 900; font-size: clamp(42px, 11vw, 72px); text-transform: uppercase; color: var(--co-blue); line-height: 0.92; letter-spacing: normal; margin-bottom: 2.5rem; }
 .co-steps-grid { display: flex; flex-direction: column; gap: 1px; background: var(--co-border); border: 1px solid var(--co-border); }
 .co-step { background: var(--co-white); padding: 1.5rem 1.25rem; transition: background 0.2s; }
 .co-step:hover { background: var(--co-cream); }
 .co-step-num { font-family: var(--co-font-m); font-weight: 700; font-size: 11px; color: var(--co-orange); letter-spacing: 0.1em; margin-bottom: 0.6rem; display: block; }
-.co-step-title { font-family: var(--co-font-h); font-weight: 800; font-size: 15px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--co-blue); margin-bottom: 0.5rem; }
+.co-step-title { font-family: var(--co-font-h); font-weight: 800; font-size: 15px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--co-blue); margin-bottom: 0.5rem; }
 .co-step-desc { font-family: var(--co-font-b); font-size: 14px; color: var(--co-muted); line-height: 1.6; }
 .co-rule { border: none; border-top: 2px solid var(--co-border); margin: 3rem 0 0; }
 .co-form-section { padding: 2.5rem 1.25rem 4rem; }
-.co-form-title { font-family: var(--co-font-h); font-weight: 900; font-size: clamp(36px, 9vw, 54px); text-transform: uppercase; color: var(--co-blue); line-height: 0.92; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
+.co-form-title { font-family: var(--co-font-h); font-weight: 900; font-size: clamp(36px, 9vw, 54px); text-transform: uppercase; color: var(--co-blue); line-height: 0.92; letter-spacing: normal; margin-bottom: 0.5rem; }
 .co-form-sub { font-family: var(--co-font-s); font-size: 16px; font-style: italic; color: var(--co-muted); margin-bottom: 2rem; }
 .co-selected-offer { background: var(--co-blue-light); border: 1px solid rgba(0,68,204,0.2); padding: 0.85rem 1rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .co-selected-offer-orange { background: var(--co-orange-light) !important; border-color: rgba(245,130,32,0.25) !important; }
