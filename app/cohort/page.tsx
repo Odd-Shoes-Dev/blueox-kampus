@@ -423,6 +423,9 @@ export default function CohortPage() {
                 <p className="font-libre text-2xl md:text-4xl text-gray-900 mb-4 italic">
                   We fix that.
                 </p>
+                <p className="font-libre text-base text-gray-600 mb-8 leading-relaxed">
+                  Steward your calling with our Redemptive Build Pods Cohort 01 — free hands for 4–8 weeks. Yours to keep after.
+                </p>
                 <div className="flex flex-col sm:flex-row gap-5 justify-start mt-12">
                   <a href="#request" className="border border-[#0044CC] bg-[#0044CC] text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#0033AA] hover:border-[#0033AA]">
                     REQUEST YOUR POD →
