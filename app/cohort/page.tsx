@@ -45,7 +45,7 @@ const _cohortStyles = `
   --co-border:      #E2DDD4;
   --co-muted:       #7A7060;
   --co-text:        #1A1209;
-  --co-font-h:      'Exo 2', 'Arial Narrow', Impact, sans-serif;
+  --co-font-h:      'Bebas Neue', 'Exo 2', 'Arial Narrow', Impact, sans-serif;
   --co-font-b:      'DM Sans', -apple-system, Helvetica, Arial, sans-serif;
   --co-font-s:      'Playfair Display', Georgia, 'Times New Roman', serif;
   --co-font-m:      'JetBrains Mono', 'Courier New', monospace;
@@ -58,18 +58,18 @@ const _cohortStyles = `
 }
 /* PRICING STRIP */
 .co-pricing-strip {
-  background: var(--co-black); padding: 1.5rem 1.25rem;
+  padding: 1.5rem 1.25rem;
   display: flex; flex-direction: column; gap: 10px;
 }
 .co-strip-numbers { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
 .co-strip-free {
   font-family: var(--co-font-h); font-weight: 900; font-size: 32px;
-  color: var(--co-orange); text-transform: uppercase; line-height: 1; letter-spacing: -0.02em;
+  color: var(--co-orange); text-transform: uppercase; line-height: 1; letter-spacing: 0.06em;
 }
 .co-strip-arrow { font-family: var(--co-font-m); font-size: 14px; color: rgba(255,255,255,0.3); }
 .co-strip-paid {
   font-family: var(--co-font-h); font-weight: 900; font-size: 32px;
-  color: #ffffff; line-height: 1; letter-spacing: -0.02em;
+  color: #ffffff; line-height: 1; letter-spacing: 0.06em;
 }
 .co-strip-paid small { font-size: 16px; font-weight: 400; font-family: var(--co-font-b); }
 .co-strip-note { font-family: var(--co-font-b); font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.5; }
@@ -77,12 +77,12 @@ const _cohortStyles = `
 /* SECTION LABELS */
 .co-section-wrap { padding: 3rem 1.25rem 0; }
 .co-section-label {
-  font-family: var(--co-font-m); font-size: 10px; font-weight: 600;
+  font-family: var(--co-font-m); font-size: 12px; font-weight: 600;
   letter-spacing: 0.18em; color: var(--co-orange); text-transform: uppercase;
   margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px;
 }
 .co-section-label::before { content: '/'; }
-.co-selector-prompt { font-family: var(--co-font-b); font-size: 13px; color: var(--co-muted); margin-bottom: 1.25rem; }
+.co-selector-prompt { font-family: var(--co-font-b); font-size: 15px; color: var(--co-muted); margin-bottom: 1.25rem; }
 /* STAGES */
 .co-stages-wrap { padding: 0 1.25rem; }
 .co-stages { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--co-border); }
@@ -106,20 +106,20 @@ const _cohortStyles = `
 .co-dot-orange { background: var(--co-orange) !important; border-color: var(--co-orange) !important; }
 .co-stage-text { min-width: 0; }
 .co-stage-name {
-  font-family: var(--co-font-h); font-weight: 800; font-size: 14px;
-  text-transform: uppercase; letter-spacing: 0.04em; color: var(--co-text); display: block; line-height: 1.2;
+  font-family: var(--co-font-h); font-weight: 600; font-size: 18px;
+  text-transform: uppercase; letter-spacing: 0.1em; color: var(--co-text); display: block; line-height: 1.2;
 }
 .co-name-blue { color: var(--co-blue) !important; }
 .co-name-orange { color: var(--co-orange) !important; }
-.co-stage-desc { font-family: var(--co-font-b); font-size: 12px; color: var(--co-muted); display: block; margin-top: 2px; }
+.co-stage-desc { font-family: var(--co-font-b); font-size: 14px; color: var(--co-muted); display: block; margin-top: 2px; }
 .co-stage-right { text-align: right; flex-shrink: 0; }
 .co-stage-free {
-  font-family: var(--co-font-h); font-weight: 800; font-size: 14px;
+  font-family: var(--co-font-h); font-weight: 600; font-size: 18px;
   color: var(--co-blue); text-transform: uppercase; display: block; line-height: 1.2;
 }
 .co-free-blue { color: var(--co-blue) !important; }
 .co-free-orange { color: var(--co-orange) !important; }
-.co-stage-then { font-family: var(--co-font-b); font-size: 11px; color: var(--co-muted); display: block; margin-top: 2px; }
+.co-stage-then { font-family: var(--co-font-b); font-size: 13px; color: var(--co-muted); display: block; margin-top: 2px; }
 /* OFFER GRID */
 .co-offer-grid {
   display: grid; grid-template-columns: 1fr 1fr;
@@ -128,18 +128,18 @@ const _cohortStyles = `
 .co-offer-cell { padding: 1.25rem; background: var(--co-blue); }
 .co-offer-cell-wh { background: var(--co-white) !important; }
 .co-offer-eye {
-  font-family: var(--co-font-m); font-size: 9px; font-weight: 600;
+  font-family: var(--co-font-m); font-size: 12px; font-weight: 600;
   letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 6px;
   color: rgba(255,255,255,0.45);
 }
 .co-offer-cell-wh .co-offer-eye { color: var(--co-orange) !important; }
 .co-offer-big {
-  font-family: var(--co-font-h); font-weight: 900; font-size: 26px;
-  line-height: 1; margin-bottom: 4px; color: var(--co-white); letter-spacing: -0.02em;
+  font-family: var(--co-font-h); font-weight: 900; font-size: 34px;
+  line-height: 1; margin-bottom: 4px; color: var(--co-white); letter-spacing: 0.06em;
 }
 .co-offer-big-blue { color: var(--co-blue) !important; }
 .co-offer-big small { font-size: 14px; font-weight: 400; font-family: var(--co-font-b); }
-.co-offer-sm { font-family: var(--co-font-b); font-size: 11px; line-height: 1.4; color: rgba(255,255,255,0.45); }
+.co-offer-sm { font-family: var(--co-font-b); font-size: 13px; line-height: 1.4; color: rgba(255,255,255,0.45); }
 .co-offer-sm-muted { color: var(--co-muted) !important; }
 .co-offer-context {
   background: var(--co-cream-dark); padding: 1rem 1.25rem;
@@ -171,7 +171,7 @@ const _cohortStyles = `
 .co-big-label {
   font-family: var(--co-font-h); font-weight: 900;
   font-size: clamp(42px, 11vw, 72px); text-transform: uppercase; color: var(--co-blue);
-  line-height: 0.92; letter-spacing: -0.02em; margin-bottom: 2.5rem;
+  line-height: 0.92; letter-spacing: 0.06em; margin-bottom: 2.5rem;
 }
 .co-steps-grid {
   display: flex; flex-direction: column; gap: 1px;
@@ -184,8 +184,8 @@ const _cohortStyles = `
   color: var(--co-orange); letter-spacing: 0.1em; margin-bottom: 0.6rem; display: block;
 }
 .co-step-title {
-  font-family: var(--co-font-h); font-weight: 800; font-size: 15px;
-  text-transform: uppercase; letter-spacing: 0.04em; color: var(--co-blue); margin-bottom: 0.5rem;
+  font-family: var(--co-font-h); font-weight: 600; font-size: 22px;
+  text-transform: uppercase; letter-spacing: 0.1em; color: var(--co-blue); margin-bottom: 0.5rem;
 }
 .co-step-desc { font-family: var(--co-font-b); font-size: 14px; color: var(--co-muted); line-height: 1.6; }
 /* FORM */
@@ -194,10 +194,10 @@ const _cohortStyles = `
 .co-form-title {
   font-family: var(--co-font-h); font-weight: 900;
   font-size: clamp(36px, 9vw, 54px); text-transform: uppercase; color: var(--co-blue);
-  line-height: 0.92; letter-spacing: -0.02em; margin-bottom: 0.5rem;
+  line-height: 0.92; letter-spacing: 0.06em; margin-bottom: 0.5rem;
 }
 .co-form-sub {
-  font-family: var(--co-font-s); font-size: 16px; font-style: italic;
+  font-family: var(--co-font-s); font-size: 18px; font-style: italic;
   color: var(--co-muted); margin-bottom: 2rem;
 }
 .co-selected-offer {
@@ -206,13 +206,13 @@ const _cohortStyles = `
   display: flex; align-items: center; justify-content: space-between; gap: 8px;
 }
 .co-selected-offer-orange { background: var(--co-orange-light) !important; border-color: rgba(245,130,32,0.25) !important; }
-.co-sel-stage { font-family: var(--co-font-m); font-size: 10px; color: var(--co-muted); text-transform: uppercase; letter-spacing: 0.1em; }
-.co-sel-offer { font-family: var(--co-font-h); font-weight: 900; font-size: 16px; color: var(--co-blue); text-transform: uppercase; white-space: nowrap; letter-spacing: 0.02em; }
+.co-sel-stage { font-family: var(--co-font-m); font-size: 12px; color: var(--co-muted); text-transform: uppercase; letter-spacing: 0.1em; }
+.co-sel-offer { font-family: var(--co-font-h); font-weight: 900; font-size: 18px; color: var(--co-blue); text-transform: uppercase; white-space: nowrap; letter-spacing: 0.02em; }
 .co-sel-offer-orange { color: var(--co-orange) !important; }
 .co-field { margin-bottom: 1.1rem; }
 .co-field label {
-  display: block; font-family: var(--co-font-m); font-size: 9px;
-  font-weight: 600; letter-spacing: 0.16em; color: var(--co-muted);
+  display: block; font-family: var(--co-font-m); font-size: 12px;
+  font-weight: 600; letter-spacing: 0.12em; color: var(--co-muted);
   text-transform: uppercase; margin-bottom: 6px;
 }
 .co-field input[type=text],
@@ -257,22 +257,22 @@ const _cohortStyles = `
   border-left: 1.5px solid #fff; border-bottom: 1.5px solid #fff;
   transform: rotate(-45deg) translateY(-1px); display: block;
 }
-.co-role-lbl { font-family: var(--co-font-b); font-size: 13px; color: var(--co-muted); font-weight: 500; }
+.co-role-lbl { font-family: var(--co-font-b); font-size: 15px; color: var(--co-muted); font-weight: 500; }
 .co-role-lbl-sel { color: var(--co-blue) !important; font-weight: 600 !important; }
-.co-err { font-family: var(--co-font-b); font-size: 12px; color: #D9534F; margin-top: 8px; }
+.co-err { font-family: var(--co-font-b); font-size: 14px; color: #D9534F; margin-top: 8px; }
 .co-err a { color: #D9534F; }
 .co-submit-btn {
   display: block; width: 100%; background: var(--co-blue); color: var(--co-white);
   border: none; border-radius: 0; padding: 18px; cursor: pointer;
   font-family: var(--co-font-h); font-weight: 900; font-size: 18px;
-  letter-spacing: 0.08em; text-transform: uppercase; margin-top: 1.5rem; min-height: 56px;
+  letter-spacing: 0.12em; text-transform: uppercase; margin-top: 1.5rem; min-height: 56px;
   transition: background 0.25s var(--co-ease), transform 0.15s;
 }
 .co-submit-btn:hover { background: var(--co-blue-dark); transform: translateY(-2px); }
 .co-submit-btn:active { transform: translateY(0); }
 .co-submit-btn:disabled { background: #BBB4A8; cursor: not-allowed; transform: none; }
 .co-fine {
-  font-family: var(--co-font-s); font-size: 12px; font-style: italic;
+  font-family: var(--co-font-s); font-size: 14px; font-style: italic;
   color: #BBB4A8; text-align: center; margin-top: 1rem; line-height: 1.7;
 }
 /* SUCCESS */
@@ -285,7 +285,7 @@ const _cohortStyles = `
 .co-success-title {
   font-family: var(--co-font-h); font-weight: 900;
   font-size: clamp(36px, 9vw, 54px); text-transform: uppercase; color: var(--co-blue);
-  line-height: 0.92; letter-spacing: -0.02em; margin-bottom: 1.25rem;
+  line-height: 0.92; letter-spacing: 0.06em; margin-bottom: 1.25rem;
 }
 .co-success-body { font-family: var(--co-font-s); font-size: 16px; font-style: italic; color: var(--co-muted); line-height: 1.8; }
 /* RESPONSIVE — 480px */
@@ -320,7 +320,7 @@ const _cohortStyles = `
 `;
 
 export default function CohortPage() {
-  const [activeStage, setActiveStage] = useState<StageKey | null>('revenue');
+  const [activeStage, setActiveStage] = useState<StageKey | null>(null);
   const [selectedRoles, setSelectedRoles] = useState<string[]>([]);
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -331,7 +331,7 @@ export default function CohortPage() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [company, setCompany] = useState('');
-  const [formStage, setFormStage] = useState<StageKey | ''>('revenue');
+  const [formStage, setFormStage] = useState<StageKey | ''>('');
   const [vision, setVision] = useState('');
   const [hearAbout, setHearAbout] = useState('');
 
@@ -405,6 +405,7 @@ export default function CohortPage() {
 
   return (
     <>
+      <style dangerouslySetInnerHTML={{ __html: _cohortStyles }} />
       <Header />
 
       <main className="co-main">
@@ -436,6 +437,22 @@ export default function CohortPage() {
                 </div>
               </div>
             </Reveal>
+
+            <Reveal delay={0.2}>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+                {[
+                  { val: '300+',   lbl: 'Builders Trained' },
+                  { val: '15+',    lbl: 'Products Shipped' },
+                  { val: '7',      lbl: 'Days to Kickoff' },
+                  { val: '$100M+', lbl: 'Portfolio Served' },
+                ].map(({ val, lbl }) => (
+                  <div key={val} className="text-center">
+                    <div className="font-bebas text-4xl sm:text-5xl text-[#0044CC] mb-3 leading-none">{val}</div>
+                    <div className="font-mono text-gray-600 text-xs font-black uppercase tracking-widest">{lbl}</div>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
           </div>
         </section>
 
@@ -449,6 +466,25 @@ export default function CohortPage() {
           <p className="co-strip-note">
             <strong>Full 3-builder pod.</strong> Not per person. One team, one price.
           </p>
+        </div>
+
+        {/* TRUSTED BY STRIP */}
+        <div className="w-full border-t border-b border-gray-100 bg-white py-3 px-6">
+          <div className="max-w-6xl mx-auto flex flex-wrap items-center gap-x-4 gap-y-2">
+            <span className="font-mono text-[10px] font-black uppercase tracking-widest text-gray-400 mr-2 shrink-0">Trusted by</span>
+            {[
+              { name: 'Haiven',       desc: 'Counter-Trafficking AI' },
+              { name: 'DevShield',    desc: 'Child Safety' },
+              { name: 'By The Fruit', desc: '$100M+ Kingdom Portfolio' },
+              { name: 'Dig In Vision',desc: 'Industrial VR · Europe' },
+            ].map(({ name, desc }, i, arr) => (
+              <span key={name} className="flex items-center gap-2 text-xs shrink-0">
+                <span className="font-semibold text-gray-800">{name}</span>
+                <span className="text-gray-400">{desc}</span>
+                {i < arr.length - 1 && <span className="text-gray-200 ml-2">·</span>}
+              </span>
+            ))}
+          </div>
         </div>
 
         {/* STAGE SELECTOR */}
