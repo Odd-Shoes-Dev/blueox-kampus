@@ -68,11 +68,10 @@ export default function Header(){
         {/* Desktop nav */}
         <nav className="hidden lg:flex gap-6 text-xs uppercase font-bold tracking-widest">
           <Link href="/"         className={navLink(pathname === '/')}>Home</Link>
-          <Link href="/academy"  className={navLink(pathname === '/academy')}>Academy</Link>
-          <Link href="/builders" className={navLink(pathname === '/builders')}>Builders</Link>
           <Link href="/pods"     className={navLink(pathname === '/pods')}>Pods</Link>
-          <Link href="/partners" className={navLink(pathname === '/partners')}>Partners</Link>
           <Link href="/cohort"   className={navLink(pathname === '/cohort')}>Cohort</Link>
+          <Link href="/partners" className={navLink(pathname === '/partners')}>Partners</Link>
+          <Link href="/about"    className={navLink(pathname === '/about')}>About</Link>
         </nav>
 
         {/* Right CTAs + hamburger */}
@@ -111,11 +110,10 @@ export default function Header(){
           className="lg:hidden absolute top-full left-0 w-full backdrop-blur-md py-4 px-6 flex flex-col gap-1 bg-white/95 border-t border-gray-200"
         >
           <Link href="/"         onClick={() => setOpen(false)} className={mobileLinkCls(pathname === '/')}>Home</Link>
-          <Link href="/academy"  onClick={() => setOpen(false)} className={mobileLinkCls(pathname === '/academy')}>Academy</Link>
-          <Link href="/builders" onClick={() => setOpen(false)} className={mobileLinkCls(pathname === '/builders')}>Builders</Link>
           <Link href="/pods"     onClick={() => setOpen(false)} className={mobileLinkCls(pathname === '/pods')}>Pods</Link>
-          <Link href="/partners" onClick={() => setOpen(false)} className={mobileLinkCls(pathname === '/partners')}>Partners</Link>
           <Link href="/cohort"   onClick={() => setOpen(false)} className={mobileLinkCls(pathname === '/cohort')}>Cohort</Link>
+          <Link href="/partners" onClick={() => setOpen(false)} className={mobileLinkCls(pathname === '/partners')}>Partners</Link>
+          <Link href="/about"    onClick={() => setOpen(false)} className={mobileLinkCls(pathname === '/about')}>About</Link>
           <div className="flex gap-2 mt-3">
             <a
               href="https://www.blueoxjobs.eu/hiring"

@@ -2,51 +2,101 @@ import Link from 'next/link';
 
 export default function Footer(){
   return (
-    <footer className="border-t border-gray-200 bg-white py-10">
+    <footer className="border-t border-gray-200 bg-white py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-12">
-        <div className="flex flex-col sm:flex-row items-start justify-between gap-8 flex-wrap">
-
-          {/* Brand */}
-          <div>
-            <div className="flex items-center gap-2.5 mb-3">
-              <img src="/assets/images/logo_name.png" alt="Blue OX" className="w-20 h-auto" />
-              <span className="text-xs font-black tracking-tighter uppercase leading-none text-black">
-                Blue <span className="text-[#F58220]">OX Kampus</span>
-              </span>
-            </div>
-            <p className="text-xs text-gray-400 leading-relaxed">Mbarara, Uganda · EU · US · Gulf</p>
-            <p className="mt-2 text-sm text-gray-500 font-medium leading-snug max-w-xs">
-              Not a dev shop. Not a talent marketplace.<br />
-              Execution infrastructure for redemptive technology.
-            </p>
-          </div>
-
-          {/* Links */}
-          <div className="flex flex-wrap gap-x-8 gap-y-3">
-            {[
-              { label: 'Hire a Pod',      href: '/#request' },
-              { label: 'Join as Builder', href: '/builders' },
-              { label: 'Fund Training',   href: '/fund' },
-              { label: 'Academy',         href: '/academy' },
-              { label: 'Partners',        href: '/partners' },
-              { label: 'Email us',        href: 'mailto:blueoxrecruit@gmail.com' },
-              { label: 'WhatsApp',        href: 'https://wa.me/3197010209759' },
-            ].map(({ label, href }) => (
-              href.startsWith('/') || href.startsWith('#') ? (
-                <Link key={label} href={href} className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
-                  {label}
-                </Link>
-              ) : (
-                <a key={label} href={href} className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
-                  {label}
-                </a>
-              )
-            ))}
+        {/* Brand Section */}
+        <div className="mb-12">
+          <div className="flex items-center gap-2.5 mb-2">
+            <img src="/assets/images/logo_name.png" alt="Blue OX" className="w-20 h-auto" />
+            <span className="text-xs font-black tracking-tighter uppercase leading-none text-black">
+              Blue <span className="text-[#F58220]">OX Kampus</span>
+            </span>
           </div>
         </div>
 
-        <div className="mt-8 border-t border-gray-100 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray-400">&copy; {new Date().getFullYear()} Blue Ox Kampus. All rights reserved.</p>
+        {/* 3 Column Links Section */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 mb-12">
+          
+          {/* Column 1: Navigation */}
+          <div>
+            <h3 className="text-xs font-black uppercase tracking-widest text-black mb-4">Navigation</h3>
+            <ul className="space-y-3 flex flex-col">
+              <li>
+                <a href="/#request" className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
+                  Hire a Pod
+                </a>
+              </li>
+              <li>
+                <Link href="/cohort" className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
+                  Cohort 01
+                </Link>
+              </li>
+              <li>
+                <Link href="/partners" className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
+                  Partners
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
+                  About
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 2: Community */}
+          <div>
+            <h3 className="text-xs font-black uppercase tracking-widest text-black mb-4">Community</h3>
+            <ul className="space-y-3 flex flex-col">
+              <li>
+                <Link href="/builders" className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
+                  Join as Builder
+                </Link>
+              </li>
+              <li>
+                <Link href="/academy" className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
+                  Academy
+                </Link>
+              </li>
+              <li>
+                <Link href="/fund" className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
+                  Fund Training
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 3: Contact */}
+          <div>
+            <h3 className="text-xs font-black uppercase tracking-widest text-black mb-4">Contact</h3>
+            <ul className="space-y-3 flex flex-col">
+              <li>
+                <a href="mailto:blueoxrecruit@gmail.com" className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
+                  Email
+                </a>
+              </li>
+              <li>
+                <a href="https://wa.me/3197010209759" className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
+                  WhatsApp
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/the-blue-ox-kampus/" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
+                  LinkedIn
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-100 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="text-xs text-gray-400 text-center sm:text-left">
+            <p className="mb-1">&copy; {new Date().getFullYear()} Blue Ox Kampus · Mbarara, Uganda · EU · US · Gulf</p>
+            <p className="text-gray-500 font-medium">
+              Not a dev shop. Not a talent marketplace. Execution infrastructure for redemptive technology.
+            </p>
+          </div>
           <div className="flex gap-4">
             <a
               href="https://www.linkedin.com/company/the-blue-ox-kampus/"
