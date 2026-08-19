@@ -2,8 +2,8 @@ import './globals.css';
 import { ReactNode } from 'react';
 
 export const metadata = {
-  title: 'Blue Ox Kampus — Raise. Equip. Send.',
-  description: 'Blue Ox Kampus exists to raise, equip and send faith-driven creatives from Africa to places where the gospel is least accessible. Filmmakers, musicians, designers, developers, photographers, storytellers — raised here, sent everywhere.',
+  title: 'Blue Ox Kampus, Raise. Equip. Send.',
+  description: 'Blue Ox Kampus exists to raise, equip and send faith-driven creatives from Africa to places where the gospel is least accessible. Filmmakers, musicians, designers, developers, photographers, storytellers raised here, sent everywhere.',
   keywords: ['faith-driven creatives', 'Christian mission', 'Africa sending', 'missionary creatives', 'gospel mission', 'Uganda', 'Blue Ox Kampus', 'creative missionaries', 'church planting', 'mission sending', 'raise equip send', 'faith and craft', 'Africa Christianity', 'kingdom mission', 'creative training', 'filmmakers missionaries', 'music mission'],
 
   authors: [{ name: 'Blue Ox Kampus', url: 'https://www.blueoxkampus.com' }],
@@ -22,8 +22,8 @@ export const metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Blue Ox Kampus — Raise. Equip. Send.',
-    description: '5.5 billion people don\'t know Jesus. Blue Ox Kampus is building a pathway — raising faith-driven creatives from Africa, equipping them for the work, and sending them where the gospel is least accessible.',
+    title: 'Blue Ox Kampus, Raise. Equip. Send.',
+    description: '5.5 billion people don\'t know Jesus. Blue Ox Kampus is building a pathway, raising faith-driven creatives from Africa, equipping them for the work, and sending them where the gospel is least accessible.',
     url: 'https://www.blueoxkampus.com',
     siteName: 'Blue Ox Kampus',
     images: [
@@ -31,7 +31,7 @@ export const metadata = {
         url: '/assets/images/favicon.png',
         width: 1200,
         height: 630,
-        alt: 'Blue Ox Kampus — Raise. Equip. Send.'
+        alt: 'Blue Ox Kampus, Raise. Equip. Send.'
       }
     ],
     locale: 'en_US',
@@ -39,7 +39,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Blue Ox Kampus — Raise. Equip. Send.',
+    title: 'Blue Ox Kampus, Raise. Equip. Send.',
     description: 'We have the message. Now we need people who can carry it. Blue Ox Kampus raises, equips and sends faith-driven creatives from Africa to the least-reached places on earth.',
     images: ['/assets/images/favicon.png'],
     site: '@blueoxjobs',
@@ -104,7 +104,7 @@ export default function RootLayout({ children }:{children:ReactNode}){
               alternateName: 'BlueOX Kampus',
               url: 'https://www.blueoxkampus.com',
               logo: 'https://www.blueoxkampus.com/assets/images/logo.png',
-              description: "Blue Ox Kampus exists to raise, equip and send faith-driven creatives from Africa to places where the gospel is least accessible. Filmmakers, musicians, photographers, designers, developers and storytellers — raised here, sent everywhere.",
+              description: "Blue Ox Kampus exists to raise, equip and send faith-driven creatives from Africa to places where the gospel is least accessible. Filmmakers, musicians, photographers, designers, developers and storytellers raised here, sent everywhere.",
               mission: "Raise faith-driven creatives from Africa. Equip them for the work. Send them where the gospel is least accessible. Help them multiply.",
               address: {
                 '@type': 'PostalAddress',
