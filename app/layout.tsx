@@ -2,9 +2,9 @@ import './globals.css';
 import { ReactNode } from 'react';
 
 export const metadata = {
-  title: 'Blue Ox Kampus — Ship Real Work. Build a Career. Fund a Movement.',
-  description: "Blue Ox Kampus pairs talented software builders and creators with real startups in execution pods. Join a global movement: get international experience, fund kingdom initiatives, and ship products that matter. Pods in campus. Zero cost. Real impact.",
-  keywords: ['execution pods', 'builder placement', 'startup experience', 'technical talent', 'software pods', 'kingdom capital', 'faith-driven investing', 'student placement', 'university partnerships', 'product shipping', 'developer training', 'career pathways', 'international experience', 'Blue Ox Kampus', 'tech ecosystem', 'impact investing'],
+  title: 'Blue Ox Kampus — Raise. Equip. Send.',
+  description: 'Blue Ox Kampus exists to raise, equip and send faith-driven creatives from Africa to places where the gospel is least accessible. Filmmakers, musicians, designers, developers, photographers, storytellers — raised here, sent everywhere.',
+  keywords: ['faith-driven creatives', 'Christian mission', 'Africa sending', 'missionary creatives', 'gospel mission', 'Uganda', 'Blue Ox Kampus', 'creative missionaries', 'church planting', 'mission sending', 'raise equip send', 'faith and craft', 'Africa Christianity', 'kingdom mission', 'creative training', 'filmmakers missionaries', 'music mission'],
 
   authors: [{ name: 'Blue Ox Kampus', url: 'https://www.blueoxkampus.com' }],
   generator: 'Next.js',
@@ -22,16 +22,16 @@ export const metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Blue Ox Kampus — Execution Pods for Builders',
-    description: 'Raise a global generation of builders, creatives, and storytellers discipled in faith, sharpened in craft, and committed to shaping culture. Execution pods at $199/week. Ship real products. Fund kingdom initiatives.',
+    title: 'Blue Ox Kampus — Raise. Equip. Send.',
+    description: '5.5 billion people don\'t know Jesus. Blue Ox Kampus is building a pathway — raising faith-driven creatives from Africa, equipping them for the work, and sending them where the gospel is least accessible.',
     url: 'https://www.blueoxkampus.com',
     siteName: 'Blue Ox Kampus',
     images: [
-      { 
-        url: '/assets/images/favicon.png', 
+      {
+        url: '/assets/images/favicon.png',
         width: 1200,
         height: 630,
-        alt: 'Blue Ox Kampus — Raising Builders to Shape Culture' 
+        alt: 'Blue Ox Kampus — Raise. Equip. Send.'
       }
     ],
     locale: 'en_US',
@@ -39,8 +39,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Blue Ox Kampus — Execution Pods for Builders',
-    description: "Join execution pods with real startups. Get international experience, ship real products, and fund kingdom initiatives. Training at campus. Competing weekly. Deploying globally.",
+    title: 'Blue Ox Kampus — Raise. Equip. Send.',
+    description: 'We have the message. Now we need people who can carry it. Blue Ox Kampus raises, equips and sends faith-driven creatives from Africa to the least-reached places on earth.',
     images: ['/assets/images/favicon.png'],
     site: '@blueoxjobs',
     creator: '@blueoxjobs'
@@ -104,8 +104,8 @@ export default function RootLayout({ children }:{children:ReactNode}){
               alternateName: 'BlueOX Kampus',
               url: 'https://www.blueoxkampus.com',
               logo: 'https://www.blueoxkampus.com/assets/images/logo.png',
-              description: "Blue Ox Kampus is a global ecosystem connecting talented builders, universities, and faith-driven investors. We operate execution pods where builders ship real products, students gain international experience, and capital funds kingdom initiatives. From isolation to impact.",
-              mission: "Connecting talented builders with execution pods that ship real products, while channeling returns into kingdom-aligned initiatives and global impact.",
+              description: "Blue Ox Kampus exists to raise, equip and send faith-driven creatives from Africa to places where the gospel is least accessible. Filmmakers, musicians, photographers, designers, developers and storytellers — raised here, sent everywhere.",
+              mission: "Raise faith-driven creatives from Africa. Equip them for the work. Send them where the gospel is least accessible. Help them multiply.",
               address: {
                 '@type': 'PostalAddress',
                 addressRegion: 'Western Uganda',
