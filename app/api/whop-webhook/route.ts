@@ -58,7 +58,7 @@ export async function POST(req: Request) {
         // Send email notification to Blue Ox team
         await resend.emails.send({
           from: 'Blue Ox Kampus <onboarding@resend.dev>',
-          to: 'blueoxrecruit@gmail.com',
+          to: 'info@blueoxkampus.com',
           subject: `🎉 New Funding: $${amount} - ${productName}`,
           html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -75,7 +75,7 @@ export async function POST(req: Request) {
           `
         });
 
-        console.log('Email notification sent to blueoxrecruit@gmail.com');
+        console.log('Email notification sent to info@blueoxkampus.com');
         break;
       
       case 'payment_failed':
@@ -84,7 +84,7 @@ export async function POST(req: Request) {
         // Optionally send a notification about failed payment
         await resend.emails.send({
           from: 'Blue Ox Kampus <onboarding@resend.dev>',
-          to: 'blueoxrecruit@gmail.com',
+          to: 'info@blueoxkampus.com',
           subject: '⚠️ Payment Failed',
           html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -102,7 +102,7 @@ export async function POST(req: Request) {
         // Send refund notification
         await resend.emails.send({
           from: 'Blue Ox Kampus <onboarding@resend.dev>',
-          to: 'blueoxrecruit@gmail.com',
+          to: 'info@blueoxkampus.com',
           subject: '🔄 Refund Created',
           html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">

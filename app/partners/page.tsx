@@ -386,14 +386,14 @@ export default function PartnersPage() {
                   PARTNER WITH US
                 </button>
                 <a 
-                  href="mailto:blueoxrecruit@gmail.com"
+                  href="mailto:info@blueoxkampus.com"
                   className="inline-block border border-black bg-transparent text-black font-semibold text-sm px-6 py-2 rounded-none transition-all duration-300 ease-in-out hover:bg-black hover:text-white"
                 >
                   EMAIL US
                 </a>
               </div>
               <p className="font-libre text-gray-600 text-sm mt-6">
-                Email: <a href="mailto:blueoxrecruit@gmail.com" className="text-[#F58220] hover:underline">blueoxrecruit@gmail.com</a>
+                Email: <a href="mailto:info@blueoxkampus.com" className="text-[#F58220] hover:underline">info@blueoxkampus.com</a>
               </p>
             </div>
           </Reveal>

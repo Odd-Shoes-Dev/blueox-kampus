@@ -47,6 +47,6 @@ Blue Ox Kampus is a foundation-focused platform delivering immersive, industry-a
    ```
 
 ## Contact
-- **Email**: blueoxrecruit@gmail.com
+- **Email**: info@blueoxkampus.com
 - **WhatsApp**: +3197010209759
 - **Website**: https://www.blueoxkampus.com

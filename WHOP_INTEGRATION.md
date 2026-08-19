@@ -286,9 +286,9 @@ const handleCustomAmount = async (amount: number) => {
 };
 ```
 
-## Email to blueoxrecruit@gmail.com
+## Email to info@blueoxkampus.com
 
-Send payment notifications to `blueoxrecruit@gmail.com` using the existing Resend integration:
+Send payment notifications to `info@blueoxkampus.com` using the existing Resend integration:
 
 ```typescript
 // In app/api/whop-webhook/route.ts
@@ -299,7 +299,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 // After payment.succeeded event:
 await resend.emails.send({
   from: 'Blue Ox Kampus <noreply@blueoxkampus.com>',
-  to: 'blueoxrecruit@gmail.com',
+  to: 'info@blueoxkampus.com',
   subject: `New Funding: $${payload.data.amount} - ${payload.data.product_name}`,
   html: `
     <h2>New Funding Received</h2>
@@ -329,4 +329,4 @@ await resend.emails.send({
 
 **Last Updated:** February 16, 2026  
 **Status:** Ready for implementation  
-**Contact:** blueoxrecruit@gmail.com
+**Contact:** info@blueoxkampus.com

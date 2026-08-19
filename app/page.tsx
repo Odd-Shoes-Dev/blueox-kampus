@@ -38,7 +38,7 @@ export default function Page() {
                 We have the message. Now we need people who can carry it.
               </p>
               <p className="text-base md:text-lg text-gray-600 mb-4 leading-relaxed">
-                Blue Ox Kampus exists to raise, equip and send faith-driven creatives from Africa to places where the gospel is least accessible. Filmmakers. Musicians. Photographers. Writers. Designers. Developers. Producers. Storytellers. People who already know how to make things. People who already know how to communicate. People who already have something to carry. We&apos;re building a pathway for them to go.
+                Blue Ox Kampus exists to raise, equip and send faith-driven creatives from Africa to places where the gospel is least accessible. <span className="text-[#0044CC] font-semibold">Filmmakers. Musicians. Photographers. Writers. Designers. Developers. Producers. Storytellers.</span> People who already know how to make things. People who already know how to communicate. People who already have something to carry. We&apos;re building a pathway for them to go.
               </p>
               <div className="flex flex-col sm:flex-row gap-5 justify-start mt-12">
                 <a href="/fund" className="border border-[#0044CC] bg-[#0044CC] text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#0033AA] hover:border-[#0033AA]">
