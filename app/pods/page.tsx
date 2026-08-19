@@ -158,6 +158,73 @@ export default function PodsPage() {
           </div>
         </div>
       </section>
+      {/* Stats Strip */}
+      <section className="relative py-12 bg-white border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-6 sm:px-6">
+          <Reveal delay={0.2}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+              {[
+                { val: '$199',   lbl: 'Per week — full 3-builder pod. Coordinator included' },
+                { val: '7 days', lbl: 'Request to kickoff' },
+                { val: '300+',   lbl: 'Builders trained' },
+                { val: '15+',    lbl: 'Products shipped' },
+              ].map(({ val, lbl }) => (
+                <div key={val} className="text-center">
+                  <div className="font-bebas text-4xl sm:text-5xl text-[#0044CC] mb-3 leading-none">{val}</div>
+                  <div className="blueox-body text-gray-600 text-xs font-black uppercase tracking-widest">{lbl}</div>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* KAMPUS NETWORK */}
+      <section className="relative py-12 bg-white border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-6 sm:px-6">
+          <Reveal>
+            <div className="mb-6">
+              <div className="blueox-body text-[#F58220] text-xs font-black uppercase tracking-wider mb-6">/ KAMPUS NETWORK</div>
+              <h2 className="font-bebas text-5xl md:text-7xl text-[#0044CC] leading-tight uppercase">
+                ONE KAMPUS.<br />MANY CONNECTIONS.<br />A GROWING SENDING NETWORK.
+              </h2>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+              {[
+                { country: 'Uganda', city: 'Mbarara — Physical Kampus. Where we gather, create, train and form creatives in person.', flag: '🇺🇬', isLive: true },
+                { country: 'Online Market 01', city: 'Location identified. Local leaders in place. Active creative community already gathering online.', flag: '🌍', isLive: false },
+                { country: 'Online Market 02', city: 'Location identified. Local leaders in place. Active creative community already gathering online.', flag: '🌍', isLive: false },
+                { country: 'Online Market 03', city: 'Location identified. Local leaders in place. Active creative community already gathering online.', flag: '🌍', isLive: false },
+              ].map((campus) => (
+                <div key={campus.country} className="bg-white border border-gray-100 rounded-lg p-4 hover:border-[#0044CC] transition-colors">
+                  <div className="text-2xl mb-2">{campus.flag}</div>
+                  <div className="font-bebas text-xl text-[#0044CC] mb-2 uppercase">{campus.country}</div>
+                  <div className="flex items-center justify-between">
+                    <p className="blueox-body text-xs text-gray-600 leading-relaxed">
+                      {campus.city && <span>{campus.city}</span>}
+                    </p>
+                    <span className={`blueox-body text-xs font-black uppercase tracking-wide ${campus.isLive ? 'text-green-600' : 'text-gray-600'}`}>
+                      {campus.isLive ? '● Live' : '○ Online'}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.2}>
+            <div className="flex justify-start mt-8">
+              <a href="/fund" className="border border-[#0044CC] bg-[#0044CC] text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#0033AA] hover:border-[#0033AA]">
+                HELP BUILD THE NEXT KAMPUS →
+              </a>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Track Record */}
       <section className="relative py-16 bg-white border-t border-gray-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">

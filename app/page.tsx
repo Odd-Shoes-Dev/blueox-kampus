@@ -49,74 +49,13 @@ already have something to carry. We're building a pathway for them to go.
                 <a href="/fund" className="border border-[#0044CC] bg-[#0044CC] text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#0033AA] hover:border-[#0033AA]">
                   FUND THE SENDING →
                 </a>
-                <a href="/mission" className="border border-[#0044CC] bg-transparent text-[#0044CC] font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#0044CC] hover:text-white">
+                <a href="/#the-pathway" className="border border-[#0044CC] bg-transparent text-[#0044CC] font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#0044CC] hover:text-white">
                   EXPLORE THE MISSION →
                 </a>
               </div>
             </div>
           </Reveal>
 
-          <Reveal delay={0.2}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-              {[
-                { val: '$199',   lbl: 'Per week — full 3-builder pod. Coordinator included' },
-                { val: '7 days', lbl: 'Request to kickoff' },
-                { val: '300+',   lbl: 'Builders trained' },
-                { val: '15+',    lbl: 'Products shipped' },
-              ].map(({ val, lbl }) => (
-                <div key={val} className="text-center">
-                  <div className="font-bebas text-4xl sm:text-5xl text-[#0044CC] mb-3 leading-none">{val}</div>
-                  <div className="font-mono text-gray-600 text-xs font-black uppercase tracking-widest">{lbl}</div>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* KAMPUS NETWORK */}
-      <section className="relative py-3 md:py-4 bg-white">
-        <div className="max-w-6xl mx-auto px-6 sm:px-6">
-          <Reveal>
-            <div className="mb-6">
-              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-6">/ KAMPUS NETWORK</div>
-              <h2 className="font-bebas text-5xl md:text-7xl text-[#0044CC] leading-tight uppercase">
-                ONE KAMPUS.<br />MANY CONNECTIONS.<br />A GROWING SENDING NETWORK.
-              </h2>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.1}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-              {[
-                { country: 'Uganda', city: 'Mbarara — Physical Kampus. Where we gather, create, train and form creatives in person.', status: 'Live', flag: '🇺🇬', isLive: true },
-                { country: 'Online Market 01', city: 'Location identified. Local leaders in place. Active creative community already gathering online.', status: 'Online', flag: '🌍', isLive: false },
-                { country: 'Online Market 02', city: 'Location identified. Local leaders in place. Active creative community already gathering online.', status: 'Online', flag: '🌍', isLive: false },
-                { country: 'Online Market 03', city: 'Location identified. Local leaders in place. Active creative community already gathering online.', status: 'Online', flag: '🌍', isLive: false },
-              ].map((campus) => (
-                <div key={campus.country} className="bg-white border border-gray-100 rounded-lg p-4 hover:border-[#0044CC] transition-colors">
-                  <div className="text-2xl mb-2">{campus.flag}</div>
-                  <div className="font-bebas text-xl text-[#0044CC] mb-2 uppercase">{campus.country}</div>
-                  <div className="flex items-center justify-between">
-                    <p className="text-xs text-gray-600 font-libre leading-relaxed">
-                      {campus.city && <span>{campus.city}</span>}
-                    </p>
-                    <span className={`text-xs font-mono font-black uppercase tracking-wide ${campus.isLive ? 'text-green-600' : 'text-gray-600'}`}>
-                      {campus.isLive ? '● Live' : '○ Online'}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.2}>
-            <div className="flex justify-start mt-8">
-              <a href="/fund" className="border border-[#0044CC] bg-[#0044CC] text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#0033AA] hover:border-[#0033AA]">
-                HELP BUILD THE NEXT KAMPUS →
-              </a>
-            </div>
-          </Reveal>
         </div>
       </section>
 
@@ -212,7 +151,7 @@ already have something to carry. We're building a pathway for them to go.
 
           <Reveal delay={0.2}>
             <div className="flex justify-start">
-              <a href="/mission" className="border border-[#0044CC] bg-transparent text-[#0044CC] font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#0044CC] hover:text-white">
+              <a href="/#the-pathway" className="border border-[#0044CC] bg-transparent text-[#0044CC] font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#0044CC] hover:text-white">
                 YOU DON&apos;T HAVE TO STOP BEING A CREATIVE TO BECOME A MISSIONARY →
               </a>
             </div>
@@ -465,7 +404,7 @@ already have something to carry. We're building a pathway for them to go.
       </section>
 
       {/* THE PATHWAY */}
-      <section className="relative py-20 bg-white border-t border-gray-100">
+      <section className="relative py-20 bg-white border-t border-gray-100" id="the-pathway">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <Reveal>
             <div className="text-center mb-12">
@@ -627,7 +566,7 @@ already have something to carry. We're building a pathway for them to go.
                   <Link href="/fund" className="border border-[#0044CC] bg-[#0044CC] text-white font-semibold text-sm px-6 py-3 rounded-none transition-all duration-300 hover:bg-[#0033AA] hover:border-[#0033AA] inline-block">
                     FUND THE SENDING →
                   </Link>
-                  <Link href="/mission" className="border border-black bg-transparent text-black font-semibold text-sm px-6 py-3 rounded-none transition-all duration-300 hover:bg-black hover:text-white inline-block">
+                  <Link href="/#the-pathway" className="border border-black bg-transparent text-black font-semibold text-sm px-6 py-3 rounded-none transition-all duration-300 hover:bg-black hover:text-white inline-block">
                     EXPLORE THE MISSION →
                   </Link>
                 </div>
@@ -705,7 +644,7 @@ already have something to carry. We're building a pathway for them to go.
                 <a href="/fund" className="border border-[#F58220] bg-[#F58220] text-[#0044CC] font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-white hover:border-white hover:text-[#0044CC] shadow-lg shadow-orange-500/20">
                   FUND THE SENDING →
                 </a>
-                <a href="/mission" className="border border-white/50 bg-transparent text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-white hover:text-[#0044CC]">
+                <a href="/#the-pathway" className="border border-white/50 bg-transparent text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-white hover:text-[#0044CC]">
                   EXPLORE THE MISSION →
                 </a>
               </div>

@@ -29,7 +29,7 @@ export default function Footer(){
             <h3 className="text-xs font-black uppercase tracking-widest text-black mb-4">The Mission</h3>
             <ul className="space-y-3 flex flex-col">
               <li>
-                <Link href="/mission" className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
+                <Link href="/#the-pathway" className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
                   The Mission
                 </Link>
               </li>
