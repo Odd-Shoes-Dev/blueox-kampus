@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Bebas_Neue, Libre_Baskerville, Space_Mono } from 'next/font/google';
 
-// Import Blue Ox Components
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Reveal from '../components/Reveal';
@@ -24,7 +23,7 @@ export default function Page() {
     <div className={`${bebasNeue.variable} ${libreBaskerville.variable} ${spaceMono.variable}`}>
       <Header />
 
-      {/* HERO */}
+      {/* 01 — HERO / THE GRAVITY */}
       <section className="relative bg-white pt-28 md:pt-36 pb-24 md:pb-28">
         <div className="max-w-6xl mx-auto px-6 sm:px-6">
           <Reveal>
@@ -34,16 +33,12 @@ export default function Page() {
                 <span className="text-gray-300">|</span>
                 <span className="text-gray-600 text-sm font-libre italic">If we don&apos;t shape culture, culture will disciple the next generation.</span>
               </div>
-              <h1 className="font-bebas text-[5.5rem] sm:text-[7rem] md:text-[10rem] mb-12 text-[#0044CC] leading-[1.1] tracking-normal uppercase text-left">5.5 BILLION PEOPLE<br /><span className="text-transparent" style={{ WebkitTextStroke: '1px #0044CC' }}> DON'T</span><br />KNOW JESUS.</h1>
+              <h1 className="font-bebas text-[5.5rem] sm:text-[7rem] md:text-[10rem] mb-12 text-[#0044CC] leading-[1.1] tracking-normal uppercase text-left">5.5 BILLION PEOPLE<br /><span className="text-transparent" style={{ WebkitTextStroke: '1px #0044CC' }}> DON&apos;T</span><br />KNOW JESUS.</h1>
               <p className="font-libre text-2xl md:text-4xl text-gray-900 mb-4 italic">
                 We have the message. Now we need people who can carry it.
               </p>
               <p className="text-base md:text-lg text-gray-600 mb-4 leading-relaxed">
-                Blue Ox Kampus exists to raise, equip and send faith-driven creatives from Africa to places where the gospel is
-least accessible.
-Filmmakers. Musicians. Photographers. Writers. Designers. Developers. Producers. Storytellers.
-People who already know how to make things. People who already know how to communicate. People who
-already have something to carry. We're building a pathway for them to go.
+                Blue Ox Kampus exists to raise, equip and send faith-driven creatives from Africa to places where the gospel is least accessible. Filmmakers. Musicians. Photographers. Writers. Designers. Developers. Producers. Storytellers. People who already know how to make things. People who already know how to communicate. People who already have something to carry. We&apos;re building a pathway for them to go.
               </p>
               <div className="flex flex-col sm:flex-row gap-5 justify-start mt-12">
                 <a href="/fund" className="border border-[#0044CC] bg-[#0044CC] text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#0033AA] hover:border-[#0033AA]">
@@ -55,7 +50,6 @@ already have something to carry. We're building a pathway for them to go.
               </div>
             </div>
           </Reveal>
-
         </div>
       </section>
 
@@ -67,7 +61,7 @@ already have something to carry. We're building a pathway for them to go.
               {['Haiven', 'DevShield', 'By The Fruit', 'Dig In Vision', 'Competition-Ranked Builders', 'No Hiring · Just Output', 'Mbarara Uganda', 'Shipping Globally', 'Redemptive Technology'].map(item => (
                 <span key={item}>
                   <span className="academy-ticker-item">{item}</span>
-                  <span className="academy-ticker-sep"></span>
+                  <span className="academy-ticker-sep"></span>
                 </span>
               ))}
             </div>
@@ -75,7 +69,7 @@ already have something to carry. We're building a pathway for them to go.
               {['Haiven', 'DevShield', 'By The Fruit', 'Dig In Vision', 'Competition-Ranked Builders', 'No Hiring · Just Output', 'Mbarara Uganda', 'Shipping Globally', 'Redemptive Technology'].map(item => (
                 <span key={item}>
                   <span className="academy-ticker-item">{item}</span>
-                  <span className="academy-ticker-sep"></span>
+                  <span className="academy-ticker-sep"></span>
                 </span>
               ))}
             </div>
@@ -83,151 +77,7 @@ already have something to carry. We're building a pathway for them to go.
         </div>
       </div>
 
-      {/* THE INVERSION */}
-      <section className="relative py-20 bg-white border-t border-gray-100">
-        <div className="max-w-6xl mx-auto px-6 sm:px-6">
-          <Reveal>
-            <div className="mb-16">
-              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-6">/ THE INVERSION</div>
-              <h2 className="font-bebas text-5xl md:text-7xl text-[#0044CC] leading-tight uppercase">
-                WE&apos;RE NOT<br />
-                ABANDONING<br />
-                WHAT WE BUILT.
-              </h2>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.1}>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                { n: '01', t: 'The Old Pipeline', d: 'GATHER → TRAIN → WORK. The model that built the campus and trained hundreds of builders. It worked.' },
-                { n: '02', t: 'The Blue Ox Inversion', d: 'GATHER → FORM → EQUIP → SEND → MULTIPLY. The same pipeline. A new destination.' },
-                { n: '03', t: "We're giving it a destination.", d: "The training still matters. The creative work still matters. The Kampus still matters. But now they all point somewhere: TOWARD SENDING." },
-              ].map(s => (
-                <div key={s.n} className="bg-white border border-gray-100 rounded-lg p-6 hover:border-[#0044CC] transition-colors">
-                  <div className="font-mono text-[#F58220] text-xs font-black mb-3">{s.n}</div>
-                  <div className="font-bebas text-2xl text-[#0044CC] mb-3 uppercase">{s.t}</div>
-                  <p className="text-sm text-gray-600 font-libre leading-relaxed">{s.d}</p>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* THE PEOPLE WE SEND */}
-      <section className="relative py-3 md:py-4 bg-white border-t border-gray-100">
-        <div className="max-w-6xl mx-auto px-6 sm:px-6">
-          <Reveal>
-            <div className="mb-4">
-              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-6">/ THE PEOPLE WE SEND</div>
-              <h2 className="font-bebas text-6xl md:text-8xl text-[#0044CC] leading-tight uppercase font-light">
-                YOUR CRAFT CAN<br />
-                BECOME PART OF<br />
-                THE MISSION.
-              </h2>
-              <p className="font-libre text-lg md:text-xl text-gray-600 mt-8 max-w-2xl">
-                Writers. Producers & Engineers. Storytellers. The gospel has always moved through stories — and the work needs people who know how to make it happen.
-              </p>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.1}>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-12">
-              {[
-                { role: 'Filmmakers', desc: 'Stories can cross borders.' },
-                { role: 'Musicians', desc: 'Music can open doors language cannot.' },
-                { role: 'Photographers', desc: 'Images can help people see.' },
-                { role: 'Designers', desc: 'Communication can make complex ideas understandable.' },
-                { role: 'Developers', desc: 'Technology can serve people and movements that need it.' },
-              ].map((item, idx) => (
-                <div key={idx} className="bg-white border border-gray-100 rounded-lg p-6 hover:border-[#0044CC] transition-colors">
-                  <div className="font-bebas text-xl text-[#0044CC] mb-3 uppercase">{item.role}</div>
-                  <p className="text-sm text-gray-600 font-libre leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.2}>
-            <div className="flex justify-start">
-              <a href="/#the-pathway" className="border border-[#0044CC] bg-transparent text-[#0044CC] font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#0044CC] hover:text-white">
-                YOU DON&apos;T HAVE TO STOP BEING A CREATIVE TO BECOME A MISSIONARY →
-              </a>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* WHY WE START WITH CREATIVES */}
-      <section className="relative py-20 bg-white border-t border-gray-100">
-        <div className="max-w-6xl mx-auto px-6 sm:px-6">
-          <Reveal>
-            <div className="mb-16">
-              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-6">/ WHY WE START WITH CREATIVES</div>
-              <h2 className="font-bebas text-5xl md:text-7xl text-[#0044CC] leading-tight uppercase">
-                BECAUSE WE<br />
-                KNOW THEM.
-              </h2>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.1}>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-              {[
-                { title: 'We are creatives ourselves', desc: 'We know what it means to have a gift but not have the equipment. We know what it means to have talent but not have opportunity.' },
-                { title: 'We know what it means', desc: 'We know what it means to want to use your craft for something bigger. We have spent years building environments where creatives can learn, collaborate and work.' },
-                { title: 'Now we want to help them go', desc: "We aren't trying to become experts in every kind of missionary. We're starting with the people we understand. That's our lane. And we're going to stay in it." },
-              ].map((item, idx) => (
-                <div key={idx} className="bg-white border border-gray-100 rounded-lg p-6 hover:border-[#0044CC] transition-colors">
-                  <div className="font-bebas text-xl text-[#0044CC] mb-3 uppercase">{item.title}</div>
-                  <p className="text-sm text-gray-600 font-libre leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.2}>
-            <div className="mt-12 bg-gray-50 border border-gray-100 rounded-lg p-8 md:p-10">
-              <div className="font-mono text-[#F58220] text-xs font-black mb-2 uppercase tracking-wider">Our Lane</div>
-              <div className="font-bebas text-3xl md:text-4xl text-[#0044CC] mb-3 uppercase">We aren&apos;t trying to do everything. We&apos;re doing this.</div>
-              <p className="text-base md:text-lg text-gray-600 font-libre leading-relaxed">
-                Raise faith-driven creatives from Africa. Equip them for the work. Send them where the gospel is least accessible. Help them multiply. That&apos;s the work.
-              </p>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* WHERE WE STAND */}
-      <section className="relative py-24 bg-white border-t border-gray-100">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <Reveal>
-            <div className="mb-8">
-              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-6">/ WHERE WE STAND</div>
-              <h2 className="font-bebas text-5xl md:text-7xl text-[#0044CC] leading-tight uppercase mb-8">
-                FIRST DEPLOYMENT<br />
-                TARGET:<br />
-                SEPTEMBER 2026
-              </h2>
-              <p className="font-libre text-lg md:text-xl text-gray-600 italic max-w-2xl mx-auto mb-12 leading-relaxed">
-                The Kampus exists. A $2,500 experiment became a physical creative hub in Uganda. More than 300 builders have trained through the work. But the sending pipeline is new. We haven&apos;t sent our first missionary yet. We&apos;re building the pathway now.
-              </p>
-              <p className="font-libre text-base text-gray-500 max-w-xl mx-auto mb-12 leading-relaxed">
-                That means the people who give today aren&apos;t funding a mature machine. They&apos;re helping build the first version of it.
-              </p>
-              <a
-                href="/fund"
-                className="border border-[#0044CC] bg-[#0044CC] text-white font-semibold text-base px-12 py-4 rounded-none transition-all duration-300 hover:bg-[#0033AA] hover:border-[#0033AA] inline-block"
-              >
-                HELP SEND THE FIRST CREATIVE →
-              </a>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* THE QUESTION THAT CHANGED THE MODEL */}
+      {/* 02 — THE QUESTION THAT CHANGED THE MODEL */}
       <section className="relative py-20 bg-white border-t border-gray-100" id="the-question">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <Reveal>
@@ -249,14 +99,14 @@ already have something to carry. We're building a pathway for them to go.
                 <p className="font-libre text-gray-600 leading-relaxed mb-4">
                   We&apos;ve spent years working with faith-driven creatives. We&apos;ve trained developers. We&apos;ve worked with filmmakers, designers, musicians and storytellers. We&apos;ve built communities. We&apos;ve worked with churches. We&apos;ve worked across borders.
                 </p>
-                <p className="font-bebas font-bold text-[#0044CC] uppercase">Maybe the point isn&apos;t simply to build better creatives. Maybe it&apos;s to help send them.</p>
+                <div className="font-bebas text-2xl text-[#0044CC] mb-3 uppercase">Maybe the point isn&apos;t simply to build better creatives. Maybe it&apos;s to help send them.</div>
               </div>
             </div>
           </Reveal>
         </div>
       </section>
 
-      {/* THE RESEARCH */}
+      {/* 03 — THE RESEARCH: THE WORLD HAS CHANGED */}
       <section className="relative py-20 bg-white border-t border-gray-100" id="the-research">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <Reveal>
@@ -269,7 +119,6 @@ already have something to carry. We're building a pathway for them to go.
                 For generations, the story of Christian mission was largely told from the West outward. But the geography of Christianity has changed dramatically.
               </p>
 
-              {/* Vibe Coding Competition Video */}
               <div className="mt-10 max-w-xs mx-auto">
                 <div className="relative overflow-hidden" style={{ paddingBottom: '177.78%' }}>
                   <iframe
@@ -302,6 +151,9 @@ already have something to carry. We're building a pathway for them to go.
           </div>
 
           <Reveal delay={0.4}>
+            <p className="font-libre text-gray-500 text-sm mb-8 italic">
+              Source: Pew Research Center, 2025. 1910 estimate via the Center for the Study of Global Christianity. Two distinct analyses do not present as one continuous data series.
+            </p>
             <div className="bg-white border border-[#0044CC]/20 rounded-none p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
                 <p className="font-bebas text-lg text-[#0044CC] mb-1 uppercase">Africa has received. The gospel came. The Church grew.</p>
@@ -318,7 +170,239 @@ already have something to carry. We're building a pathway for them to go.
         </div>
       </section>
 
-      {/* FUND THE SENDING */}
+      {/* 04 — THE INVERSION (VISUAL CENTERPIECE) */}
+      <section className="relative py-20 bg-white border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-6 sm:px-6">
+          <Reveal>
+            <div className="mb-16">
+              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-6">/ THE INVERSION</div>
+              <h2 className="font-bebas text-5xl md:text-7xl text-[#0044CC] leading-tight uppercase">
+                WE&apos;RE NOT<br />
+                ABANDONING<br />
+                WHAT WE BUILT.
+              </h2>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                { n: '01', t: 'The Old Pipeline', d: 'GATHER → TRAIN → WORK. The model that built the campus and trained hundreds of builders. It worked.' },
+                { n: '02', t: 'The Blue Ox Inversion', d: 'GATHER → FORM → EQUIP → SEND → MULTIPLY. The same pipeline. A new destination.' },
+                { n: '03', t: "We're giving it a destination.", d: "The training still matters. The creative work still matters. The Kampus still matters. But now they all point somewhere: TOWARD SENDING." },
+              ].map(s => (
+                <div key={s.n} className="bg-white border border-gray-100 rounded-lg p-6 hover:border-[#0044CC] transition-colors">
+                  <div className="font-mono text-[#F58220] text-xs font-black mb-3">{s.n}</div>
+                  <div className="font-bebas text-2xl text-[#0044CC] mb-3 uppercase">{s.t}</div>
+                  <p className="text-sm text-gray-600 font-libre leading-relaxed">{s.d}</p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* 05 — THE PATHWAY: FROM GIFTED TO SENT */}
+      <section className="relative py-20 bg-white border-t border-gray-100" id="the-pathway">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <Reveal>
+            <div className="text-center mb-12">
+              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-4">/ THE PATHWAY: FROM GIFTED TO SENT</div>
+              <h2 className="text-4xl md:text-5xl font-bebas text-[#0044CC] mb-4 leading-tight uppercase">
+                One creative can become a sending movement.
+              </h2>
+              <p className="font-libre text-gray-600 max-w-2xl mx-auto italic">
+                Going isn&apos;t the end. The people we send can return, create, teach, mentor and raise others who will go next.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="space-y-6">
+            {[
+              { step: 1, icon: 'planner.svg', title: 'Gather',   body: 'We find faith-driven creatives across Uganda and through our growing network of churches, creative communities and partner organizations across Africa.', time: '01' },
+              { step: 2, icon: 'team.svg',    title: 'Form',     body: "We help them develop their craft, character, faith and cross-cultural readiness. Being gifted isn't enough. They need to be ready to go.", time: '02' },
+              { step: 3, icon: 'rocket.svg',  title: 'Equip',    body: 'We put the tools in their hands. Cameras. Computers. Software. Instruments. Microphones. Production equipment. Whatever their craft requires to serve well.', time: '03' },
+              { step: 4, icon: 'chart.svg',   title: 'Send',     body: 'We help create pathways for these creatives to take their skills beyond their borders and into places where the gospel is least accessible.', time: '04' },
+              { step: 5, icon: 'rocket.svg',  title: 'Multiply', body: "Going isn't the end. The people we send can return, create, teach, mentor and raise others who will go next. One creative can become a sending movement.", time: '05' },
+            ].map((item, i) => (
+              <Reveal key={item.step} delay={0.1 + i * 0.1}>
+                <div className="border-l-4 border-[#0044CC] pl-6 flex items-start gap-6">
+                  <div className="shrink-0">
+                    <div className="w-12 h-12 bg-transparent border border-[#0044CC] rounded-full flex items-center justify-center">
+                      <img src={`/icons/${item.icon}`} alt={`Step ${item.step}`} className="w-6 h-6" style={{ filter: 'invert(10%) sepia(100%) saturate(800%) hue-rotate(200deg)' }} />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-1">/ {item.time}</div>
+                    <h3 className="text-xl font-bebas text-[#0044CC] mb-2 uppercase">{item.title}</h3>
+                    <p className="font-libre text-gray-600 leading-relaxed">{item.body}</p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 06 — THE PEOPLE WE SEND */}
+      <section className="relative py-20 bg-white border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-6 sm:px-6">
+          <Reveal>
+            <div className="mb-4">
+              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-6">/ THE PEOPLE WE SEND</div>
+              <h2 className="font-bebas text-6xl md:text-8xl text-[#0044CC] leading-tight uppercase font-light">
+                YOUR CRAFT CAN<br />
+                BECOME PART OF<br />
+                THE MISSION.
+              </h2>
+              <p className="font-libre text-lg md:text-xl text-gray-600 mt-8 max-w-2xl">
+                Writers. Producers &amp; Engineers. Storytellers. The gospel has always moved through stories and the work needs people who know how to make it happen.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-12">
+              {[
+                { role: 'Filmmakers',   desc: 'Stories can cross borders.' },
+                { role: 'Musicians',    desc: 'Music can open doors language cannot.' },
+                { role: 'Photographers', desc: 'Images can help people see.' },
+                { role: 'Designers',    desc: 'Communication can make complex ideas understandable.' },
+                { role: 'Developers',   desc: 'Technology can serve people and movements that need it.' },
+              ].map((item, idx) => (
+                <div key={idx} className="bg-white border border-gray-100 rounded-lg p-6 hover:border-[#0044CC] transition-colors">
+                  <div className="font-bebas text-xl text-[#0044CC] mb-3 uppercase">{item.role}</div>
+                  <p className="text-sm text-gray-600 font-libre leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.2}>
+            <div className="flex justify-start">
+              <a href="/#the-pathway" className="border border-[#0044CC] bg-transparent text-[#0044CC] font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#0044CC] hover:text-white">
+                YOU DON&apos;T HAVE TO STOP BEING A CREATIVE TO BECOME A MISSIONARY →
+              </a>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* 07 & 08 — KAMPUS NETWORK, PARTNER HUBS & EXPANSION */}
+      <section className="relative py-20 bg-white border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-6 sm:px-6">
+          <Reveal>
+            <div className="mb-6">
+              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-6">/ KAMPUS NETWORK</div>
+              <h2 className="font-bebas text-5xl md:text-7xl text-[#0044CC] leading-tight uppercase">
+                ONE KAMPUS.<br />MANY CONNECTIONS.<br />A GROWING SENDING NETWORK.
+              </h2>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+              {[
+                { country: 'Uganda', city: 'Mbarara — Physical Kampus. Where we gather, create, train and form creatives in person.', flag: '🇺🇬', isLive: true },
+                { country: 'Online Market 01', city: 'Location identified. Local leaders in place. Active creative community already gathering online.', flag: '🌍', isLive: false },
+                { country: 'Online Market 02', city: 'Location identified. Local leaders in place. Active creative community already gathering online.', flag: '🌍', isLive: false },
+                { country: 'Online Market 03', city: 'Location identified. Local leaders in place. Active creative community already gathering online.', flag: '🌍', isLive: false },
+              ].map((campus) => (
+                <div key={campus.country} className="bg-white border border-gray-100 rounded-lg p-4 hover:border-[#0044CC] transition-colors">
+                  <div className="text-2xl mb-2">{campus.flag}</div>
+                  <div className="font-bebas text-xl text-[#0044CC] mb-2 uppercase">{campus.country}</div>
+                  <div className="flex items-center justify-between">
+                    <p className="text-xs text-gray-600 font-libre leading-relaxed">
+                      {campus.city && <span>{campus.city}</span>}
+                    </p>
+                    <span className={`text-xs font-mono font-black uppercase tracking-wide ${campus.isLive ? 'text-green-600' : 'text-gray-600'}`}>
+                      {campus.isLive ? '● Live' : '○ Online'}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.2}>
+            <div className="flex justify-start mt-8">
+              <a href="/fund" className="border border-[#0044CC] bg-[#0044CC] text-white font-semibold text-sm px-8 py-3 rounded-none transition-all duration-300 hover:bg-[#0033AA] hover:border-[#0033AA]">
+                HELP BUILD THE NEXT KAMPUS →
+              </a>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* 09 — WHY WE START WITH CREATIVES */}
+      <section className="relative py-20 bg-white border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-6 sm:px-6">
+          <Reveal>
+            <div className="mb-16">
+              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-6">/ WHY WE START WITH CREATIVES</div>
+              <h2 className="font-bebas text-5xl md:text-7xl text-[#0044CC] leading-tight uppercase">
+                BECAUSE WE<br />
+                KNOW THEM.
+              </h2>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+              {[
+                { title: 'We are creatives ourselves', desc: 'We know what it means to have a gift but not have the equipment. We know what it means to have talent but not have opportunity.' },
+                { title: 'We know what it means',      desc: 'We know what it means to want to use your craft for something bigger. We have spent years building environments where creatives can learn, collaborate and work.' },
+                { title: 'Now we want to help them go', desc: "We aren't trying to become experts in every kind of missionary. We're starting with the people we understand. That's our lane. And we're going to stay in it." },
+              ].map((item, idx) => (
+                <div key={idx} className="bg-white border border-gray-100 rounded-lg p-6 hover:border-[#0044CC] transition-colors">
+                  <div className="font-bebas text-xl text-[#0044CC] mb-3 uppercase">{item.title}</div>
+                  <p className="text-sm text-gray-600 font-libre leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.2}>
+            <div className="mt-12 bg-gray-50 border border-gray-100 rounded-lg p-8 md:p-10">
+              <div className="font-mono text-[#F58220] text-xs font-black mb-2 uppercase tracking-wider">Our Lane</div>
+              <div className="font-bebas text-3xl md:text-4xl text-[#0044CC] mb-3 uppercase">We aren&apos;t trying to do everything. We&apos;re doing this.</div>
+              <p className="text-base md:text-lg text-gray-600 font-libre leading-relaxed">
+                Raise faith-driven creatives from Africa. Equip them for the work. Send them where the gospel is least accessible. Help them multiply. That&apos;s the work.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* 10 — WHERE WE STAND */}
+      <section className="relative py-24 bg-white border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <Reveal>
+            <div className="mb-8">
+              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-6">/ WHERE WE STAND</div>
+              <h2 className="font-bebas text-5xl md:text-7xl text-[#0044CC] leading-tight uppercase mb-8">
+                FIRST DEPLOYMENT<br />
+                TARGET:<br />
+                SEPTEMBER 2026
+              </h2>
+              <p className="font-libre text-lg md:text-xl text-gray-600 italic max-w-2xl mx-auto mb-12 leading-relaxed">
+                The Kampus exists. A $2,500 experiment became a physical creative hub in Uganda. More than 300 builders have trained through the work. But the sending pipeline is new. We haven&apos;t sent our first missionary yet. We&apos;re building the pathway now.
+              </p>
+              <p className="font-libre text-base text-gray-500 max-w-xl mx-auto mb-12 leading-relaxed">
+                That means the people who give today aren&apos;t funding a mature machine. They&apos;re helping build the first version of it.
+              </p>
+              <a
+                href="/fund"
+                className="border border-[#0044CC] bg-[#0044CC] text-white font-semibold text-base px-12 py-4 rounded-none transition-all duration-300 hover:bg-[#0033AA] hover:border-[#0033AA] inline-block"
+              >
+                HELP SEND THE FIRST CREATIVE →
+              </a>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* 11 — FUND THE SENDING */}
       <section className="relative py-20 bg-white border-t border-gray-100" id="give">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <Reveal>
@@ -343,9 +427,9 @@ already have something to carry. We're building a pathway for them to go.
           <Reveal delay={0.3}>
             <div className="grid md:grid-cols-3 gap-4 mb-10">
               {[
-                { label: 'Send a Creative', val: 'SEND', txt: 'Help make the journey possible. Cover the cost of getting a faith-driven creative from their campus to their field.', hi: false },
+                { label: 'Send a Creative', val: 'SEND',  txt: 'Help make the journey possible. Cover the cost of getting a faith-driven creative from their campus to their field.', hi: false },
                 { label: 'Equip a Creative', val: 'EQUIP', txt: 'Put the right tools into the hands of someone preparing to go. Cameras. Computers. Instruments. Whatever their craft requires.', hi: false },
-                { label: 'Form a Creative', val: 'FORM', txt: 'Support training, spiritual formation and cross-cultural preparation before deployment. Being gifted is not enough. They need to be ready to go.', hi: true },
+                { label: 'Form a Creative', val: 'FORM',  txt: 'Support training, spiritual formation and cross-cultural preparation before deployment. Being gifted is not enough. They need to be ready to go.', hi: true },
               ].map(({ label, val, txt, hi }) => (
                 <div key={label} className={`bg-white border rounded-none p-6 ${hi ? 'border-[#0044CC]' : 'border-gray-200'}`}>
                   <div className="text-xs font-mono font-black uppercase tracking-widest text-gray-500 mb-2">{label}</div>
@@ -403,49 +487,7 @@ already have something to carry. We're building a pathway for them to go.
         </div>
       </section>
 
-      {/* THE PATHWAY */}
-      <section className="relative py-20 bg-white border-t border-gray-100" id="the-pathway">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <Reveal>
-            <div className="text-center mb-12">
-              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-4">/ THE PATHWAY: FROM GIFTED TO SENT</div>
-              <h2 className="text-4xl md:text-5xl font-bebas text-[#0044CC] mb-4 leading-tight uppercase">
-                One creative can become a sending movement.
-              </h2>
-              <p className="font-libre text-gray-600 max-w-2xl mx-auto italic">
-                Going isn&apos;t the end. The people we send can return, create, teach, mentor and raise others who will go next.
-              </p>
-            </div>
-          </Reveal>
-
-          <div className="space-y-6">
-            {[
-              { step: 1, icon: 'planner.svg', title: 'Gather', body: 'We find faith-driven creatives across Uganda and through our growing network of churches, creative communities and partner organizations across Africa.', time: '01' },
-              { step: 2, icon: 'team.svg',    title: 'Form',   body: 'We help them develop their craft, character, faith and cross-cultural readiness. Being gifted isn\'t enough. They need to be ready to go.', time: '02' },
-              { step: 3, icon: 'rocket.svg',  title: 'Equip',  body: 'We put the tools in their hands. Cameras. Computers. Software. Instruments. Microphones. Production equipment. Whatever their craft requires to serve well.', time: '03' },
-              { step: 4, icon: 'chart.svg',   title: 'Send',   body: 'We help create pathways for these creatives to take their skills beyond their borders and into places where the gospel is least accessible.', time: '04' },
-              { step: 5, icon: 'rocket.svg',  title: 'Multiply', body: 'Going isn\'t the end. The people we send can return, create, teach, mentor and raise others who will go next. One creative can become a sending movement.', time: '05' },
-            ].map((item, i) => (
-              <Reveal key={item.step} delay={0.1 + i * 0.1}>
-                <div className="border-l-4 border-[#0044CC] pl-6 flex items-start gap-6">
-                  <div className="shrink-0">
-                    <div className="w-12 h-12 bg-transparent border border-[#0044CC] rounded-full flex items-center justify-center">
-                      <img src={`/icons/${item.icon}`} alt={`Step ${item.step}`} className="w-6 h-6" style={{ filter: 'invert(10%) sepia(100%) saturate(800%) hue-rotate(200deg)' }} />
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-1">/ {item.time}</div>
-                    <h3 className="text-xl font-bebas text-[#0044CC] mb-2 uppercase">{item.title}</h3>
-                    <p className="font-libre text-gray-600 leading-relaxed">{item.body}</p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* THE MONEY STORY */}
+      {/* 12 — THE MONEY STORY / ODD SHOES SEPARATION */}
       <section className="relative py-20 bg-white border-t border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <Reveal>
@@ -458,10 +500,10 @@ already have something to carry. We're building a pathway for them to go.
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { icon: 'crown.svg',   tag: 'Mission-Funded',        title: 'Not a storefront',       body: 'Blue Ox Kampus is not a storefront. There are no commercial services being sold here.',     href: '/fund' },
-              { icon: 'book.svg',    tag: 'Different Door',         title: 'Want to hire?',           body: 'If you want to hire a software team, that\'s a different door.',     href: 'https://oddshoesgroup.com' },
-              { icon: 'diamond.svg', tag: 'Odd Shoes',              title: 'Our commercial work',     body: 'Odd Shoes works with clients through normal commercial relationships to build software. Blue Ox Kampus exists to fund the sending.',    href: 'https://oddshoesgroup.com' },
-              { icon: 'rocket.svg',  tag: 'Clear Purpose',          title: 'Different work. Different money.',    body: 'Different work. Different money. Clear purpose.',           href: '/fund' },
+              { icon: 'crown.svg',   tag: 'Mission-Funded', title: 'Not a storefront',           body: 'Blue Ox Kampus is not a storefront. There are no commercial services being sold here.',                                                              href: '/fund' },
+              { icon: 'book.svg',    tag: 'Different Door',  title: 'Want to hire?',              body: "If you want to hire a software team, that's a different door.",                                                                                       href: 'https://oddshoesgroup.com' },
+              { icon: 'diamond.svg', tag: 'Odd Shoes',       title: 'Our commercial work',        body: 'Odd Shoes works with clients through normal commercial relationships to build software. Blue Ox Kampus exists to fund the sending.',                   href: 'https://oddshoesgroup.com' },
+              { icon: 'rocket.svg',  tag: 'Clear Purpose',   title: 'Different work. Different money.', body: 'Different work. Different money. Clear purpose.',                                                                                              href: '/fund' },
             ].map(({ icon, tag, title, body, href }, index) => (
               <Reveal key={tag} delay={0.1 + index * 0.1}>
                 <a href={href} className="glass p-6 rounded-xl block hover:border-[#0044CC]/50 transition-all duration-300 group border border-gray-100 hover:border-[#0044CC]">
@@ -477,7 +519,7 @@ already have something to carry. We're building a pathway for them to go.
         </div>
       </section>
 
-      {/* THE FIRST CREATIVE */}
+      {/* 13 — THE FIRST CREATIVE */}
       <section className="relative py-20 bg-white border-t border-gray-100" id="the-first-creative">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <Reveal>
@@ -509,7 +551,7 @@ already have something to carry. We're building a pathway for them to go.
         </div>
       </section>
 
-      {/* THE BIGGER VISION */}
+      {/* 14 — THE BIGGER VISION */}
       <section className="relative py-20 bg-white border-t border-gray-100" id="the-vision">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <Reveal>
@@ -540,94 +582,8 @@ already have something to carry. We're building a pathway for them to go.
         </div>
       </section>
 
-      {/* THE FINAL CLOSE */}
-      <section className="relative py-20 bg-white border-t border-gray-100" id="the-close">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <Reveal>
-            <div className="grid md:grid-cols-2 gap-16 items-start">
-              <div>
-                <h2 className="text-4xl md:text-5xl font-bebas text-[#0044CC] mb-4 leading-tight uppercase">
-                  5.5 billion is too big for one organization. But it isn&apos;t too big for a movement.
-                </h2>
-                <p className="font-libre text-gray-600 leading-relaxed italic">
-                  We don&apos;t claim to have the answer to the world&apos;s greatest problem. We believe we&apos;ve found our part of the answer. Raise the creatives already among us. Equip them to serve. Send them where they&apos;re needed most. Help them multiply. That&apos;s the work.
-                </p>
-              </div>
-              <div>
-                <ul className="space-y-3 mb-6">
-                  {['There are gifted creatives', 'There are places that need the gospel', 'There is a Church in Africa capable of sending', "What's needed is a pathway", 'Blue Ox Kampus is building it', 'Your gift is part of how it happens'].map(f => (
-                    <li key={f} className="flex items-start gap-3 text-sm text-gray-600 font-libre">
-                      <img src="/icons/check.svg" alt="" className="w-4 h-4 mt-0.5 shrink-0" />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-                <div className="flex gap-3 flex-wrap">
-                  <Link href="/fund" className="border border-[#0044CC] bg-[#0044CC] text-white font-semibold text-sm px-6 py-3 rounded-none transition-all duration-300 hover:bg-[#0033AA] hover:border-[#0033AA] inline-block">
-                    FUND THE SENDING →
-                  </Link>
-                  <Link href="/#the-pathway" className="border border-black bg-transparent text-black font-semibold text-sm px-6 py-3 rounded-none transition-all duration-300 hover:bg-black hover:text-white inline-block">
-                    EXPLORE THE MISSION →
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* THE QUESTION — CONTINUED */}
-      <section className="relative py-20 bg-white border-t border-gray-100">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <Reveal>
-            <div className="text-center mb-10">
-              <div className="text-[#F58220] text-xs font-mono font-black uppercase tracking-wider mb-4">/ WHAT WE HAVE IN OUR HANDS</div>
-              <h2 className="text-4xl md:text-5xl font-bebas text-[#0044CC] mb-4 max-w-3xl mx-auto leading-tight uppercase">
-                We&apos;ve learned how to find gifted people, develop their skills, connect them to real work and build environments where they can grow.
-              </h2>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.1}>
-            <div className="grid md:grid-cols-2 gap-12 mb-12">
-              <p className="font-libre text-gray-600 leading-relaxed italic">
-                We&apos;ve spent years working with faith-driven creatives. We&apos;ve trained developers. We&apos;ve worked with filmmakers, designers, musicians and storytellers. We&apos;ve built communities. We&apos;ve worked with churches. We&apos;ve worked across borders.
-              </p>
-              <p className="font-libre text-gray-600 leading-relaxed italic">
-                Then we realized: maybe the point isn&apos;t simply to build better creatives. Maybe it&apos;s to help send them.
-              </p>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.2}>
-            <div className="border-t border-gray-200 pt-8">
-              <p className="text-xs font-mono font-black uppercase tracking-widest text-[#F58220] mb-6">/ The research</p>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                {[
-                  { title: 'Africa has received',   body: 'The gospel came. The Church grew. Sub-Saharan Africa is now home to 30.7% of the world\'s Christians.' },
-                  { title: '697 million Christians', body: 'Africa became the continent with the most Christians in 2018, passing Latin America — which had passed Europe in 2014.' },
-                  { title: '1% to 31%',              body: 'In 1910, roughly 1% of the world\'s Christians lived in sub-Saharan Africa. By 2020, that share had grown to 31%.' },
-                  { title: 'Now Africa can send',    body: 'Not someday. Now. The Church in Africa is capable of sending. What is needed is a pathway.' },
-                ].map(({ title, body }) => (
-                  <div key={title} className="bg-white border border-gray-200 rounded-none p-5 hover:border-[#0044CC] hover:shadow-lg hover:shadow-blue-500/5 transition-all duration-200">
-                    <h4 className="font-bebas text-[#0044CC] mb-2 text-sm uppercase">{title}</h4>
-                    <p className="font-libre text-gray-600 text-sm leading-relaxed">{body}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.3}>
-            <p className="font-libre text-gray-500 text-sm mt-6 italic">
-              Source: Pew Research Center, 2025. 1910 estimate via the Center for the Study of Global Christianity. Two distinct analyses — do not present as one continuous data series.
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* FINAL CLOSE */}
-      <section className="relative py-24 bg-white border-t border-gray-200 text-center" id="give">
+      {/* 15 — THE FINAL CLOSE */}
+      <section className="relative py-24 bg-white border-t border-gray-200 text-center">
         <div className="max-w-4xl mx-auto px-6">
           <Reveal>
             <div className="bg-gradient-to-br from-[#0044CC] to-[#0033AA] border-2 border-[#F58220]/30 rounded-none p-12 text-white shadow-2xl shadow-blue-500/20">
