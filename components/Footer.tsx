@@ -14,53 +14,60 @@ export default function Footer(){
           </div>
         </div>
 
+        {/* Tagline */}
+        <div className="mb-8">
+          <p className="text-xs font-mono font-black uppercase tracking-widest text-gray-500">
+            Home for faith-driven creatives — Raised here. Sent everywhere.
+          </p>
+        </div>
+
         {/* 3 Column Links Section */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 mb-12">
-          
-          {/* Column 1: Navigation */}
+
+          {/* Column 1: The Mission */}
           <div>
-            <h3 className="text-xs font-black uppercase tracking-widest text-black mb-4">Navigation</h3>
+            <h3 className="text-xs font-black uppercase tracking-widest text-black mb-4">The Mission</h3>
             <ul className="space-y-3 flex flex-col">
               <li>
-                <a href="/#request" className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
-                  Hire a Pod
-                </a>
-              </li>
-              <li>
-                <Link href="/cohort" className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
-                  Cohort 01
+                <Link href="/#the-pathway" className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
+                  The Mission
                 </Link>
               </li>
               <li>
-                <Link href="/partners" className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
-                  Partners
+                <Link href="/#the-research" className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
+                  The Research
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
-                  About
+                <Link href="/#the-question" className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
+                  The Pathway
+                </Link>
+              </li>
+              <li>
+                <Link href="/#the-people" className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
+                  The Creatives
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 2: Community */}
+          {/* Column 2: The Kampus */}
           <div>
-            <h3 className="text-xs font-black uppercase tracking-widest text-black mb-4">Community</h3>
+            <h3 className="text-xs font-black uppercase tracking-widest text-black mb-4">The Kampus</h3>
             <ul className="space-y-3 flex flex-col">
               <li>
-                <Link href="/builders" className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
-                  Join as Builder
+                <Link href="/about" className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
+                  The Kampus
                 </Link>
               </li>
               <li>
-                <Link href="/academy" className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
-                  Academy
+                <Link href="/#give" className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
+                  Impact
                 </Link>
               </li>
               <li>
                 <Link href="/fund" className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
-                  Fund Training
+                  Give
                 </Link>
               </li>
             </ul>
@@ -92,9 +99,15 @@ export default function Footer(){
         {/* Bottom Bar */}
         <div className="border-t border-gray-100 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-xs text-gray-400 text-center sm:text-left">
-            <p className="mb-1">&copy; {new Date().getFullYear()} Blue Ox Kampus · Mbarara, Uganda · EU · US · Gulf</p>
+            <p className="mb-1">&copy; {new Date().getFullYear()} Blue Ox Kampus · Mbarara, Uganda</p>
             <p className="text-gray-500 font-medium">
-              Not a dev shop. Not a talent marketplace. Execution infrastructure for redemptive technology.
+              Mission-funded. Raise. Equip. Send.
+            </p>
+            <p className="text-gray-400 mt-1">
+              Need software?{' '}
+              <a href="https://oddshoesgroup.com" target="_blank" rel="noopener noreferrer" className="text-[#F58220] hover:underline">
+                Visit Odd Shoes →
+              </a>
             </p>
           </div>
           <div className="flex gap-4">

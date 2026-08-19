@@ -76,19 +76,11 @@ export default function Header(){
 
         {/* Right CTAs + hamburger */}
         <div className="flex items-center gap-2 sm:gap-3">
-          <a
-            href="https://www.blueoxjobs.eu/hiring"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:inline-block border border-[#F58220] text-[#F58220] px-4 py-2 rounded-md text-sm font-black uppercase hover:bg-[#F58220] hover:text-white transition-colors"
-          >
-            Request a Pod
-          </a>
           <Link
             href="/fund"
             className="hidden md:inline-block bg-[#0044CC] text-white px-4 py-2 rounded-md text-sm font-black uppercase hover:bg-[#0033AA] transition-colors"
           >
-            Fund Training
+            Fund the Sending
           </Link>
           <button
             ref={btnRef}
@@ -115,21 +107,12 @@ export default function Header(){
           <Link href="/partners" onClick={() => setOpen(false)} className={mobileLinkCls(pathname === '/partners')}>Partners</Link>
           <Link href="/about"    onClick={() => setOpen(false)} className={mobileLinkCls(pathname === '/about')}>About</Link>
           <div className="flex gap-2 mt-3">
-            <a
-              href="https://www.blueoxjobs.eu/hiring"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setOpen(false)}
-              className="flex-1 border border-[#F58220] text-[#F58220] px-4 py-3 text-sm font-black uppercase text-center block hover:bg-[#F58220] hover:text-white transition-colors rounded-md"
-            >
-              Request a Pod
-            </a>
             <Link
               href="/fund"
               onClick={() => setOpen(false)}
               className="flex-1 bg-[#0044CC] text-white px-4 py-3 text-sm font-black uppercase text-center block hover:bg-[#0033AA] transition-colors rounded-md"
             >
-              Fund Training
+              Fund the Sending
             </Link>
           </div>
         </div>
