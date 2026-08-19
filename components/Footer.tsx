@@ -78,7 +78,7 @@ export default function Footer(){
             <h3 className="text-xs font-black uppercase tracking-widest text-black mb-4">Contact</h3>
             <ul className="space-y-3 flex flex-col">
               <li>
-                <a href="mailto:blueoxrecruit@gmail.com" className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
+                <a href="mailto:info@blueoxkampus.com" className="text-xs text-gray-500 hover:text-[#F58220] transition-colors font-semibold uppercase tracking-wider">
                   Email
                 </a>
               </li>

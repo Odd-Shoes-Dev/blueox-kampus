@@ -115,7 +115,7 @@ export default function RootLayout({ children }:{children:ReactNode}){
               contactPoint: {
                 '@type': 'ContactPoint',
                 contactType: 'customer service',
-                email: 'blueoxrecruit@gmail.com',
+                email: 'info@blueoxkampus.com',
                 telephone: '+3197010209759',
                 url: 'https://www.blueoxkampus.com'
               },

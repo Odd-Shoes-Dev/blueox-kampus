@@ -172,7 +172,7 @@ export default function FundPage() {
                 ))}
               </div>
               <p className="font-libre text-gray-600 text-sm text-center mt-6">
-                Need a custom amount over $2,500? <a href="mailto:blueoxrecruit@gmail.com" className="text-[#F58220] hover:underline">Contact us directly</a>
+                Need a custom amount over $2,500? <a href="mailto:info@blueoxkampus.com" className="text-[#F58220] hover:underline">Contact us directly</a>
               </p>
             </div>
           </Reveal>
